@@ -176,3 +176,16 @@ expression Schools =
 
 	annotation PBI_ResultType = Table
 
+expression 'Cycles List' =
+		let
+		    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45WMlTSUXLyUYrViVYyAjJ9IUxjINMVyIwFAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#"Cycle Order" = _t, Cycle = _t]),
+		    #"Colonnes renommées" = Table.RenameColumns(Source,{{"Cycle Order", "Cycle Sort"}}),
+		    #"Type modifié" = Table.TransformColumnTypes(#"Colonnes renommées",{{"Cycle Sort", Int64.Type}, {"Cycle", type text}})
+		in
+		    #"Type modifié"
+	lineageTag: b6a6fd6d-ee84-4d31-bdfe-877d137be880
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

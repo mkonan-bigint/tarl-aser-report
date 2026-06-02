@@ -1,0 +1,12 @@
+DEFINE
+
+VAR __BaseTable = DISTINCT(SELECTCOLUMNS(
+		'ASER CIV Data',
+		"@Grade ID", 'ASER CIV Data'[Grade ID],
+		"@Cycle ID", 'ASER CIV Data'[Cycle ID],
+		"@Group Level", RELATED( 'Levels in Subjects'[Group Level Sort] ),
+		"@Students At Level", 'ASER CIV Data'[Students At Level]
+	))
+
+
+EVALUATE FILTER(__BaseTable, [@Grade ID] = 10 && [@Cycle ID] = 2 && [@Group Level] = 3)

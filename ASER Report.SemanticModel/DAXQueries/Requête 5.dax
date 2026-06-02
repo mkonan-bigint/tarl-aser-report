@@ -1,0 +1,13 @@
+DEFINE
+
+	VAR __GradesData =
+	SELECTCOLUMNS(
+		'ASER CIV Data',
+		"@Cycle ID", 'ASER CIV Data'[Cycle ID],
+		"@Grade", RELATED( Grades[Grade] ),
+		"@Level ID", 'ASER CIV Data'[Level ID],
+		"@Subject ID", 'ASER CIV Data'[Subject ID],
+		"@Students At Level", 'ASER CIV Data'[Students At Level]
+	)
+
+EVALUATE FILTER( __GradesData, [@Cycle ID] = 1 && [@Grade] = "CE1" ) ORDER BY [@Level ID] ASC

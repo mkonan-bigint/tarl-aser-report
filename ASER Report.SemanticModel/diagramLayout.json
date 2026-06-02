@@ -1,0 +1,192 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 317.64549205063952,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 6.6122996630190869,
+            "y": 369.21985949341718
+          },
+          "nodeIndex": "Cycles",
+          "nodeLineageTag": "2dc2b491-cd42-4119-9a49-bf55e1235237",
+          "size": {
+            "height": 234.5,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 0
+          },
+          "nodeIndex": "Levels in Subjects",
+          "nodeLineageTag": "228a31b4-63b6-4a56-af45-4169c3054e5f",
+          "size": {
+            "height": 264.11944016201176,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 779.503949142394,
+            "y": 430.48535251591977
+          },
+          "nodeIndex": "Entry Calendar",
+          "nodeLineageTag": "7b0eec92-c670-4601-908e-d5e6855a918a",
+          "size": {
+            "height": 181.58519200907938,
+            "width": 234
+          },
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 1147.0922862014002,
+            "y": 101.71441450444058
+          },
+          "nodeIndex": "Mesures",
+          "nodeLineageTag": "88d328ed-b1e1-4ef2-a3ac-aee29dcb536c",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 754.60503160184078,
+            "y": 0
+          },
+          "nodeIndex": "Grades",
+          "nodeLineageTag": "13bbfd5a-984c-40ec-9f96-fa9cfa5ec28a",
+          "size": {
+            "height": 349.09229747675954,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 1157.1517175316203,
+            "y": 281.32982282602768
+          },
+          "nodeIndex": "Cycles interval",
+          "nodeLineageTag": "b34c730b-c264-4aa7-8a8d-716fb62668a4",
+          "size": {
+            "height": 145,
+            "width": 234
+          },
+          "zIndex": 7
+        },
+        {
+          "location": {
+            "x": 384.43625233233047,
+            "y": 9.8494703860822312
+          },
+          "nodeIndex": "ASER CIV Data",
+          "nodeLineageTag": "2271c66e-66ce-4fa7-a6bc-86fce794e533",
+          "size": {
+            "height": 510.97611619473633,
+            "width": 234
+          },
+          "zIndex": 1
+        }
+      ],
+      "name": "Toutes les tables",
+      "zoomValue": 71.778131818616174,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    },
+    {
+      "ordinal": 1,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 1318.2162879232862,
+            "y": 175.84232212219993
+          },
+          "nodeIndex": "Mesures",
+          "nodeLineageTag": "88d328ed-b1e1-4ef2-a3ac-aee29dcb536c",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 247.04647089292342,
+            "y": 361.27612578096813
+          },
+          "nodeIndex": "Cycles",
+          "nodeLineageTag": "2dc2b491-cd42-4119-9a49-bf55e1235237",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 902.57147212355915,
+            "y": -50
+          },
+          "nodeIndex": "Entry Calendar",
+          "nodeLineageTag": "7b0eec92-c670-4601-908e-d5e6855a918a",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 334.18218088866189,
+            "y": 30.120217152281384
+          },
+          "nodeIndex": "Levels in Subjects",
+          "nodeLineageTag": "228a31b4-63b6-4a56-af45-4169c3054e5f",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 952.77230573190536,
+            "y": 259.9042435143873
+          },
+          "nodeIndex": "Grades",
+          "size": {
+            "height": 331.44289088775167,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Disposition 1",
+      "zoomValue": 67.714566726536134,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Toutes les tables",
+  "defaultDiagram": "Toutes les tables"
+}

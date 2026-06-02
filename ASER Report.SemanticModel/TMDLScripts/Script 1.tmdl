@@ -1,0 +1,698 @@
+createOrReplace
+
+	model Model
+		culture: fr-FR
+		defaultPowerBIDataSourceVersion: powerBI_V3
+		sourceQueryCulture: fr-FR
+		dataAccessOptions
+			legacyRedirects
+			returnErrorValuesAsNull
+
+		table 'ASER Data CIV'
+			lineageTag: 2271c66e-66ce-4fa7-a6bc-86fce794e533
+
+			measure 'Number Of Schools Tested' = DISTINCTCOUNT( 'ASER Data CIV'[School ID] )
+				formatString: 0
+				lineageTag: 067b1b3d-1b52-4e22-bc96-5aaa63df3ad2
+
+			column 'Students In Class'
+				dataType: int64
+				formatString: 0
+				lineageTag: c0c0f07e-57ed-4395-a1a3-9d914446917a
+				summarizeBy: sum
+				sourceColumn: Students In Class
+
+				annotation SummarizationSetBy = Automatic
+
+			column 'Boys Tested'
+				dataType: int64
+				formatString: 0
+				lineageTag: 7b691fbe-bd2d-45ed-a82f-bcf0078af5c2
+				summarizeBy: sum
+				sourceColumn: Boys Tested
+
+				annotation SummarizationSetBy = Automatic
+
+			column 'Girls Tested'
+				dataType: int64
+				formatString: 0
+				lineageTag: ff503c80-a725-42d3-8949-ae2c77ba76e5
+				summarizeBy: sum
+				sourceColumn: Girls Tested
+
+				annotation SummarizationSetBy = Automatic
+
+			column 'Students Tested'
+				dataType: int64
+				formatString: 0
+				lineageTag: 4c788f5a-a377-4a3b-b867-1f2291cc30c0
+				summarizeBy: sum
+				sourceColumn: Students Tested
+
+				annotation SummarizationSetBy = Automatic
+
+			column 'Teacher Male'
+				dataType: int64
+				formatString: 0
+				lineageTag: 2b9779c5-cf30-4062-9cfc-6c2cda370ff5
+				summarizeBy: sum
+				sourceColumn: Teacher Male
+
+				annotation SummarizationSetBy = Automatic
+
+			column 'Teacher Female'
+				dataType: int64
+				formatString: 0
+				lineageTag: 8a4e7a0b-fe18-4ea2-bccc-36697874f991
+				summarizeBy: sum
+				sourceColumn: Teacher Female
+
+				annotation SummarizationSetBy = Automatic
+
+			column 'Number Of Students'
+				dataType: int64
+				formatString: 0
+				lineageTag: 99971a1a-6f6a-4972-a065-83b58b2b625f
+				summarizeBy: sum
+				sourceColumn: Number Of Students
+
+				annotation SummarizationSetBy = Automatic
+
+			column 'Grade ID'
+				dataType: int64
+				formatString: 0
+				lineageTag: 667b7477-273a-49ab-84e7-72d986743ab3
+				summarizeBy: none
+				sourceColumn: Grade ID
+
+				annotation SummarizationSetBy = Automatic
+
+			column 'Cycle ID'
+				dataType: int64
+				formatString: 0
+				lineageTag: 52b5df66-7fdd-4091-ba55-7092d9fc1f52
+				summarizeBy: none
+				sourceColumn: Cycle ID
+
+				annotation SummarizationSetBy = Automatic
+
+			column 'Level ID'
+				dataType: int64
+				formatString: 0
+				lineageTag: 544caaf8-e433-43fa-9b24-141d70464cea
+				summarizeBy: none
+				sourceColumn: Level ID
+
+				annotation SummarizationSetBy = Automatic
+
+			column 'Entry Date'
+				dataType: dateTime
+				formatString: Short Date
+				lineageTag: 689ce407-92c9-4739-bfd9-0e123c388b49
+				summarizeBy: none
+				sourceColumn: Entry Date
+
+				annotation SummarizationSetBy = Automatic
+
+				annotation UnderlyingDateTimeDataType = Date
+
+			column 'School ID'
+				dataType: int64
+				formatString: 0
+				lineageTag: 6bb538e5-d574-4891-a5bd-0529f5e9151b
+				summarizeBy: none
+				sourceColumn: School ID
+
+				annotation SummarizationSetBy = User
+
+			column 'DRENAET ID'
+				dataType: int64
+				formatString: 0
+				lineageTag: 13e63cc0-d761-4923-98e3-1c0411c51893
+				summarizeBy: count
+				sourceColumn: DRENAET ID
+
+				annotation SummarizationSetBy = Automatic
+
+			column 'IEPP ID'
+				dataType: int64
+				formatString: 0
+				lineageTag: 9d8473a5-a469-4722-bdec-25a101d71736
+				summarizeBy: count
+				sourceColumn: IEPP ID
+
+				annotation SummarizationSetBy = Automatic
+
+			partition 'ASER Data CIV' = m
+				mode: import
+				source =
+						let
+						    Source = Table.Combine({#"Old Data", #"New Data"}),
+						    #"Texte en majuscules" = Table.TransformColumns(Source,{{"DRENAET", Text.Upper, type text}}),
+						    #"Valeur remplacée" = Table.ReplaceValue(#"Texte en majuscules","DRENA ","",Replacer.ReplaceText,{"DRENAET"}),
+						    #"Colonnes renommées" = Table.RenameColumns(#"Valeur remplacée",{{"Beginner L", "Beginner L - L"}, {"Letter", "Letter - L"}, {"Word", "Word - L"}, {"Paragraph", "Paragraph - L"}, {"Story", "Story - L"}, {"Beginner N", "Beginner N - N"}, {"1-Digit", "1-Digit - N"}, {"2-Digit", "2-Digit - N"}, {"Substraction", "Substraction - N"}, {"Division", "Division - N"}, {"Comprehension", "Comprehension - L"}}),
+						    #"Tableau croisé dynamique des colonnes supprimé" = Table.UnpivotOtherColumns(#"Colonnes renommées", {"DRENAET", "IEPP", "School", "Cycle", "Grade", "Students In Class", "Boys Tested", "Girls Tested", "Entry Date", "Region", "Sector", "Students Tested", "Period", "Teacher Male", "Teacher Female"}, "Attribut", "Valeur"),
+						    #"Colonnes renommées1" = Table.RenameColumns(#"Tableau croisé dynamique des colonnes supprimé",{{"Valeur", "Number Of Students"}}),
+						    #"Fractionner la colonne par délimiteur" = Table.SplitColumn(#"Colonnes renommées1", "Attribut", Splitter.SplitTextByDelimiter(" - ", QuoteStyle.Csv), {"Attribut.1", "Attribut.2"}),
+						    #"Colonnes renommées2" = Table.RenameColumns(#"Fractionner la colonne par délimiteur",{{"Attribut.1", "Level"}, {"Attribut.2", "Subject"}}),
+						    #"Valeur remplacée1" = Table.ReplaceValue(#"Colonnes renommées2","L","Litteracy",Replacer.ReplaceText,{"Subject"}),
+						    #"Valeur remplacée2" = Table.ReplaceValue(#"Valeur remplacée1","N","Numeracy",Replacer.ReplaceText,{"Subject"}),
+						    #"Requêtes fusionnées" = Table.NestedJoin(#"Valeur remplacée2", {"DRENAET", "IEPP", "School", "Grade"}, #"Grades in DRENAETs", {"DRENAET", "IEPP", "School", "Grade"}, "Grades in DRENAETs", JoinKind.LeftOuter),
+						    #"Grades in DRENAETs développé" = Table.ExpandTableColumn(#"Requêtes fusionnées", "Grades in DRENAETs", {"DRENAET ID", "Grade ID", "IEPP ID", "School ID"}, {"DRENAET ID", "Grade ID", "IEPP ID", "School ID"}),
+						    #"Requêtes fusionnées1" = Table.NestedJoin(#"Grades in DRENAETs développé", {"Cycle", "Period"}, Cycles, {"Cycle", "Period"}, "Cycles", JoinKind.LeftOuter),
+						    #"Cycles développé" = Table.ExpandTableColumn(#"Requêtes fusionnées1", "Cycles", {"Cycle ID"}, {"Cycle ID"}),
+						    #"Requêtes fusionnées2" = Table.NestedJoin(#"Cycles développé", {"Level", "Subject"}, #"Levels in Subjects", {"Level", "Subject"}, "Levels in Subjects", JoinKind.LeftOuter),
+						    #"Levels in Subjects développé" = Table.ExpandTableColumn(#"Requêtes fusionnées2", "Levels in Subjects", {"Level ID"}, {"Level ID"}),
+						    #"Autres colonnes supprimées" = Table.SelectColumns(#"Levels in Subjects développé",{"Students In Class", "Boys Tested", "Girls Tested", "Entry Date", "Students Tested", "Teacher Male", "Teacher Female", "Number Of Students", "DRENAET ID", "Grade ID", "IEPP ID", "School ID", "Cycle ID", "Level ID"})
+						in
+						    #"Autres colonnes supprimées"
+
+			annotation PBI_NavigationStepName = Navigation
+
+			annotation PBI_ResultType = Table
+
+		table 'Grades in DRENAETs'
+			lineageTag: 13bbfd5a-984c-40ec-9f96-fa9cfa5ec28a
+
+			measure 'Number Of Schools' = DISTINCTCOUNT( 'Grades in DRENAETs'[School ID] )
+				formatString: 0
+				lineageTag: cb9668aa-733c-44e6-aa9e-f06733f64b35
+
+			measure 'Number Of IEPPs' = DISTINCTCOUNT( 'Grades in DRENAETs'[IEPP] )
+				formatString: 0
+				lineageTag: cf5d988b-65aa-4447-9c26-9f74f6fda9a7
+
+			measure 'Number Of DRENAETs' = DISTINCTCOUNT( 'Grades in DRENAETs'[DRENAET] )
+				formatString: 0
+				lineageTag: 18a3d325-e8d5-453f-b685-22788919c997
+
+			measure 'Number Of Students in Cycle' =
+					
+					VAR __ASER_sans_doublon = DISTINCT(SELECTCOLUMNS(
+							'ASER Data CIV',
+							"@Grade ID", 'ASER Data CIV'[Grade ID],
+							"@Cycle ID", 'ASER Data CIV'[Cycle ID],
+							"@School ID", 'ASER Data CIV'[School ID],
+							"@Students In Class", 'ASER Data CIV'[Students In Class]
+						))
+					
+					VAR __Table = SUMMARIZE( __ASER_sans_doublon,
+							[@Grade ID],
+							[@Cycle ID],
+							[@School ID],
+							"@Number Of Students", MAX('ASER Data CIV'[Students In Class])
+						)
+					
+					VAR __Result = SUMX( __Table, [@Number Of Students])
+					RETURN __Result
+				formatString: #,0
+				lineageTag: 0fff3ea4-189b-4482-8b07-dd9be72630e5
+
+			column DRENAET
+				dataType: string
+				lineageTag: 6f0e51c7-fb57-4292-9077-02e07ef95652
+				summarizeBy: none
+				sourceColumn: DRENAET
+
+				annotation SummarizationSetBy = Automatic
+
+			column IEPP
+				dataType: string
+				lineageTag: 4c6cbf21-1004-4a32-8b1b-35b45803b526
+				summarizeBy: none
+				sourceColumn: IEPP
+
+				annotation SummarizationSetBy = Automatic
+
+			column School
+				dataType: string
+				lineageTag: 56f34723-637d-4fc7-b586-5fc7c3ad94c0
+				summarizeBy: none
+				sourceColumn: School
+
+				annotation SummarizationSetBy = Automatic
+
+			column Grade
+				dataType: string
+				lineageTag: a3dbe4fb-9206-4d72-88c9-2f38a61d2c6f
+				summarizeBy: none
+				sourceColumn: Grade
+
+				annotation SummarizationSetBy = Automatic
+
+			column 'Grade ID'
+				dataType: int64
+				formatString: 0
+				lineageTag: 8c41e4f7-9423-4b0c-807a-b9f4c5c9f8a1
+				summarizeBy: none
+				sourceColumn: Grade ID
+
+				annotation SummarizationSetBy = Automatic
+
+			column Donor
+				dataType: string
+				lineageTag: 2d2c5a62-fbce-4e40-9c3b-6d8d8cbfdd2b
+				summarizeBy: none
+				sourceColumn: Donor
+
+				annotation SummarizationSetBy = Automatic
+
+			column 'School ID'
+				dataType: int64
+				formatString: 0
+				lineageTag: 69f67ef1-b50d-44e8-a33b-e1e355a2f5a2
+				summarizeBy: none
+				sourceColumn: School ID
+
+				annotation SummarizationSetBy = Automatic
+
+			column 'DRENAET ID'
+				dataType: int64
+				formatString: 0
+				lineageTag: d0ae80a6-f981-4f7c-b7b0-8e163a7d65f4
+				summarizeBy: none
+				sourceColumn: DRENAET ID
+
+				annotation SummarizationSetBy = Automatic
+
+			column 'IEPP ID'
+				dataType: int64
+				formatString: 0
+				lineageTag: eee5a45d-56ba-4191-bc74-cbef16b4c645
+				summarizeBy: none
+				sourceColumn: IEPP ID
+
+				annotation SummarizationSetBy = Automatic
+
+			partition 'Grades in DRENAETs' = m
+				mode: import
+				source =
+						let
+						    Source = Table.Combine({#"Old Data", #"New Data"}),
+						    #"Texte en majuscules" = Table.TransformColumns(Source,{{"DRENAET", Text.Upper, type text}}),
+						    #"Valeur remplacée" = Table.ReplaceValue(#"Texte en majuscules","DRENA ","",Replacer.ReplaceText,{"DRENAET"}),
+						    #"Autres colonnes supprimées" = Table.SelectColumns(#"Valeur remplacée",{"DRENAET", "IEPP", "School", "Grade"}),
+						    #"Doublons supprimés" = Table.Distinct(#"Autres colonnes supprimées"),
+						    #"Index ajouté" = Table.AddIndexColumn(#"Doublons supprimés", "Index", 0, 1, Int64.Type),
+						    #"Colonnes renommées" = Table.RenameColumns(#"Index ajouté",{{"Index", "Grade ID"}}),
+						    #"Requêtes fusionnées" = Table.NestedJoin(#"Colonnes renommées", {"DRENAET"}, #"DRENAETs and Donors", {"DRENAET"}, "DRENAETs and Donors", JoinKind.LeftOuter),
+						    #"DRENAETs and Donors développé" = Table.ExpandTableColumn(#"Requêtes fusionnées", "DRENAETs and Donors", {"Donor", "DRENAET ID"}, {"Donor", "DRENAET ID"}),
+						    #"Requêtes fusionnées1" = Table.NestedJoin(#"DRENAETs and Donors développé", {"DRENAET", "IEPP", "School"}, Schools, {"DRENAET", "IEPP", "School"}, "Schools", JoinKind.LeftOuter),
+						    #"Schools développé" = Table.ExpandTableColumn(#"Requêtes fusionnées1", "Schools", {"School ID"}, {"School ID"}),
+						    #"Requêtes fusionnées2" = Table.NestedJoin(#"Schools développé", {"DRENAET", "IEPP"}, IEPPs, {"DRENAET", "IEPP"}, "IEPPs", JoinKind.LeftOuter),
+						    #"IEPPs développé" = Table.ExpandTableColumn(#"Requêtes fusionnées2", "IEPPs", {"IEPP ID"}, {"IEPP ID"})
+						in
+						    #"IEPPs développé"
+
+			annotation PBI_NavigationStepName = Navigation
+
+			annotation PBI_ResultType = Table
+
+		table Cycles
+			lineageTag: 2dc2b491-cd42-4119-9a49-bf55e1235237
+
+			column 'Cycle ID'
+				dataType: int64
+				formatString: 0
+				lineageTag: 49860b4c-a29f-4ee8-95b2-a4bcc7b08489
+				summarizeBy: none
+				sourceColumn: Cycle ID
+
+				annotation SummarizationSetBy = Automatic
+
+			column Cycle
+				dataType: string
+				lineageTag: 0ee720e5-5240-4f6a-9fa0-0fba5811fa37
+				summarizeBy: none
+				sourceColumn: Cycle
+
+				annotation SummarizationSetBy = Automatic
+
+			column Period
+				dataType: string
+				lineageTag: 54bef491-3e23-4eed-8f45-95ec5713191a
+				summarizeBy: none
+				sourceColumn: Period
+
+				annotation SummarizationSetBy = Automatic
+
+			partition Cycles = m
+				mode: import
+				source =
+						let
+						    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("Zcw7CsAgEADRu2xtwF01nzaQLjmBeP9rZDUEBmymeMXUKipBzttj0XTxmLRQxVyemZPLNXPGxDqnwQUT8IoJeMMkdc6Dd0zAByZgjbjk7uVzxYZu+PzeXg==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#"Cycle ID" = _t, Cycle = _t, Period = _t]),
+						    #"Type modifié" = Table.TransformColumnTypes(Source,{{"Cycle ID", Int64.Type}, {"Cycle", type text}, {"Period", type text}})
+						in
+						    #"Type modifié"
+
+			annotation PBI_NavigationStepName = Navigation
+
+			annotation PBI_ResultType = Table
+
+		table 'Levels in Subjects'
+			lineageTag: 228a31b4-63b6-4a56-af45-4169c3054e5f
+
+			column Level
+				dataType: string
+				lineageTag: 13616aec-13da-4333-8315-c1de70d971ab
+				summarizeBy: none
+				sourceColumn: Level
+
+				annotation SummarizationSetBy = Automatic
+
+			column Subject
+				dataType: string
+				lineageTag: 98a04a38-6d90-4ea8-bdf8-2c7e3f9c1559
+				summarizeBy: none
+				sourceColumn: Subject
+
+				annotation SummarizationSetBy = Automatic
+
+			column 'Level ID'
+				dataType: int64
+				formatString: 0
+				lineageTag: 41493d22-4abd-471f-b644-6594ca5d0fc4
+				summarizeBy: none
+				sourceColumn: Level ID
+
+				annotation SummarizationSetBy = Automatic
+
+			partition 'Levels in Subjects' = m
+				mode: import
+				source =
+						let
+						    Source = Table.Combine({#"Old Data", #"New Data"}),
+						    #"Texte en majuscules" = Table.TransformColumns(Source,{{"DRENAET", Text.Upper, type text}}),
+						    #"Valeur remplacée" = Table.ReplaceValue(#"Texte en majuscules","DRENA ","",Replacer.ReplaceText,{"DRENAET"}),
+						    #"Colonnes renommées" = Table.RenameColumns(#"Valeur remplacée",{{"Beginner L", "Beginner L - L"}, {"Letter", "Letter - L"}, {"Word", "Word - L"}, {"Paragraph", "Paragraph - L"}, {"Story", "Story - L"}, {"Beginner N", "Beginner N - N"}, {"1-Digit", "1-Digit - N"}, {"2-Digit", "2-Digit - N"}, {"Substraction", "Substraction - N"}, {"Division", "Division - N"}, {"Comprehension", "Comprehension - L"}}),
+						    #"Tableau croisé dynamique des colonnes supprimé" = Table.UnpivotOtherColumns(#"Colonnes renommées", {"DRENAET", "IEPP", "School", "Cycle", "Grade", "Students In Class", "Boys Tested", "Girls Tested", "Entry Date", "Region", "Sector", "Students Tested", "Period", "Teacher Male", "Teacher Female"}, "Attribut", "Valeur"),
+						    #"Colonnes renommées1" = Table.RenameColumns(#"Tableau croisé dynamique des colonnes supprimé",{{"Valeur", "Number Of Students"}}),
+						    #"Fractionner la colonne par délimiteur" = Table.SplitColumn(#"Colonnes renommées1", "Attribut", Splitter.SplitTextByDelimiter(" - ", QuoteStyle.Csv), {"Attribut.1", "Attribut.2"}),
+						    #"Colonnes renommées2" = Table.RenameColumns(#"Fractionner la colonne par délimiteur",{{"Attribut.1", "Level"}, {"Attribut.2", "Subject"}}),
+						    #"Valeur remplacée1" = Table.ReplaceValue(#"Colonnes renommées2","L","Litteracy",Replacer.ReplaceText,{"Subject"}),
+						    #"Valeur remplacée2" = Table.ReplaceValue(#"Valeur remplacée1","N","Numeracy",Replacer.ReplaceText,{"Subject"}),
+						    #"Autres colonnes supprimées" = Table.SelectColumns(#"Valeur remplacée2",{"Level", "Subject"}),
+						    #"Doublons supprimés" = Table.Distinct(#"Autres colonnes supprimées"),
+						    #"Index ajouté" = Table.AddIndexColumn(#"Doublons supprimés", "Index", 0, 1, Int64.Type),
+						    #"Colonnes renommées3" = Table.RenameColumns(#"Index ajouté",{{"Index", "Level ID"}})
+						in
+						    #"Colonnes renommées3"
+
+			annotation PBI_NavigationStepName = Navigation
+
+			annotation PBI_ResultType = Table
+
+		table 'Entry Calendar'
+			lineageTag: 7b0eec92-c670-4601-908e-d5e6855a918a
+			dataCategory: Time
+
+			column Date
+				isKey
+				formatString: Short Date
+				lineageTag: 2ca7011e-05c1-4021-b7d1-2fa8413314b8
+				summarizeBy: none
+				isNameInferred
+				sourceColumn: [Date]
+
+				annotation SummarizationSetBy = Automatic
+
+			partition 'Entry Calendar' = calculated
+				mode: import
+				source =
+						
+						VAR Date_Debut = DATE(2021, 1, 1)
+						VAR Date_Fin = LASTDATE( 'ASER Data CIV'[Entry Date] )
+						RETURN CALENDAR( Date_Debut, Date_Fin)
+
+			annotation PBI_Id = 844ba9c1cc9f475d911851b5514f3aba
+
+		relationship AutoDetected_5b318c4c-725d-4f59-a8bf-cc2baf97c8c3
+			fromColumn: 'ASER Data CIV'.'Grade ID'
+			toColumn: 'Grades in DRENAETs'.'Grade ID'
+
+		relationship AutoDetected_f34f51e3-fb32-4e3c-8dc6-18e7b08cf6d9
+			fromColumn: 'ASER Data CIV'.'Cycle ID'
+			toColumn: Cycles.'Cycle ID'
+
+		relationship AutoDetected_f063efa2-131c-4be8-8b3f-a3571619a31b
+			fromColumn: 'ASER Data CIV'.'Level ID'
+			toColumn: 'Levels in Subjects'.'Level ID'
+
+		relationship d9062aef-b932-8c85-997b-bbd4d62d7c81
+			fromColumn: 'ASER Data CIV'.'Entry Date'
+			toColumn: 'Entry Calendar'.Date
+
+		cultureInfo fr-FR
+
+		expression Paramètre1 = #"Exemple de fichier" meta [IsParameterQuery=true, BinaryIdentifier=#"Exemple de fichier", Type="Binary", IsParameterQueryRequired=true]
+			lineageTag: 0d0598cb-5473-4bbb-a2f0-c2e02d4b0b63
+			queryGroup: 'Transformer le fichier à partir de From 24_25 (2)\Requêtes d''assistance'
+
+			annotation PBI_ResultType = Binary
+
+		expression 'Transformer l''exemple de fichier' =
+				let
+				    Source = Excel.Workbook(Paramètre1, null, true),
+				    ASER_Sheet = Source{[Item="ASER",Kind="Sheet"]}[Data]
+				in
+				    ASER_Sheet
+			lineageTag: ada244f1-8141-4aa7-834d-d203885d4522
+			queryGroup: 'Transformer le fichier à partir de From 24_25 (2)'
+
+			annotation PBI_ResultType = Table
+
+		expression 'Exemple de fichier' =
+				let
+				    Source = Folder.Files("C:\2026 04 Formation TaRL\ASER_Data\From 24_25"),
+				    Navigation1 = Source{0}[Content]
+				in
+				    Navigation1
+			lineageTag: 39cb1ec9-a4fe-4338-a9b6-6edf2b7162f8
+			queryGroup: 'Transformer le fichier à partir de From 24_25 (2)\Requêtes d''assistance'
+
+			annotation PBI_ResultType = Binary
+
+		expression 'Transformer le fichier' =
+				let
+				    Source = (Paramètre1 as binary) => let
+				    Source = Excel.Workbook(Paramètre1, null, true),
+				    ASER_Sheet = Source{[Item="ASER",Kind="Sheet"]}[Data]
+				in
+				    ASER_Sheet
+				in
+				    Source
+			mAttributes: [ FunctionQueryBinding = "{""exemplarFormulaName"":""Transformer l\u0027exemple de fichier""}" ]
+			lineageTag: a566f16d-b64e-4193-9ad6-381f9645f47a
+			queryGroup: 'Transformer le fichier à partir de From 24_25 (2)\Requêtes d''assistance'
+
+			annotation PBI_ResultType = Function
+
+			annotation PBI_NavigationStepName = Navigation
+
+		expression fx_ComparaisonColonnes =
+				(Table1 as table, Table2 as table, Alias_Table1 as text, Alias_Table2 as text) =>
+				let
+				    // Récupérer les noms des colonnes des deux tables
+				    Columns1 = Table.ColumnNames(Table1),
+				    Columns2 = Table.ColumnNames(Table2),
+				
+				    // Trier les noms des colonnes des deux tables
+				    SortedColumns1 = List.Sort(Columns1),
+				    SortedColumns2 = List.Sort(Columns2),
+				
+				    // Comparer les colonnes (vérifie noms + ordre des colonnes)
+				    SameColumns = SortedColumns1 = SortedColumns2,
+				    TestResult = if SameColumns then "Les deux tables ont les mêmes colonnes" else "Il existe des colonnes divergentes entre les 2 tables",
+				
+				    // Détection des colonnes présentes dans Table1 mais absentes de Table2
+				    MissingInTable2 = List.Difference(SortedColumns1, SortedColumns2),
+				    Table1_MissingColumns = Table.FromList(MissingInTable2, Splitter.SplitByNothing(), {"Colonne"}),
+				    ExistsInTable1 = Table.AddColumn(Table1_MissingColumns, "Présente dans la table", each Alias_Table1 ),
+				    NotInTable2 = Table.AddColumn(ExistsInTable1, "Mais pas dans la table", each Alias_Table2 ),
+				
+				    // Détection des colonnes présentes dans Table2 mais absentes de Table1
+				    MissingInTable1 = List.Difference(SortedColumns2, SortedColumns1),
+				    Table2_MissingColumns = Table.FromList(MissingInTable1, Splitter.SplitByNothing(), {"Colonne"}),
+				    ExistsInTable2 = Table.AddColumn(Table2_MissingColumns, "Présente dans la table", each Alias_Table2 ),
+				    NotInTable1 = Table.AddColumn(ExistsInTable2, "Mais pas dans la table", each Alias_Table1 ),
+				    // Fusion des résultats
+				    DiffColumns = Table.Combine({NotInTable2, NotInTable1}),
+				    // NEW : Ajout dans le record d'un champ donnant le nombre de lignes de la table des écarts
+				    NonMatchingCount = Table.RowCount(DiffColumns),
+				
+				    Result = [
+				              Test vérification = TestResult,
+				              Nombre de colonnes divergentes = NonMatchingCount,
+				              Vérifier les colonnes divergentes = DiffColumns
+				              ]
+				
+				in
+				    Result
+			lineageTag: 54f22b0a-3e68-4240-ad00-06825af29573
+
+			annotation PBI_NavigationStepName = Navigation
+
+			annotation PBI_ResultType = Function
+
+		expression 'New Data' =
+				let
+				    Source = Folder.Files("C:\2026 04 Formation TaRL\ASER_Data\From 24_25"),
+				    #"Fichiers masqués filtrés1" = Table.SelectRows(Source, each [Attributes]?[Hidden]? <> true),
+				    #"Appeler une fonction personnalisée1" = Table.AddColumn(#"Fichiers masqués filtrés1", "Transformer le fichier", each #"Transformer le fichier"([Content])),
+				    #"Colonnes renommées1" = Table.RenameColumns(#"Appeler une fonction personnalisée1", {"Name", "Source.Name"}),
+				    #"Autres colonnes supprimées1" = Table.SelectColumns(#"Colonnes renommées1", {"Source.Name", "Transformer le fichier"}),
+				    #"Colonne de tables développée1" = Table.ExpandTableColumn(#"Autres colonnes supprimées1", "Transformer le fichier", Table.ColumnNames(#"Transformer le fichier"(#"Exemple de fichier"))),
+				    #"Fractionner la colonne par délimiteur" = Table.SplitColumn(#"Colonne de tables développée1", "Source.Name", Splitter.SplitTextByDelimiter("_", QuoteStyle.Csv), {"Source.Name.1", "Source.Name.2"}),
+				    #"Fractionner la colonne par délimiteur1" = Table.SplitColumn(#"Fractionner la colonne par délimiteur", "Source.Name.2", Splitter.SplitTextByEachDelimiter({"-"}, QuoteStyle.Csv, true), {"Source.Name.2.1", "Source.Name.2.2"}),
+				    #"Fractionner la colonne par délimiteur2" = Table.SplitColumn(#"Fractionner la colonne par délimiteur1", "Source.Name.2.2", Splitter.SplitTextByDelimiter(".", QuoteStyle.Csv), {"Source.Name.2.2.1", "Source.Name.2.2.2"}),
+				    #"Autres colonnes supprimées" = Table.SelectColumns(#"Fractionner la colonne par délimiteur2",{"Source.Name.2.1", "Source.Name.2.2.1", "Column1", "Column2", "Column3", "Column4", "Column5", "Column6", "Column7", "Column8", "Column9", "Column10", "Column11", "Column12", "Column13", "Column14", "Column15", "Column16", "Column17", "Column18", "Column19", "Column20", "Column21", "Column22", "Column23", "Column24", "Column25", "Column26", "Column27", "Column28"}),
+				    #"En-têtes promus" = Table.PromoteHeaders(#"Autres colonnes supprimées", [PromoteAllScalars=true]),
+				    #"Colonnes renommées" = Table.RenameColumns(#"En-têtes promus",{{"2024-2025", "Period"}, {"BL", "Cycle"}, {"DATE DE SAISIE", "Entry Date"}, {"REGIONS", "Region"}, {"inspections", "IEPP"}, {"SECTEUR PEDAGOGIQUE", "Sector"}, {"ECOLE", "School"}, {"COURS", "Grade"}, {"NOMBRE TOTAL ELEVES DANS LA CLASSE", "Students In Class"}, {"ELEVES GARCONS TESTES", "Boys Tested"}, {"ELEVES FILLES TESTES", "Girls Tested"}, {"ELEVE TOTAL TESTES", "Total Tested"}, {"DEBUTANT LECTURE", "Beginner L"}, {"LETTRES", "Letter"}, {"MOTS", "Word"}, {"PARAGRAPHES", "Paragraph"}, {"HISTOIRE", "Story"}, {"COMPREHENSION", "Comprehension"}, {"DEBUTANT MATH", "Beginner N"}, {"1 CHIFFRE", "1-Digit"}, {"2 CHIFFRES", "2-Digit"}, {"SOUSTRACTION", "Substraction"}, {"DIVISION", "Division"}, {"ENSEIGNANT HOMME PNAPASS DANS ECOLE", "Teacher Male"}, {"ENSEIGNANT FEMME PNAPASS DANS ECOLE", "Teacher Female"}, {"DRENA", "DRENAET"}}),
+				    #"Autres colonnes supprimées2" = Table.SelectColumns(#"Colonnes renommées",{"Period", "Cycle", "Entry Date", "Region", "DRENAET", "IEPP", "Sector", "School", "Grade", "Students In Class", "Boys Tested", "Girls Tested", "Total Tested", "Beginner L", "Letter", "Word", "Paragraph", "Story", "Comprehension", "Beginner N", "1-Digit", "2-Digit", "Substraction", "Division", "Teacher Male", "Teacher Female"}),
+				    #"Type modifié" = Table.TransformColumnTypes(#"Autres colonnes supprimées2",{{"Period", type text}, {"Cycle", type text}, {"Entry Date", type datetime}, {"Region", type text}, {"DRENAET", type text}, {"IEPP", type text}, {"Sector", type text}, {"School", type text}, {"Grade", type text}, {"Students In Class", Int64.Type}, {"Boys Tested", Int64.Type}, {"Girls Tested", Int64.Type}, {"Total Tested", Int64.Type}, {"Beginner L", Int64.Type}, {"Letter", Int64.Type}, {"Word", Int64.Type}, {"Paragraph", Int64.Type}, {"Story", Int64.Type}, {"Comprehension", Int64.Type}, {"Beginner N", Int64.Type}, {"1-Digit", Int64.Type}, {"2-Digit", Int64.Type}, {"Substraction", Int64.Type}, {"Division", Int64.Type}, {"Teacher Male", Int64.Type}, {"Teacher Female", Int64.Type}}),
+				    #"Lignes filtrées" = Table.SelectRows(#"Type modifié", each ([Region] <> "REGIONS")),
+				    #"Type modifié1" = Table.TransformColumnTypes(#"Lignes filtrées",{{"Entry Date", type date}}),
+				    #"Colonnes renommées2" = Table.RenameColumns(#"Type modifié1",{{"Total Tested", "Students Tested"}})
+				in
+				    #"Colonnes renommées2"
+			lineageTag: 052ac18e-e178-4066-b7dc-70cbe9696c52
+
+			annotation PBI_NavigationStepName = Navigation
+
+			annotation PBI_ResultType = Table
+
+		expression ASER_2021-2022 =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\2026 04 Formation TaRL\ASER_Data\Before 24_25\ASER Data_2021-2022.xlsx"), null, true),
+				    ASER_Sheet = Source{[Item="ASER",Kind="Sheet"]}[Data],
+				    #"En-têtes promus" = Table.PromoteHeaders(ASER_Sheet, [PromoteAllScalars=true])
+				in
+				    #"En-têtes promus"
+			lineageTag: eadbc1b8-e0c2-4a97-b99b-8c8cf448b027
+			queryGroup: 'Sources Old Data'
+
+			annotation PBI_NavigationStepName = Navigation
+
+			annotation PBI_ResultType = Table
+
+		expression ASER_2022-2023 =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\2026 04 Formation TaRL\ASER_Data\Before 24_25\ASER Data_2022-2023.xlsx"), null, true),
+				    ASER_Sheet = Source{[Item="ASER",Kind="Sheet"]}[Data],
+				    #"En-têtes promus" = Table.PromoteHeaders(ASER_Sheet, [PromoteAllScalars=true])
+				in
+				    #"En-têtes promus"
+			lineageTag: b34597f1-bd0a-4830-b8c0-d374a0cb4012
+			queryGroup: 'Sources Old Data'
+
+			annotation PBI_NavigationStepName = Navigation
+
+			annotation PBI_ResultType = Table
+
+		expression ASER_2023-2024 =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\2026 04 Formation TaRL\ASER_Data\Before 24_25\ASER Data_2023-2024.xlsx"), null, true),
+				    ASER_Sheet = Source{[Item="ASER",Kind="Sheet"]}[Data],
+				    #"En-têtes promus" = Table.PromoteHeaders(ASER_Sheet, [PromoteAllScalars=true])
+				in
+				    #"En-têtes promus"
+			lineageTag: d92bbcaf-e3f7-4cbb-8c67-083fac3f599c
+			queryGroup: 'Sources Old Data'
+
+			annotation PBI_NavigationStepName = Navigation
+
+			annotation PBI_ResultType = Table
+
+		expression 'Old Data' =
+				let
+				    Source = Table.Combine({#"ASER_2021-2022", #"ASER_2022-2023", #"ASER_2023-2024"}),
+				    #"Type modifié" = Table.TransformColumnTypes(Source,{{"DRENAET", type text}, {"IEPP", type text}, {"School", type text}, {"Cycle", type text}, {"Grade", type text}, {"Students In Class", Int64.Type}, {"Boys Tested", Int64.Type}, {"Girls Tested", Int64.Type}, {"Beginner L", Int64.Type}, {"Letter", Int64.Type}, {"Word", Int64.Type}, {"Paragraph", Int64.Type}, {"Story", Int64.Type}, {"Beginner N", Int64.Type}, {"1-Digit", Int64.Type}, {"2-Digit", Int64.Type}, {"Substraction", Int64.Type}, {"Division", Int64.Type}, {"Comprehension", Int64.Type}, {"Entry Date", type date}, {"Region", type text}, {"Sector", type text}, {"Students Tested", Int64.Type}, {"Period", type text}, {"Teacher Male", Int64.Type}, {"Teacher Female", Int64.Type}})
+				in
+				    #"Type modifié"
+			lineageTag: bad010f8-9b9f-4161-af72-a0a4c3e45d52
+
+			annotation PBI_NavigationStepName = Navigation
+
+			annotation PBI_ResultType = Table
+
+		expression 'DRENAETs and Donors' =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\2026 04 Formation TaRL\ASER_Data\Donor and DRENAET.xlsx"), null, true),
+				    Tableau1_Table = Source{[Item="Tableau1",Kind="Table"]}[Data],
+				    #"Type modifié" = Table.TransformColumnTypes(Tableau1_Table,{{"DRENAET", type text}, {"Donors", type text}}),
+				    #"Index ajouté" = Table.AddIndexColumn(#"Type modifié", "Index", 0, 1, Int64.Type),
+				    #"Colonnes renommées" = Table.RenameColumns(#"Index ajouté",{{"Index", "DRENAET ID"}, {"Donors", "Donor"}})
+				in
+				    #"Colonnes renommées"
+			lineageTag: 7164e3e1-cb21-4b60-ad6c-7505e1b31b86
+
+			annotation PBI_NavigationStepName = Navigation
+
+			annotation PBI_ResultType = Table
+
+		expression Schools =
+				let
+				    Source = Table.Combine({#"Old Data", #"New Data"}),
+				    #"Texte en majuscules" = Table.TransformColumns(Source,{{"DRENAET", Text.Upper, type text}}),
+				    #"Valeur remplacée" = Table.ReplaceValue(#"Texte en majuscules","DRENA ","",Replacer.ReplaceText,{"DRENAET"}),
+				    #"Autres colonnes supprimées" = Table.SelectColumns(#"Valeur remplacée",{"DRENAET", "IEPP", "School", "Grade"}),
+				    #"Doublons supprimés" = Table.Distinct(#"Autres colonnes supprimées"),
+				    #"Index ajouté" = Table.AddIndexColumn(#"Doublons supprimés", "Index", 0, 1, Int64.Type),
+				    #"Colonnes renommées" = Table.RenameColumns(#"Index ajouté",{{"Index", "Grade ID"}}),
+				    #"Requêtes fusionnées" = Table.NestedJoin(#"Colonnes renommées", {"DRENAET"}, #"DRENAETs and Donors", {"DRENAET"}, "DRENAETs and Donors", JoinKind.LeftOuter),
+				    #"DRENAETs and Donors développé" = Table.ExpandTableColumn(#"Requêtes fusionnées", "DRENAETs and Donors", {"Donor"}, {"Donor"}),
+				    #"Autres colonnes supprimées1" = Table.SelectColumns(#"DRENAETs and Donors développé",{"DRENAET", "IEPP", "School"}),
+				    #"Doublons supprimés1" = Table.Distinct(#"Autres colonnes supprimées1"),
+				    #"Index ajouté1" = Table.AddIndexColumn(#"Doublons supprimés1", "Index", 0, 1, Int64.Type),
+				    #"Colonnes renommées1" = Table.RenameColumns(#"Index ajouté1",{{"Index", "School ID"}})
+				in
+				    #"Colonnes renommées1"
+			lineageTag: 09be6be2-19c0-4769-ad23-06f7b8bae5f5
+
+			annotation PBI_NavigationStepName = Navigation
+
+			annotation PBI_ResultType = Table
+
+		expression IEPPs =
+				let
+				    Source = Table.Combine({#"Old Data", #"New Data"}),
+				    #"Texte en majuscules" = Table.TransformColumns(Source,{{"DRENAET", Text.Upper, type text}}),
+				    #"Valeur remplacée" = Table.ReplaceValue(#"Texte en majuscules","DRENA ","",Replacer.ReplaceText,{"DRENAET"}),
+				    #"Autres colonnes supprimées" = Table.SelectColumns(#"Valeur remplacée",{"DRENAET", "IEPP", "School", "Grade"}),
+				    #"Doublons supprimés" = Table.Distinct(#"Autres colonnes supprimées"),
+				    #"Index ajouté" = Table.AddIndexColumn(#"Doublons supprimés", "Index", 0, 1, Int64.Type),
+				    #"Colonnes renommées" = Table.RenameColumns(#"Index ajouté",{{"Index", "Grade ID"}}),
+				    #"Requêtes fusionnées" = Table.NestedJoin(#"Colonnes renommées", {"DRENAET"}, #"DRENAETs and Donors", {"DRENAET"}, "DRENAETs and Donors", JoinKind.LeftOuter),
+				    #"DRENAETs and Donors développé" = Table.ExpandTableColumn(#"Requêtes fusionnées", "DRENAETs and Donors", {"Donor"}, {"Donor"}),
+				    #"Requêtes fusionnées1" = Table.NestedJoin(#"DRENAETs and Donors développé", {"DRENAET", "IEPP", "School"}, Schools, {"DRENAET", "IEPP", "School"}, "Schools", JoinKind.LeftOuter),
+				    #"Schools développé" = Table.ExpandTableColumn(#"Requêtes fusionnées1", "Schools", {"School ID"}, {"School ID"}),
+				    #"Autres colonnes supprimées1" = Table.SelectColumns(#"Schools développé",{"DRENAET", "IEPP"}),
+				    #"Doublons supprimés1" = Table.Distinct(#"Autres colonnes supprimées1"),
+				    #"Index ajouté1" = Table.AddIndexColumn(#"Doublons supprimés1", "Index", 0, 1, Int64.Type),
+				    #"Colonnes renommées1" = Table.RenameColumns(#"Index ajouté1",{{"Index", "IEPP ID"}})
+				in
+				    #"Colonnes renommées1"
+			lineageTag: 01df9dd4-bf23-4dc0-a0a6-02dd78e9f02e
+
+			annotation PBI_NavigationStepName = Navigation
+
+			annotation PBI_ResultType = Table
+
+		queryGroup 'Transformer le fichier à partir de From 24_25 (2)'
+
+			annotation PBI_QueryGroupOrder = 0
+
+		queryGroup 'Transformer le fichier à partir de From 24_25 (2)\Requêtes d''assistance'
+
+			annotation PBI_QueryGroupOrder = 0
+
+		queryGroup 'Sources Old Data'
+
+			annotation PBI_QueryGroupOrder = 2
+
+		annotation __PBI_TimeIntelligenceEnabled = 0
+
+		annotation PBI_QueryOrder = ["fx_ComparaisonColonnes","New Data","Paramètre1","Transformer l'exemple de fichier","Exemple de fichier","Transformer le fichier","ASER_2021-2022","ASER_2022-2023","ASER_2023-2024","Old Data","ASER Data CIV","Grades in DRENAETs","Cycles","Levels in Subjects","DRENAETs and Donors","Schools","IEPPs"]
+
+		annotation PBI_ProTooling = ["DaxQueryView_Desktop"]
+

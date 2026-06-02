@@ -1,0 +1,18 @@
+# Fichier : .gitignore
+# À placer à la racine du projet PBIP
+
+# Fichiers ignorés par défaut par Microsoft
+**/.pbi/localSettings.json
+**/.pbi/cache.abf
+
+# Ignorer les fichiers binaires Power BI
+*.pbix
+*.pbiviz
+ 
+# Ignorer les fichiers temporaires Windows
+Thumbs.db
+desktop.ini
+.vs/
+ 
+# Ignorer les paramètres locaux VS Code
+.vscode/settings.json

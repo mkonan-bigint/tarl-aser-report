@@ -1,0 +1,29 @@
+table 'Cycles interval'
+	isHidden
+	lineageTag: b34c730b-c264-4aa7-8a8d-716fb62668a4
+
+	measure 'Valeur Cycles Interval' = SELECTEDVALUE('Cycles interval'[Cycles Interval], 1)
+		formatString: 0
+		isHidden
+		lineageTag: 07adeb8e-4291-4989-b79e-bbc9a0346a03
+
+	column 'Cycles Interval'
+		isHidden
+		formatString: 0
+		lineageTag: eb6fc780-20a5-4d69-8f13-7434931bb1f3
+		summarizeBy: none
+		sourceColumn: [Value]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 0
+				}
+
+		annotation SummarizationSetBy = User
+
+	partition 'Cycles interval' = calculated
+		mode: import
+		source = GENERATESERIES(1, 5, 1)
+
+	annotation PBI_Id = 7408f001186f4868b53db12d3417c2b4
+

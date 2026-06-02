@@ -1,0 +1,13 @@
+DEFINE
+
+	VAR __BaseTable = DISTINCT(SELECTCOLUMNS(
+		'ASER Cycles Data',
+		"@Period", 'ASER Cycles Data'[Period],
+		"@Cycle ID", 'ASER Cycles Data'[Cycle ID],
+		"@School ID", 'ASER Cycles Data'[School ID],
+        "@Subject ID", 'ASER Cycles Data'[Subject ID],
+		"@Students Tested", 'ASER Cycles Data'[Students At Level]
+	))
+	
+	
+EVALUATE __BaseTable

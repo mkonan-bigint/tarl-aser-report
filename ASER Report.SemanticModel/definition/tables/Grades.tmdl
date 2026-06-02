@@ -1,0 +1,132 @@
+table Grades
+	lineageTag: 13bbfd5a-984c-40ec-9f96-fa9cfa5ec28a
+
+	column DRENAET
+		dataType: string
+		lineageTag: 6f0e51c7-fb57-4292-9077-02e07ef95652
+		summarizeBy: none
+		sourceColumn: DRENAET
+
+		annotation SummarizationSetBy = Automatic
+
+	column IEPP
+		dataType: string
+		lineageTag: 4c6cbf21-1004-4a32-8b1b-35b45803b526
+		summarizeBy: none
+		sourceColumn: IEPP
+
+		annotation SummarizationSetBy = Automatic
+
+	column School
+		dataType: string
+		lineageTag: 56f34723-637d-4fc7-b586-5fc7c3ad94c0
+		summarizeBy: none
+		sourceColumn: School
+
+		annotation SummarizationSetBy = Automatic
+
+	column Grade
+		dataType: string
+		lineageTag: a3dbe4fb-9206-4d72-88c9-2f38a61d2c6f
+		summarizeBy: none
+		sourceColumn: Grade
+		sortByColumn: 'Grade Sort'
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Grade ID'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 8c41e4f7-9423-4b0c-807a-b9f4c5c9f8a1
+		summarizeBy: none
+		sourceColumn: Grade ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'School ID'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 69f67ef1-b50d-44e8-a33b-e1e355a2f5a2
+		summarizeBy: none
+		sourceColumn: School ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'DRENAET ID'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: d0ae80a6-f981-4f7c-b7b0-8e163a7d65f4
+		summarizeBy: none
+		sourceColumn: DRENAET ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'IEPP ID'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: eee5a45d-56ba-4191-bc74-cbef16b4c645
+		summarizeBy: none
+		sourceColumn: IEPP ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Grade Sort'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: cab31000-fbca-41c0-aa3c-4a4d8931fc30
+		summarizeBy: none
+		sourceColumn: Grade Sort
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Donor
+		dataType: string
+		lineageTag: 6480ee37-df10-482b-8e55-b5b1f69aef21
+		summarizeBy: none
+		sourceColumn: Donor
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Grades = m
+		mode: import
+		source =
+				let
+				    Source = Table.Combine({#"Old Data", #"New Data"}),
+				    #"Texte en majuscules" = Table.TransformColumns(Source,{{"DRENAET", Text.Upper, type text}}),
+				    #"Valeur remplacée" = Table.ReplaceValue(#"Texte en majuscules","DRENA ","",Replacer.ReplaceText,{"DRENAET"}),
+				    #"Autres colonnes supprimées" = Table.SelectColumns(#"Valeur remplacée",{"DRENAET", "IEPP", "School", "Grade"}),
+				    #"Doublons supprimés" = Table.Distinct(#"Autres colonnes supprimées"),
+				    #"Index ajouté" = Table.AddIndexColumn(#"Doublons supprimés", "Index", 0, 1, Int64.Type),
+				    #"Colonnes renommées" = Table.RenameColumns(#"Index ajouté",{{"Index", "Grade ID"}}),
+				    #"Requêtes fusionnées" = Table.NestedJoin(#"Colonnes renommées", {"DRENAET"}, #"DRENAETs and Donors", {"DRENAET"}, "DRENAETs and Donors", JoinKind.LeftOuter),
+				    #"DRENAETs and Donors développé" = Table.ExpandTableColumn(#"Requêtes fusionnées", "DRENAETs and Donors", {"Donor", "DRENAET ID"}, {"Donor", "DRENAET ID"}),
+				    #"Requêtes fusionnées1" = Table.NestedJoin(#"DRENAETs and Donors développé", {"DRENAET", "IEPP", "School"}, Schools, {"DRENAET", "IEPP", "School"}, "Schools", JoinKind.LeftOuter),
+				    #"Schools développé" = Table.ExpandTableColumn(#"Requêtes fusionnées1", "Schools", {"School ID"}, {"School ID"}),
+				    #"Requêtes fusionnées2" = Table.NestedJoin(#"Schools développé", {"DRENAET", "IEPP"}, IEPPs, {"DRENAET", "IEPP"}, "IEPPs", JoinKind.LeftOuter),
+				    #"IEPPs développé" = Table.ExpandTableColumn(#"Requêtes fusionnées2", "IEPPs", {"IEPP ID"}, {"IEPP ID"}),
+				    #"Colonne conditionnelle ajoutée" = Table.AddColumn(#"IEPPs développé", "Grade Sort", each if [Grade] = "CE1" then 3 else if [Grade] = "CE2" then 4 else if [Grade] = "CM1" then 5 else if [Grade] = "CM2" then 6 else null),
+				    #"Type modifié" = Table.TransformColumnTypes(#"Colonne conditionnelle ajoutée",{{"Grade Sort", Int64.Type}})
+				in
+				    #"Type modifié"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

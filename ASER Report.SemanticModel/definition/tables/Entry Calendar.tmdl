@@ -1,0 +1,24 @@
+table 'Entry Calendar'
+	lineageTag: 7b0eec92-c670-4601-908e-d5e6855a918a
+	dataCategory: Time
+
+	column Date
+		isKey
+		formatString: Short Date
+		lineageTag: 2ca7011e-05c1-4021-b7d1-2fa8413314b8
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Entry Calendar' = calculated
+		mode: import
+		source =
+				
+				VAR Date_Debut = DATE(2021, 1, 1)
+				VAR Date_Fin = LASTDATE( 'ASER CIV Data'[Entry Date] )
+				RETURN CALENDAR( Date_Debut, Date_Fin)
+
+	annotation PBI_Id = 844ba9c1cc9f475d911851b5514f3aba
+

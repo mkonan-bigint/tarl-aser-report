@@ -1,0 +1,524 @@
+table Mesures
+	lineageTag: 88d328ed-b1e1-4ef2-a3ac-aee29dcb536c
+
+	measure '# Of DRENAETs' = DISTINCTCOUNT( 'Grades'[DRENAET] )
+		formatString: #,0
+		displayFolder: 0. Overall KPIs
+		lineageTag: 18a3d325-e8d5-453f-b685-22788919c997
+
+	measure '# Of IEPPs' = DISTINCTCOUNT( 'Grades'[IEPP] )
+		formatString: #,0
+		displayFolder: 0. Overall KPIs
+		lineageTag: cf5d988b-65aa-4447-9c26-9f74f6fda9a7
+
+	measure '# Of Schools' = DISTINCTCOUNT( 'Grades'[School ID] )
+		formatString: #,0
+		displayFolder: 0. Overall KPIs
+		lineageTag: cb9668aa-733c-44e6-aa9e-f06733f64b35
+
+	measure '# Of Schools Reached' = DISTINCTCOUNT( 'ASER CIV Data'[School ID] )
+		formatString: #,0
+		displayFolder: 0. Overall KPIs
+		lineageTag: 067b1b3d-1b52-4e22-bc96-5aaa63df3ad2
+
+	measure '# Of Students In Cycle' =
+			
+			VAR __CurrentCycle = MAX( Cycles[Cycle ID] )
+			
+			VAR __BaseTable = DISTINCT(SELECTCOLUMNS(
+					'ASER CIV Data',
+					"@Grade ID", 'ASER CIV Data'[Grade ID],
+					"@Cycle ID", 'ASER CIV Data'[Cycle ID],
+					"@Students In Class", 'ASER CIV Data'[Students In Class]
+				))
+			
+			    VAR __FilteredTable = FILTER( __BaseTable, [@Cycle ID] = __CurrentCycle )
+			
+			RETURN SUMX( __FilteredTable, [@Students In Class] )
+		formatString: #,0
+		displayFolder: 1. Cycle specific KPIs
+		lineageTag: 32a8b5ca-4fd8-4f29-8e78-d208d54298d1
+
+	measure '# Of Students Tested In Cycle' =
+			
+			VAR __CurrentCycle = MAX( Cycles[Cycle ID] )
+			VAR __CurrentSubject = MAX( 'ASER CIV Data'[Subject ID] )
+			
+			VAR __BaseTable = DISTINCT(SELECTCOLUMNS(
+					'ASER CIV Data',
+					"@Grade ID", 'ASER CIV Data'[Grade ID],
+					"@Cycle ID", 'ASER CIV Data'[Cycle ID],
+					"@Level ID", 'ASER CIV Data'[Level ID],
+					"@Subject ID", 'ASER CIV Data'[Subject ID],
+					"@Students At Level", 'ASER CIV Data'[Students At Level]
+				))
+			
+			VAR __FilteredTable = FILTER( __BaseTable, [@Cycle ID] = __CurrentCycle  && [@Subject ID] = __CurrentSubject)
+			
+			RETURN SUMX( __FilteredTable, [@Students At Level] )
+		formatString: #,0
+		displayFolder: 1. Cycle specific KPIs
+		lineageTag: 4589fda1-cd39-43d9-8eb0-b4e3ad2e6e2f
+
+	measure '_# Of Students Reached In Program' = ```
+			
+			VAR __NbDistinctCycles =
+			    COUNTROWS( VALUES( Cycles[Cycle ID] ) )
+			
+			-- Table dédupliquée : une ligne par (School, Grade, Cycle)
+			-- MAX sert uniquement à dédupliquer les lignes Level ID
+			-- La table ramène l'effectif de chaque classe pour à chaque cycle
+			VAR __BaseTable =
+			    SUMMARIZE(
+			        'ASER CIV Data',
+			        'ASER CIV Data'[School ID],
+			        'ASER CIV Data'[Grade ID],
+			        'ASER CIV Data'[Cycle ID],
+			        "@Effectif", MAX( 'ASER CIV Data'[Students In Class] )
+			    )
+			
+			-- ── CAS 1 : Cycle unique
+			VAR __SingleCycle =
+			    SUMX( __BaseTable, [@Effectif] )
+			
+			-- ── CAS 2 : Multi-cycles
+			-- Étape 1 : effectif de chaque école pour chaque cycle (somme des classes)
+			VAR __EffectifParEcoleParCycle =
+			    SUMMARIZE(
+			        __BaseTable,
+			        'ASER CIV Data'[School ID],
+			        'ASER CIV Data'[Cycle ID],
+			        "@EffectifCycle",
+			            VAR __CurSchool = 'ASER CIV Data'[School ID]
+			            VAR __CurCycle  = 'ASER CIV Data'[Cycle ID]
+			            RETURN
+			                SUMX(
+			                    FILTER( __BaseTable,
+			                        'ASER CIV Data'[School ID] = __CurSchool &&
+			                        'ASER CIV Data'[Cycle ID]  = __CurCycle
+			                    ),
+			                    [@Effectif]
+			                )
+			    )
+			
+			-- Étape 2 : pour chaque école, MAX des effectifs sur les cycles
+			VAR __MaxParEcole =
+			    SUMMARIZE(
+			        __EffectifParEcoleParCycle,
+			        'ASER CIV Data'[School ID],
+			        "@MaxEffectif", 
+			        VAR __CurSchool = 'ASER CIV Data'[School ID]
+			        RETURN
+			            MAXX(
+			                FILTER( __EffectifParEcoleParCycle,
+			                    'ASER CIV Data'[School ID] = __CurSchool
+			                ),
+			                [@EffectifCycle]
+			        )
+			    )
+			
+			-- Étape 3 : somme des maximums
+			VAR __MultiCycle =
+			    SUMX( __MaxParEcole, [@MaxEffectif] )
+			
+			RETURN
+			    IF( __NbDistinctCycles = 1, __SingleCycle, __MultiCycle )
+			```
+		formatString: #,0
+		displayFolder: 2. Program specific KPIs
+		lineageTag: 24fd0b70-42c6-4753-ba54-2d4d41e7d508
+
+	measure '% Change Rate Of Students Tested' =
+			
+			
+			VAR __CurrentNumberOfStudents = [# Of Students Tested In Cycle]
+			VAR __PreviousNumberOfStudents = [# Of Students Tested In Previous Cycle]
+			VAR __NumberChange = __CurrentNumberOfStudents - __PreviousNumberOfStudents
+			VAR __PercentageChange = DIVIDE( __NumberChange, __PreviousNumberOfStudents )
+			RETURN __PercentageChange
+		displayFolder: 0. Overall KPIs
+		lineageTag: 20bfb364-664a-4ff1-be41-a72bc3ddca38
+
+		formatStringDefinition = "+0 %;-0 %;0 %"
+
+	measure '# Of Students Tested In Previous Cycle' =
+			
+			VAR __NumberOfCycles = 'Cycles interval'[Valeur Cycles Interval]
+			VAR __CurrentCycle = MAX( Cycles[Cycle ID] ) - 'Cycles interval'[Valeur Cycles Interval]
+			VAR __CurrentSubject = MAX( 'ASER CIV Data'[Subject ID] )
+			
+			VAR __BaseTable =
+			    DISTINCT(
+			        SELECTCOLUMNS(
+			            CALCULATETABLE(
+			                'ASER CIV Data',
+			                ALL( Cycles )
+			            ),
+			            "@Cycle ID",        'ASER CIV Data'[Cycle ID],
+			            "@School ID",       'ASER CIV Data'[School ID],
+			            "@Subject ID",      'ASER CIV Data'[Subject ID],
+			            "@Students Tested", 'ASER CIV Data'[Students At Level]
+			        )
+			    )
+			
+			VAR __FilteredTable =
+			    FILTER(
+			        __BaseTable,
+			        [@Cycle ID] = __CurrentCycle &&
+			        [@Subject ID] = __CurrentSubject
+			    )
+			
+			RETURN
+			    SUMX( __FilteredTable, [@Students Tested] )
+		formatString: #,0
+		displayFolder: 1. Cycle specific KPIs
+		lineageTag: 450a8c52-7905-4a81-9a13-73e707afd5b8
+
+	measure '# Of Boys Tested In Cycle' =
+			
+			VAR __CurrentCycle = MAX( Cycles[Cycle ID] )
+			
+			VAR __BaseTable = DISTINCT(SELECTCOLUMNS(
+					'ASER CIV Data',
+					"@Grade ID", 'ASER CIV Data'[Grade ID],
+					"@Cycle ID", 'ASER CIV Data'[Cycle ID],
+					"@Boys Tested In Class", 'ASER CIV Data'[Boys Tested In Class]
+				))
+			
+			    VAR __FilteredTable = FILTER( __BaseTable, [@Cycle ID] = __CurrentCycle)
+			
+			RETURN SUMX( __FilteredTable, [@Boys Tested In Class] )
+		formatString: #,0
+		displayFolder: 1. Cycle specific KPIs
+		lineageTag: 38384916-df62-49fd-9dae-93494f57aa80
+
+	measure '# Of Girls Tested In Cycle' =
+			
+			VAR __CurrentCycle = MAX( Cycles[Cycle ID] )
+			
+			VAR __BaseTable = DISTINCT(SELECTCOLUMNS(
+					'ASER CIV Data',
+					"@Grade ID", 'ASER CIV Data'[Grade ID],
+					"@Cycle ID", 'ASER CIV Data'[Cycle ID],
+					"@Girls Tested In Class", 'ASER CIV Data'[Girls Tested In Class]
+				))
+			
+			    VAR __FilteredTable = FILTER( __BaseTable, [@Cycle ID] = __CurrentCycle )
+			
+			RETURN SUMX( __FilteredTable, [@Girls Tested In Class] )
+		formatString: #,0
+		displayFolder: 1. Cycle specific KPIs
+		lineageTag: bc504718-b829-4160-adbb-0d4caa6c15d6
+
+	measure '% Of Students With High Litteracy In Cycle' = ```
+			
+			DIVIDE( 
+			    [# Of Students With High Litteracy In Cycle],
+			    [# Of Students Tested In Cycle]
+			    )
+			```
+		formatString: 0\ %;-0\ %;0\ %
+		displayFolder: 1. Cycle specific KPIs
+		lineageTag: 1d3c5cd4-246e-4480-8b48-63d56ff14838
+
+	measure '# Of Students With High Litteracy In Cycle' =
+			
+			VAR __CurrentCycle = MAX( Cycles[Cycle ID] )
+			
+				VAR __GradesData =
+				SELECTCOLUMNS(
+					'ASER CIV Data',
+					"@Cycle ID", 'ASER CIV Data'[Cycle ID],
+					"@Grade", RELATED( Grades[Grade] ),
+			        "@Group Level", RELATED( 'Levels in Subjects'[Group Level Sort] ),
+					"@Students At Level", 'ASER CIV Data'[Students At Level]
+				)
+			
+			    VAR __FilteredTable = FILTER( __GradesData, [@Cycle ID] = __CurrentCycle  && [@Group Level] = 3)
+			
+			RETURN SUMX( __FilteredTable, [@Students At Level] )
+		formatString: #,0
+		displayFolder: 1. Cycle specific KPIs
+		lineageTag: 3f415c52-f7fc-4d20-993a-6cfa641ab613
+
+	measure '% Of Students With High Litteracy At BL' = ```
+			
+			CALCULATE (DIVIDE( 
+			    [# Of Students With High Litteracy In Cycle],
+			    [# Of Students Tested In Cycle]
+			    ), Cycles[Cycle] = "BL" )
+			```
+		formatString: 0\ %;-0\ %;0\ %
+		displayFolder: 1. Cycle specific KPIs
+		lineageTag: 80db46d6-8cbf-4667-b72f-4c291d6825be
+
+	measure '% Of Students With High Litteracy At EL' = ```
+			
+			CALCULATE (DIVIDE( 
+			    [# Of Students With High Litteracy In Cycle],
+			    [# Of Students Tested In Cycle]
+			    ), Cycles[Cycle] = "EL" )
+			```
+		formatString: 0\ %;-0\ %;0\ %
+		displayFolder: 1. Cycle specific KPIs
+		lineageTag: fcbfe87e-5312-417d-b542-0b17a4dfb42b
+
+	measure 'pp Of Litteracy Improvemnt From BL to EL' =
+			
+			VAR __EL = [% Of Students With High Litteracy At EL]
+			VAR __BL = [% Of Students With High Litteracy At BL]
+			RETURN __EL - __BL
+		formatString: 0\ %;-0\ %;0\ %
+		displayFolder: 2. Program specific KPIs
+		lineageTag: 420efd55-0b13-43f0-9e12-93ef15d1dfd1
+
+	measure '# Of Students With Low Litteracy In Cycle' =
+			
+			VAR __CurrentCycle = MAX( Cycles[Cycle ID] )
+			
+			VAR __BaseTable = DISTINCT(SELECTCOLUMNS(
+					'ASER CIV Data',
+					"@Grade ID", 'ASER CIV Data'[Grade ID],
+					"@Cycle ID", 'ASER CIV Data'[Cycle ID],
+					"@Group Level", RELATED( 'Levels in Subjects'[Group Level Sort] ),
+					"@Students At Level", 'ASER CIV Data'[Students At Level]
+				))
+			
+			    VAR __FilteredTable = FILTER( __BaseTable, [@Cycle ID] = __CurrentCycle  && [@Group Level] = 1)
+			
+			RETURN SUMX( __FilteredTable, [@Students At Level] )
+		formatString: #,0
+		displayFolder: 1. Cycle specific KPIs
+		lineageTag: 211d6b35-41e0-40ab-b4f4-aa8ae078e2af
+
+	measure 'pp Of Litteracy Difficulty Reduction From BL to EL' =
+			
+			VAR __EL = [% Of Students With Low Litteracy At EL]
+			VAR __BL = [% Of Students With Low Litteracy At BL]
+			RETURN __BL - __EL
+		formatString: 0\ %;-0\ %;0\ %
+		displayFolder: 2. Program specific KPIs
+		lineageTag: 92710847-def6-4456-92ca-92e25a8d0deb
+
+	measure '% Of Students With Low Litteracy At EL' = ```
+			
+			CALCULATE (DIVIDE( 
+			    [# Of Students With Low Litteracy In Cycle],
+			    [# Of Students Tested In Cycle]
+			    ), Cycles[Cycle] = "EL" )
+			```
+		formatString: 0\ %;-0\ %;0\ %
+		displayFolder: 1. Cycle specific KPIs
+		lineageTag: 0152dfa5-ae6d-484a-8ae0-bc918afaca61
+
+	measure '% Of Students With Low Litteracy At BL' = ```
+			
+			CALCULATE (DIVIDE( 
+			    [# Of Students With Low Litteracy In Cycle],
+			    [# Of Students Tested In Cycle]
+			    ), Cycles[Cycle] = "BL" )
+			```
+		formatString: 0\ %;-0\ %;0\ %
+		displayFolder: 1. Cycle specific KPIs
+		lineageTag: a36eda9a-1aaa-41d6-913e-4ebcc7e571b2
+
+	measure '# Of Students With High Numeracy In Cycle' =
+			
+			VAR __CurrentCycle = MAX( Cycles[Cycle ID] )
+			
+				VAR __GradesData =
+				SELECTCOLUMNS(
+					'ASER CIV Data',
+					"@Cycle ID", 'ASER CIV Data'[Cycle ID],
+					"@Grade", RELATED( Grades[Grade] ),
+			        "@Group Level", RELATED( 'Levels in Subjects'[Group Level Sort] ),
+					"@Students At Level", 'ASER CIV Data'[Students At Level]
+				)
+			
+			    VAR __FilteredTable = FILTER( __GradesData, [@Cycle ID] = __CurrentCycle  && [@Group Level] = 6)
+			
+			RETURN SUMX( __FilteredTable, [@Students At Level] )
+		formatString: #,0
+		displayFolder: 1. Cycle specific KPIs
+		lineageTag: a2cf9272-e7db-4400-87ff-c1009e77cb46
+
+	measure '% Of Students With High Numeracy At BL' = ```
+			
+			CALCULATE (DIVIDE( 
+			    [# Of Students With High Numeracy In Cycle],
+			    [# Of Students Tested In Cycle]
+			    ), Cycles[Cycle] = "BL" )
+			```
+		formatString: 0\ %;-0\ %;0\ %
+		displayFolder: 1. Cycle specific KPIs
+		lineageTag: 001a5102-7096-4460-89e3-c4da2e95658c
+
+	measure '% Of Students With High Numeracy At EL' = ```
+			
+			CALCULATE (DIVIDE( 
+			    [# Of Students With High Numeracy In Cycle],
+			    [# Of Students Tested In Cycle]
+			    ), Cycles[Cycle] = "EL" )
+			```
+		formatString: 0\ %;-0\ %;0\ %
+		displayFolder: 1. Cycle specific KPIs
+		lineageTag: e6cafb5c-b178-462a-a3b5-f3942aab4247
+
+	measure 'pp Of Numeracy Improvemnt From BL to EL' =
+			
+			VAR __EL = [% Of Students With High Numeracy At EL]
+			VAR __BL = [% Of Students With High Numeracy At BL]
+			RETURN __EL - __BL
+		formatString: 0\ %;-0\ %;0\ %
+		displayFolder: 2. Program specific KPIs
+		lineageTag: 90bd8cc0-78a0-4549-8af0-9020b7347640
+
+	measure '% Of Students With High Numeracy In Cycle' = ```
+			
+			DIVIDE( 
+			    [# Of Students With High Numeracy In Cycle],
+			    [# Of Students Tested In Cycle]
+			    )
+			```
+		formatString: 0\ %;-0\ %;0\ %
+		displayFolder: 1. Cycle specific KPIs
+		lineageTag: 4661b9a4-6f23-4856-83d9-27f15acd5bb0
+
+	measure '# Of Students With Low Numeracy In Cycle' =
+			
+			VAR __CurrentCycle = MAX( Cycles[Cycle ID] )
+			
+			VAR __BaseTable = DISTINCT(SELECTCOLUMNS(
+					'ASER CIV Data',
+					"@Grade ID", 'ASER CIV Data'[Grade ID],
+					"@Cycle ID", 'ASER CIV Data'[Cycle ID],
+					"@Group Level", RELATED( 'Levels in Subjects'[Group Level Sort] ),
+					"@Students At Level", 'ASER CIV Data'[Students At Level]
+				))
+			
+			    VAR __FilteredTable = FILTER( __BaseTable, [@Cycle ID] = __CurrentCycle  && [@Group Level] = 4)
+			
+			RETURN SUMX( __FilteredTable, [@Students At Level] )
+		formatString: #,0
+		displayFolder: 1. Cycle specific KPIs
+		lineageTag: 7b8873f5-05ca-4796-a7b1-9fdb4f258ba0
+
+	measure '% Of Students With Low Numeracy In Cycle' = ```
+			
+			DIVIDE( 
+			    [# Of Students With Low Numeracy In Cycle],
+			    [# Of Students Tested In Cycle]
+			    )
+			```
+		formatString: 0\ %;-0\ %;0\ %
+		displayFolder: 1. Cycle specific KPIs
+		lineageTag: 6d2a5faa-4cf3-46a7-bd1d-41d31d8b4a13
+
+	measure '% Of Students With Low Numeracy At BL' = ```
+			
+			CALCULATE (DIVIDE( 
+			    [# Of Students With Low Numeracy In Cycle],
+			    [# Of Students Tested In Cycle]
+			    ), Cycles[Cycle] = "BL" )
+			```
+		formatString: 0\ %;-0\ %;0\ %
+		displayFolder: 1. Cycle specific KPIs
+		lineageTag: c03f20e5-6c17-498f-bf5c-16f5b2cee833
+
+	measure '% Of Students With Low Numeracy At EL' = ```
+			
+			CALCULATE (DIVIDE( 
+			    [# Of Students With Low Numeracy In Cycle],
+			    [# Of Students Tested In Cycle]
+			    ), Cycles[Cycle] = "EL" )
+			```
+		formatString: 0\ %;-0\ %;0\ %
+		displayFolder: 1. Cycle specific KPIs
+		lineageTag: 3f005491-75a7-4af6-994a-abfd439986c8
+
+	measure 'pp Of Numeracy Difficulty Reduction From BL to EL' =
+			
+			VAR __EL = [% Of Students With Low Numeracy At EL]
+			VAR __BL = [% Of Students With Low Numeracy At BL]
+			RETURN __BL - __EL
+		formatString: 0\ %;-0\ %;0\ %
+		displayFolder: 2. Program specific KPIs
+		lineageTag: aa0fab98-392c-4b0c-93a3-e07b66114535
+
+	measure '% Of Students With Low Litteracy In Cycle' = ```
+			
+			DIVIDE( 
+			    [# Of Students With Low Litteracy In Cycle],
+			    [# Of Students Tested In Cycle]
+			    )
+			```
+		formatString: 0\ %;-0\ %;0\ %
+		displayFolder: 1. Cycle specific KPIs
+		lineageTag: 16eb3db3-45d0-4e40-b785-cc7aad0904e1
+
+	measure 'Selected Cycle' = MAX( Cycles[Cycle Name] )
+		displayFolder: 1. Cycle specific KPIs
+		lineageTag: 825df335-d53b-4f76-ba13-9c005806ccdd
+
+	measure 'Compared To Cycle' =
+			
+			VAR __CurrentCycleID = MAX( Cycles[Cycle ID] )
+			VAR __CurrentCycle = MAX( Cycles[Cycle Name] )
+			VAR __ComparedToID = __CurrentCycleID - 'Cycles interval'[Valeur Cycles Interval]
+			VAR __ComparedToName = LOOKUPVALUE( Cycles[Cycle Name], Cycles[Cycle ID], __ComparedToID)
+			
+			RETURN __ComparedToName
+		displayFolder: 1. Cycle specific KPIs
+		lineageTag: 063a0961-39b6-44c8-8f64-9217198fd396
+
+	measure '# Of Boys and Girls Tested In Cycle' = [# Of Boys Tested In Cycle] + [# Of Girls Tested In Cycle]
+		formatString: #,0
+		displayFolder: 1. Cycle specific KPIs
+		lineageTag: 5e9db005-b7fb-4ae9-806a-8bb9cf9df357
+
+	measure '# Of DRENAETs Reached' = DISTINCTCOUNT( 'ASER CIV Data'[DRENAET ID] )
+		formatString: #,0
+		displayFolder: 0. Overall KPIs
+		lineageTag: 5b030cf3-e886-45ad-b49a-4d2e953a1225
+
+	measure '# Of IEPPs Reached' = DISTINCTCOUNT( 'ASER CIV Data'[IEPP ID] )
+		formatString: #,0
+		displayFolder: 0. Overall KPIs
+		lineageTag: 70672695-dd88-4a1c-986e-42126c156b3c
+
+	measure '% Of Schools That Submitted Their data' =
+			
+			DIVIDE( [# Of Schools Reached], [# Of Schools] )
+		formatString: 0\ %;-0\ %;0\ %
+		displayFolder: 0. Overall KPIs
+		lineageTag: cd4870d4-ea1e-4ef7-b073-db5a7effc9de
+
+	measure 'Home Page Title' = "Endline Assessment Results"
+		lineageTag: 461d8922-0f4d-4b22-ac4e-87a1f7386f05
+
+	measure 'Home Page SubTitle' =
+			
+			VAR __Period = MAX( Cycles[Period] )
+			VAR __SubTitle = "Academic year " & __Period & ", Côte d'Ivoire"
+			RETURN __SubTitle
+		lineageTag: faf5ccdc-df33-4320-9e5e-0c02df24d6ad
+
+	measure 'Reach Stats Title' =
+			
+			VAR __Period = MAX( Cycles[Period] )
+			RETURN "Reach in " & __Period
+		lineageTag: 97560163-30b3-4ee3-be3b-c833e8051136
+
+	partition Mesures = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#"Colonne 1" = _t]),
+				    #"Colonnes supprimées" = Table.RemoveColumns(Source,{"Colonne 1"})
+				in
+				    #"Colonnes supprimées"
+
+	annotation PBI_ResultType = Exception
+
+	annotation PBI_NavigationStepName = Navigation
+

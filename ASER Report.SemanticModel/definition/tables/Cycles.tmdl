@@ -1,0 +1,73 @@
+table Cycles
+	lineageTag: 2dc2b491-cd42-4119-9a49-bf55e1235237
+
+	column 'Cycle ID'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 49860b4c-a29f-4ee8-95b2-a4bcc7b08489
+		summarizeBy: none
+		sourceColumn: Cycle ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Cycle
+		dataType: string
+		lineageTag: 0ee720e5-5240-4f6a-9fa0-0fba5811fa37
+		summarizeBy: none
+		sourceColumn: Cycle
+		sortByColumn: 'Cycle Sort'
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Period
+		dataType: string
+		lineageTag: 54bef491-3e23-4eed-8f45-95ec5713191a
+		summarizeBy: none
+		sourceColumn: Period
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cycle Name'
+		dataType: string
+		lineageTag: dfef2b3a-3e1f-4690-bb57-9750c145c4e1
+		summarizeBy: none
+		sourceColumn: Cycle Name
+		sortByColumn: 'Cycle ID'
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cycle Sort'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 8d68d0fc-353c-4699-b1a4-5fe0ea19c5eb
+		summarizeBy: none
+		sourceColumn: Cycle Sort
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Cycles = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("Zcw7CsAgEADRu2xtwF01nzaQLjmBeP9rZDUEBmymeMXUKipBzttj0XTxmLRQxVyemZPLNXPGxDqnwQUT8IoJeMMkdc6Dd0zAByZgjbjk7uVzxYZu+PzeXg==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#"Cycle ID" = _t, Cycle = _t, Period = _t]),
+				    #"Type modifié" = Table.TransformColumnTypes(Source,{{"Cycle ID", Int64.Type}, {"Cycle", type text}, {"Period", type text}}),
+				    #"Personnalisée ajoutée" = Table.AddColumn(#"Type modifié", "Cycle Name", each [Period] & " " & [Cycle]),
+				    #"Colonne conditionnelle ajoutée" = Table.AddColumn(#"Personnalisée ajoutée", "Cycle Sort", each if [Cycle] = "BL" then 1 else if [Cycle] = "ML" then 2 else if [Cycle] = "EL" then 3 else null),
+				    #"Type modifié1" = Table.TransformColumnTypes(#"Colonne conditionnelle ajoutée",{{"Cycle Name", type text}, {"Cycle Sort", Int64.Type}})
+				in
+				    #"Type modifié1"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

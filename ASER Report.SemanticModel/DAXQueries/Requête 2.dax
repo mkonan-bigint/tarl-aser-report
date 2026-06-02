@@ -1,0 +1,12 @@
+DEFINE
+VAR __BaseTable =
+    SUMMARIZE(
+        'ASER Data CIV',
+        'ASER Data CIV'[School ID],
+        'ASER Data CIV'[Grade ID],
+        'ASER Data CIV'[Cycle ID],
+        'ASER Data CIV'[Level ID],
+        "@StudentsTested", MAX( 'ASER Data CIV'[Students Tested] )
+    )
+	
+EVALUATE __BaseTable

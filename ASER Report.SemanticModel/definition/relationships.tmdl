@@ -1,0 +1,16 @@
+relationship AutoDetected_5b318c4c-725d-4f59-a8bf-cc2baf97c8c3
+	fromColumn: 'ASER CIV Data'.'Grade ID'
+	toColumn: Grades.'Grade ID'
+
+relationship AutoDetected_f34f51e3-fb32-4e3c-8dc6-18e7b08cf6d9
+	fromColumn: 'ASER CIV Data'.'Cycle ID'
+	toColumn: Cycles.'Cycle ID'
+
+relationship AutoDetected_f063efa2-131c-4be8-8b3f-a3571619a31b
+	fromColumn: 'ASER CIV Data'.'Level ID'
+	toColumn: 'Levels in Subjects'.'Level ID'
+
+relationship d9062aef-b932-8c85-997b-bbd4d62d7c81
+	fromColumn: 'ASER CIV Data'.'Entry Date'
+	toColumn: 'Entry Calendar'.Date
+

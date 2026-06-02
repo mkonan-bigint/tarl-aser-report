@@ -1,0 +1,194 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/3.2.0/schema.json",
+  "themeCollection": {
+    "baseTheme": {
+      "name": "Fluent2-CY26SU04",
+      "reportVersionAtImport": {
+        "visual": "2.8.0",
+        "report": "3.2.0",
+        "page": "2.3.1"
+      },
+      "type": "SharedResources"
+    },
+    "customTheme": {
+      "name": "TaRL-Africa5989797339417177.json",
+      "reportVersionAtImport": {
+        "visual": "2.8.0",
+        "report": "3.2.0",
+        "page": "2.3.1"
+      },
+      "type": "RegisteredResources"
+    }
+  },
+  "objects": {
+    "section": [
+      {
+        "properties": {
+          "verticalAlignment": {
+            "expr": {
+              "Literal": {
+                "Value": "'Top'"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "outspacePane": [
+      {
+        "properties": {
+          "expanded": {
+            "expr": {
+              "Literal": {
+                "Value": "false"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "resourcePackages": [
+    {
+      "name": "SharedResources",
+      "type": "SharedResources",
+      "items": [
+        {
+          "name": "Fluent2-CY26SU04",
+          "path": "BaseThemes/Fluent2-CY26SU04.json",
+          "type": "BaseTheme"
+        }
+      ]
+    },
+    {
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
+        {
+          "name": "Diapositive148093994725091516.PNG",
+          "path": "Diapositive148093994725091516.PNG",
+          "type": "Image"
+        },
+        {
+          "name": "Diapositive2026116986589033053.PNG",
+          "path": "Diapositive2026116986589033053.PNG",
+          "type": "Image"
+        },
+        {
+          "name": "Diapositive2027294921849477904.PNG",
+          "path": "Diapositive2027294921849477904.PNG",
+          "type": "Image"
+        },
+        {
+          "name": "Diapositive20439491172894797.PNG",
+          "path": "Diapositive20439491172894797.PNG",
+          "type": "Image"
+        },
+        {
+          "name": "Diapositive20608276600398836.PNG",
+          "path": "Diapositive20608276600398836.PNG",
+          "type": "Image"
+        },
+        {
+          "name": "Diapositive207488195767934691.PNG",
+          "path": "Diapositive207488195767934691.PNG",
+          "type": "Image"
+        },
+        {
+          "name": "Diapositive223637178794017644.PNG",
+          "path": "Diapositive223637178794017644.PNG",
+          "type": "Image"
+        },
+        {
+          "name": "Diapositive22965798037025268.PNG",
+          "path": "Diapositive22965798037025268.PNG",
+          "type": "Image"
+        },
+        {
+          "name": "Diapositive234598573564343615.PNG",
+          "path": "Diapositive234598573564343615.PNG",
+          "type": "Image"
+        },
+        {
+          "name": "Diapositive240213738781680375.PNG",
+          "path": "Diapositive240213738781680375.PNG",
+          "type": "Image"
+        },
+        {
+          "name": "Diapositive241803752430968044.PNG",
+          "path": "Diapositive241803752430968044.PNG",
+          "type": "Image"
+        },
+        {
+          "name": "Diapositive24604234009635305.PNG",
+          "path": "Diapositive24604234009635305.PNG",
+          "type": "Image"
+        },
+        {
+          "name": "Diapositive246886601354075985.PNG",
+          "path": "Diapositive246886601354075985.PNG",
+          "type": "Image"
+        },
+        {
+          "name": "Diapositive26295828100445505.PNG",
+          "path": "Diapositive26295828100445505.PNG",
+          "type": "Image"
+        },
+        {
+          "name": "Diapositive26606529515721847.PNG",
+          "path": "Diapositive26606529515721847.PNG",
+          "type": "Image"
+        },
+        {
+          "name": "Diapositive26762976032872845.PNG",
+          "path": "Diapositive26762976032872845.PNG",
+          "type": "Image"
+        },
+        {
+          "name": "Diapositive29683345598312445.PNG",
+          "path": "Diapositive29683345598312445.PNG",
+          "type": "Image"
+        },
+        {
+          "name": "Diapositive29855861244442917.PNG",
+          "path": "Diapositive29855861244442917.PNG",
+          "type": "Image"
+        },
+        {
+          "name": "drenaet_img8356319764846721.png",
+          "path": "drenaet_img8356319764846721.png",
+          "type": "Image"
+        },
+        {
+          "name": "drenaet_img8920860042061809.png",
+          "path": "drenaet_img8920860042061809.png",
+          "type": "Image"
+        },
+        {
+          "name": "pupils_img7116967251911133.png",
+          "path": "pupils_img7116967251911133.png",
+          "type": "Image"
+        },
+        {
+          "name": "schools_img9524959656224049.png",
+          "path": "schools_img9524959656224049.png",
+          "type": "Image"
+        },
+        {
+          "name": "TaRL-Africa5989797339417177.json",
+          "path": "TaRL-Africa5989797339417177.json",
+          "type": "CustomTheme"
+        }
+      ]
+    }
+  ],
+  "settings": {
+    "useStylableVisualContainerHeader": true,
+    "exportDataMode": "AllowSummarized",
+    "defaultDrillFilterOtherVisuals": true,
+    "allowChangeFilterTypes": true,
+    "useEnhancedTooltips": true,
+    "filterPaneHiddenInEditMode": true,
+    "useDefaultAggregateDisplayName": true
+  }
+}

@@ -1,0 +1,217 @@
+table 'ASER CIV Data'
+	isHidden
+	lineageTag: 2271c66e-66ce-4fa7-a6bc-86fce794e533
+
+	column 'Students In Class'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: c0c0f07e-57ed-4395-a1a3-9d914446917a
+		summarizeBy: sum
+		sourceColumn: Students In Class
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Teacher Male In School'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 2b9779c5-cf30-4062-9cfc-6c2cda370ff5
+		summarizeBy: sum
+		sourceColumn: Teacher Male In School
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Teacher Female In School'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 8a4e7a0b-fe18-4ea2-bccc-36697874f991
+		summarizeBy: sum
+		sourceColumn: Teacher Female In School
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Students At Level'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 99971a1a-6f6a-4972-a065-83b58b2b625f
+		summarizeBy: sum
+		sourceColumn: Students At Level
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Grade ID'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 667b7477-273a-49ab-84e7-72d986743ab3
+		summarizeBy: none
+		sourceColumn: Grade ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cycle ID'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 52b5df66-7fdd-4091-ba55-7092d9fc1f52
+		summarizeBy: none
+		sourceColumn: Cycle ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Level ID'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 544caaf8-e433-43fa-9b24-141d70464cea
+		summarizeBy: none
+		sourceColumn: Level ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Entry Date'
+		dataType: dateTime
+		isHidden
+		formatString: Short Date
+		lineageTag: 689ce407-92c9-4739-bfd9-0e123c388b49
+		summarizeBy: none
+		sourceColumn: Entry Date
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'School ID'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 6bb538e5-d574-4891-a5bd-0529f5e9151b
+		summarizeBy: none
+		sourceColumn: School ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column 'DRENAET ID'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 13e63cc0-d761-4923-98e3-1c0411c51893
+		summarizeBy: count
+		sourceColumn: DRENAET ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'IEPP ID'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 9d8473a5-a469-4722-bdec-25a101d71736
+		summarizeBy: count
+		sourceColumn: IEPP ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Period
+		dataType: string
+		isHidden
+		lineageTag: 39e78b8d-381c-468f-b4ed-a92e259a53bc
+		summarizeBy: none
+		sourceColumn: Period
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Subject ID'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 1abcfcd1-7179-46f4-b90e-85716d718fd3
+		summarizeBy: count
+		sourceColumn: Subject ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Boys Tested In Class'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 37b20696-7757-4121-b8dc-8d51ee2d74f0
+		summarizeBy: sum
+		sourceColumn: Boys Tested In Class
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Girls Tested In Class'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: e60c6c3e-82c3-4f54-ba11-77795003fe52
+		summarizeBy: sum
+		sourceColumn: Girls Tested In Class
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'ASER CIV Data' = m
+		mode: import
+		source =
+				let
+				    Source = Table.Combine({#"Old Data", #"New Data"}),
+				    #"Texte en majuscules" = Table.TransformColumns(Source,{{"DRENAET", Text.Upper, type text}}),
+				    #"Valeur remplacée" = Table.ReplaceValue(#"Texte en majuscules","DRENA ","",Replacer.ReplaceText,{"DRENAET"}),
+				    #"Colonnes renommées" = Table.RenameColumns(#"Valeur remplacée",{{"Beginner L", "Beginner L - L"}, {"Letter", "Letter - L"}, {"Word", "Word - L"}, {"Paragraph", "Paragraph - L"}, {"Story", "Story - L"}, {"Beginner N", "Beginner N - N"}, {"1-Digit", "1-Digit - N"}, {"2-Digit", "2-Digit - N"}, {"Substraction", "Substraction - N"}, {"Division", "Division - N"}, {"Comprehension", "Comprehension - L"}}),
+				    #"Tableau croisé dynamique des colonnes supprimé" = Table.UnpivotOtherColumns(#"Colonnes renommées", {"DRENAET", "IEPP", "School", "Cycle", "Grade", "Students In Class", "Boys Tested", "Girls Tested", "Entry Date", "Region", "Sector", "Students Tested", "Period", "Teacher Male", "Teacher Female"}, "Attribut", "Valeur"),
+				    #"Colonnes renommées1" = Table.RenameColumns(#"Tableau croisé dynamique des colonnes supprimé",{{"Valeur", "Number Of Students"}}),
+				    #"Fractionner la colonne par délimiteur" = Table.SplitColumn(#"Colonnes renommées1", "Attribut", Splitter.SplitTextByDelimiter(" - ", QuoteStyle.Csv), {"Attribut.1", "Attribut.2"}),
+				    #"Colonnes renommées2" = Table.RenameColumns(#"Fractionner la colonne par délimiteur",{{"Attribut.1", "Level"}, {"Attribut.2", "Subject"}}),
+				    #"Valeur remplacée1" = Table.ReplaceValue(#"Colonnes renommées2","L","Litteracy",Replacer.ReplaceText,{"Subject"}),
+				    #"Valeur remplacée2" = Table.ReplaceValue(#"Valeur remplacée1","N","Numeracy",Replacer.ReplaceText,{"Subject"}),
+				    #"Requêtes fusionnées" = Table.NestedJoin(#"Valeur remplacée2", {"DRENAET", "IEPP", "School", "Grade"}, Grades, {"DRENAET", "IEPP", "School", "Grade"}, "Grades in DRENAETs", JoinKind.LeftOuter),
+				    #"Grades in DRENAETs développé" = Table.ExpandTableColumn(#"Requêtes fusionnées", "Grades in DRENAETs", {"DRENAET ID", "Grade ID", "IEPP ID", "School ID"}, {"DRENAET ID", "Grade ID", "IEPP ID", "School ID"}),
+				    #"Requêtes fusionnées1" = Table.NestedJoin(#"Grades in DRENAETs développé", {"Cycle", "Period"}, Cycles, {"Cycle", "Period"}, "Cycles", JoinKind.LeftOuter),
+				    #"Cycles développé" = Table.ExpandTableColumn(#"Requêtes fusionnées1", "Cycles", {"Cycle ID"}, {"Cycle ID"}),
+				    #"Requêtes fusionnées2" = Table.NestedJoin(#"Cycles développé", {"Level", "Subject"}, #"Levels in Subjects", {"Level", "Subject"}, "Levels in Subjects", JoinKind.LeftOuter),
+				    #"Levels in Subjects développé" = Table.ExpandTableColumn(#"Requêtes fusionnées2", "Levels in Subjects", {"Level ID", "Subject ID"}, {"Level ID", "Subject ID"}),
+				    #"Autres colonnes supprimées" = Table.SelectColumns(#"Levels in Subjects développé",{"Students In Class", "Boys Tested", "Girls Tested", "Entry Date", "Students Tested", "Period", "Teacher Male", "Teacher Female", "Number Of Students", "DRENAET ID", "Grade ID", "IEPP ID", "School ID", "Cycle ID", "Subject ID", "Level ID"}),
+				    #"Colonnes renommées3" = Table.RenameColumns(#"Autres colonnes supprimées",{{"Boys Tested", "Boys Tested In Class"}, {"Girls Tested", "Girls Tested In Class"}, {"Students Tested", "Students Tested In Class"}, {"Teacher Male", "Teacher Male In School"}, {"Teacher Female", "Teacher Female In School"}, {"Number Of Students", "Students At Level"}}),
+				    #"Autres colonnes supprimées1" = Table.SelectColumns(#"Colonnes renommées3",{"Students In Class", "Boys Tested In Class", "Girls Tested In Class", "Entry Date", "Period", "Teacher Male In School", "Teacher Female In School", "Students At Level", "DRENAET ID", "Grade ID", "IEPP ID", "School ID", "Cycle ID", "Subject ID", "Level ID"})
+				in
+				    #"Autres colonnes supprimées1"
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

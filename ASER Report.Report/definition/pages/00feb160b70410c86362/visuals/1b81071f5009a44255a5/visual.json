@@ -4,9 +4,10 @@
   "position": {
     "x": 235,
     "y": 95,
-    "z": 1004,
+    "z": 3000,
     "height": 40,
-    "width": 150
+    "width": 150,
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "slicer",
@@ -93,7 +94,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'2025-2026'"
+                                "Value": "'2024-2025'"
                               }
                             }
                           ]

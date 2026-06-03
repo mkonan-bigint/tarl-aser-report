@@ -467,6 +467,209 @@ table Mesures
 			RETURN "Reach in " & __Period
 		lineageTag: 97560163-30b3-4ee3-be3b-c833e8051136
 
+	measure '# Of Red schools for Literacy' =
+			
+				VAR __BaseTable = SUMMARIZE(
+					'ASER CIV Data',
+					'ASER CIV Data'[School ID],
+					'ASER CIV Data'[Period],
+					"@Progress in Literacy from BL to EL", [pp Of Litteracy Improvemnt From BL to EL],
+					"@Progress in Numeracy from BL to EL", [pp Of Numeracy Improvemnt From BL to EL]
+				)
+			
+				VAR __Table = SELECTCOLUMNS(
+					__BaseTable,
+					"@School ID", 'ASER CIV Data'[School ID],
+					"@Period", 'ASER CIV Data'[Period],
+					"@Literacy Status", SWITCH(
+						TRUE(),
+						[@Progress in Literacy from BL to EL] = BLANK(), BLANK(),
+						[@Progress in Literacy from BL to EL] < 0.1, "Red school (0-10pp)",
+						[@Progress in Literacy from BL to EL] < 0.25, "Yellow school (10-25pp)",
+						"Green school (>25pp)"
+					)
+				)
+			
+				VAR __Red_Schools = FILTER(
+					__Table,
+					[@Literacy Status] = "Red school (0-10pp)"
+				)
+			
+			    VAR __Result = COUNTROWS( __Red_Schools )
+			
+			    RETURN __Result
+		formatString: 0
+		lineageTag: 72502e7f-3519-41b2-93bc-4d0c974d0f74
+
+	measure '# Of Yellow schools for Literacy' =
+			
+				VAR __BaseTable = SUMMARIZE(
+					'ASER CIV Data',
+					'ASER CIV Data'[School ID],
+					'ASER CIV Data'[Period],
+					"@Progress in Literacy from BL to EL", [pp Of Litteracy Improvemnt From BL to EL],
+					"@Progress in Numeracy from BL to EL", [pp Of Numeracy Improvemnt From BL to EL]
+				)
+			
+				VAR __Table = SELECTCOLUMNS(
+					__BaseTable,
+					"@School ID", 'ASER CIV Data'[School ID],
+					"@Period", 'ASER CIV Data'[Period],
+					"@Literacy Status", SWITCH(
+						TRUE(),
+						[@Progress in Literacy from BL to EL] = BLANK(), BLANK(),
+						[@Progress in Literacy from BL to EL] < 0.1, "Red school (0-10pp)",
+						[@Progress in Literacy from BL to EL] < 0.25, "Yellow school (10-25pp)",
+						"Green school (>25pp)"
+					)
+				)
+			
+				VAR __Yellow_Schools = FILTER(
+					__Table,
+					[@Literacy Status] = "Yellow school (10-25pp)"
+				)
+			
+			    VAR __Result = COUNTROWS( __Yellow_Schools )
+			
+			    RETURN __Result
+		formatString: 0
+		lineageTag: 5502c1f4-9cb7-4468-a3d5-231b47291a89
+
+	measure '# Of Green schools for Literacy' =
+			
+				VAR __BaseTable = SUMMARIZE(
+					'ASER CIV Data',
+					'ASER CIV Data'[School ID],
+					'ASER CIV Data'[Period],
+					"@Progress in Literacy from BL to EL", [pp Of Litteracy Improvemnt From BL to EL],
+					"@Progress in Numeracy from BL to EL", [pp Of Numeracy Improvemnt From BL to EL]
+				)
+			
+				VAR __Table = SELECTCOLUMNS(
+					__BaseTable,
+					"@School ID", 'ASER CIV Data'[School ID],
+					"@Period", 'ASER CIV Data'[Period],
+					"@Literacy Status", SWITCH(
+						TRUE(),
+						[@Progress in Literacy from BL to EL] = BLANK(), BLANK(),
+						[@Progress in Literacy from BL to EL] < 0.1, "Red school (0-10pp)",
+						[@Progress in Literacy from BL to EL] < 0.25, "Yellow school (10-25pp)",
+						"Green school (>25pp)" )
+				)
+			
+				VAR __Green_Schools = FILTER(
+					__Table,
+					[@Literacy Status] = "Green school (>25pp)"
+				)
+			
+			    VAR __Result = COUNTROWS( __Green_Schools )
+			
+			    RETURN __Result
+		formatString: 0
+		lineageTag: 63b96d07-c17d-46f5-ac60-2c0e483a7d2c
+
+	measure '# Of Yellow schools for Numeracy' =
+			
+				VAR __BaseTable = SUMMARIZE(
+					'ASER CIV Data',
+					'ASER CIV Data'[School ID],
+					'ASER CIV Data'[Period],
+					"@Progress in Literacy from BL to EL", [pp Of Litteracy Improvemnt From BL to EL],
+					"@Progress in Numeracy from BL to EL", [pp Of Numeracy Improvemnt From BL to EL]
+				)
+			
+				VAR __Table = SELECTCOLUMNS(
+					__BaseTable,
+					"@School ID", 'ASER CIV Data'[School ID],
+					"@Period", 'ASER CIV Data'[Period],
+					"@Numeracy Status", SWITCH(
+						TRUE(),
+						[@Progress in Numeracy from BL to EL] = BLANK(), BLANK(),
+						[@Progress in Numeracy from BL to EL] < 0.1, "Red school (0-10pp)",
+						[@Progress in Numeracy from BL to EL] < 0.25, "Yellow school (10-25pp)",
+						"Green school (>25pp)"
+					)
+				)
+			
+				VAR __Yellow_Schools = FILTER(
+					__Table,
+					[@Numeracy Status] = "Yellow school (10-25pp)"
+				)
+			
+			    VAR __Result = COUNTROWS( __Yellow_Schools )
+			
+			    RETURN __Result
+		formatString: 0
+		lineageTag: 3b6661d8-c428-4571-ac1d-47548f4b3a09
+
+	measure '# Of Red schools for Numeracy' =
+			
+				VAR __BaseTable = SUMMARIZE(
+					'ASER CIV Data',
+					'ASER CIV Data'[School ID],
+					'ASER CIV Data'[Period],
+					"@Progress in Literacy from BL to EL", [pp Of Litteracy Improvemnt From BL to EL],
+					"@Progress in Numeracy from BL to EL", [pp Of Numeracy Improvemnt From BL to EL]
+				)
+			
+				VAR __Table = SELECTCOLUMNS(
+					__BaseTable,
+					"@School ID", 'ASER CIV Data'[School ID],
+					"@Period", 'ASER CIV Data'[Period],
+					"@Numeracy Status", SWITCH(
+						TRUE(),
+						[@Progress in Numeracy from BL to EL] = BLANK(), BLANK(),
+						[@Progress in Numeracy from BL to EL] < 0.1, "Red school (0-10pp)",
+						[@Progress in Numeracy from BL to EL] < 0.25, "Yellow school (10-25pp)",
+						"Green school (>25pp)"
+					)
+				)
+			
+				VAR __Red_Schools = FILTER(
+					__Table,
+					[@Numeracy Status] = "Red school (0-10pp)"
+				)
+			
+			    VAR __Result = COUNTROWS( __Red_Schools )
+			
+			    RETURN __Result
+		formatString: 0
+		lineageTag: 16265274-fda3-42d0-9bff-9c9f5a267232
+
+	measure '# Of Green schools for Numeracy' =
+			
+				VAR __BaseTable = SUMMARIZE(
+					'ASER CIV Data',
+					'ASER CIV Data'[School ID],
+					'ASER CIV Data'[Period],
+					"@Progress in Literacy from BL to EL", [pp Of Litteracy Improvemnt From BL to EL],
+					"@Progress in Numeracy from BL to EL", [pp Of Numeracy Improvemnt From BL to EL]
+				)
+			
+				VAR __Table = SELECTCOLUMNS(
+					__BaseTable,
+					"@School ID", 'ASER CIV Data'[School ID],
+					"@Period", 'ASER CIV Data'[Period],
+					"@Numeracy Status", SWITCH(
+						TRUE(),
+						[@Progress in Numeracy from BL to EL] = BLANK(), BLANK(),
+						[@Progress in Numeracy from BL to EL] < 0.1, "Red school (0-10pp)",
+						[@Progress in Numeracy from BL to EL] < 0.25, "Yellow school (10-25pp)",
+						"Green school (>25pp)"
+					)
+				)
+			
+				VAR __Green_Schools = FILTER(
+					__Table,
+					[@Numeracy Status] = "Green school (>25pp)"
+				)
+			
+			    VAR __Result = COUNTROWS( __Green_Schools )
+			
+			    RETURN __Result
+		formatString: 0
+		lineageTag: 2e009ffe-a9a3-45a7-a2f0-fc1156e0f611
+
 	partition Mesures = m
 		mode: import
 		source =

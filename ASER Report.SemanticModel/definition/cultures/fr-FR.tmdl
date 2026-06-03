@@ -6350,6 +6350,162 @@ cultureInfo fr-FR
 			          }
 			        }
 			      ]
+			    },
+			    "mesure.of_red_schools_for_literacy": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "# Of Red schools for Literacy"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "# of red schools for literacy": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Red school (0-10pp)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.of_yellow_schools_for_literacy": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "# Of Yellow schools for Literacy"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "# of yellow schools for literacy": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Yellow school (10-25pp)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.of_green_schools_for_literacy": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "# Of Green schools for Literacy"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "# of green schools for literacy": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Green school (>25pp)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.of_yellow_schools_for_numeracy": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "# Of Yellow schools for Numeracy"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "# of yellow schools for numeracy": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Yellow school (10-25pp)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.of_red_schools_for_numeracy": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "# Of Red schools for Numeracy"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "# of red schools for numeracy": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Red school (0-10pp)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.of_green_schools_for_numeracy": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "# Of Green schools for Numeracy"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "# of green schools for numeracy": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Green school (>25pp)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
@@ -6490,6 +6646,204 @@ cultureInfo fr-FR
 			          }
 			        }
 			      }
+			    },
+			    "mesure_has_of_green_schools_for_numeracy": {
+			      "Binding": {
+			        "ConceptualEntity": "Mesures"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mesure": {
+			          "Target": {
+			            "Entity": "mesure"
+			          }
+			        },
+			        "mesure.of_green_schools_for_numeracy": {
+			          "Target": {
+			            "Entity": "mesure.of_green_schools_for_numeracy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mesure"
+			            },
+			            "Object": {
+			              "Role": "mesure.of_green_schools_for_numeracy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mesures_have__of_green_schools_for_numeracy"
+			        }
+			      ]
+			    },
+			    "mesure_has_of_red_schools_for_numeracy": {
+			      "Binding": {
+			        "ConceptualEntity": "Mesures"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mesure": {
+			          "Target": {
+			            "Entity": "mesure"
+			          }
+			        },
+			        "mesure.of_red_schools_for_numeracy": {
+			          "Target": {
+			            "Entity": "mesure.of_red_schools_for_numeracy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mesure"
+			            },
+			            "Object": {
+			              "Role": "mesure.of_red_schools_for_numeracy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mesures_have__of_red_schools_for_numeracy"
+			        }
+			      ]
+			    },
+			    "mesure_has_of_yellow_schools_for_numeracy": {
+			      "Binding": {
+			        "ConceptualEntity": "Mesures"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mesure": {
+			          "Target": {
+			            "Entity": "mesure"
+			          }
+			        },
+			        "mesure.of_yellow_schools_for_numeracy": {
+			          "Target": {
+			            "Entity": "mesure.of_yellow_schools_for_numeracy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mesure"
+			            },
+			            "Object": {
+			              "Role": "mesure.of_yellow_schools_for_numeracy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mesures_have__of_yellow_schools_for_numeracy"
+			        }
+			      ]
+			    },
+			    "mesure_has_of_green_schools_for_literacy": {
+			      "Binding": {
+			        "ConceptualEntity": "Mesures"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mesure": {
+			          "Target": {
+			            "Entity": "mesure"
+			          }
+			        },
+			        "mesure.of_green_schools_for_literacy": {
+			          "Target": {
+			            "Entity": "mesure.of_green_schools_for_literacy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mesure"
+			            },
+			            "Object": {
+			              "Role": "mesure.of_green_schools_for_literacy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mesures_have__of_green_schools_for_literacy"
+			        }
+			      ]
+			    },
+			    "mesure_has_of_yellow_schools_for_literacy": {
+			      "Binding": {
+			        "ConceptualEntity": "Mesures"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mesure": {
+			          "Target": {
+			            "Entity": "mesure"
+			          }
+			        },
+			        "mesure.of_yellow_schools_for_literacy": {
+			          "Target": {
+			            "Entity": "mesure.of_yellow_schools_for_literacy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mesure"
+			            },
+			            "Object": {
+			              "Role": "mesure.of_yellow_schools_for_literacy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mesures_have__of_yellow_schools_for_literacy"
+			        }
+			      ]
+			    },
+			    "mesure_has_of_red_schools_for_literacy": {
+			      "Binding": {
+			        "ConceptualEntity": "Mesures"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mesure": {
+			          "Target": {
+			            "Entity": "mesure"
+			          }
+			        },
+			        "mesure.of_red_schools_for_literacy": {
+			          "Target": {
+			            "Entity": "mesure.of_red_schools_for_literacy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mesure"
+			            },
+			            "Object": {
+			              "Role": "mesure.of_red_schools_for_literacy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mesures_have__of_red_schools_for_literacy"
+			        }
+			      ]
 			    },
 			    "cycle_has_mesure_reach_stats_title": {
 			      "Binding": {
@@ -7670,15 +8024,15 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "cycle_has_mesure_entity___of_students_reached_in_program": {
+			    "mesure_has_entity___of_students_reached_in_program": {
 			      "Binding": {
-			        "ConceptualEntity": "Cycles"
+			        "ConceptualEntity": "Mesures"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "cycle": {
+			        "mesure": {
 			          "Target": {
-			            "Entity": "cycle"
+			            "Entity": "mesure"
 			          }
 			        },
 			        "mesure.entity___of_students_reached_in_program": {
@@ -7691,7 +8045,7 @@ cultureInfo fr-FR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "cycle"
+			              "Role": "mesure"
 			            },
 			            "Object": {
 			              "Role": "mesure.entity___of_students_reached_in_program"
@@ -7699,27 +8053,9 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "cycles_have___of_students_reached_in_program"
+			          "ID": "mesures_have___of_students_reached_in_program"
 			        }
 			      ]
-			    },
-			    "ASER_CIV_data_has_mesure_entity___of_students_reached_in_program": {
-			      "Binding": {
-			        "ConceptualEntity": "ASER CIV Data"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "ASER_CIV_data": {
-			          "Target": {
-			            "Entity": "ASER_CIV_data"
-			          }
-			        },
-			        "mesure.entity___of_students_reached_in_program": {
-			          "Target": {
-			            "Entity": "mesure.entity___of_students_reached_in_program"
-			          }
-			        }
-			      }
 			    },
 			    "mesure_has_of_students_tested_in_cycle": {
 			      "Binding": {

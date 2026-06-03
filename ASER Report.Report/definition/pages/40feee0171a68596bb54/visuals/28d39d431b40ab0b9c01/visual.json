@@ -1,10 +1,10 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
   "name": "28d39d431b40ab0b9c01",
   "position": {
     "x": 25,
     "y": 160,
-    "z": 1000,
+    "z": 0,
     "height": 525,
     "width": 750,
     "tabOrder": 0
@@ -45,9 +45,8 @@
                   "Property": "% Of Students With Low Litteracy At EL"
                 }
               },
-              "queryRef": "Mesures.Percentage Of Students Tested With Low Litteracy In Grade EL",
-              "nativeQueryRef": "Endline",
-              "displayName": "Endline"
+              "queryRef": "Mesures.% Of Students With Low Litteracy At EL",
+              "nativeQueryRef": "Endline"
             },
             {
               "field": {
@@ -60,9 +59,8 @@
                   "Property": "pp Of Litteracy Difficulty Reduction From BL to EL"
                 }
               },
-              "queryRef": "Mesures.Litteracy Difficulty Reduction BL to EL (PP)",
-              "nativeQueryRef": "Decrease from baseline",
-              "displayName": "Decrease from baseline"
+              "queryRef": "Mesures.pp Of Litteracy Difficulty Reduction From BL to EL",
+              "nativeQueryRef": "Decrease from baseline"
             }
           ]
         }
@@ -71,16 +69,16 @@
         "sort": [
           {
             "field": {
-              "Column": {
+              "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Grades"
+                    "Entity": "Mesures"
                   }
                 },
-                "Property": "DRENAET"
+                "Property": "pp Of Litteracy Difficulty Reduction From BL to EL"
               }
             },
-            "direction": "Ascending"
+            "direction": "Descending"
           }
         ]
       }
@@ -199,7 +197,27 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "categoryAxis": [
+        {
+          "properties": {
+            "innerPadding": {
+              "expr": {
+                "Literal": {
+                  "Value": "50L"
+                }
+              }
+            },
+            "preferredCategoryWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "80D"
                 }
               }
             }

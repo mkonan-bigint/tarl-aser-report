@@ -499,6 +499,7 @@ table Mesures
 			
 			    RETURN __Result
 		formatString: 0
+		displayFolder: 2. Program specific KPIs
 		lineageTag: 72502e7f-3519-41b2-93bc-4d0c974d0f74
 
 	measure '# Of Yellow schools for Literacy' =
@@ -533,6 +534,7 @@ table Mesures
 			
 			    RETURN __Result
 		formatString: 0
+		displayFolder: 2. Program specific KPIs
 		lineageTag: 5502c1f4-9cb7-4468-a3d5-231b47291a89
 
 	measure '# Of Green schools for Literacy' =
@@ -566,6 +568,7 @@ table Mesures
 			
 			    RETURN __Result
 		formatString: 0
+		displayFolder: 2. Program specific KPIs
 		lineageTag: 63b96d07-c17d-46f5-ac60-2c0e483a7d2c
 
 	measure '# Of Yellow schools for Numeracy' =
@@ -600,6 +603,7 @@ table Mesures
 			
 			    RETURN __Result
 		formatString: 0
+		displayFolder: 2. Program specific KPIs
 		lineageTag: 3b6661d8-c428-4571-ac1d-47548f4b3a09
 
 	measure '# Of Red schools for Numeracy' =
@@ -634,6 +638,7 @@ table Mesures
 			
 			    RETURN __Result
 		formatString: 0
+		displayFolder: 2. Program specific KPIs
 		lineageTag: 16265274-fda3-42d0-9bff-9c9f5a267232
 
 	measure '# Of Green schools for Numeracy' =
@@ -668,6 +673,7 @@ table Mesures
 			
 			    RETURN __Result
 		formatString: 0
+		displayFolder: 2. Program specific KPIs
 		lineageTag: 2e009ffe-a9a3-45a7-a2f0-fc1156e0f611
 
 	partition Mesures = m

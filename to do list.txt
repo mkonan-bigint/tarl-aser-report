@@ -1,0 +1,4 @@
+Correction requete "Cycles" pour integrer automatiquement les nouveaux cycles : la table Cycles a été manuellement dans Power Query avec la fonctionnalité Entrer des données. Elle n'intègre donc pas automatiquement les nouveaux cycles.
+
+Correction mesure "# Of Students Reached In Program" : Patrick a proposé une nouvelle formule. L'ancienne ne prenait pas en compte certains aspects.
+

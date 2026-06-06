@@ -163,7 +163,7 @@ expression Paramètre1 = #"Exemple de fichier" meta [IsParameterQuery=true, Bina
 	lineageTag: 0d0598cb-5473-4bbb-a2f0-c2e02d4b0b63
 	queryGroup: 'Transform ASER New Data\Requêtes d''assistance'
 
-	annotation PBI_ResultType = Exception
+	annotation PBI_ResultType = Binary
 
 expression 'Exemple de fichier' =
 		let
@@ -201,9 +201,9 @@ expression Paramètre2 = #"Exemple de fichier (2)" meta [IsParameterQuery=true, 
 	lineageTag: 5ca6b49f-4bcf-4345-a20d-e6933315a928
 	queryGroup: 'Transform Verification ASER\Requêtes d''assistance'
 
-	annotation PBI_ResultType = Exception
+	annotation PBI_ResultType = Binary
 
-/// Nombre de lignes à conserver dans chaque table. Utile pendant le développement. 
+/// Nombre de lignes à conserver dans chaque table. Utile pendant le développement.
 /// Ne rien renseigner si vous voulez conserver toutes les lignes. Nécessaire pour la déploiement en production.
 expression Sample_Size = null meta [IsParameterQuery=true, Type="Number", IsParameterQueryRequired=false]
 	lineageTag: 6467d4c3-b058-45e7-8631-70a32754a2f3

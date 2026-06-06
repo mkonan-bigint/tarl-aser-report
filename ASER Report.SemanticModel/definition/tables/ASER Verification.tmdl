@@ -1,55 +1,14 @@
 table 'ASER Verification'
 	lineageTag: 6b966e14-343a-4239-a460-c0a0c9fca739
 
-	column Gender
-		dataType: string
-		lineageTag: fc85abfa-42d1-49e5-97e6-c95a0fad635b
-		summarizeBy: none
-		sourceColumn: Gender
-
-		annotation SummarizationSetBy = Automatic
-
-	column 'Literacy Result ID - Supervisor'
-		dataType: int64
-		formatString: 0
-		lineageTag: 3831404d-86c0-4031-a105-9aca14978f18
-		summarizeBy: sum
-		sourceColumn: Literacy Result ID - Supervisor
-
-		annotation SummarizationSetBy = Automatic
-
-	column 'Literacy Result ID - Facilitator'
-		dataType: int64
-		formatString: 0
-		lineageTag: 7140706b-9520-455d-9210-5176635bdf8f
-		summarizeBy: sum
-		sourceColumn: Literacy Result ID - Facilitator
-
-		annotation SummarizationSetBy = Automatic
-
-	column 'Numeracy Result ID - Supervisor'
-		dataType: int64
-		formatString: 0
-		lineageTag: 23eae28e-ef41-43f9-b1e2-f578206159f0
-		summarizeBy: sum
-		sourceColumn: Numeracy Result ID - Supervisor
-
-		annotation SummarizationSetBy = Automatic
-
-	column 'Numeracy Result ID - Facilitator'
-		dataType: int64
-		formatString: 0
-		lineageTag: 8b5d28ef-62db-46f1-a82b-ec5ad6494e63
-		summarizeBy: sum
-		sourceColumn: Numeracy Result ID - Facilitator
-
-		annotation SummarizationSetBy = Automatic
-
 	column 'Literacy Cross-Check'
 		dataType: string
 		lineageTag: 21467873-99fc-4b57-9724-4ce505992952
 		summarizeBy: none
 		sourceColumn: Literacy Cross-Check
+		sortByColumn: 'Literacy Cross-Check ID'
+
+		changedProperty = SortByColumn
 
 		annotation SummarizationSetBy = Automatic
 
@@ -58,42 +17,59 @@ table 'ASER Verification'
 		lineageTag: 5fcef616-a755-4972-a76f-57f12f8b534c
 		summarizeBy: none
 		sourceColumn: Numeracy Cross-Check
+		sortByColumn: 'Numeracy Cross-Check ID'
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
 	column 'Literacy Cross-Check ID'
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: af39d90d-9bd6-4ac6-9dc9-26d2cc57eca6
 		summarizeBy: count
 		sourceColumn: Literacy Cross-Check ID
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column 'Numeracy Cross-Check ID'
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: d8b843e2-8f70-4799-a3dd-9156d6058f9e
 		summarizeBy: count
 		sourceColumn: Numeracy Cross-Check ID
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column 'Grade ID'
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: 6b15787a-d928-4d53-9418-3ce69ce05dfd
 		summarizeBy: none
 		sourceColumn: Grade ID
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column 'Cycle ID'
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: 30b7bf12-58b1-4915-93a7-bb5bca99d0bc
 		summarizeBy: none
 		sourceColumn: Cycle ID
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -146,11 +122,9 @@ table 'ASER Verification'
 				    #"Grades développé" = Table.ExpandTableColumn(#"Requêtes fusionnées4", "Grades", {"Grade ID"}, {"Grade ID"}),
 				    #"Requêtes fusionnées5" = Table.NestedJoin(#"Grades développé", {"Period", "Cycle"}, Cycles, {"Period", "Cycle"}, "Cycles", JoinKind.LeftOuter),
 				    #"Cycles développé" = Table.ExpandTableColumn(#"Requêtes fusionnées5", "Cycles", {"Cycle ID"}, {"Cycle ID"}),
-				    #"Autres colonnes supprimées3" = Table.SelectColumns(#"Cycles développé",{"Gender", "Literacy Result ID - Supervisor", "Literacy Result ID - Facilitator", "Numeracy Result ID - Supervisor", "Numeracy Result ID - Facilitator", "Literacy Cross-Check", "Numeracy Cross-Check", "Literacy Cross-Check ID", "Numeracy Cross-Check ID", "Grade ID", "Cycle ID"}),
-				    #"Valeur remplacée11" = Table.ReplaceValue(#"Autres colonnes supprimées3","GARÇON","M",Replacer.ReplaceText,{"Gender"}),
-				    #"Valeur remplacée12" = Table.ReplaceValue(#"Valeur remplacée11","FILLE","F",Replacer.ReplaceText,{"Gender"})
+				    #"Autres colonnes supprimées3" = Table.SelectColumns(#"Cycles développé",{"Literacy Cross-Check", "Numeracy Cross-Check", "Literacy Cross-Check ID", "Numeracy Cross-Check ID", "Grade ID", "Cycle ID"})
 				in
-				    #"Valeur remplacée12"
+				    #"Autres colonnes supprimées3"
 
 	annotation PBI_NavigationStepName = Navigation
 

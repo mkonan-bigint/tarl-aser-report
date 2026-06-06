@@ -22,3 +22,11 @@ relationship AutoDetected_36b178bf-e4b4-471f-8a4f-eb4bbf285bc8
 	fromColumn: 'Mentoring Visits'.'Cycle ID'
 	toColumn: Cycles.'Cycle ID'
 
+relationship AutoDetected_814dea24-e204-4e2b-ae45-b18e34f5ce9a
+	fromColumn: 'ASER Verification'.'Grade ID'
+	toColumn: Grades.'Grade ID'
+
+relationship AutoDetected_44519e79-38b5-4e2d-b7ff-13f329ac2772
+	fromColumn: 'ASER Verification'.'Cycle ID'
+	toColumn: Cycles.'Cycle ID'
+

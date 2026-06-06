@@ -1,0 +1,158 @@
+table 'ASER Verification'
+	lineageTag: 6b966e14-343a-4239-a460-c0a0c9fca739
+
+	column Gender
+		dataType: string
+		lineageTag: fc85abfa-42d1-49e5-97e6-c95a0fad635b
+		summarizeBy: none
+		sourceColumn: Gender
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Literacy Result ID - Supervisor'
+		dataType: int64
+		formatString: 0
+		lineageTag: 3831404d-86c0-4031-a105-9aca14978f18
+		summarizeBy: sum
+		sourceColumn: Literacy Result ID - Supervisor
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Literacy Result ID - Facilitator'
+		dataType: int64
+		formatString: 0
+		lineageTag: 7140706b-9520-455d-9210-5176635bdf8f
+		summarizeBy: sum
+		sourceColumn: Literacy Result ID - Facilitator
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Numeracy Result ID - Supervisor'
+		dataType: int64
+		formatString: 0
+		lineageTag: 23eae28e-ef41-43f9-b1e2-f578206159f0
+		summarizeBy: sum
+		sourceColumn: Numeracy Result ID - Supervisor
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Numeracy Result ID - Facilitator'
+		dataType: int64
+		formatString: 0
+		lineageTag: 8b5d28ef-62db-46f1-a82b-ec5ad6494e63
+		summarizeBy: sum
+		sourceColumn: Numeracy Result ID - Facilitator
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Literacy Cross-Check'
+		dataType: string
+		lineageTag: 21467873-99fc-4b57-9724-4ce505992952
+		summarizeBy: none
+		sourceColumn: Literacy Cross-Check
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Numeracy Cross-Check'
+		dataType: string
+		lineageTag: 5fcef616-a755-4972-a76f-57f12f8b534c
+		summarizeBy: none
+		sourceColumn: Numeracy Cross-Check
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Literacy Cross-Check ID'
+		dataType: int64
+		formatString: 0
+		lineageTag: af39d90d-9bd6-4ac6-9dc9-26d2cc57eca6
+		summarizeBy: count
+		sourceColumn: Literacy Cross-Check ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Numeracy Cross-Check ID'
+		dataType: int64
+		formatString: 0
+		lineageTag: d8b843e2-8f70-4799-a3dd-9156d6058f9e
+		summarizeBy: count
+		sourceColumn: Numeracy Cross-Check ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Grade ID'
+		dataType: int64
+		formatString: 0
+		lineageTag: 6b15787a-d928-4d53-9418-3ce69ce05dfd
+		summarizeBy: none
+		sourceColumn: Grade ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cycle ID'
+		dataType: int64
+		formatString: 0
+		lineageTag: 30b7bf12-58b1-4915-93a7-bb5bca99d0bc
+		summarizeBy: none
+		sourceColumn: Cycle ID
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'ASER Verification' = m
+		mode: import
+		source =
+				let
+				    Source = Folder.Files("C:\2026 04 Formation TaRL\ASER_Data\verification_ASER"),
+				    #"Fichiers masqués filtrés1" = Table.SelectRows(Source, each [Attributes]?[Hidden]? <> true),
+				    #"Appeler une fonction personnalisée1" = Table.AddColumn(#"Fichiers masqués filtrés1", "Transformer le fichier", each #"Transformer le fichier (2)"([Content])),
+				    #"Colonnes renommées1" = Table.RenameColumns(#"Appeler une fonction personnalisée1", {"Name", "Source.Name"}),
+				    #"Autres colonnes supprimées1" = Table.SelectColumns(#"Colonnes renommées1", {"Source.Name", "Transformer le fichier"}),
+				    #"Colonne de tables développée1" = Table.ExpandTableColumn(#"Autres colonnes supprimées1", "Transformer le fichier", Table.ColumnNames(#"Transformer le fichier (2)"(#"Exemple de fichier (2)"))),
+				    #"Fractionner la colonne par délimiteur" = Table.SplitColumn(#"Colonne de tables développée1", "Source.Name", Splitter.SplitTextByDelimiter("_", QuoteStyle.Csv), {"Source.Name.1", "Source.Name.2", "Source.Name.3"}),
+				    #"Fractionner la colonne par délimiteur1" = Table.SplitColumn(#"Fractionner la colonne par délimiteur", "Source.Name.3", Splitter.SplitTextByDelimiter(".", QuoteStyle.Csv), {"Source.Name.3.1", "Source.Name.3.2"}),
+				    #"Autres colonnes supprimées" = Table.SelectColumns(#"Fractionner la colonne par délimiteur1",{"Source.Name.2", "Source.Name.3.1", "DRENA", "IEPP", "ECOLES", "COURS", "GENRE", "RESULTAT LECTURE SUPERVIS.", "RESULTAT LECTURE FACILITAT.", "RESULTAT MATH SUPERVIS.", "RESULTAT MATH FACILITAT."}),
+				    #"Colonnes renommées" = Table.RenameColumns(#"Autres colonnes supprimées",{{"Source.Name.2", "Period"}, {"Source.Name.3.1", "Cycle"}, {"ECOLES", "School"}, {"COURS", "Grade"}, {"GENRE", "Gender"}, {"RESULTAT LECTURE SUPERVIS.", "Literacy Result Supervisor"}, {"RESULTAT MATH SUPERVIS.", "Numeracy Result Supervisor"}, {"RESULTAT MATH FACILITAT.", "Numeracy Result Facilitator"}, {"RESULTAT LECTURE FACILITAT.", "Literacy Result Facilitator"}, {"DRENA", "DRENAET"}}),
+				    #"Valeur remplacée" = Table.ReplaceValue(#"Colonnes renommées","Compréhension","Comprehension",Replacer.ReplaceText,{"Literacy Result Supervisor", "Literacy Result Facilitator"}),
+				    #"Valeur remplacée1" = Table.ReplaceValue(#"Valeur remplacée","Débutant","Beginner L",Replacer.ReplaceText,{"Literacy Result Supervisor", "Literacy Result Facilitator"}),
+				    #"Valeur remplacée2" = Table.ReplaceValue(#"Valeur remplacée1","Lettre","Letter",Replacer.ReplaceText,{"Literacy Result Supervisor", "Literacy Result Facilitator"}),
+				    #"Valeur remplacée3" = Table.ReplaceValue(#"Valeur remplacée2","Paragraphe","Paragraph",Replacer.ReplaceText,{"Literacy Result Supervisor", "Literacy Result Facilitator"}),
+				    #"Valeur remplacée4" = Table.ReplaceValue(#"Valeur remplacée3","Mot","Word",Replacer.ReplaceText,{"Literacy Result Supervisor", "Literacy Result Facilitator"}),
+				    #"Valeur remplacée5" = Table.ReplaceValue(#"Valeur remplacée4","Histoire","Story",Replacer.ReplaceText,{"Literacy Result Supervisor", "Literacy Result Facilitator"}),
+				    #"Valeur remplacée6" = Table.ReplaceValue(#"Valeur remplacée5","Débutant","Beginner N",Replacer.ReplaceText,{"Numeracy Result Supervisor", "Numeracy Result Facilitator"}),
+				    #"Valeur remplacée7" = Table.ReplaceValue(#"Valeur remplacée6","2-Chiffres","2-Digit",Replacer.ReplaceText,{"Numeracy Result Supervisor", "Numeracy Result Facilitator"}),
+				    #"Valeur remplacée8" = Table.ReplaceValue(#"Valeur remplacée7","Soustraction","Substraction",Replacer.ReplaceText,{"Numeracy Result Supervisor", "Numeracy Result Facilitator"}),
+				    #"Valeur remplacée9" = Table.ReplaceValue(#"Valeur remplacée8","1-Chiffre","1-Digit",Replacer.ReplaceText,{"Numeracy Result Supervisor", "Numeracy Result Facilitator"}),
+				    #"Requêtes fusionnées" = Table.NestedJoin(#"Valeur remplacée9", {"Literacy Result Supervisor"}, #"Levels in Subjects", {"Level"}, "Levels in Subjects", JoinKind.LeftOuter),
+				    #"Levels in Subjects développé" = Table.ExpandTableColumn(#"Requêtes fusionnées", "Levels in Subjects", {"Level ID"}, {"Level ID"}),
+				    #"Colonnes renommées2" = Table.RenameColumns(#"Levels in Subjects développé",{{"Level ID", "Literacy Result ID - Supervisor"}}),
+				    #"Requêtes fusionnées1" = Table.NestedJoin(#"Colonnes renommées2", {"Literacy Result Facilitator"}, #"Levels in Subjects", {"Level"}, "Levels in Subjects", JoinKind.LeftOuter),
+				    #"Levels in Subjects développé1" = Table.ExpandTableColumn(#"Requêtes fusionnées1", "Levels in Subjects", {"Level ID"}, {"Level ID"}),
+				    #"Colonnes renommées3" = Table.RenameColumns(#"Levels in Subjects développé1",{{"Level ID", "Literacy Result ID - Facilitator"}}),
+				    #"Requêtes fusionnées2" = Table.NestedJoin(#"Colonnes renommées3", {"Numeracy Result Supervisor"}, #"Levels in Subjects", {"Level"}, "Levels in Subjects", JoinKind.LeftOuter),
+				    #"Levels in Subjects développé2" = Table.ExpandTableColumn(#"Requêtes fusionnées2", "Levels in Subjects", {"Level ID"}, {"Level ID"}),
+				    #"Colonnes renommées4" = Table.RenameColumns(#"Levels in Subjects développé2",{{"Level ID", "Numeracy Result ID - Supervisor"}}),
+				    #"Requêtes fusionnées3" = Table.NestedJoin(#"Colonnes renommées4", {"Numeracy Result Facilitator"}, #"Levels in Subjects", {"Level"}, "Levels in Subjects", JoinKind.LeftOuter),
+				    #"Levels in Subjects développé3" = Table.ExpandTableColumn(#"Requêtes fusionnées3", "Levels in Subjects", {"Level ID"}, {"Level ID"}),
+				    #"Colonnes renommées5" = Table.RenameColumns(#"Levels in Subjects développé3",{{"Level ID", "Numeracy Result ID - Facilitator"}}),
+				    #"Personnalisée ajoutée" = Table.AddColumn(#"Colonnes renommées5", "Literacy Results Gap", each [#"Literacy Result ID - Facilitator"] - [#"Literacy Result ID - Supervisor"], Int64.Type),
+				    #"Personnalisée ajoutée1" = Table.AddColumn(#"Personnalisée ajoutée", "Numeracy Results Gap", each [#"Numeracy Result ID - Facilitator"] - [#"Numeracy Result ID - Supervisor"], Int64.Type),
+				    #"Colonne conditionnelle ajoutée" = Table.AddColumn(#"Personnalisée ajoutée1", "Literacy Cross-Check", each if [Literacy Results Gap] >= 2 then "Teacher make higher (2+ levels)" else if [Literacy Results Gap] = 1 then "Teacher make higher (1 level)" else if [Literacy Results Gap] = 0 then "Same result" else if [Literacy Results Gap] = -1 then "Teacher make lower (1 level)" else if [Literacy Results Gap] <= -2 then "Teacher make lower (2+ levels)" else null),
+				    #"Personnalisée ajoutée2" = Table.AddColumn(#"Colonne conditionnelle ajoutée", "Numeracy Cross-Check", each if [Numeracy Results Gap] >= 2 then "Teacher make higher (2+ levels)" else if [Numeracy Results Gap] = 1 then "Teacher make higher (1 level)" else if [Numeracy Results Gap] = 0 then "Same result" else if [Numeracy Results Gap] = -1 then "Teacher make lower (1 level)" else if [Numeracy Results Gap] <= -2 then "Teacher make lower (2+ levels)" else null),
+				    #"Personnalisée ajoutée3" = Table.AddColumn(#"Personnalisée ajoutée2", "Literacy Cross-Check ID", each if [Literacy Results Gap] >= 2 then 1 else if [Literacy Results Gap] = 1 then 2 else if [Literacy Results Gap] = 0 then 3 else if [Literacy Results Gap] = -1 then 4 else if [Literacy Results Gap] <= -2 then 5 else null),
+				    #"Personnalisée ajoutée4" = Table.AddColumn(#"Personnalisée ajoutée3", "Numeracy Cross-Check ID", each if [Numeracy Results Gap] >= 2 then 1 else if [Numeracy Results Gap] = 1 then 2 else if [Numeracy Results Gap] = 0 then 3 else if [Numeracy Results Gap] = -1 then 4 else if [Numeracy Results Gap] <= -2 then 5 else null),
+				    #"Type modifié" = Table.TransformColumnTypes(#"Personnalisée ajoutée4",{{"Period", type text}, {"Cycle", type text}, {"DRENAET", type text}, {"IEPP", type text}, {"School", type text}, {"Grade", type text}, {"Gender", type text}, {"Literacy Result Supervisor", type text}, {"Literacy Result Facilitator", type text}, {"Numeracy Result Supervisor", type text}, {"Numeracy Result Facilitator", type text}, {"Literacy Result ID - Supervisor", Int64.Type}, {"Literacy Result ID - Facilitator", Int64.Type}, {"Numeracy Result ID - Supervisor", Int64.Type}, {"Numeracy Result ID - Facilitator", Int64.Type}, {"Literacy Results Gap", Int64.Type}, {"Numeracy Results Gap", Int64.Type}, {"Literacy Cross-Check", type text}, {"Numeracy Cross-Check", type text}, {"Literacy Cross-Check ID", Int64.Type}, {"Numeracy Cross-Check ID", Int64.Type}}),
+				    #"Autres colonnes supprimées2" = Table.SelectColumns(#"Type modifié",{"Period", "Cycle", "DRENAET", "IEPP", "School", "Grade", "Gender", "Literacy Result ID - Supervisor", "Literacy Result ID - Facilitator", "Numeracy Result ID - Supervisor", "Numeracy Result ID - Facilitator", "Literacy Cross-Check", "Numeracy Cross-Check", "Literacy Cross-Check ID", "Numeracy Cross-Check ID"}),
+				    #"Valeur remplacée10" = Table.ReplaceValue(#"Autres colonnes supprimées2","DRENA ","",Replacer.ReplaceText,{"DRENAET"}),
+				    #"Requêtes fusionnées4" = Table.NestedJoin(#"Valeur remplacée10", {"Grade", "School", "IEPP", "DRENAET"}, Grades, {"Grade", "School", "IEPP", "DRENAET"}, "Grades", JoinKind.LeftOuter),
+				    #"Grades développé" = Table.ExpandTableColumn(#"Requêtes fusionnées4", "Grades", {"Grade ID"}, {"Grade ID"}),
+				    #"Requêtes fusionnées5" = Table.NestedJoin(#"Grades développé", {"Period", "Cycle"}, Cycles, {"Period", "Cycle"}, "Cycles", JoinKind.LeftOuter),
+				    #"Cycles développé" = Table.ExpandTableColumn(#"Requêtes fusionnées5", "Cycles", {"Cycle ID"}, {"Cycle ID"}),
+				    #"Autres colonnes supprimées3" = Table.SelectColumns(#"Cycles développé",{"Gender", "Literacy Result ID - Supervisor", "Literacy Result ID - Facilitator", "Numeracy Result ID - Supervisor", "Numeracy Result ID - Facilitator", "Literacy Cross-Check", "Numeracy Cross-Check", "Literacy Cross-Check ID", "Numeracy Cross-Check ID", "Grade ID", "Cycle ID"}),
+				    #"Valeur remplacée11" = Table.ReplaceValue(#"Autres colonnes supprimées3","GARÇON","M",Replacer.ReplaceText,{"Gender"}),
+				    #"Valeur remplacée12" = Table.ReplaceValue(#"Valeur remplacée11","FILLE","F",Replacer.ReplaceText,{"Gender"})
+				in
+				    #"Valeur remplacée12"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

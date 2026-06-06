@@ -27,9 +27,11 @@ expression ASER_2021-2022 =
 		let
 		    Source = Excel.Workbook(File.Contents("C:\2026 04 Formation TaRL\ASER_Data\Before 24_25\ASER Data_2021-2022.xlsx"), null, true),
 		    ASER_Sheet = Source{[Item="ASER",Kind="Sheet"]}[Data],
-		    #"En-têtes promus" = Table.PromoteHeaders(ASER_Sheet, [PromoteAllScalars=true])
+		    #"En-têtes promus" = Table.PromoteHeaders(ASER_Sheet, [PromoteAllScalars=true]),
+		    TableSize = Table.RowCount(#"En-têtes promus"),
+		    #"Conserver les premières lignes" = Table.FirstN(#"En-têtes promus",(Sample_Size ?? TableSize))
 		in
-		    #"En-têtes promus"
+		    #"Conserver les premières lignes"
 	lineageTag: eadbc1b8-e0c2-4a97-b99b-8c8cf448b027
 	queryGroup: 'Sources Old Data'
 
@@ -41,9 +43,11 @@ expression ASER_2022-2023 =
 		let
 		    Source = Excel.Workbook(File.Contents("C:\2026 04 Formation TaRL\ASER_Data\Before 24_25\ASER Data_2022-2023.xlsx"), null, true),
 		    ASER_Sheet = Source{[Item="ASER",Kind="Sheet"]}[Data],
-		    #"En-têtes promus" = Table.PromoteHeaders(ASER_Sheet, [PromoteAllScalars=true])
+		    #"En-têtes promus" = Table.PromoteHeaders(ASER_Sheet, [PromoteAllScalars=true]),
+		    TableSize = Table.RowCount(#"En-têtes promus"),
+		    #"Conserver les premières lignes" = Table.FirstN(#"En-têtes promus",(Sample_Size ?? TableSize))
 		in
-		    #"En-têtes promus"
+		    #"Conserver les premières lignes"
 	lineageTag: b34597f1-bd0a-4830-b8c0-d374a0cb4012
 	queryGroup: 'Sources Old Data'
 
@@ -55,9 +59,11 @@ expression ASER_2023-2024 =
 		let
 		    Source = Excel.Workbook(File.Contents("C:\2026 04 Formation TaRL\ASER_Data\Before 24_25\ASER Data_2023-2024.xlsx"), null, true),
 		    ASER_Sheet = Source{[Item="ASER",Kind="Sheet"]}[Data],
-		    #"En-têtes promus" = Table.PromoteHeaders(ASER_Sheet, [PromoteAllScalars=true])
+		    #"En-têtes promus" = Table.PromoteHeaders(ASER_Sheet, [PromoteAllScalars=true]),
+		    TableSize = Table.RowCount(#"En-têtes promus"),
+		    #"Conserver les premières lignes" = Table.FirstN(#"En-têtes promus",(Sample_Size ?? TableSize))
 		in
-		    #"En-têtes promus"
+		    #"Conserver les premières lignes"
 	lineageTag: d92bbcaf-e3f7-4cbb-8c67-083fac3f599c
 	queryGroup: 'Sources Old Data'
 
@@ -157,7 +163,7 @@ expression Paramètre1 = #"Exemple de fichier" meta [IsParameterQuery=true, Bina
 	lineageTag: 0d0598cb-5473-4bbb-a2f0-c2e02d4b0b63
 	queryGroup: 'Transform ASER New Data\Requêtes d''assistance'
 
-	annotation PBI_ResultType = Binary
+	annotation PBI_ResultType = Exception
 
 expression 'Exemple de fichier' =
 		let
@@ -177,12 +183,13 @@ expression 'Transformer le fichier' =
 		    Source = (Paramètre1 as binary) => let
 		        Source = Excel.Workbook(Paramètre1, null, true),
 		        verification_Sheet = Source{[Item="ASER",Kind="Sheet"]}[Data],
-		        #"En-têtes promus" = Table.PromoteHeaders(verification_Sheet, [PromoteAllScalars=true])
+		        #"En-têtes promus" = Table.PromoteHeaders(verification_Sheet, [PromoteAllScalars=true]),
+		        TableSize = Table.RowCount(#"En-têtes promus"),
+		        #"Conserver les premières lignes" = Table.FirstN(#"En-têtes promus",(Sample_Size ?? TableSize))
 		    in
-		        #"En-têtes promus"
+		        #"Conserver les premières lignes"
 		in
 		    Source
-	mAttributes: [ FunctionQueryBinding = "{""exemplarFormulaName"":""Transformer l\u0027exemple de fichier""}" ]
 	lineageTag: a566f16d-b64e-4193-9ad6-381f9645f47a
 	queryGroup: 'Transform ASER New Data\Requêtes d''assistance'
 
@@ -190,17 +197,50 @@ expression 'Transformer le fichier' =
 
 	annotation PBI_NavigationStepName = Navigation
 
-expression 'Transformer l''exemple de fichier' =
-		let
-		    Source = Excel.Workbook(Paramètre1, null, true),
-		    verification_Sheet = Source{[Item="ASER",Kind="Sheet"]}[Data],
-		    #"En-têtes promus" = Table.PromoteHeaders(verification_Sheet, [PromoteAllScalars=true])
-		in
-		    #"En-têtes promus"
-	lineageTag: 2014c0ae-be01-4951-94b7-07f578afa505
-	queryGroup: 'Transform ASER New Data\Requêtes d''assistance'
+expression Paramètre2 = #"Exemple de fichier (2)" meta [IsParameterQuery=true, BinaryIdentifier=#"Exemple de fichier (2)", Type="Binary", IsParameterQueryRequired=true]
+	lineageTag: 5ca6b49f-4bcf-4345-a20d-e6933315a928
+	queryGroup: 'Transform Verification ASER\Requêtes d''assistance'
+
+	annotation PBI_ResultType = Exception
+
+/// Nombre de lignes à conserver dans chaque table. Utile pendant le développement. 
+/// Ne rien renseigner si vous voulez conserver toutes les lignes. Nécessaire pour la déploiement en production.
+expression Sample_Size = null meta [IsParameterQuery=true, Type="Number", IsParameterQueryRequired=false]
+	lineageTag: 6467d4c3-b058-45e7-8631-70a32754a2f3
 
 	annotation PBI_NavigationStepName = Navigation
 
-	annotation PBI_ResultType = Table
+	annotation PBI_ResultType = Null
+
+expression 'Exemple de fichier (2)' =
+		let
+		    Source = Folder.Files("C:\2026 04 Formation TaRL\ASER_Data\verification_ASER"),
+		    Navigation1 = Source{0}[Content]
+		in
+		    Navigation1
+	lineageTag: 545ea9ec-de3b-4187-935e-e693e6a3b694
+	queryGroup: 'Transform Verification ASER\Requêtes d''assistance'
+
+	annotation PBI_ResultType = Binary
+
+expression 'Transformer le fichier (2)' =
+		let
+		    Source = (Paramètre2 as binary) => let
+		        Source = Excel.Workbook(Paramètre2, null, true),
+		        verification_Sheet = Source{[Item="verification",Kind="Sheet"]}[Data],
+		        #"En-têtes promus" = Table.PromoteHeaders(verification_Sheet, [PromoteAllScalars=true]),
+		        #"Autres colonnes supprimées" = Table.SelectColumns(#"En-têtes promus",{"TYPE", "DRENA", "IEPP", "ECOLES", "COURS", "GENRE", "RESULTAT LECTURE SUPERVIS.", "RESULTAT LECTURE FACILITAT.", "RESULTAT MATH SUPERVIS.", "RESULTAT MATH FACILITAT."}),
+		        #"Doublons supprimés" = Table.Distinct(#"Autres colonnes supprimées"),
+		        TableSize = Table.RowCount(#"Doublons supprimés"),
+		        #"Conserver les premières lignes" = Table.FirstN(#"En-têtes promus",(Sample_Size ?? TableSize))
+		    in
+		        #"Conserver les premières lignes"
+		in
+		    Source
+	lineageTag: 345e76f7-c46c-4fce-8b9b-62c01a011a7c
+	queryGroup: 'Transform Verification ASER\Requêtes d''assistance'
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Function
 

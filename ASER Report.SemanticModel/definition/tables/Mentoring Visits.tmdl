@@ -1,0 +1,72 @@
+table 'Mentoring Visits'
+	lineageTag: 09a51613-c57e-44d4-b1b7-bb3ac6a9597d
+
+	column 'Grade ID'
+		dataType: int64
+		formatString: 0
+		lineageTag: 3bacc73e-6fd9-43cc-9607-777f8e0ba0ce
+		summarizeBy: none
+		sourceColumn: Grade ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Visit Type'
+		dataType: string
+		lineageTag: 090d367e-14e5-4d58-8455-fa3c447bf5c7
+		summarizeBy: none
+		sourceColumn: Visit Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Visits Count'
+		dataType: int64
+		formatString: 0
+		lineageTag: 7e92dbf4-2edd-4d2f-87bd-ca0deaa7c748
+		summarizeBy: sum
+		sourceColumn: Visits Count
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cycle ID'
+		dataType: int64
+		formatString: 0
+		lineageTag: d2abcd22-aee5-412f-82e4-9a2695b66f30
+		summarizeBy: none
+		sourceColumn: Cycle ID
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Mentoring Visits' = m
+		mode: import
+		source =
+				let
+				    Source = Folder.Files("C:\2026 04 Formation TaRL\ASER_Data\From 24_25"),
+				    #"Fichiers masqués filtrés1" = Table.SelectRows(Source, each [Attributes]?[Hidden]? <> true),
+				    #"Appeler une fonction personnalisée1" = Table.AddColumn(#"Fichiers masqués filtrés1", "Transformer le fichier", each #"Transformer le fichier"([Content])),
+				    #"Colonnes renommées1" = Table.RenameColumns(#"Appeler une fonction personnalisée1", {"Name", "Source.Name"}),
+				    #"Autres colonnes supprimées1" = Table.SelectColumns(#"Colonnes renommées1", {"Source.Name", "Transformer le fichier"}),
+				    #"Colonne de tables développée1" = Table.ExpandTableColumn(#"Autres colonnes supprimées1", "Transformer le fichier", Table.ColumnNames(#"Transformer le fichier"(#"Exemple de fichier"))),
+				    #"Fractionner la colonne par délimiteur" = Table.SplitColumn(#"Colonne de tables développée1", "Source.Name", Splitter.SplitTextByDelimiter("_", QuoteStyle.Csv), {"Source.Name.1", "Source.Name.2"}),
+				    #"Fractionner la colonne par délimiteur1" = Table.SplitColumn(#"Fractionner la colonne par délimiteur", "Source.Name.2", Splitter.SplitTextByEachDelimiter({"-"}, QuoteStyle.Csv, true), {"Source.Name.2.1", "Source.Name.2.2"}),
+				    #"Fractionner la colonne par délimiteur2" = Table.SplitColumn(#"Fractionner la colonne par délimiteur1", "Source.Name.2.2", Splitter.SplitTextByDelimiter(".", QuoteStyle.Csv), {"Source.Name.2.2.1", "Source.Name.2.2.2"}),
+				    #"Autres colonnes supprimées" = Table.SelectColumns(#"Fractionner la colonne par délimiteur2",{"Source.Name.2.1", "Source.Name.2.2.1", "REGIONS", "DRENA", "inspections", "ECOLE", "COURS", "VISITE MENTORAT (CPPP)", "AUTRE VISITE MENTORAT"}),
+				    #"Lignes filtrées" = Table.SelectRows(#"Autres colonnes supprimées", each ([COURS] <> null)),
+				    #"Colonnes renommées" = Table.RenameColumns(#"Lignes filtrées",{{"Source.Name.2.1", "Period"}, {"Source.Name.2.2.1", "Cycle"}, {"REGIONS", "Region"}, {"inspections", "IEPP"}, {"ECOLE", "School"}, {"DRENA", "DRENAET"}, {"VISITE MENTORAT (CPPP)", "Mentoring Visit (CPPP)"}, {"AUTRE VISITE MENTORAT", "Other Mentoring Visit"}, {"COURS", "Grade"}}),
+				    #"Type modifié" = Table.TransformColumnTypes(#"Colonnes renommées",{{"Period", type text}, {"Cycle", type text}, {"Region", type text}, {"DRENAET", type text}, {"IEPP", type text}, {"School", type text}, {"Grade", type text}, {"Mentoring Visit (CPPP)", Int64.Type}, {"Other Mentoring Visit", Int64.Type}}),
+				    #"Valeur remplacée" = Table.ReplaceValue(#"Type modifié","DRENA ","",Replacer.ReplaceText,{"DRENAET"}),
+				    #"Requêtes fusionnées" = Table.NestedJoin(#"Valeur remplacée", {"Grade", "School", "IEPP", "DRENAET"}, Grades, {"Grade", "School", "IEPP", "DRENAET"}, "Grades", JoinKind.LeftOuter),
+				    #"Grades développé" = Table.ExpandTableColumn(#"Requêtes fusionnées", "Grades", {"Grade ID"}, {"Grade ID"}),
+				    #"Autres colonnes supprimées2" = Table.SelectColumns(#"Grades développé",{"Period", "Cycle", "Mentoring Visit (CPPP)", "Other Mentoring Visit", "Grade ID"}),
+				    #"Tableau croisé dynamique des colonnes supprimé" = Table.UnpivotOtherColumns(#"Autres colonnes supprimées2", {"Period", "Cycle", "Grade ID"}, "Attribut", "Valeur"),
+				    #"Colonnes renommées2" = Table.RenameColumns(#"Tableau croisé dynamique des colonnes supprimé",{{"Attribut", "Visit Type"}, {"Valeur", "Visits Count"}}),
+				    #"Lignes filtrées1" = Table.SelectRows(#"Colonnes renommées2", each ([Visits Count] <> 0)),
+				    #"Requêtes fusionnées1" = Table.NestedJoin(#"Lignes filtrées1", {"Period", "Cycle"}, Cycles, {"Period", "Cycle"}, "Cycles", JoinKind.LeftOuter),
+				    #"Cycles développé" = Table.ExpandTableColumn(#"Requêtes fusionnées1", "Cycles", {"Cycle ID"}, {"Cycle ID"}),
+				    #"Autres colonnes supprimées3" = Table.SelectColumns(#"Cycles développé",{"Grade ID", "Visit Type", "Visits Count", "Cycle ID"})
+				in
+				    #"Autres colonnes supprimées3"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

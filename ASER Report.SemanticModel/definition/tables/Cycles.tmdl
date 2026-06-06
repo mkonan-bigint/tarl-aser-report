@@ -48,7 +48,7 @@ table Cycles
 		isHidden
 		formatString: 0
 		lineageTag: 8d68d0fc-353c-4699-b1a4-5fe0ea19c5eb
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: Cycle Sort
 
 		changedProperty = IsHidden

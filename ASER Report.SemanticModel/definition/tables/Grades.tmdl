@@ -53,7 +53,7 @@ table Grades
 		isHidden
 		formatString: 0
 		lineageTag: 69f67ef1-b50d-44e8-a33b-e1e355a2f5a2
-		summarizeBy: none
+		summarizeBy: count
 		sourceColumn: School ID
 
 		changedProperty = IsHidden
@@ -65,7 +65,7 @@ table Grades
 		isHidden
 		formatString: 0
 		lineageTag: d0ae80a6-f981-4f7c-b7b0-8e163a7d65f4
-		summarizeBy: none
+		summarizeBy: count
 		sourceColumn: DRENAET ID
 
 		changedProperty = IsHidden
@@ -77,7 +77,7 @@ table Grades
 		isHidden
 		formatString: 0
 		lineageTag: eee5a45d-56ba-4191-bc74-cbef16b4c645
-		summarizeBy: none
+		summarizeBy: count
 		sourceColumn: IEPP ID
 
 		changedProperty = IsHidden
@@ -89,7 +89,7 @@ table Grades
 		isHidden
 		formatString: 0
 		lineageTag: cab31000-fbca-41c0-aa3c-4a4d8931fc30
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: Grade Sort
 
 		changedProperty = IsHidden

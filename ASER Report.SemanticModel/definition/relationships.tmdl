@@ -6,11 +6,19 @@ relationship AutoDetected_f34f51e3-fb32-4e3c-8dc6-18e7b08cf6d9
 	fromColumn: 'ASER CIV Data'.'Cycle ID'
 	toColumn: Cycles.'Cycle ID'
 
+relationship d9062aef-b932-8c85-997b-bbd4d62d7c81
+	fromColumn: 'ASER CIV Data'.'Entry Date'
+	toColumn: 'Entry Calendar'.Date
+
 relationship AutoDetected_f063efa2-131c-4be8-8b3f-a3571619a31b
 	fromColumn: 'ASER CIV Data'.'Level ID'
 	toColumn: 'Levels in Subjects'.'Level ID'
 
-relationship d9062aef-b932-8c85-997b-bbd4d62d7c81
-	fromColumn: 'ASER CIV Data'.'Entry Date'
-	toColumn: 'Entry Calendar'.Date
+relationship AutoDetected_31c6e09f-48eb-4fac-9e8b-4420864c2969
+	fromColumn: 'Mentoring Visits'.'Grade ID'
+	toColumn: Grades.'Grade ID'
+
+relationship AutoDetected_36b178bf-e4b4-471f-8a4f-eb4bbf285bc8
+	fromColumn: 'Mentoring Visits'.'Cycle ID'
+	toColumn: Cycles.'Cycle ID'
 

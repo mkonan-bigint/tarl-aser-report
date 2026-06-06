@@ -1,6 +1,37 @@
 table 'Levels in Subjects'
 	lineageTag: 228a31b4-63b6-4a56-af45-4169c3054e5f
 
+	column 'Subject ID'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: dc5913eb-5109-4b12-b722-125ccbd657b9
+		summarizeBy: none
+		sourceColumn: Subject ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Group Level Sort' =
+			
+			SWITCH( TRUE(),
+			        'Levels in Subjects'[Level Sort] <= 2, 1,
+			        'Levels in Subjects'[Level Sort] = 3, 2,
+			        'Levels in Subjects'[Level Sort] <= 6, 3,
+			        'Levels in Subjects'[Level Sort] <= 12, 4,
+			        'Levels in Subjects'[Level Sort] = 13, 5,
+			        'Levels in Subjects'[Level Sort] <= 15, 6,
+			        BLANK() )
+		isHidden
+		formatString: 0
+		lineageTag: ed270a33-723a-4a8e-b238-e61fcac9f99a
+		summarizeBy: none
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
 	column Level
 		dataType: string
 		lineageTag: 13616aec-13da-4333-8315-c1de70d971ab
@@ -29,18 +60,6 @@ table 'Levels in Subjects'
 		lineageTag: 41493d22-4abd-471f-b644-6594ca5d0fc4
 		summarizeBy: none
 		sourceColumn: Level ID
-
-		changedProperty = IsHidden
-
-		annotation SummarizationSetBy = Automatic
-
-	column 'Subject ID'
-		dataType: int64
-		isHidden
-		formatString: 0
-		lineageTag: dc5913eb-5109-4b12-b722-125ccbd657b9
-		summarizeBy: none
-		sourceColumn: Subject ID
 
 		changedProperty = IsHidden
 
@@ -106,25 +125,6 @@ table 'Levels in Subjects'
 		changedProperty = SortByColumn
 
 		annotation GroupingDesignState = {"Version":0,"Sources":[{"Name":"l","Entity":"Levels in Subjects"}],"GroupedColumns":[{"Column":{"Expression":{"SourceRef":{"Source":"l"}},"Property":"Level"}}],"GroupItems":[{"DisplayName":"(Vide)","BlankDefaultPlaceholder":true},{"DisplayName":"2-Digit","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"l"}},"Property":"Level"}}],"Values":[[{"Literal":{"Value":"'2-Digit'"}}]]}}},{"DisplayName":"Can read at least a simple paragraph","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"l"}},"Property":"Level"}}],"Values":[[{"Literal":{"Value":"'Paragraph'"}}],[{"Literal":{"Value":"'Story'"}}],[{"Literal":{"Value":"'Comprehension'"}}]]}}},{"DisplayName":"Can solve at least 2x2 subtraction operation","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"l"}},"Property":"Level"}}],"Values":[[{"Literal":{"Value":"'Substraction'"}}],[{"Literal":{"Value":"'Division'"}}]]}}},{"DisplayName":"Cannot read words","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"l"}},"Property":"Level"}}],"Values":[[{"Literal":{"Value":"'Beginner L'"}}],[{"Literal":{"Value":"'Letter'"}}]]}}},{"DisplayName":"Cannot recognize 2-digit","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"l"}},"Property":"Level"}}],"Values":[[{"Literal":{"Value":"'Beginner N'"}}],[{"Literal":{"Value":"'1-Digit'"}}]]}}},{"DisplayName":"Word","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"l"}},"Property":"Level"}}],"Values":[[{"Literal":{"Value":"'Word'"}}]]}}}]}
-
-		annotation SummarizationSetBy = Automatic
-
-	column 'Group Level Sort' =
-			
-			SWITCH( TRUE(),
-			        'Levels in Subjects'[Level Sort] <= 2, 1,
-			        'Levels in Subjects'[Level Sort] = 3, 2,
-			        'Levels in Subjects'[Level Sort] <= 6, 3,
-			        'Levels in Subjects'[Level Sort] <= 12, 4,
-			        'Levels in Subjects'[Level Sort] = 13, 5,
-			        'Levels in Subjects'[Level Sort] <= 15, 6,
-			        BLANK() )
-		isHidden
-		formatString: 0
-		lineageTag: ed270a33-723a-4a8e-b238-e61fcac9f99a
-		summarizeBy: none
-
-		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 

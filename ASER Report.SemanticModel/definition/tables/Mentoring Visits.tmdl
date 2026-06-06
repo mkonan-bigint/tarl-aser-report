@@ -2,7 +2,7 @@ table 'Mentoring Visits'
 	lineageTag: 09a51613-c57e-44d4-b1b7-bb3ac6a9597d
 
 	column 'Grade ID'
-		dataType: int64
+		dataType: double
 		formatString: 0
 		lineageTag: 3bacc73e-6fd9-43cc-9607-777f8e0ba0ce
 		summarizeBy: none
@@ -19,7 +19,7 @@ table 'Mentoring Visits'
 		annotation SummarizationSetBy = Automatic
 
 	column 'Visits Count'
-		dataType: int64
+		dataType: double
 		formatString: 0
 		lineageTag: 7e92dbf4-2edd-4d2f-87bd-ca0deaa7c748
 		summarizeBy: sum
@@ -33,6 +33,15 @@ table 'Mentoring Visits'
 		lineageTag: d2abcd22-aee5-412f-82e4-9a2695b66f30
 		summarizeBy: none
 		sourceColumn: Cycle ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'School ID'
+		dataType: int64
+		formatString: 0
+		lineageTag: a71d9435-210c-41b0-b39b-48d6244298be
+		summarizeBy: count
+		sourceColumn: School ID
 
 		annotation SummarizationSetBy = Automatic
 
@@ -55,18 +64,19 @@ table 'Mentoring Visits'
 				    #"Type modifié" = Table.TransformColumnTypes(#"Colonnes renommées",{{"Period", type text}, {"Cycle", type text}, {"Region", type text}, {"DRENAET", type text}, {"IEPP", type text}, {"School", type text}, {"Grade", type text}, {"Mentoring Visit (CPPP)", Int64.Type}, {"Other Mentoring Visit", Int64.Type}}),
 				    #"Valeur remplacée" = Table.ReplaceValue(#"Type modifié","DRENA ","",Replacer.ReplaceText,{"DRENAET"}),
 				    #"Requêtes fusionnées" = Table.NestedJoin(#"Valeur remplacée", {"Grade", "School", "IEPP", "DRENAET"}, Grades, {"Grade", "School", "IEPP", "DRENAET"}, "Grades", JoinKind.LeftOuter),
-				    #"Grades développé" = Table.ExpandTableColumn(#"Requêtes fusionnées", "Grades", {"Grade ID"}, {"Grade ID"}),
-				    #"Autres colonnes supprimées2" = Table.SelectColumns(#"Grades développé",{"Period", "Cycle", "Mentoring Visit (CPPP)", "Other Mentoring Visit", "Grade ID"}),
-				    #"Tableau croisé dynamique des colonnes supprimé" = Table.UnpivotOtherColumns(#"Autres colonnes supprimées2", {"Period", "Cycle", "Grade ID"}, "Attribut", "Valeur"),
+				    #"Grades développé" = Table.ExpandTableColumn(#"Requêtes fusionnées", "Grades", {"Grade ID", "School ID"}, {"Grade ID", "School ID"}),
+				    #"Autres colonnes supprimées2" = Table.SelectColumns(#"Grades développé",{"Period", "Cycle", "Mentoring Visit (CPPP)", "Other Mentoring Visit", "Grade ID", "School ID"}),
+				    #"Tableau croisé dynamique des colonnes supprimé" = Table.UnpivotOtherColumns(#"Autres colonnes supprimées2", {"Period", "Cycle", "Grade ID", "School ID"}, "Attribut", "Valeur"),
 				    #"Colonnes renommées2" = Table.RenameColumns(#"Tableau croisé dynamique des colonnes supprimé",{{"Attribut", "Visit Type"}, {"Valeur", "Visits Count"}}),
 				    #"Lignes filtrées1" = Table.SelectRows(#"Colonnes renommées2", each ([Visits Count] <> 0)),
 				    #"Requêtes fusionnées1" = Table.NestedJoin(#"Lignes filtrées1", {"Period", "Cycle"}, Cycles, {"Period", "Cycle"}, "Cycles", JoinKind.LeftOuter),
 				    #"Cycles développé" = Table.ExpandTableColumn(#"Requêtes fusionnées1", "Cycles", {"Cycle ID"}, {"Cycle ID"}),
-				    #"Autres colonnes supprimées3" = Table.SelectColumns(#"Cycles développé",{"Grade ID", "Visit Type", "Visits Count", "Cycle ID"})
+				    #"Autres colonnes supprimées3" = Table.SelectColumns(#"Cycles développé",{"Grade ID", "School ID", "Visit Type", "Visits Count", "Cycle ID"}),
+				    #"Lignes groupées" = Table.Group(#"Autres colonnes supprimées3", {"School ID", "Visit Type", "Cycle ID"}, {{"Grade ID", each List.Max([Grade ID]), type nullable number}, {"Visits Count", each List.Median([Visits Count]), type number}})
 				in
-				    #"Autres colonnes supprimées3"
+				    #"Lignes groupées"
 
 	annotation PBI_NavigationStepName = Navigation
 
-	annotation PBI_ResultType = Exception
+	annotation PBI_ResultType = Table
 

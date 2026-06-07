@@ -47,13 +47,11 @@ Mesures verification
 
 
 
-Mesures mentoring
+~~Mesures mentoring~~
 
-* Average Number Of Mentoring School Visits ← # Of Schools visited, #Of Schools assessed
-* \# Of Schools with 0 mentor visit
-* \# Of Schools with 1-3 mentor visits
-* \# Of Schools with 4-6 mentor visits
-* \# Of Schools with 7+ mentor visits
-
-
+* ~~Average Number Of Mentoring School Visits ← # Of Schools visited, #Of Schools assessed~~
+* ~~# Of Schools with 0 mentor visit~~
+* ~~# Of Schools with 1-3 mentor visits~~
+* ~~# Of Schools with 4-6 mentor visits~~
+* ~~# Of Schools with 7+ mentor visits~~
 

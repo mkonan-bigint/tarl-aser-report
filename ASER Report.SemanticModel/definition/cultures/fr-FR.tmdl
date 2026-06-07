@@ -6506,6 +6506,1509 @@ cultureInfo fr-FR
 			          }
 			        }
 			      ]
+			    },
+			    "mesure.of_schools_visited": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "# Of Schools Visited"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "# of schools visited": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "no of school visited": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "num of school visited": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "number of school visited": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.average_number_of_mentoring_school_visits": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "Average Number Of Mentoring School Visits"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "average number of mentoring school visits": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.of_visits": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "# Of Visits"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "# of visits": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "no of visit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "num of visit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "number of visit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.of_schools_with_0_mentor_visit": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "# Of Schools with 0 mentor visit"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "# of schools with 0 mentor visit": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "0 mentor visit": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.of_schools_with_13_mentor_visits": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "# Of Schools with 1-3 mentor visits"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "# of schools with 1-3 mentor visits": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "# of schools with 1 3 mentor visits": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "1-3 mentor visits": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.of_schools_with_46_mentor_visits": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "# Of Schools with 4-6 mentor visits"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "# of schools with 4-6 mentor visits": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "# of schools with 4 6 mentor visits": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "4-6 mentor visits": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.of_schools_with_7_mentor_visits": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "# Of Schools with 7+ mentor visits"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "# of schools with 7+ mentor visits": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "7+ mentor visits": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "mentoring_visit": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mentoring Visits"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mentoring visit": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "visit": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "mentoring appointment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "appointment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "mentoring call": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "call": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "mentoring stopover": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "stopover": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "mentoring stay": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "mentoring holiday": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "mentoring vacation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "mentoring break": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        }
+			      ]
+			    },
+			    "mentoring_visit.grade_ID": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mentoring Visits",
+			          "ConceptualProperty": "Grade ID"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "grade ID": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "grade identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "grade identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "grade identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "grade credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "mentoring_visit.visit_type": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mentoring Visits",
+			          "ConceptualProperty": "Visit Type"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "visit type": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "type": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "visit category": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "visit genre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "visit manner": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "visit variety": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "category": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "genre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "manner": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "variety": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "visit brand": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "visit class": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "mentoring_visit.visits_count": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mentoring Visits",
+			          "ConceptualProperty": "Visits Count"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "visits count": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "visit count": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "visit amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "mentoring_visit.cycle_ID": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mentoring Visits",
+			          "ConceptualProperty": "Cycle ID"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "cycle ID": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "cycle identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "cycle identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "cycle identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "cycle credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "mentoring_visit.school_ID": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mentoring Visits",
+			          "ConceptualProperty": "School ID"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "school ID": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "school identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "school identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "school identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "school credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "ASER_verification": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ASER Verification"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ASER verification": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "verification": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "aser confirmation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "aser corroboration": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "aser substantiation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "aser authentication": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "aser certification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "confirmation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "corroboration": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "substantiation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "authentication": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "certification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        }
+			      ]
+			    },
+			    "ASER_verification.literacy_crosscheck": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ASER Verification",
+			          "ConceptualProperty": "Literacy Cross-Check"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "literacy cross-check": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "literacy cross check": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "check": {
+			            "Type": "Noun",
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "cross check": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "literacy": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "cross cheque": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "cross checkup": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "cross inspection": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "cross payment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "cheque": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "checkup": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "inspection": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "payment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "cross test": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "cross tick": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "ASER_verification.numeracy_crosscheck": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ASER Verification",
+			          "ConceptualProperty": "Numeracy Cross-Check"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "numeracy cross-check": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "numeracy cross check": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "check": {
+			            "Type": "Noun",
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "cross check": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "numeracy": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "cross cheque": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "cross checkup": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "cross inspection": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "cross payment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "cheque": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "checkup": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "inspection": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "payment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "cross test": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "cross tick": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "ASER_verification.literacy_crosscheck_ID": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ASER Verification",
+			          "ConceptualProperty": "Literacy Cross-Check ID"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "literacy cross-check ID": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "literacy cross check ID": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "check": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "cross check": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "literacy cross check": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "check ID": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "cross check ID": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "cross cheque id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "cross checkup id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "cross inspection id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "cross payment id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "cross check identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "cross check identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "cross check identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "cross cheque": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "cross checkup": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "cross inspection": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "ASER_verification.numeracy_crosscheck_ID": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ASER Verification",
+			          "ConceptualProperty": "Numeracy Cross-Check ID"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "numeracy cross-check ID": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "numeracy cross check ID": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "check": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "cross check": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "numeracy cross check": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "check ID": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "cross check ID": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "cross cheque id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "cross checkup id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "cross inspection id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "cross payment id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "cross check identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "cross check identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "cross check identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "cross cheque": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "cross checkup": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "cross inspection": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "ASER_verification.grade_ID": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ASER Verification",
+			          "ConceptualProperty": "Grade ID"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "grade ID": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "grade identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "grade identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "grade identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "grade credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "ASER_verification.cycle_ID": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ASER Verification",
+			          "ConceptualProperty": "Cycle ID"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "cycle ID": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "cycle identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "cycle identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "cycle identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "cycle credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
@@ -6575,23 +8078,189 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "ASER_CIV_data_has_entry_calendar": {
+			    "ASER_verification_has_cycle": {
 			      "Binding": {
-			        "ConceptualEntity": "ASER CIV Data"
+			        "ConceptualEntity": "ASER Verification"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "ASER_CIV_data": {
+			        "ASER_verification": {
 			          "Target": {
-			            "Entity": "ASER_CIV_data"
+			            "Entity": "ASER_verification"
 			          }
 			        },
-			        "entry_calendar": {
+			        "cycle": {
 			          "Target": {
-			            "Entity": "entry_calendar"
+			            "Entity": "cycle"
 			          }
 			        }
-			      }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "ASER_verification"
+			            },
+			            "Object": {
+			              "Role": "cycle"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ASER_verifications_have_cycles"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cycle"
+			            },
+			            "Object": {
+			              "Role": "ASER_verification"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "cycles_have_ASER_verifications"
+			        }
+			      ]
+			    },
+			    "ASER_verification_has_grade": {
+			      "Binding": {
+			        "ConceptualEntity": "ASER Verification"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "ASER_verification": {
+			          "Target": {
+			            "Entity": "ASER_verification"
+			          }
+			        },
+			        "grade": {
+			          "Target": {
+			            "Entity": "grade"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "ASER_verification"
+			            },
+			            "Object": {
+			              "Role": "grade"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ASER_verifications_have_grades"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grade"
+			            },
+			            "Object": {
+			              "Role": "ASER_verification"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "grades_have_ASER_verifications"
+			        }
+			      ]
+			    },
+			    "mentoring_visit_has_cycle": {
+			      "Binding": {
+			        "ConceptualEntity": "Mentoring Visits"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mentoring_visit": {
+			          "Target": {
+			            "Entity": "mentoring_visit"
+			          }
+			        },
+			        "cycle": {
+			          "Target": {
+			            "Entity": "cycle"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mentoring_visit"
+			            },
+			            "Object": {
+			              "Role": "cycle"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mentoring_visits_have_cycles"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cycle"
+			            },
+			            "Object": {
+			              "Role": "mentoring_visit"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "cycles_have_mentoring_visits"
+			        }
+			      ]
+			    },
+			    "mentoring_visit_has_grade": {
+			      "Binding": {
+			        "ConceptualEntity": "Mentoring Visits"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mentoring_visit": {
+			          "Target": {
+			            "Entity": "mentoring_visit"
+			          }
+			        },
+			        "grade": {
+			          "Target": {
+			            "Entity": "grade"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mentoring_visit"
+			            },
+			            "Object": {
+			              "Role": "grade"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mentoring_visits_have_grades"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grade"
+			            },
+			            "Object": {
+			              "Role": "mentoring_visit"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "grades_have_mentoring_visits"
+			        }
+			      ]
 			    },
 			    "ASER_CIV_data_has_level_in_subjects": {
 			      "Binding": {
@@ -6607,6 +8276,24 @@ cultureInfo fr-FR
 			        "level_in_subjects": {
 			          "Target": {
 			            "Entity": "level_in_subjects"
+			          }
+			        }
+			      }
+			    },
+			    "ASER_CIV_data_has_entry_calendar": {
+			      "Binding": {
+			        "ConceptualEntity": "ASER CIV Data"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "ASER_CIV_data": {
+			          "Target": {
+			            "Entity": "ASER_CIV_data"
+			          }
+			        },
+			        "entry_calendar": {
+			          "Target": {
+			            "Entity": "entry_calendar"
 			          }
 			        }
 			      }
@@ -6646,6 +8333,514 @@ cultureInfo fr-FR
 			          }
 			        }
 			      }
+			    },
+			    "ASER_verification_has_numeracy_crosscheck": {
+			      "Binding": {
+			        "ConceptualEntity": "ASER Verification"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "ASER_verification": {
+			          "Target": {
+			            "Entity": "ASER_verification"
+			          }
+			        },
+			        "ASER_verification.numeracy_crosscheck": {
+			          "Target": {
+			            "Entity": "ASER_verification.numeracy_crosscheck"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "ASER_verification"
+			            },
+			            "Object": {
+			              "Role": "ASER_verification.numeracy_crosscheck"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ASER_verifications_have_numeracy_crosscheck"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "ASER_verification"
+			            },
+			            "Prepositions": [
+			              {
+			                "cross": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "ASER_verification.numeracy_crosscheck"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ASER_verifications_are_cross_numeracy_crosscheck"
+			        }
+			      ]
+			    },
+			    "ASER_verification_has_literacy_crosscheck": {
+			      "Binding": {
+			        "ConceptualEntity": "ASER Verification"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "ASER_verification": {
+			          "Target": {
+			            "Entity": "ASER_verification"
+			          }
+			        },
+			        "ASER_verification.literacy_crosscheck": {
+			          "Target": {
+			            "Entity": "ASER_verification.literacy_crosscheck"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "ASER_verification"
+			            },
+			            "Object": {
+			              "Role": "ASER_verification.literacy_crosscheck"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ASER_verifications_have_literacy_crosscheck"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "ASER_verification"
+			            },
+			            "Prepositions": [
+			              {
+			                "cross": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "ASER_verification.literacy_crosscheck"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ASER_verifications_are_cross_literacy_crosscheck"
+			        }
+			      ]
+			    },
+			    "mentoring_visit_has_school_ID": {
+			      "Binding": {
+			        "ConceptualEntity": "Mentoring Visits"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mentoring_visit": {
+			          "Target": {
+			            "Entity": "mentoring_visit"
+			          }
+			        },
+			        "mentoring_visit.school_ID": {
+			          "Target": {
+			            "Entity": "mentoring_visit.school_ID"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mentoring_visit"
+			            },
+			            "Object": {
+			              "Role": "mentoring_visit.school_ID"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mentoring_visits_have_school_ID"
+			        }
+			      ]
+			    },
+			    "mentoring_visit_has_visits_count": {
+			      "Binding": {
+			        "ConceptualEntity": "Mentoring Visits"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mentoring_visit": {
+			          "Target": {
+			            "Entity": "mentoring_visit"
+			          }
+			        },
+			        "mentoring_visit.visits_count": {
+			          "Target": {
+			            "Entity": "mentoring_visit.visits_count"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mentoring_visit"
+			            },
+			            "Object": {
+			              "Role": "mentoring_visit.visits_count"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mentoring_visits_have_visits_counts"
+			        }
+			      ]
+			    },
+			    "mentoring_visit_has_visit_type": {
+			      "Binding": {
+			        "ConceptualEntity": "Mentoring Visits"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mentoring_visit": {
+			          "Target": {
+			            "Entity": "mentoring_visit"
+			          }
+			        },
+			        "mentoring_visit.visit_type": {
+			          "Target": {
+			            "Entity": "mentoring_visit.visit_type"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mentoring_visit"
+			            },
+			            "Object": {
+			              "Role": "mentoring_visit.visit_type"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mentoring_visits_have_visit_types"
+			        }
+			      ]
+			    },
+			    "mentoring_visit_has_mesure_of_schools_with_7_mentor_visits": {
+			      "Binding": {
+			        "ConceptualEntity": "Mentoring Visits"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mentoring_visit": {
+			          "Target": {
+			            "Entity": "mentoring_visit"
+			          }
+			        },
+			        "mesure.of_schools_with_7_mentor_visits": {
+			          "Target": {
+			            "Entity": "mesure.of_schools_with_7_mentor_visits"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mentoring_visit"
+			            },
+			            "Object": {
+			              "Role": "mesure.of_schools_with_7_mentor_visits"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mentoring_visits_have__of_schools_with_7_mentor_visits"
+			        }
+			      ]
+			    },
+			    "ASER_CIV_data_has_mesure_of_schools_with_7_mentor_visits": {
+			      "Binding": {
+			        "ConceptualEntity": "ASER CIV Data"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "ASER_CIV_data": {
+			          "Target": {
+			            "Entity": "ASER_CIV_data"
+			          }
+			        },
+			        "mesure.of_schools_with_7_mentor_visits": {
+			          "Target": {
+			            "Entity": "mesure.of_schools_with_7_mentor_visits"
+			          }
+			        }
+			      }
+			    },
+			    "mentoring_visit_has_mesure_of_schools_with_46_mentor_visits": {
+			      "Binding": {
+			        "ConceptualEntity": "Mentoring Visits"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mentoring_visit": {
+			          "Target": {
+			            "Entity": "mentoring_visit"
+			          }
+			        },
+			        "mesure.of_schools_with_46_mentor_visits": {
+			          "Target": {
+			            "Entity": "mesure.of_schools_with_46_mentor_visits"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mentoring_visit"
+			            },
+			            "Object": {
+			              "Role": "mesure.of_schools_with_46_mentor_visits"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mentoring_visits_have__of_schools_with_46_mentor_visits"
+			        }
+			      ]
+			    },
+			    "ASER_CIV_data_has_mesure_of_schools_with_46_mentor_visits": {
+			      "Binding": {
+			        "ConceptualEntity": "ASER CIV Data"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "ASER_CIV_data": {
+			          "Target": {
+			            "Entity": "ASER_CIV_data"
+			          }
+			        },
+			        "mesure.of_schools_with_46_mentor_visits": {
+			          "Target": {
+			            "Entity": "mesure.of_schools_with_46_mentor_visits"
+			          }
+			        }
+			      }
+			    },
+			    "mentoring_visit_has_mesure_of_schools_with_13_mentor_visits": {
+			      "Binding": {
+			        "ConceptualEntity": "Mentoring Visits"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mentoring_visit": {
+			          "Target": {
+			            "Entity": "mentoring_visit"
+			          }
+			        },
+			        "mesure.of_schools_with_13_mentor_visits": {
+			          "Target": {
+			            "Entity": "mesure.of_schools_with_13_mentor_visits"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mentoring_visit"
+			            },
+			            "Object": {
+			              "Role": "mesure.of_schools_with_13_mentor_visits"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mentoring_visits_have__of_schools_with_13_mentor_visits"
+			        }
+			      ]
+			    },
+			    "ASER_CIV_data_has_mesure_of_schools_with_13_mentor_visits": {
+			      "Binding": {
+			        "ConceptualEntity": "ASER CIV Data"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "ASER_CIV_data": {
+			          "Target": {
+			            "Entity": "ASER_CIV_data"
+			          }
+			        },
+			        "mesure.of_schools_with_13_mentor_visits": {
+			          "Target": {
+			            "Entity": "mesure.of_schools_with_13_mentor_visits"
+			          }
+			        }
+			      }
+			    },
+			    "mentoring_visit_has_mesure_of_schools_with_0_mentor_visit": {
+			      "Binding": {
+			        "ConceptualEntity": "Mentoring Visits"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mentoring_visit": {
+			          "Target": {
+			            "Entity": "mentoring_visit"
+			          }
+			        },
+			        "mesure.of_schools_with_0_mentor_visit": {
+			          "Target": {
+			            "Entity": "mesure.of_schools_with_0_mentor_visit"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mentoring_visit"
+			            },
+			            "Object": {
+			              "Role": "mesure.of_schools_with_0_mentor_visit"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mentoring_visits_have__of_schools_with_0_mentor_visit"
+			        }
+			      ]
+			    },
+			    "ASER_CIV_data_has_mesure_of_schools_with_0_mentor_visit": {
+			      "Binding": {
+			        "ConceptualEntity": "ASER CIV Data"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "ASER_CIV_data": {
+			          "Target": {
+			            "Entity": "ASER_CIV_data"
+			          }
+			        },
+			        "mesure.of_schools_with_0_mentor_visit": {
+			          "Target": {
+			            "Entity": "mesure.of_schools_with_0_mentor_visit"
+			          }
+			        }
+			      }
+			    },
+			    "mentoring_visit_has_mesure_of_visits": {
+			      "Binding": {
+			        "ConceptualEntity": "Mentoring Visits"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mentoring_visit": {
+			          "Target": {
+			            "Entity": "mentoring_visit"
+			          }
+			        },
+			        "mesure.of_visits": {
+			          "Target": {
+			            "Entity": "mesure.of_visits"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mentoring_visit"
+			            },
+			            "Object": {
+			              "Role": "mesure.of_visits"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mentoring_visits_have__of_visits"
+			        }
+			      ]
+			    },
+			    "mentoring_visit_has_mesure_average_number_of_mentoring_school_visits": {
+			      "Binding": {
+			        "ConceptualEntity": "Mentoring Visits"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mentoring_visit": {
+			          "Target": {
+			            "Entity": "mentoring_visit"
+			          }
+			        },
+			        "mesure.average_number_of_mentoring_school_visits": {
+			          "Target": {
+			            "Entity": "mesure.average_number_of_mentoring_school_visits"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mentoring_visit"
+			            },
+			            "Object": {
+			              "Role": "mesure.average_number_of_mentoring_school_visits"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mentoring_visits_have_average_number_of_mentoring_school_visits"
+			        }
+			      ]
+			    },
+			    "mentoring_visit_has_mesure_of_schools_visited": {
+			      "Binding": {
+			        "ConceptualEntity": "Mentoring Visits"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mentoring_visit": {
+			          "Target": {
+			            "Entity": "mentoring_visit"
+			          }
+			        },
+			        "mesure.of_schools_visited": {
+			          "Target": {
+			            "Entity": "mesure.of_schools_visited"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mentoring_visit"
+			            },
+			            "Object": {
+			              "Role": "mesure.of_schools_visited"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mentoring_visits_have__of_schools_visited"
+			        }
+			      ]
 			    },
 			    "mesure_has_of_green_schools_for_numeracy": {
 			      "Binding": {

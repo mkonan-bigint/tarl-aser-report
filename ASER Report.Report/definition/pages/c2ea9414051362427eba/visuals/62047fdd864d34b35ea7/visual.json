@@ -1,10 +1,10 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
-  "name": "6c75f459a55885e7561b",
+  "name": "62047fdd864d34b35ea7",
   "position": {
-    "x": 235,
+    "x": 155,
     "y": 95,
-    "z": 3000,
+    "z": 4000,
     "height": 40,
     "width": 150,
     "tabOrder": 5000
@@ -23,11 +23,11 @@
                       "Entity": "Cycles"
                     }
                   },
-                  "Property": "Period"
+                  "Property": "Cycle Name"
                 }
               },
-              "queryRef": "Cycles.Period",
-              "nativeQueryRef": "Period",
+              "queryRef": "Cycles.Cycle Name",
+              "nativeQueryRef": "Cycle Name",
               "active": true
             }
           ]
@@ -86,7 +86,7 @@
                                   "Source": "c"
                                 }
                               },
-                              "Property": "Period"
+                              "Property": "Cycle Name"
                             }
                           }
                         ],
@@ -94,7 +94,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'2024-2025'"
+                                "Value": "'2024-2025 EL'"
                               }
                             }
                           ]
@@ -148,7 +148,7 @@
       ]
     },
     "syncGroup": {
-      "groupName": "Period",
+      "groupName": "Cycle Name",
       "fieldChanges": true,
       "filterChanges": true
     },

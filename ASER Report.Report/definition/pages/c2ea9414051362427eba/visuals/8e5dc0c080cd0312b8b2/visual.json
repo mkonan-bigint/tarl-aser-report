@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
-  "name": "6c75f459a55885e7561b",
+  "name": "8e5dc0c080cd0312b8b2",
   "position": {
-    "x": 235,
-    "y": 95,
-    "z": 3000,
-    "height": 40,
-    "width": 150,
-    "tabOrder": 5000
+    "x": 1070,
+    "y": 5,
+    "z": 0,
+    "height": 80,
+    "width": 185.71428571428572,
+    "tabOrder": 0
   },
   "visual": {
     "visualType": "slicer",
@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Cycles"
+                      "Entity": "Grades"
                     }
                   },
-                  "Property": "Period"
+                  "Property": "DRENAET"
                 }
               },
-              "queryRef": "Cycles.Period",
-              "nativeQueryRef": "Period",
+              "queryRef": "Grades.DRENAET",
+              "nativeQueryRef": "DRENAET",
               "active": true
             }
           ]
@@ -54,7 +54,21 @@
             "strictSingleSelect": {
               "expr": {
                 "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "selectAllCheckboxEnabled": {
+              "expr": {
+                "Literal": {
                   "Value": "true"
+                }
+              }
+            },
+            "singleSelect": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }
@@ -63,49 +77,7 @@
       ],
       "general": [
         {
-          "properties": {
-            "filter": {
-              "filter": {
-                "Version": 2,
-                "From": [
-                  {
-                    "Name": "c",
-                    "Entity": "Cycles",
-                    "Type": 0
-                  }
-                ],
-                "Where": [
-                  {
-                    "Condition": {
-                      "In": {
-                        "Expressions": [
-                          {
-                            "Column": {
-                              "Expression": {
-                                "SourceRef": {
-                                  "Source": "c"
-                                }
-                              },
-                              "Property": "Period"
-                            }
-                          }
-                        ],
-                        "Values": [
-                          [
-                            {
-                              "Literal": {
-                                "Value": "'2024-2025'"
-                              }
-                            }
-                          ]
-                        ]
-                      }
-                    }
-                  }
-                ]
-              }
-            }
-          }
+          "properties": {}
         }
       ],
       "header": [
@@ -131,15 +103,65 @@
       "items": [
         {
           "properties": {
-            "background": {
+            "padding": {
+              "expr": {
+                "Literal": {
+                  "Value": "5D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'DRENAET'"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "fontColor": {
               "solid": {
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 5,
-                      "Percent": 0.6
+                      "ColorId": 0,
+                      "Percent": 0
                     }
                   }
+                }
+              }
+            },
+            "italic": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }
@@ -148,7 +170,7 @@
       ]
     },
     "syncGroup": {
-      "groupName": "Period",
+      "groupName": "DRENAET",
       "fieldChanges": true,
       "filterChanges": true
     },

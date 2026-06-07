@@ -676,6 +676,23 @@ table Mesures
 		displayFolder: 2. Program specific KPIs
 		lineageTag: 2e009ffe-a9a3-45a7-a2f0-fc1156e0f611
 
+	measure '# Of Schools Visited' = DISTINCTCOUNT( 'Mentoring Visits'[School ID] )
+		formatString: 0
+		displayFolder: 0. Overall KPIs
+		lineageTag: 92100cbd-3a25-4528-90f6-65eb70b2d0b6
+
+	measure 'Average Number Of Mentoring School Visits' = DIVIDE( [# Of Visits], [# Of Schools Visited] )
+		displayFolder: 0. Overall KPIs
+		lineageTag: 1db5c8e7-3c12-4876-867d-45e06d2cb988
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '# Of Visits' = SUM( 'Mentoring Visits'[Visits Count] )
+		displayFolder: 0. Overall KPIs
+		lineageTag: 1ca65ee9-e048-4a1a-b1f9-277f20c83eab
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	partition Mesures = m
 		mode: import
 		source =

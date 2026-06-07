@@ -693,6 +693,98 @@ table Mesures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure '# Of Schools with 0 mentor visit' = ```
+			
+			
+			VAR __CurrentCycle = MAX( Cycles[Cycle ID] )
+			
+			VAR __Visits =
+			SUMMARIZE(
+				'ASER CIV Data',
+				'ASER CIV Data'[Cycle ID],
+				'ASER CIV Data'[School ID],
+				"@Visits", [# Of Visits] + 0
+			)
+			
+			VAR __Filtered_Visits = 
+			FILTER( __Visits, [@Visits] = 0)
+			
+			VAR __Result = COUNTROWS( __Filtered_Visits )
+			RETURN __Result
+			```
+		formatString: 0
+		displayFolder: 1. Cycle specific KPIs
+		lineageTag: 8622d5a7-f261-4323-a41f-de60c6c177fd
+
+	measure '# Of Schools with 1-3 mentor visits' = ```
+			
+			
+			VAR __CurrentCycle = MAX( Cycles[Cycle ID] )
+			
+			VAR __Visits =
+			SUMMARIZE(
+				'ASER CIV Data',
+				'ASER CIV Data'[Cycle ID],
+				'ASER CIV Data'[School ID],
+				"@Visits", [# Of Visits] + 0
+			)
+			
+			VAR __Filtered_Visits = 
+			FILTER( __Visits, [@Visits] IN {1,2,3})
+			
+			VAR __Result = COUNTROWS( __Filtered_Visits )
+			RETURN __Result
+			```
+		formatString: 0
+		displayFolder: 1. Cycle specific KPIs
+		lineageTag: 752948f8-3ba9-4b3a-9761-63eff3c522ff
+
+	measure '# Of Schools with 4-6 mentor visits' = ```
+			
+			
+			VAR __CurrentCycle = MAX( Cycles[Cycle ID] )
+			
+			VAR __Visits =
+			SUMMARIZE(
+				'ASER CIV Data',
+				'ASER CIV Data'[Cycle ID],
+				'ASER CIV Data'[School ID],
+				"@Visits", [# Of Visits] + 0
+			)
+			
+			VAR __Filtered_Visits = 
+			FILTER( __Visits, [@Visits] IN {4,5,6})
+			
+			VAR __Result = COUNTROWS( __Filtered_Visits )
+			RETURN __Result
+			```
+		formatString: 0
+		displayFolder: 1. Cycle specific KPIs
+		lineageTag: 80a48a80-9ca5-494a-8a5d-0a10e5aa66b7
+
+	measure '# Of Schools with 7+ mentor visits' = ```
+			
+			
+			VAR __CurrentCycle = MAX( Cycles[Cycle ID] )
+			
+			VAR __Visits =
+			SUMMARIZE(
+				'ASER CIV Data',
+				'ASER CIV Data'[Cycle ID],
+				'ASER CIV Data'[School ID],
+				"@Visits", [# Of Visits] + 0
+			)
+			
+			VAR __Filtered_Visits = 
+			FILTER( __Visits, [@Visits] >= 7)
+			
+			VAR __Result = COUNTROWS( __Filtered_Visits )
+			RETURN __Result
+			```
+		formatString: 0
+		displayFolder: 1. Cycle specific KPIs
+		lineageTag: 0aef0678-cc26-4def-847c-134ff7b34da3
+
 	partition Mesures = m
 		mode: import
 		source =

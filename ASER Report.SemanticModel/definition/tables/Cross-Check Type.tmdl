@@ -1,0 +1,48 @@
+table 'Cross-Check Type'
+	lineageTag: cbadb351-0740-401d-933a-2b789bd1dd9b
+
+	column 'Cross-Check Type'
+		lineageTag: caaad9f8-bbcf-4c92-ae45-9e2afb1dc274
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'Cross-Check Type Commande'
+
+		relatedColumnDetails
+			groupByColumn: 'Cross-Check Type Champs'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cross-Check Type Champs'
+		isHidden
+		lineageTag: b7f56a0b-b1ba-44cc-aa47-61fd9990e275
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'Cross-Check Type Commande'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cross-Check Type Commande'
+		isHidden
+		formatString: 0
+		lineageTag: d0e43438-ae23-4188-a006-36291ae1ac91
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Cross-Check Type' = calculated
+		mode: import
+		source =
+				{
+				    ("Literacy", NAMEOF('ASER Verification'[Literacy Cross-Check]), 0),
+				    ("Numeracy", NAMEOF('ASER Verification'[Numeracy Cross-Check]), 1)
+				}
+
+	annotation PBI_Id = 2516ea01eb0748dc9d92aa3f42775df9
+

@@ -42,6 +42,7 @@ ref table Mesures
 ref table 'Cycles interval'
 ref table 'Mentoring Visits'
 ref table 'ASER Verification'
+ref table 'Cross-Check Type'
 
 ref cultureInfo fr-FR
 

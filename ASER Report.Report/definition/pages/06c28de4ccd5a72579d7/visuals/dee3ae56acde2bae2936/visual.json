@@ -4,10 +4,10 @@
   "position": {
     "x": 620,
     "y": 95,
-    "z": 5001,
+    "z": 6000,
     "height": 40,
     "width": 200,
-    "tabOrder": 5001
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "slicer",
@@ -112,7 +112,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'''ASER Verification''[Literacy Cross-Check]'"
+                                "Value": "'''ASER Verification''[Numeracy Cross-Check]'"
                               }
                             }
                           ]
@@ -140,7 +140,7 @@
                                 "0": [
                                   {
                                     "Literal": {
-                                      "Value": "'''ASER Verification''[Literacy Cross-Check]'"
+                                      "Value": "'''ASER Verification''[Numeracy Cross-Check]'"
                                     }
                                   }
                                 ]
@@ -164,7 +164,7 @@
                         },
                         "valueMap": [
                           {
-                            "0": "Literacy"
+                            "0": "Numeracy"
                           }
                         ]
                       }

@@ -42,11 +42,28 @@
                       "Entity": "ASER Verification"
                     }
                   },
-                  "Property": "Literacy Cross-Check"
+                  "Property": "Numeracy Cross-Check"
                 }
               },
-              "queryRef": "ASER Verification.Literacy Cross-Check",
-              "nativeQueryRef": "Literacy Cross-Check"
+              "queryRef": "ASER Verification.Numeracy Cross-Check",
+              "nativeQueryRef": "Numeracy",
+              "displayName": "Numeracy"
+            }
+          ],
+          "fieldParameters": [
+            {
+              "parameterExpr": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Cross-Check Type"
+                    }
+                  },
+                  "Property": "Cross-Check Type"
+                }
+              },
+              "index": 0,
+              "length": 1
             }
           ]
         },
@@ -382,6 +399,174 @@
                           }
                         },
                         "Property": "Literacy Cross-Check"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Teacher make lower (2+ levels)'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 3,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "ASER Verification"
+                          }
+                        },
+                        "Property": "Numeracy Cross-Check"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Teacher make higher (1 level)'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 6,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "ASER Verification"
+                          }
+                        },
+                        "Property": "Numeracy Cross-Check"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Same result'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 7,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "ASER Verification"
+                          }
+                        },
+                        "Property": "Numeracy Cross-Check"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Teacher make lower (1 level)'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 8,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "ASER Verification"
+                          }
+                        },
+                        "Property": "Numeracy Cross-Check"
                       }
                     },
                     "Right": {

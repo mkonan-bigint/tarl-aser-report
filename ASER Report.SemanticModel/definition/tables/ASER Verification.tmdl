@@ -73,6 +73,18 @@ table 'ASER Verification'
 
 		annotation SummarizationSetBy = Automatic
 
+	column 'School ID'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 1cb482df-48d5-491f-8fd0-7ce51f853a83
+		summarizeBy: count
+		sourceColumn: School ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
 	partition 'ASER Verification' = m
 		mode: import
 		source =
@@ -119,10 +131,10 @@ table 'ASER Verification'
 				    #"Autres colonnes supprimées2" = Table.SelectColumns(#"Type modifié",{"Period", "Cycle", "DRENAET", "IEPP", "School", "Grade", "Gender", "Literacy Result ID - Supervisor", "Literacy Result ID - Facilitator", "Numeracy Result ID - Supervisor", "Numeracy Result ID - Facilitator", "Literacy Cross-Check", "Numeracy Cross-Check", "Literacy Cross-Check ID", "Numeracy Cross-Check ID"}),
 				    #"Valeur remplacée10" = Table.ReplaceValue(#"Autres colonnes supprimées2","DRENA ","",Replacer.ReplaceText,{"DRENAET"}),
 				    #"Requêtes fusionnées4" = Table.NestedJoin(#"Valeur remplacée10", {"Grade", "School", "IEPP", "DRENAET"}, Grades, {"Grade", "School", "IEPP", "DRENAET"}, "Grades", JoinKind.LeftOuter),
-				    #"Grades développé" = Table.ExpandTableColumn(#"Requêtes fusionnées4", "Grades", {"Grade ID"}, {"Grade ID"}),
+				    #"Grades développé" = Table.ExpandTableColumn(#"Requêtes fusionnées4", "Grades", {"Grade ID", "School ID"}, {"Grade ID", "School ID"}),
 				    #"Requêtes fusionnées5" = Table.NestedJoin(#"Grades développé", {"Period", "Cycle"}, Cycles, {"Period", "Cycle"}, "Cycles", JoinKind.LeftOuter),
 				    #"Cycles développé" = Table.ExpandTableColumn(#"Requêtes fusionnées5", "Cycles", {"Cycle ID"}, {"Cycle ID"}),
-				    #"Autres colonnes supprimées3" = Table.SelectColumns(#"Cycles développé",{"Literacy Cross-Check", "Numeracy Cross-Check", "Literacy Cross-Check ID", "Numeracy Cross-Check ID", "Grade ID", "Cycle ID"})
+				    #"Autres colonnes supprimées3" = Table.SelectColumns(#"Cycles développé",{"Literacy Cross-Check", "Numeracy Cross-Check", "Literacy Cross-Check ID", "Numeracy Cross-Check ID", "Grade ID", "School ID", "Cycle ID"})
 				in
 				    #"Autres colonnes supprimées3"
 

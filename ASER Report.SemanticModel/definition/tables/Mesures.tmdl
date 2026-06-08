@@ -811,6 +811,11 @@ table Mesures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure 'Title Overall cross-cheking' =
+			
+			"Overall Cross-Checking for " & MAX( 'Cross-Check Type'[Cross-Check Type] )
+		lineageTag: 778f65d9-2e68-4c81-9c71-558bc5998706
+
 	partition Mesures = m
 		mode: import
 		source =

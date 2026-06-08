@@ -498,7 +498,7 @@ table Mesures
 			    VAR __Result = COUNTROWS( __Red_Schools )
 			
 			    RETURN __Result
-		formatString: 0
+		formatString: #,0
 		displayFolder: 2. Program specific KPIs
 		lineageTag: 72502e7f-3519-41b2-93bc-4d0c974d0f74
 
@@ -533,7 +533,7 @@ table Mesures
 			    VAR __Result = COUNTROWS( __Yellow_Schools )
 			
 			    RETURN __Result
-		formatString: 0
+		formatString: #,0
 		displayFolder: 2. Program specific KPIs
 		lineageTag: 5502c1f4-9cb7-4468-a3d5-231b47291a89
 
@@ -567,7 +567,7 @@ table Mesures
 			    VAR __Result = COUNTROWS( __Green_Schools )
 			
 			    RETURN __Result
-		formatString: 0
+		formatString: #,0
 		displayFolder: 2. Program specific KPIs
 		lineageTag: 63b96d07-c17d-46f5-ac60-2c0e483a7d2c
 
@@ -602,7 +602,7 @@ table Mesures
 			    VAR __Result = COUNTROWS( __Yellow_Schools )
 			
 			    RETURN __Result
-		formatString: 0
+		formatString: #,0
 		displayFolder: 2. Program specific KPIs
 		lineageTag: 3b6661d8-c428-4571-ac1d-47548f4b3a09
 
@@ -637,7 +637,7 @@ table Mesures
 			    VAR __Result = COUNTROWS( __Red_Schools )
 			
 			    RETURN __Result
-		formatString: 0
+		formatString: #,0
 		displayFolder: 2. Program specific KPIs
 		lineageTag: 16265274-fda3-42d0-9bff-9c9f5a267232
 
@@ -672,26 +672,24 @@ table Mesures
 			    VAR __Result = COUNTROWS( __Green_Schools )
 			
 			    RETURN __Result
-		formatString: 0
+		formatString: #,0
 		displayFolder: 2. Program specific KPIs
 		lineageTag: 2e009ffe-a9a3-45a7-a2f0-fc1156e0f611
 
 	measure '# Of Schools Visited' = DISTINCTCOUNT( 'Mentoring Visits'[School ID] )
-		formatString: 0
+		formatString: #,0
 		displayFolder: 0. Overall KPIs
 		lineageTag: 92100cbd-3a25-4528-90f6-65eb70b2d0b6
 
 	measure 'Average Number Of Mentoring School Visits' = DIVIDE( [# Of Visits], [# Of Schools Visited] )
+		formatString: #,0.0
 		displayFolder: 0. Overall KPIs
 		lineageTag: 1db5c8e7-3c12-4876-867d-45e06d2cb988
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	measure '# Of Visits' = SUM( 'Mentoring Visits'[Visits Count] )
+		formatString: #,0
 		displayFolder: 0. Overall KPIs
 		lineageTag: 1ca65ee9-e048-4a1a-b1f9-277f20c83eab
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure '# Of Schools with 0 mentor visit' = ```
 			
@@ -712,7 +710,7 @@ table Mesures
 			VAR __Result = COUNTROWS( __Filtered_Visits )
 			RETURN __Result
 			```
-		formatString: 0
+		formatString: #,0
 		displayFolder: 1. Cycle specific KPIs
 		lineageTag: 8622d5a7-f261-4323-a41f-de60c6c177fd
 
@@ -758,7 +756,7 @@ table Mesures
 			VAR __Result = COUNTROWS( __Filtered_Visits )
 			RETURN __Result
 			```
-		formatString: 0
+		formatString: #,0
 		displayFolder: 1. Cycle specific KPIs
 		lineageTag: 80a48a80-9ca5-494a-8a5d-0a10e5aa66b7
 
@@ -781,7 +779,7 @@ table Mesures
 			VAR __Result = COUNTROWS( __Filtered_Visits )
 			RETURN __Result
 			```
-		formatString: 0
+		formatString: #,0
 		displayFolder: 1. Cycle specific KPIs
 		lineageTag: 0aef0678-cc26-4def-847c-134ff7b34da3
 
@@ -794,22 +792,20 @@ table Mesures
 	measure '% Of Schools where verification was done' =
 			
 			DIVIDE( [# Of Schools where verification was done], [# Of Schools Reached] )
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
 		lineageTag: 2671ca01-18dd-467d-bcb2-4d1ea11267b9
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure '# Of Students reassessed' =
 			
 			COUNTROWS( 'ASER Verification' )
-		formatString: 0
+		formatString: #,0
 		lineageTag: 51ed8e21-621e-43bc-9bb6-a8ec2ae78dfe
 
 	measure '% Of Students reassessed' =
 			
 			DIVIDE( [# Of Students reassessed], [_# Of Students Reached In Program] )
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
 		lineageTag: 98d11783-c7b1-4d1e-b365-a601b6a9a1ae
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure 'Title Overall cross-cheking' =
 			

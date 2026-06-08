@@ -6,7 +6,7 @@
     "y": 160,
     "z": 0,
     "height": 525,
-    "width": 750,
+    "width": 1230,
     "tabOrder": 0
   },
   "visual": {
@@ -140,7 +140,7 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 7,
+                      "ColorId": 3,
                       "Percent": 0
                     }
                   }
@@ -159,7 +159,7 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 3,
+                      "ColorId": 7,
                       "Percent": 0
                     }
                   }

@@ -5,8 +5,8 @@
     "x": 25.040276179516685,
     "y": 160.55235903337169,
     "z": 0,
-    "height": 524.37284234752588,
-    "width": 1229.9194476409666,
+    "height": 525,
+    "width": 1230,
     "tabOrder": 0
   },
   "visual": {
@@ -46,7 +46,8 @@
                 }
               },
               "queryRef": "Mesures.% Of Students With Low Litteracy At EL",
-              "nativeQueryRef": "Endline"
+              "nativeQueryRef": "Endline",
+              "displayName": "Endline"
             },
             {
               "field": {
@@ -60,7 +61,8 @@
                 }
               },
               "queryRef": "Mesures.pp Of Litteracy Difficulty Reduction From BL to EL",
-              "nativeQueryRef": "Decrease from baseline"
+              "nativeQueryRef": "Decrease from baseline",
+              "displayName": "Decrease from baseline"
             }
           ]
         }
@@ -188,6 +190,25 @@
           },
           "selector": {
             "metadata": "Mesures.Litteracy Difficulty Reduction BL to EL (PP)"
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 7,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mesures.pp Of Litteracy Difficulty Reduction From BL to EL"
           }
         }
       ],

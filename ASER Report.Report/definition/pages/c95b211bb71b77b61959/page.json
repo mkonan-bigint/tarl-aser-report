@@ -1,7 +1,7 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
   "name": "c95b211bb71b77b61959",
-  "displayName": "Students who read at least a simple paragraph",
+  "displayName": "Levels  across grades - Focus on Literacy",
   "displayOption": "FitToPage",
   "height": 720,
   "width": 1280,

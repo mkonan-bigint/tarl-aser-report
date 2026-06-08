@@ -8009,42 +8009,845 @@ cultureInfo fr-FR
 			          }
 			        }
 			      ]
-			    }
-			  },
-			  "Relationships": {
-			    "level_in_subjects_subject_hierarchy_has_grouped_level": {
-			      "Binding": {
-			        "ConceptualEntity": "Levels in Subjects"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "level_in_subjects.subject_hierarchy": {
-			          "Target": {
-			            "Entity": "level_in_subjects.subject_hierarchy"
-			          }
-			        },
-			        "level_in_subjects.subject_hierarchy.grouped_level": {
-			          "Target": {
-			            "Entity": "level_in_subjects.subject_hierarchy.grouped_level"
-			          }
+			    },
+			    "mesure.of_schools_where_verification_was_done": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "# Of Schools where verification was done"
 			        }
 			      },
-			      "Phrasings": [
+			      "State": "Generated",
+			      "Terms": [
 			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "level_in_subjects.subject_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "level_in_subjects.subject_hierarchy.grouped_level"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "subject_hierarchies_have_grouped_levels"
+			          "# of schools where verification was done": {
+			            "State": "Generated"
+			          }
 			        }
 			      ]
 			    },
+			    "mesure.of_schools_where_verification_was_done1": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "% Of Schools where verification was done"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% of schools where verification was done": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.of_students_reassessed": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "# Of Students reassessed"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "# of students reassessed": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "no of student reassessed": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "num of student reassessed": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "number of student reassessed": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.of_students_reassessed1": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "% Of Students reassessed"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% of students reassessed": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage of student reassessed": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "pct of student reassessed": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.title_overall_crosscheking": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "Title Overall cross-cheking"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "title overall cross-cheking": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "title overall cross cheking": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "designation overall cross-cheking": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "designation overall cross cheking": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "name overall cross-cheking": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "award overall cross-cheking": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "call overall cross-cheking": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "heading overall cross-cheking": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "label overall cross-cheking": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "name overall cross cheking": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "award overall cross cheking": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "call overall cross cheking": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ]
+			    },
+			    "ASER_verification.school_ID": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ASER Verification",
+			          "ConceptualProperty": "School ID"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "school ID": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "school identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "school identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "school identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "school credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "crosscheck_type": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Cross-Check Type"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cross-check type": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "cross check type": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "type": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "check type": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "cross-cheque type": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "cross-checkup type": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "cross-inspection type": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "cross-payment type": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "cross-check category": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "cross-check genre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "cross-check manner": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "cross-check variety": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "cross cheque type": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "cross checkup type": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        }
+			      ]
+			    },
+			    "crosscheck_type.crosscheck_type": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Cross-Check Type",
+			          "ConceptualProperty": "Cross-Check Type"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cross-check type": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "cross-check type name": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "cross check type": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "type": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "check type": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "cross-cheque type": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "cross-checkup type": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "cross-inspection type": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "cross-payment type": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "cross-check category": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "cross-check genre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "cross-check manner": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "cross-check variety": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "cross cheque type": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "cross checkup type": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        }
+			      ],
+			      "NameType": "Name"
+			    },
+			    "crosscheck_type.crosscheck_type_champs": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Cross-Check Type",
+			          "ConceptualProperty": "Cross-Check Type Champs"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "cross-check type champs": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "cross check type champs": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "champs": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "type champs": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "check type champs": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "cross-cheque type champs": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "cross-checkup type champs": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "cross-inspection type champs": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "cross-payment type champs": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "cross-check category champs": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "cross-check genre champs": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "cross-check manner champs": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "cross-check variety champs": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "cross cheque type champs": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "cross checkup type champs": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        }
+			      ]
+			    },
+			    "crosscheck_type.crosscheck_type_commande": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Cross-Check Type",
+			          "ConceptualProperty": "Cross-Check Type Commande"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "cross-check type commande": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "cross check type commande": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "cross-cheque type commande": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "cross-checkup type commande": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "cross-inspection type commande": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "cross-payment type commande": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "cross-check category commande": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "cross-check genre commande": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "cross-check manner commande": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "cross-check variety commande": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "cross cheque type commande": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "cross checkup type commande": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        }
+			      ]
+			    }
+			  },
+			  "Relationships": {
 			    "level_in_subjects_subject_hierarchy_has_subject": {
 			      "Binding": {
 			        "ConceptualEntity": "Levels in Subjects"
@@ -8333,6 +9136,235 @@ cultureInfo fr-FR
 			          }
 			        }
 			      }
+			    },
+			    "crosscheck_type_has_crosscheck_type": {
+			      "Binding": {
+			        "ConceptualEntity": "Cross-Check Type"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "crosscheck_type": {
+			          "Target": {
+			            "Entity": "crosscheck_type"
+			          }
+			        },
+			        "crosscheck_type.crosscheck_type": {
+			          "Target": {
+			            "Entity": "crosscheck_type.crosscheck_type"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "crosscheck_type"
+			            },
+			            "Object": {
+			              "Role": "crosscheck_type.crosscheck_type"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "crosscheck_type_have_crosscheck_type"
+			        },
+			        {
+			          "Name": {
+			            "Subject": {
+			              "Role": "crosscheck_type"
+			            },
+			            "Name": {
+			              "Role": "crosscheck_type.crosscheck_type"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "crosscheck_type_are_names_IDs_of_crosscheck_type"
+			        }
+			      ]
+			    },
+			    "crosscheck_type_has_mesure_title_overall_crosscheking": {
+			      "Binding": {
+			        "ConceptualEntity": "Cross-Check Type"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "crosscheck_type": {
+			          "Target": {
+			            "Entity": "crosscheck_type"
+			          }
+			        },
+			        "mesure.title_overall_crosscheking": {
+			          "Target": {
+			            "Entity": "mesure.title_overall_crosscheking"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "crosscheck_type"
+			            },
+			            "Object": {
+			              "Role": "mesure.title_overall_crosscheking"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "crosscheck_type_have_title_overall_crosscheking"
+			        }
+			      ]
+			    },
+			    "mesure_has_of_students_reassessed1": {
+			      "Binding": {
+			        "ConceptualEntity": "Mesures"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mesure": {
+			          "Target": {
+			            "Entity": "mesure"
+			          }
+			        },
+			        "mesure.of_students_reassessed1": {
+			          "Target": {
+			            "Entity": "mesure.of_students_reassessed1"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mesure"
+			            },
+			            "Object": {
+			              "Role": "mesure.of_students_reassessed1"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mesures_have__of_students_reassessed"
+			        }
+			      ]
+			    },
+			    "ASER_verification_has_mesure_of_students_reassessed": {
+			      "Binding": {
+			        "ConceptualEntity": "ASER Verification"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "ASER_verification": {
+			          "Target": {
+			            "Entity": "ASER_verification"
+			          }
+			        },
+			        "mesure.of_students_reassessed": {
+			          "Target": {
+			            "Entity": "mesure.of_students_reassessed"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "ASER_verification"
+			            },
+			            "Object": {
+			              "Role": "mesure.of_students_reassessed"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ASER_verifications_have__of_students_reassessed"
+			        }
+			      ]
+			    },
+			    "ASER_verification_has_mesure_of_schools_where_verification_was_done1": {
+			      "Binding": {
+			        "ConceptualEntity": "ASER Verification"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "ASER_verification": {
+			          "Target": {
+			            "Entity": "ASER_verification"
+			          }
+			        },
+			        "mesure.of_schools_where_verification_was_done1": {
+			          "Target": {
+			            "Entity": "mesure.of_schools_where_verification_was_done1"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "ASER_verification"
+			            },
+			            "Object": {
+			              "Role": "mesure.of_schools_where_verification_was_done1"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ASER_verifications_have__of_schools_where_verification_was_done"
+			        }
+			      ]
+			    },
+			    "ASER_CIV_data_has_mesure_of_schools_where_verification_was_done1": {
+			      "Binding": {
+			        "ConceptualEntity": "ASER CIV Data"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "ASER_CIV_data": {
+			          "Target": {
+			            "Entity": "ASER_CIV_data"
+			          }
+			        },
+			        "mesure.of_schools_where_verification_was_done1": {
+			          "Target": {
+			            "Entity": "mesure.of_schools_where_verification_was_done1"
+			          }
+			        }
+			      }
+			    },
+			    "ASER_verification_has_mesure_of_schools_where_verification_was_done": {
+			      "Binding": {
+			        "ConceptualEntity": "ASER Verification"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "ASER_verification": {
+			          "Target": {
+			            "Entity": "ASER_verification"
+			          }
+			        },
+			        "mesure.of_schools_where_verification_was_done": {
+			          "Target": {
+			            "Entity": "mesure.of_schools_where_verification_was_done"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "ASER_verification"
+			            },
+			            "Object": {
+			              "Role": "mesure.of_schools_where_verification_was_done"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ASER_verifications_have__of_schools_where_verification_was_done1"
+			        }
+			      ]
 			    },
 			    "ASER_verification_has_numeracy_crosscheck": {
 			      "Binding": {
@@ -10874,6 +11906,39 @@ cultureInfo fr-FR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "grades_have_drenaets"
+			        }
+			      ]
+			    },
+			    "level_in_subjects_subject_hierarchy_has_grouped_level": {
+			      "Binding": {
+			        "ConceptualEntity": "Levels in Subjects"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "level_in_subjects.subject_hierarchy": {
+			          "Target": {
+			            "Entity": "level_in_subjects.subject_hierarchy"
+			          }
+			        },
+			        "level_in_subjects.subject_hierarchy.grouped_level": {
+			          "Target": {
+			            "Entity": "level_in_subjects.subject_hierarchy.grouped_level"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "level_in_subjects.subject_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "level_in_subjects.subject_hierarchy.grouped_level"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "subject_hierarchies_have_grouped_levels"
 			        }
 			      ]
 			    },

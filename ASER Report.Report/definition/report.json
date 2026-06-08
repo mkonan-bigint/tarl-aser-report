@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/3.2.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/3.3.0/schema.json",
   "themeCollection": {
     "baseTheme": {
       "name": "Fluent2-CY26SU04",
@@ -70,16 +70,6 @@
           "type": "Image"
         },
         {
-          "name": "Diapositive2026116986589033053.PNG",
-          "path": "Diapositive2026116986589033053.PNG",
-          "type": "Image"
-        },
-        {
-          "name": "Diapositive2027294921849477904.PNG",
-          "path": "Diapositive2027294921849477904.PNG",
-          "type": "Image"
-        },
-        {
           "name": "Diapositive20439491172894797.PNG",
           "path": "Diapositive20439491172894797.PNG",
           "type": "Image"
@@ -125,16 +115,6 @@
           "type": "Image"
         },
         {
-          "name": "Diapositive246886601354075985.PNG",
-          "path": "Diapositive246886601354075985.PNG",
-          "type": "Image"
-        },
-        {
-          "name": "Diapositive26295828100445505.PNG",
-          "path": "Diapositive26295828100445505.PNG",
-          "type": "Image"
-        },
-        {
           "name": "Diapositive26606529515721847.PNG",
           "path": "Diapositive26606529515721847.PNG",
           "type": "Image"
@@ -142,11 +122,6 @@
         {
           "name": "Diapositive26762976032872845.PNG",
           "path": "Diapositive26762976032872845.PNG",
-          "type": "Image"
-        },
-        {
-          "name": "Diapositive29683345598312445.PNG",
-          "path": "Diapositive29683345598312445.PNG",
           "type": "Image"
         },
         {

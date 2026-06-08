@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
-  "name": "ebfaa5a83563106c0464",
+  "name": "02339cdf7b73b0d54603",
   "position": {
-    "x": 25,
+    "x": 650,
     "y": 160,
-    "z": 0,
+    "z": 5001,
     "height": 525,
-    "width": 650,
-    "tabOrder": 0
+    "width": 600,
+    "tabOrder": 5001
   },
   "visual": {
     "visualType": "columnChart",
@@ -42,10 +42,10 @@
                       "Entity": "Mesures"
                     }
                   },
-                  "Property": "% Of Students With Low Litteracy At EL"
+                  "Property": "% Of Students With Low Numeracy At EL"
                 }
               },
-              "queryRef": "Mesures.Percentage Of Students Tested With Low Litteracy In Grade EL",
+              "queryRef": "Mesures.Percentage Of Students Tested With Low Numeracy In Grade EL",
               "nativeQueryRef": "Endline",
               "displayName": "Endline"
             },
@@ -57,10 +57,10 @@
                       "Entity": "Mesures"
                     }
                   },
-                  "Property": "pp Of Litteracy Difficulty Reduction From BL to EL"
+                  "Property": "pp Of Numeracy Difficulty Reduction From BL to EL"
                 }
               },
-              "queryRef": "Mesures.Litteracy Difficulty Reduction BL to EL (PP)",
+              "queryRef": "Mesures.Numeracy Difficulty Reduction BL to EL (PP)",
               "nativeQueryRef": "Decrease from baseline",
               "displayName": "Decrease from baseline"
             }
@@ -132,7 +132,7 @@
             }
           },
           "selector": {
-            "metadata": "Mesures.Percentage Of Students Tested With Low Litteracy In Grade EL"
+            "metadata": "Mesures.Percentage Of Students Tested With Low Numeracy In Grade EL"
           }
         },
         {
@@ -151,7 +151,7 @@
             }
           },
           "selector": {
-            "metadata": "Mesures.Litteracy Difficulty Reduction BL to EL (PP)"
+            "metadata": "Mesures.Numeracy Difficulty Reduction BL to EL (PP)"
           }
         }
       ],
@@ -162,6 +162,20 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            },
+            "valueMax": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            },
+            "valueSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "0.8022716946842344D"
                 }
               }
             }
@@ -176,7 +190,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Reduction in the number of learners in Literacy difficulty'"
+                  "Value": "'Reduction in the number of learners in Numeracy difficulty'"
                 }
               }
             },
@@ -217,7 +231,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Decrease of the percentage of students who cannot read words from BL to EL'"
+                  "Value": "'Decrease of the percentage of students who can recognize 2-digit from BL to EL'"
                 }
               }
             },
@@ -232,13 +246,6 @@
               "expr": {
                 "Literal": {
                   "Value": "11D"
-                }
-              }
-            },
-            "titleWrap": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
                 }
               }
             }

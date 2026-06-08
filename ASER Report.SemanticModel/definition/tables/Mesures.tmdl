@@ -225,7 +225,8 @@ table Mesures
 			
 			VAR __EL = [% Of Students With High Litteracy At EL]
 			VAR __BL = [% Of Students With High Litteracy At BL]
-			RETURN __EL - __BL
+			VAR __Result = __BL - __EL
+			RETURN IF( ISBLANK( __EL ), BLANK(), __Result )
 		formatString: 0\ %;-0\ %;0\ %
 		displayFolder: 2. Program specific KPIs
 		lineageTag: 420efd55-0b13-43f0-9e12-93ef15d1dfd1
@@ -253,7 +254,8 @@ table Mesures
 			
 			VAR __EL = [% Of Students With Low Litteracy At EL]
 			VAR __BL = [% Of Students With Low Litteracy At BL]
-			RETURN __BL - __EL
+			VAR __Result = __BL - __EL
+			RETURN IF( ISBLANK( __EL ), BLANK(), __Result )
 		formatString: 0\ %;-0\ %;0\ %
 		displayFolder: 2. Program specific KPIs
 		lineageTag: 92710847-def6-4456-92ca-92e25a8d0deb
@@ -326,7 +328,8 @@ table Mesures
 			
 			VAR __EL = [% Of Students With High Numeracy At EL]
 			VAR __BL = [% Of Students With High Numeracy At BL]
-			RETURN __EL - __BL
+			VAR __Result = __BL - __EL
+			RETURN IF( ISBLANK( __EL ), BLANK(), __Result )
 		formatString: 0\ %;-0\ %;0\ %
 		displayFolder: 2. Program specific KPIs
 		lineageTag: 90bd8cc0-78a0-4549-8af0-9020b7347640
@@ -398,7 +401,8 @@ table Mesures
 			
 			VAR __EL = [% Of Students With Low Numeracy At EL]
 			VAR __BL = [% Of Students With Low Numeracy At BL]
-			RETURN __BL - __EL
+			VAR __Result = __BL - __EL
+			RETURN IF( ISBLANK( __EL ), BLANK(), __Result )
 		formatString: 0\ %;-0\ %;0\ %
 		displayFolder: 2. Program specific KPIs
 		lineageTag: aa0fab98-392c-4b0c-93a3-e07b66114535

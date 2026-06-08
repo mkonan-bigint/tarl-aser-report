@@ -785,6 +785,32 @@ table Mesures
 		displayFolder: 1. Cycle specific KPIs
 		lineageTag: 0aef0678-cc26-4def-847c-134ff7b34da3
 
+	measure '# Of Schools where verification was done' =
+			
+			DISTINCTCOUNT( 'ASER Verification'[School ID] )
+		formatString: 0
+		lineageTag: a9949aad-d8fb-4dbc-ba40-7216ac0f02ab
+
+	measure '% Of Schools where verification was done' =
+			
+			DIVIDE( [# Of Schools where verification was done], [# Of Schools Reached] )
+		lineageTag: 2671ca01-18dd-467d-bcb2-4d1ea11267b9
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '# Of Students reassessed' =
+			
+			COUNTROWS( 'ASER Verification' )
+		formatString: 0
+		lineageTag: 51ed8e21-621e-43bc-9bb6-a8ec2ae78dfe
+
+	measure '% Of Students reassessed' =
+			
+			DIVIDE( [# Of Students reassessed], [_# Of Students Reached In Program] )
+		lineageTag: 98d11783-c7b1-4d1e-b365-a601b6a9a1ae
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	partition Mesures = m
 		mode: import
 		source =

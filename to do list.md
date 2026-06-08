@@ -24,10 +24,10 @@ Correction mesures avec EL non disponible
 
 Mesures verification
 
-* \# Of Schools where verification was done (to be sliced by Cycle Name and IEEP)
-* % Of Schools where verification was done (to be sliced by Cycle Name and IEEP)
-* \# Of Students reassessed (to be sliced by Cycle Name and IEEP)
-* % Of Students reassessed (to be sliced by Cycle Name and IEEP)
+* ~~# Of Schools where verification was done (to be sliced by Cycle Name and IEEP)~~
+* ~~% Of Schools where verification was done (to be sliced by Cycle Name and IEEP)~~
+* ~~# Of Students reassessed (to be sliced by Cycle Name and IEEP)~~
+* ~~% Of Students reassessed (to be sliced by Cycle Name and IEEP)~~
 
 
 

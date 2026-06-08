@@ -601,8 +601,13 @@
           "properties": {
             "text": {
               "expr": {
-                "Literal": {
-                  "Value": "'Overall Cross-Checking for Literacy'"
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mesures"
+                    }
+                  },
+                  "Property": "Title Overall cross-cheking"
                 }
               }
             },

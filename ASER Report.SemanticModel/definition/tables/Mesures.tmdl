@@ -816,6 +816,50 @@ table Mesures
 			"Overall Cross-Checking for " & MAX( 'Cross-Check Type'[Cross-Check Type] )
 		lineageTag: 778f65d9-2e68-4c81-9c71-558bc5998706
 
+	measure 'pp Of Litteracy Difficulty Reduction From BL to EL (formated)' =
+			
+			VAR __EL = [% Of Students With Low Litteracy At EL]
+			VAR __BL = [% Of Students With Low Litteracy At BL]
+			VAR __Result = 100*(__EL - __BL)
+			RETURN IF( ISBLANK( __EL ), BLANK(), __Result )
+		displayFolder: 2. Program specific KPIs
+		lineageTag: 609cc8da-c97a-40e9-aae2-6845e77e4453
+
+		formatStringDefinition = "+0 pp;-0 pp;0 pp"
+
+	measure 'pp Of Litteracy Improvemnt From BL to EL (formated)' =
+			
+			VAR __EL = [% Of Students With High Litteracy At EL]
+			VAR __BL = [% Of Students With High Litteracy At BL]
+			VAR __Result = 100*(__EL - __BL)
+			RETURN IF( ISBLANK( __EL ), BLANK(), __Result )
+		displayFolder: 2. Program specific KPIs
+		lineageTag: be186f14-99ea-401c-b04e-f8f2ef3041a2
+
+		formatStringDefinition = "+0 pp;-0 pp;0 pp"
+
+	measure 'pp Of Numeracy Difficulty Reduction From BL to EL (formated)' =
+			
+			VAR __EL = [% Of Students With Low Numeracy At EL]
+			VAR __BL = [% Of Students With Low Numeracy At BL]
+			VAR __Result = 100*(__EL - __BL)
+			RETURN IF( ISBLANK( __EL ), BLANK(), __Result )
+		displayFolder: 2. Program specific KPIs
+		lineageTag: 9a531d57-9e7b-4599-bafa-083b57a73e21
+
+		formatStringDefinition = "+0 pp;-0 pp;0 pp"
+
+	measure 'pp Of Numeracy Improvemnt From BL to EL (formated)' =
+			
+			VAR __EL = [% Of Students With High Numeracy At EL]
+			VAR __BL = [% Of Students With High Numeracy At BL]
+			VAR __Result = 100*(__EL - __BL)
+			RETURN IF( ISBLANK( __EL ), BLANK(), __Result )
+		displayFolder: 2. Program specific KPIs
+		lineageTag: 6291cc44-fee3-402f-8354-f9ea78b1debc
+
+		formatStringDefinition = "+0 pp;-0 pp;0 pp"
+
 	partition Mesures = m
 		mode: import
 		source =

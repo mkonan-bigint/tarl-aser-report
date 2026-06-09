@@ -868,6 +868,21 @@ table Mesures
 
 		formatStringDefinition = "+0 pp;-0 pp;0 pp"
 
+	measure 'Subject Improvemnt comment' =
+			
+			
+			VAR __Subject = SELECTEDVALUE( 'Levels in Subjects'[Subject] )
+			VAR __pp = [pp Of Subject Improvemnt From BL to EL (formated)]
+			VAR __pp_formated =
+			SWITCH( SIGN(__pp),
+			        1, FORMAT( __pp, "+0 pp" ) & " increase",
+			        -1, FORMAT( __pp, "-0 pp" ) & " decrease",
+			        BLANK() )
+			
+			VAR __Comment = __pp_formated & " in number of students with high " & __Subject &  " from BL to EL"
+			RETURN IF( ISBLANK( __pp ), BLANK(), __Comment )
+		lineageTag: 68824b62-0ba2-4658-a203-95a6d0c4ad99
+
 	partition Mesures = m
 		mode: import
 		source =

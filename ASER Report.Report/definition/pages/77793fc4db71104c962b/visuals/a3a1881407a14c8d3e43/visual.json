@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "a3a1881407a14c8d3e43",
   "position": {
     "x": 24.963503649635037,
@@ -139,7 +139,7 @@
             "preferredCategoryWidth": {
               "expr": {
                 "Literal": {
-                  "Value": "80D"
+                  "Value": "100D"
                 }
               }
             }

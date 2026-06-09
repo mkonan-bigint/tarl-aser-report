@@ -883,6 +883,66 @@ table Mesures
 			RETURN IF( ISBLANK( __pp ), BLANK(), __Comment )
 		lineageTag: 68824b62-0ba2-4658-a203-95a6d0c4ad99
 
+	measure 'Comment - Levels across cycles' = ```
+			
+			
+			VAR __Subject = SELECTEDVALUE( 'Levels in Subjects'[Subject ID] )
+			VAR __BL =
+			SWITCH( __Subject,
+			        1, [% Of Students With High Litteracy At BL],
+			        2, [% Of Students With High Numeracy At BL],
+			        BLANK() )
+			        
+			VAR __EL =
+			SWITCH( __Subject,
+			        1, [% Of Students With High Litteracy At EL],
+			        2, [% Of Students With High Numeracy At EL],
+			        BLANK() )
+			
+			VAR __pp = [pp Of Subject Improvemnt From BL to EL (formated)]
+			VAR __pp_target = 20
+			VAR __pp_gap = __pp - __pp_target
+			
+			VAR __pp_formated =
+			SWITCH( SIGN(__pp),
+			        1, FORMAT( __pp, "+0 pp" ),
+			        -1, FORMAT( __pp, "-0 pp" ),
+			        BLANK() )
+			
+			VAR __Level = 
+			SWITCH( __Subject,
+			        1, "could read sentences",
+			        2, "could solve at least a 2x2 substraction operation",
+			        BLANK() )
+			
+			VAR __Line1 =
+			UNICHAR(10) & "• " & FORMAT( __BL, "0%" ) & " of students " & __Level & " at Baseline"
+			
+			VAR __Line2 =
+			SWITCH( TRUE(),
+			        __EL > __BL, UNICHAR(10) & "• Increased to " & FORMAT( __EL, "0%" ) & " at Endline",
+			        __EL < __BL, UNICHAR(10) & "• Decreased to " & FORMAT( __EL, "0%" ) & " at Endline",
+			        __EL = __BL, UNICHAR(10) & "• Remain stable at Endline",
+			        BLANK() )
+			
+			VAR __Line3 =
+			UNICHAR(10) & "• The change in students who " & __Level & " was " & __pp_formated
+			
+			VAR __Line4 = 
+			SWITCH( SIGN(__pp_gap),
+			        1, UNICHAR(10) & "• The change was " & FORMAT( __pp_gap, "0 pp" ) & " more than the target, which was set as " & __pp_target & " pp",
+			        -1, UNICHAR(10) & "• The change was " & FORMAT( __pp_gap, "0 pp" ) & " less than the target, which was set as " & __pp_target & " pp",
+			        BLANK() )
+			
+			VAR __Full_comment =
+			IF( ISBLANK(__EL),
+			   "Endline data not available for the current year",
+			   __Line1 & __Line2 & __Line3 & __Line4 )
+			
+			RETURN __Full_comment
+			```
+		lineageTag: f59347b9-e053-4716-aff7-c73a60e21741
+
 	partition Mesures = m
 		mode: import
 		source =

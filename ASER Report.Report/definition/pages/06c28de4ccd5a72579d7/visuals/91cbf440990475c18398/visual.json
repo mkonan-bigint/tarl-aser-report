@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "91cbf440990475c18398",
   "position": {
     "x": 24.963503649635037,
@@ -42,12 +42,12 @@
                       "Entity": "ASER Verification"
                     }
                   },
-                  "Property": "Numeracy Cross-Check"
+                  "Property": "Literacy Cross-Check"
                 }
               },
-              "queryRef": "ASER Verification.Numeracy Cross-Check",
-              "nativeQueryRef": "Numeracy",
-              "displayName": "Numeracy"
+              "queryRef": "ASER Verification.Literacy Cross-Check",
+              "nativeQueryRef": "Literacy",
+              "displayName": "Literacy"
             }
           ],
           "fieldParameters": [
@@ -572,6 +572,48 @@
                     "Right": {
                       "Literal": {
                         "Value": "'Teacher make lower (2+ levels)'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 3,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "ASER Verification"
+                          }
+                        },
+                        "Property": "Literacy Cross-Check"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Teacher make higher (1 level)'"
                       }
                     }
                   }

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "dee3ae56acde2bae2936",
   "position": {
     "x": 620,
@@ -112,7 +112,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'''ASER Verification''[Numeracy Cross-Check]'"
+                                "Value": "'''ASER Verification''[Literacy Cross-Check]'"
                               }
                             }
                           ]
@@ -140,7 +140,7 @@
                                 "0": [
                                   {
                                     "Literal": {
-                                      "Value": "'''ASER Verification''[Numeracy Cross-Check]'"
+                                      "Value": "'''ASER Verification''[Literacy Cross-Check]'"
                                     }
                                   }
                                 ]
@@ -164,7 +164,7 @@
                         },
                         "valueMap": [
                           {
-                            "0": "Numeracy"
+                            "0": "Literacy"
                           }
                         ]
                       }

@@ -860,6 +860,14 @@ table Mesures
 
 		formatStringDefinition = "+0 pp;-0 pp;0 pp"
 
+	measure 'pp Of Subject Improvemnt From BL to EL (formated)' =
+			
+			// Doit etre filtree dans le rapport par Subject pour avoir du sens
+			[pp Of Litteracy Improvemnt From BL to EL (formated)] + [pp Of Numeracy Improvemnt From BL to EL (formated)]
+		lineageTag: 870ed57b-23f9-4886-9011-3ea09b2faf25
+
+		formatStringDefinition = "+0 pp;-0 pp;0 pp"
+
 	partition Mesures = m
 		mode: import
 		source =

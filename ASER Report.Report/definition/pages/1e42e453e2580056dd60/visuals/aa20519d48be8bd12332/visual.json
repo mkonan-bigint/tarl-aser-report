@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "aa20519d48be8bd12332",
   "position": {
     "x": 25,
@@ -209,7 +209,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Increase of the percentage of students who read at liste a simple paragraph from BL to EL'"
+                  "Value": "'Increase of the percentage of students who read at least a simple paragraph from BL to EL'"
                 }
               }
             },

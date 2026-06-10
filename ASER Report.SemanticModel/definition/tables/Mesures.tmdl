@@ -919,7 +919,7 @@ table Mesures
 			VAR __pp_target2 = -20
 			
 			VAR __pp_gap = __pp - __pp_target
-			VAR __pp_gap2 = __pp2 - __pp_target2
+			VAR __pp_gap2 = __pp_target2 + __pp2
 			
 			VAR __pp_formated =
 			SWITCH( SIGN(__pp),
@@ -929,8 +929,8 @@ table Mesures
 			
 			VAR __pp_formated2 =
 			SWITCH( SIGN(__pp2),
-			        1, FORMAT( ABS(__pp2), "+0 pp" ),
-			        -1, FORMAT( ABS(__pp2), "-0 pp" ),
+			        1, FORMAT( ABS(__pp2), "-0 pp" ),
+			        -1, FORMAT( ABS(__pp2), "+0 pp" ),
 			        BLANK() )
 			
 			VAR __Level = 
@@ -984,8 +984,8 @@ table Mesures
 			
 			VAR __Line4_2 = 
 			SWITCH( SIGN(__pp_gap2),
-			        1, UNICHAR(10) & "• The change was " & FORMAT( __pp_gap2, "0 pp" ) & " less than the target, which was set as " & __pp_target2 & " pp",
-			        -1, UNICHAR(10) & "• The change was " & FORMAT( __pp_gap2, "0 pp" ) & " more than the target, which was set as " & __pp_target2 & " pp",
+			        1, UNICHAR(10) & "• The change was " & FORMAT( __pp_gap2, "0 pp" ) & " more than the target, which was set as " & __pp_target2 & " pp",
+			        -1, UNICHAR(10) & "• The change was " & FORMAT( __pp_gap2, "0 pp" ) & " less than the target, which was set as " & __pp_target2 & " pp",
 			        BLANK() )
 			
 			VAR Comment_Part2 = __Line1_2 & __Line2_2 & __Line3_2 & __Line4_2

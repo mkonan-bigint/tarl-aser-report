@@ -887,10 +887,17 @@ table Mesures
 			
 			
 			VAR __Subject = SELECTEDVALUE( 'Levels in Subjects'[Subject ID] )
+			
 			VAR __BL =
 			SWITCH( __Subject,
 			        1, [% Of Students With High Litteracy At BL],
 			        2, [% Of Students With High Numeracy At BL],
+			        BLANK() )
+			
+			VAR __BL2 =
+			SWITCH( __Subject,
+			        1, [% Of Students With Low Litteracy At BL],
+			        2, [% Of Students With Low Numeracy At BL],
 			        BLANK() )
 			        
 			VAR __EL =
@@ -899,14 +906,31 @@ table Mesures
 			        2, [% Of Students With High Numeracy At EL],
 			        BLANK() )
 			
+			VAR __EL2 =
+			SWITCH( __Subject,
+			        1, [% Of Students With Low Litteracy At EL],
+			        2, [% Of Students With Low Numeracy At EL],
+			        BLANK() )
+			
 			VAR __pp = [pp Of Subject Improvemnt From BL to EL (formated)]
+			VAR __pp2 = [pp Of Subject Difficulty Reduction From BL to EL (formated)]
+			
 			VAR __pp_target = 20
+			VAR __pp_target2 = -20
+			
 			VAR __pp_gap = __pp - __pp_target
+			VAR __pp_gap2 = __pp2 - __pp_target2
 			
 			VAR __pp_formated =
 			SWITCH( SIGN(__pp),
 			        1, FORMAT( __pp, "+0 pp" ),
 			        -1, FORMAT( __pp, "-0 pp" ),
+			        BLANK() )
+			
+			VAR __pp_formated2 =
+			SWITCH( SIGN(__pp2),
+			        1, FORMAT( ABS(__pp2), "+0 pp" ),
+			        -1, FORMAT( ABS(__pp2), "-0 pp" ),
 			        BLANK() )
 			
 			VAR __Level = 
@@ -915,6 +939,13 @@ table Mesures
 			        2, "could solve at least a 2x2 substraction operation",
 			        BLANK() )
 			
+			VAR __Level2 = 
+			SWITCH( __Subject,
+			        1, "could not read words",
+			        2, "could not recognise 2-digit numbers",
+			        BLANK() )
+			
+			// Comment for higher levels improvment
 			VAR __Line1 =
 			UNICHAR(10) & "• " & FORMAT( __BL, "0%" ) & " of students " & __Level & " at Baseline"
 			
@@ -934,12 +965,37 @@ table Mesures
 			        -1, UNICHAR(10) & "• The change was " & FORMAT( __pp_gap, "0 pp" ) & " less than the target, which was set as " & __pp_target & " pp",
 			        BLANK() )
 			
-			VAR __Full_comment =
-			IF( ISBLANK(__EL),
-			   "Endline data not available for the current year",
-			   __Line1 & __Line2 & __Line3 & __Line4 )
+			VAR Comment_Part1 = __Line1 & __Line2 & __Line3 & __Line4
 			
-			RETURN __Full_comment
+			// Comment for lower levels reduction
+			
+			VAR __Line1_2 =
+			UNICHAR(10) & "• " & FORMAT( __BL2, "0%" ) & " of students " & __Level2 & " at Baseline"
+			
+			VAR __Line2_2 =
+			SWITCH( TRUE(),
+			        __EL2 > __BL2, UNICHAR(10) & "• Increased to " & FORMAT( __EL2, "0%" ) & " at Endline",
+			        __EL2 < __BL2, UNICHAR(10) & "• Reduced to " & FORMAT( __EL2, "0%" ) & " at Endline",
+			        __EL2 = __BL2, UNICHAR(10) & "• Remain stable at Endline",
+			        BLANK() )
+			
+			VAR __Line3_2 =
+			UNICHAR(10) & "• The change in students who " & __Level2 & " was " & __pp_formated2
+			
+			VAR __Line4_2 = 
+			SWITCH( SIGN(__pp_gap2),
+			        1, UNICHAR(10) & "• The change was " & FORMAT( __pp_gap2, "0 pp" ) & " less than the target, which was set as " & __pp_target2 & " pp",
+			        -1, UNICHAR(10) & "• The change was " & FORMAT( __pp_gap2, "0 pp" ) & " more than the target, which was set as " & __pp_target2 & " pp",
+			        BLANK() )
+			
+			VAR Comment_Part2 = __Line1_2 & __Line2_2 & __Line3_2 & __Line4_2
+			
+			// Full comment
+			VAR Full_comment = Comment_Part1 & UNICHAR(10) & Comment_Part2
+			
+			RETURN IF( ISBLANK(__EL) || ISBLANK(__EL2),
+			   "Endline data not available for the current year",
+			   Full_comment )
 			```
 		lineageTag: f59347b9-e053-4716-aff7-c73a60e21741
 

@@ -943,6 +943,14 @@ table Mesures
 			```
 		lineageTag: f59347b9-e053-4716-aff7-c73a60e21741
 
+	measure 'pp Of Subject Difficulty Reduction From BL to EL (formated)' =
+			
+			// Doit etre filtree dans le rapport par Subject pour avoir du sens
+			[pp Of Litteracy Difficulty Reduction From BL to EL (formated)] + [pp Of Numeracy Difficulty Reduction From BL to EL (formated)]
+		lineageTag: 0ae81150-e0d4-4fd3-8c15-5849ef789e8c
+
+		formatStringDefinition = "+0 pp;-0 pp;0 pp"
+
 	partition Mesures = m
 		mode: import
 		source =

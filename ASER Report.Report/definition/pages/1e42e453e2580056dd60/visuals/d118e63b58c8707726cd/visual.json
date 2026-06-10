@@ -97,22 +97,7 @@
       ],
       "valueAxis": [
         {
-          "properties": {
-            "end": {
-              "expr": {
-                "Literal": {
-                  "Value": "1D"
-                }
-              }
-            },
-            "start": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
-                }
-              }
-            }
-          }
+          "properties": {}
         }
       ],
       "dataPoint": [

@@ -254,7 +254,7 @@ table Mesures
 			
 			VAR __EL = [% Of Students With Low Litteracy At EL]
 			VAR __BL = [% Of Students With Low Litteracy At BL]
-			VAR __Result = __EL - __BL
+			VAR __Result = __BL - __EL
 			RETURN IF( ISBLANK( __EL ), BLANK(), __Result )
 		formatString: 0\ %;-0\ %;0\ %
 		displayFolder: 2. Program specific KPIs
@@ -401,7 +401,7 @@ table Mesures
 			
 			VAR __EL = [% Of Students With Low Numeracy At EL]
 			VAR __BL = [% Of Students With Low Numeracy At BL]
-			VAR __Result = __EL - __BL
+			VAR __Result = __BL - __EL
 			RETURN IF( ISBLANK( __EL ), BLANK(), __Result )
 		formatString: 0\ %;-0\ %;0\ %
 		displayFolder: 2. Program specific KPIs
@@ -820,7 +820,7 @@ table Mesures
 			
 			VAR __EL = [% Of Students With Low Litteracy At EL]
 			VAR __BL = [% Of Students With Low Litteracy At BL]
-			VAR __Result = 100*(__EL - __BL)
+			VAR __Result = 100*(__BL - __EL)
 			RETURN IF( ISBLANK( __EL ), BLANK(), __Result )
 		displayFolder: 2. Program specific KPIs
 		lineageTag: 609cc8da-c97a-40e9-aae2-6845e77e4453
@@ -842,7 +842,7 @@ table Mesures
 			
 			VAR __EL = [% Of Students With Low Numeracy At EL]
 			VAR __BL = [% Of Students With Low Numeracy At BL]
-			VAR __Result = 100*(__EL - __BL)
+			VAR __Result = 100*(__BL - __EL)
 			RETURN IF( ISBLANK( __EL ), BLANK(), __Result )
 		displayFolder: 2. Program specific KPIs
 		lineageTag: 9a531d57-9e7b-4599-bafa-083b57a73e21
@@ -919,7 +919,7 @@ table Mesures
 			VAR __pp_target2 = -20
 			
 			VAR __pp_gap = __pp - __pp_target
-			VAR __pp_gap2 = __pp2 - __pp_target2
+			VAR __pp_gap2 = __pp_target2 + __pp2
 			
 			VAR __pp_formated =
 			SWITCH( SIGN(__pp),
@@ -929,8 +929,8 @@ table Mesures
 			
 			VAR __pp_formated2 =
 			SWITCH( SIGN(__pp2),
-			        1, FORMAT( ABS(__pp2), "+0 pp" ),
-			        -1, FORMAT( ABS(__pp2), "-0 pp" ),
+			        1, FORMAT( ABS(__pp2), "-0 pp" ),
+			        -1, FORMAT( ABS(__pp2), "+0 pp" ),
 			        BLANK() )
 			
 			VAR __Level = 
@@ -984,8 +984,8 @@ table Mesures
 			
 			VAR __Line4_2 = 
 			SWITCH( SIGN(__pp_gap2),
-			        1, UNICHAR(10) & "• The change was " & FORMAT( __pp_gap2, "0 pp" ) & " less than the target, which was set as " & __pp_target2 & " pp",
-			        -1, UNICHAR(10) & "• The change was " & FORMAT( __pp_gap2, "0 pp" ) & " more than the target, which was set as " & __pp_target2 & " pp",
+			        1, UNICHAR(10) & "• The change was " & FORMAT( __pp_gap2, "0 pp" ) & " more than the target, which was set as " & __pp_target2 & " pp",
+			        -1, UNICHAR(10) & "• The change was " & FORMAT( __pp_gap2, "0 pp" ) & " less than the target, which was set as " & __pp_target2 & " pp",
 			        BLANK() )
 			
 			VAR Comment_Part2 = __Line1_2 & __Line2_2 & __Line3_2 & __Line4_2
@@ -1006,6 +1006,55 @@ table Mesures
 		lineageTag: 0ae81150-e0d4-4fd3-8c15-5849ef789e8c
 
 		formatStringDefinition = "+0 pp;-0 pp;0 pp"
+
+	measure 'Comment - Progress across grades' =
+			
+			
+			VAR __Var1 = [% Of Students With High Litteracy At EL]
+			
+			
+			VAR __Comment =
+			"The best performance was seen in the CM1 class 23%
+			The CE1 class did not perform well, as the majority of learners come from lower grades (CP)
+			In CM2: only +22%, although the basic level is already high (48%). This may indicate that there is less room for improvement in CM2, as a large proportion of pupils have already mastered reading.
+			With the exception of the CE1 classes, our progress target has been achieved in all classes.
+			"
+			
+			VAR __Comment_Part1 = ""
+			
+			RETURN 1
+		formatString: 0
+		lineageTag: 5396fc62-6e58-4f31-8fb2-1d74e5080aae
+
+	measure 'Grade With Highest Literacy At EL' =
+			
+			VAR __Table =
+			    ADDCOLUMNS(
+			        VALUES( Grades[Grade] ),
+			        "@Literacy At EL", CALCULATE( [% Of Students With High Litteracy At EL] )
+			    )
+			VAR __MaxValue =
+			    MAXX( __Table, [@Literacy At EL] )
+			VAR __Result =
+			    MAXX(
+			        FILTER( __Table, [@Literacy At EL] = __MaxValue ),
+			        Grades[Grade]
+			    )
+			RETURN
+			    IF( ISBLANK( __MaxValue ), BLANK(), __Result )
+		lineageTag: a883e1ce-cfe8-4cad-9078-ea9419c18e20
+
+	measure 'Highest % Of High Literacy Level across grades at EL' =
+			
+			VAR __Table =
+			    ADDCOLUMNS(
+			        VALUES( Grades[Grade] ),
+			        "@Literacy At EL", CALCULATE( [% Of Students With High Litteracy At EL] )
+			    )
+			RETURN
+			    MAXX( __Table, [@Literacy At EL] )
+		formatString: 0\ %;-0\ %;0\ %
+		lineageTag: 61e84125-c724-45ce-b2e2-3053d75a9a7e
 
 	partition Mesures = m
 		mode: import

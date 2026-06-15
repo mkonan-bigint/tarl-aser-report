@@ -11414,19 +11414,6 @@ cultureInfo fr-FR
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
-<<<<<<< HEAD
-			        },
-			        {
-			          "Avg Gap across Group BL-ML": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-=======
->>>>>>> feature/comments
 			        }
 			      ]
 			    },
@@ -11605,19 +11592,6 @@ cultureInfo fr-FR
 			          "average number of mentoring school visits change across cycles for CPPP": {
 			            "State": "Generated"
 			          }
-<<<<<<< HEAD
-			        },
-			        {
-			          "Avg Change for CPPP": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-=======
->>>>>>> feature/comments
 			        }
 			      ]
 			    },
@@ -11634,19 +11608,6 @@ cultureInfo fr-FR
 			          "average number of mentoring school visits change across cycles for other group": {
 			            "State": "Generated"
 			          }
-<<<<<<< HEAD
-			        },
-			        {
-			          "Avg Change for Other group": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-=======
->>>>>>> feature/comments
 			        }
 			      ]
 			    }

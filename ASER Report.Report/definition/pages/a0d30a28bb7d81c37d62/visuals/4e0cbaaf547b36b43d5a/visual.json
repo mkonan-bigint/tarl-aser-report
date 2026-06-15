@@ -2,19 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "4e0cbaaf547b36b43d5a",
   "position": {
-<<<<<<< HEAD
-    "x": 0,
-    "y": 359.8840579710145,
-    "z": 9000,
-    "height": 222.60869565217391,
-    "width": 1255.8840579710145,
-=======
     "x": 25,
     "y": 675,
     "z": 9000,
     "height": 170,
     "width": 1230,
->>>>>>> feature/comments
     "tabOrder": 9000
   },
   "visual": {
@@ -78,16 +70,6 @@
       "value": [
         {
           "properties": {
-<<<<<<< HEAD
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "12D"
-                }
-              }
-            },
-=======
->>>>>>> feature/comments
             "fontFamily": {
               "expr": {
                 "Literal": {
@@ -95,8 +77,6 @@
                 }
               }
             },
-<<<<<<< HEAD
-=======
             "fontSize": {
               "expr": {
                 "Literal": {
@@ -104,7 +84,6 @@
                 }
               }
             },
->>>>>>> feature/comments
             "textWrap": {
               "expr": {
                 "Literal": {
@@ -121,8 +100,6 @@
       "layout": [
         {
           "properties": {
-<<<<<<< HEAD
-=======
             "alignment": {
               "expr": {
                 "Literal": {
@@ -130,7 +107,6 @@
                 }
               }
             },
->>>>>>> feature/comments
             "orientation": {
               "expr": {
                 "Literal": {
@@ -138,8 +114,6 @@
                 }
               }
             },
-<<<<<<< HEAD
-=======
             "columnCount": {
               "expr": {
                 "Literal": {
@@ -161,15 +135,12 @@
                 }
               }
             },
->>>>>>> feature/comments
             "style": {
               "expr": {
                 "Literal": {
                   "Value": "'Cards'"
                 }
               }
-<<<<<<< HEAD
-=======
             },
             "autoGrid": {
               "expr": {
@@ -514,7 +485,6 @@
                   "Value": "1D"
                 }
               }
->>>>>>> feature/comments
             }
           }
         }

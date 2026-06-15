@@ -2,8 +2,8 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
   "name": "00feb160b70410c86362",
   "displayName": "Improvement across grades - Focus on Numeracy",
-  "displayOption": "FitToPage",
-  "height": 720,
+  "displayOption": "ActualSize",
+  "height": 875,
   "width": 1280,
   "objects": {
     "background": [
@@ -23,7 +23,7 @@
                   "ResourcePackageItem": {
                     "PackageName": "RegisteredResources",
                     "PackageType": 1,
-                    "ItemName": "Diapositive26762976032872845.PNG"
+                    "ItemName": "Diapositive23752728212138402.PNG"
                   }
                 }
               },

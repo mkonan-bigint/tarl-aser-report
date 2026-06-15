@@ -5,7 +5,7 @@
     "x": 25,
     "y": 160,
     "z": 0,
-    "height": 525,
+    "height": 500,
     "width": 1230,
     "tabOrder": 0
   },
@@ -179,20 +179,6 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
-                }
-              }
-            },
-            "valueMax": {
-              "expr": {
-                "Literal": {
-                  "Value": "1D"
-                }
-              }
-            },
-            "valueSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "0.42317983382622165D"
                 }
               }
             }

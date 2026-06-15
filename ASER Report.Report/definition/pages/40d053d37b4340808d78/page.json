@@ -2,8 +2,8 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
   "name": "40d053d37b4340808d78",
   "displayName": "Students profiles",
-  "displayOption": "FitToPage",
-  "height": 720,
+  "displayOption": "ActualSize",
+  "height": 875,
   "width": 1280,
   "objects": {
     "background": [
@@ -23,7 +23,7 @@
                   "ResourcePackageItem": {
                     "PackageName": "RegisteredResources",
                     "PackageType": 1,
-                    "ItemName": "Diapositive29855861244442917.PNG"
+                    "ItemName": "Diapositive27072327123228822.PNG"
                   }
                 }
               },

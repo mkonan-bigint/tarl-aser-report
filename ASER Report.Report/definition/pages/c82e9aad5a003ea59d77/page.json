@@ -2,8 +2,8 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
   "name": "c82e9aad5a003ea59d77",
   "displayName": "Learning outcomes over the years",
-  "displayOption": "FitToPage",
-  "height": 720,
+  "displayOption": "ActualSize",
+  "height": 875,
   "width": 1280,
   "objects": {
     "background": [
@@ -23,7 +23,7 @@
                   "ResourcePackageItem": {
                     "PackageName": "RegisteredResources",
                     "PackageType": 1,
-                    "ItemName": "Diapositive20608276600398836.PNG"
+                    "ItemName": "Diapositive224178647318223645.PNG"
                   }
                 }
               },

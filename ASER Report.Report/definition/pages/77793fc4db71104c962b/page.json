@@ -2,8 +2,8 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
   "name": "77793fc4db71104c962b",
   "displayName": "Mentor Visits across DRENAETs",
-  "displayOption": "FitToPage",
-  "height": 720,
+  "displayOption": "ActualSize",
+  "height": 875,
   "width": 1280,
   "objects": {
     "background": [
@@ -23,7 +23,7 @@
                   "ResourcePackageItem": {
                     "PackageName": "RegisteredResources",
                     "PackageType": 1,
-                    "ItemName": "Diapositive223637178794017644.PNG"
+                    "ItemName": "Diapositive27407710594714366.PNG"
                   }
                 }
               },

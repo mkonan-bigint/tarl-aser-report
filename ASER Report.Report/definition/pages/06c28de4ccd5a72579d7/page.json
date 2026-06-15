@@ -2,8 +2,8 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
   "name": "06c28de4ccd5a72579d7",
   "displayName": "Overall Cross-Checking",
-  "displayOption": "FitToPage",
-  "height": 720,
+  "displayOption": "ActualSize",
+  "height": 875,
   "width": 1280,
   "objects": {
     "background": [
@@ -23,7 +23,7 @@
                   "ResourcePackageItem": {
                     "PackageName": "RegisteredResources",
                     "PackageType": 1,
-                    "ItemName": "Diapositive223637178794017644.PNG"
+                    "ItemName": "Diapositive26364108213947232.PNG"
                   }
                 }
               },

@@ -253,8 +253,13 @@ table Mesures
 	measure 'pp Of Literacy Difficulty Reduction From BL to EL' =
 			
 <<<<<<< HEAD
+<<<<<<< HEAD
 			VAR __EL = [% Of Students With Low Litteracy At EL]
 			VAR __BL = [% Of Students With Low Litteracy At BL]
+=======
+			VAR __EL = [% Of Students With Low Literacy At EL]
+			VAR __BL = [% Of Students With Low Literacy At BL]
+>>>>>>> feature/comments
 =======
 			VAR __EL = [% Of Students With Low Literacy At EL]
 			VAR __BL = [% Of Students With Low Literacy At BL]
@@ -824,8 +829,13 @@ table Mesures
 	measure 'pp Of Literacy Difficulty Reduction From BL to EL (formated)' =
 			
 <<<<<<< HEAD
+<<<<<<< HEAD
 			VAR __EL = [% Of Students With Low Litteracy At EL]
 			VAR __BL = [% Of Students With Low Litteracy At BL]
+=======
+			VAR __EL = [% Of Students With Low Literacy At EL]
+			VAR __BL = [% Of Students With Low Literacy At BL]
+>>>>>>> feature/comments
 =======
 			VAR __EL = [% Of Students With Low Literacy At EL]
 			VAR __BL = [% Of Students With Low Literacy At BL]
@@ -916,7 +926,10 @@ table Mesures
 			
 			VAR __pp_gap = __pp - __pp_target
 <<<<<<< HEAD
+<<<<<<< HEAD
 			VAR __pp_gap2 = __pp_target2 + __pp2
+=======
+>>>>>>> feature/comments
 =======
 >>>>>>> feature/comments
 			
@@ -927,12 +940,15 @@ table Mesures
 			        BLANK() )
 			
 <<<<<<< HEAD
+<<<<<<< HEAD
 			VAR __pp_formated2 =
 			SWITCH( SIGN(__pp2),
 			        1, FORMAT( ABS(__pp2), "-0 pp" ),
 			        -1, FORMAT( ABS(__pp2), "+0 pp" ),
 			        BLANK() )
 			
+=======
+>>>>>>> feature/comments
 =======
 >>>>>>> feature/comments
 			VAR __Level = 
@@ -2282,7 +2298,11 @@ table Mesures
 			VAR __Overall_Green_Schools_Percentage = FORMAT ( [% Of Green Schools For Numeracy], "0%" )
 			
 			
+<<<<<<< HEAD
 			VAR __Comment_Line1 = UNICHAR(10) & "• " & __Top2_Lowest_Red_Schools & " are the DRENAETs with the fewest percentage of red schools"
+=======
+			VAR __Comment_Line1 = UNICHAR(10) & "• " & __Top2_Lowest_Red_Schools & " are the DRENAETs with the smallest percentage of red schools"
+>>>>>>> feature/comments
 			
 			VAR __Comment_Line2 = UNICHAR(10) & "• " & __Top2_Highest_Red_Schools & " are the DRENAETs with the highest percentage of red schools"
 			

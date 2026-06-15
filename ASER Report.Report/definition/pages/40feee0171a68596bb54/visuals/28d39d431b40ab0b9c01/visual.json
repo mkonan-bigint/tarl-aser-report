@@ -5,7 +5,7 @@
     "x": 25.040276179516685,
     "y": 160.55235903337169,
     "z": 0,
-    "height": 525,
+    "height": 500,
     "width": 1230,
     "tabOrder": 0
   },
@@ -210,6 +210,25 @@
           "selector": {
             "metadata": "Mesures.pp Of Litteracy Difficulty Reduction From BL to EL"
           }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 3,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mesures.% Of Students With Low Litteracy At EL"
+          }
         }
       ],
       "zoom": [
@@ -218,7 +237,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             }

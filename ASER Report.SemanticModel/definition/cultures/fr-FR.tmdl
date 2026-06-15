@@ -11414,6 +11414,7 @@ cultureInfo fr-FR
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
+<<<<<<< HEAD
 			        },
 			        {
 			          "Avg Gap across Group BL-ML": {
@@ -11424,6 +11425,8 @@ cultureInfo fr-FR
 			            },
 			            "Weight": 0.9
 			          }
+=======
+>>>>>>> feature/comments
 			        }
 			      ]
 			    },
@@ -11602,6 +11605,7 @@ cultureInfo fr-FR
 			          "average number of mentoring school visits change across cycles for CPPP": {
 			            "State": "Generated"
 			          }
+<<<<<<< HEAD
 			        },
 			        {
 			          "Avg Change for CPPP": {
@@ -11612,6 +11616,8 @@ cultureInfo fr-FR
 			            },
 			            "Weight": 0.9
 			          }
+=======
+>>>>>>> feature/comments
 			        }
 			      ]
 			    },
@@ -11628,6 +11634,7 @@ cultureInfo fr-FR
 			          "average number of mentoring school visits change across cycles for other group": {
 			            "State": "Generated"
 			          }
+<<<<<<< HEAD
 			        },
 			        {
 			          "Avg Change for Other group": {
@@ -11638,6 +11645,8 @@ cultureInfo fr-FR
 			            },
 			            "Weight": 0.9
 			          }
+=======
+>>>>>>> feature/comments
 			        }
 			      ]
 			    }

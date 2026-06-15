@@ -86,7 +86,6 @@ table Grades
 
 	column 'Grade Sort'
 		dataType: int64
-		isHidden
 		formatString: 0
 		lineageTag: cab31000-fbca-41c0-aa3c-4a4d8931fc30
 		summarizeBy: sum

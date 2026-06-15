@@ -42,7 +42,7 @@
                       "Entity": "Mesures"
                     }
                   },
-                  "Property": "% Of Students With High Litteracy At BL"
+                  "Property": "% Of Students With High Literacy At BL"
                 }
               },
               "queryRef": "Mesures.Percentage Of Students Tested With High Litteracy In Grade BL",
@@ -57,7 +57,7 @@
                       "Entity": "Mesures"
                     }
                   },
-                  "Property": "pp Of Litteracy Improvemnt From BL to EL"
+                  "Property": "pp Of Literacy Improvemnt From BL to EL"
                 }
               },
               "queryRef": "Mesures.Litteracy Improvemnt BL to EL (PP)",

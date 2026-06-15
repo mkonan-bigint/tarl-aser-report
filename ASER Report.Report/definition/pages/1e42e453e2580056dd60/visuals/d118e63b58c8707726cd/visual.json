@@ -42,7 +42,7 @@
                       "Entity": "Mesures"
                     }
                   },
-                  "Property": "% Of Students With Low Litteracy At EL"
+                  "Property": "% Of Students With Low Literacy At EL"
                 }
               },
               "queryRef": "Mesures.Percentage Of Students Tested With Low Litteracy In Grade EL",
@@ -57,7 +57,7 @@
                       "Entity": "Mesures"
                     }
                   },
-                  "Property": "pp Of Litteracy Difficulty Reduction From BL to EL"
+                  "Property": "pp Of Literacy Difficulty Reduction From BL to EL"
                 }
               },
               "queryRef": "Mesures.Litteracy Difficulty Reduction BL to EL (PP)",

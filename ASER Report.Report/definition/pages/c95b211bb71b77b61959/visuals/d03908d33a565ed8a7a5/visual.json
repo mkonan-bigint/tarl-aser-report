@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "d03908d33a565ed8a7a5",
   "position": {
     "x": 25,
@@ -42,7 +42,7 @@
                       "Entity": "Mesures"
                     }
                   },
-                  "Property": "% Of Students With High Litteracy In Cycle"
+                  "Property": "% Of Students With High Literacy In Cycle"
                 }
               },
               "queryRef": "Mesures.Percentage Of Students Tested With High Litteracy In Grade",

@@ -42,7 +42,7 @@
                       "Entity": "Mesures"
                     }
                   },
-                  "Property": "% Of Students With Low Litteracy In Cycle"
+                  "Property": "% Of Students With Low Literacy In Cycle"
                 }
               },
               "queryRef": "Mesures.Percentage Of Students Tested With Low Litteracy In Grade",

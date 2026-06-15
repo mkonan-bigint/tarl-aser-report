@@ -168,10 +168,10 @@ table Mesures
 		displayFolder: 1. Cycle specific KPIs
 		lineageTag: bc504718-b829-4160-adbb-0d4caa6c15d6
 
-	measure '% Of Students With High Litteracy In Cycle' = ```
+	measure '% Of Students With High Literacy In Cycle' = ```
 			
 			DIVIDE( 
-			    [# Of Students With High Litteracy In Cycle],
+			    [# Of Students With High Literacy In Cycle],
 			    [# Of Students Tested In Cycle]
 			    )
 			```
@@ -179,7 +179,7 @@ table Mesures
 		displayFolder: 1. Cycle specific KPIs
 		lineageTag: 1d3c5cd4-246e-4480-8b48-63d56ff14838
 
-	measure '# Of Students With High Litteracy In Cycle' =
+	measure '# Of Students With High Literacy In Cycle' =
 			
 			VAR __CurrentCycle = MAX( Cycles[Cycle ID] )
 			
@@ -199,10 +199,10 @@ table Mesures
 		displayFolder: 1. Cycle specific KPIs
 		lineageTag: 3f415c52-f7fc-4d20-993a-6cfa641ab613
 
-	measure '% Of Students With High Litteracy At BL' = ```
+	measure '% Of Students With High Literacy At BL' = ```
 			
 			CALCULATE (DIVIDE( 
-			    [# Of Students With High Litteracy In Cycle],
+			    [# Of Students With High Literacy In Cycle],
 			    [# Of Students Tested In Cycle]
 			    ), Cycles[Cycle] = "BL" )
 			```
@@ -210,10 +210,10 @@ table Mesures
 		displayFolder: 1. Cycle specific KPIs
 		lineageTag: 80db46d6-8cbf-4667-b72f-4c291d6825be
 
-	measure '% Of Students With High Litteracy At EL' = ```
+	measure '% Of Students With High Literacy At EL' = ```
 			
 			CALCULATE (DIVIDE( 
-			    [# Of Students With High Litteracy In Cycle],
+			    [# Of Students With High Literacy In Cycle],
 			    [# Of Students Tested In Cycle]
 			    ), Cycles[Cycle] = "EL" )
 			```
@@ -221,17 +221,17 @@ table Mesures
 		displayFolder: 1. Cycle specific KPIs
 		lineageTag: fcbfe87e-5312-417d-b542-0b17a4dfb42b
 
-	measure 'pp Of Litteracy Improvemnt From BL to EL' =
+	measure 'pp Of Literacy Improvemnt From BL to EL' =
 			
-			VAR __EL = [% Of Students With High Litteracy At EL]
-			VAR __BL = [% Of Students With High Litteracy At BL]
+			VAR __EL = [% Of Students With High Literacy At EL]
+			VAR __BL = [% Of Students With High Literacy At BL]
 			VAR __Result = __EL - __BL
 			RETURN IF( ISBLANK( __EL ), BLANK(), __Result )
 		formatString: 0\ %;-0\ %;0\ %
 		displayFolder: 2. Program specific KPIs
 		lineageTag: 420efd55-0b13-43f0-9e12-93ef15d1dfd1
 
-	measure '# Of Students With Low Litteracy In Cycle' =
+	measure '# Of Students With Low Literacy In Cycle' =
 			
 			VAR __CurrentCycle = MAX( Cycles[Cycle ID] )
 			
@@ -250,20 +250,20 @@ table Mesures
 		displayFolder: 1. Cycle specific KPIs
 		lineageTag: 211d6b35-41e0-40ab-b4f4-aa8ae078e2af
 
-	measure 'pp Of Litteracy Difficulty Reduction From BL to EL' =
+	measure 'pp Of Literacy Difficulty Reduction From BL to EL' =
 			
-			VAR __EL = [% Of Students With Low Litteracy At EL]
-			VAR __BL = [% Of Students With Low Litteracy At BL]
+			VAR __EL = [% Of Students With Low Literacy At EL]
+			VAR __BL = [% Of Students With Low Literacy At BL]
 			VAR __Result = __BL - __EL
 			RETURN IF( ISBLANK( __EL ), BLANK(), __Result )
 		formatString: 0\ %;-0\ %;0\ %
 		displayFolder: 2. Program specific KPIs
 		lineageTag: 92710847-def6-4456-92ca-92e25a8d0deb
 
-	measure '% Of Students With Low Litteracy At EL' = ```
+	measure '% Of Students With Low Literacy At EL' = ```
 			
 			CALCULATE (DIVIDE( 
-			    [# Of Students With Low Litteracy In Cycle],
+			    [# Of Students With Low Literacy In Cycle],
 			    [# Of Students Tested In Cycle]
 			    ), Cycles[Cycle] = "EL" )
 			```
@@ -271,10 +271,10 @@ table Mesures
 		displayFolder: 1. Cycle specific KPIs
 		lineageTag: 0152dfa5-ae6d-484a-8ae0-bc918afaca61
 
-	measure '% Of Students With Low Litteracy At BL' = ```
+	measure '% Of Students With Low Literacy At BL' = ```
 			
 			CALCULATE (DIVIDE( 
-			    [# Of Students With Low Litteracy In Cycle],
+			    [# Of Students With Low Literacy In Cycle],
 			    [# Of Students Tested In Cycle]
 			    ), Cycles[Cycle] = "BL" )
 			```
@@ -407,10 +407,10 @@ table Mesures
 		displayFolder: 2. Program specific KPIs
 		lineageTag: aa0fab98-392c-4b0c-93a3-e07b66114535
 
-	measure '% Of Students With Low Litteracy In Cycle' = ```
+	measure '% Of Students With Low Literacy In Cycle' = ```
 			
 			DIVIDE( 
-			    [# Of Students With Low Litteracy In Cycle],
+			    [# Of Students With Low Literacy In Cycle],
 			    [# Of Students Tested In Cycle]
 			    )
 			```
@@ -477,7 +477,7 @@ table Mesures
 					'ASER CIV Data',
 					'ASER CIV Data'[School ID],
 					'ASER CIV Data'[Period],
-					"@Progress in Literacy from BL to EL", [pp Of Litteracy Improvemnt From BL to EL],
+					"@Progress in Literacy from BL to EL", [pp Of Literacy Improvemnt From BL to EL],
 					"@Progress in Numeracy from BL to EL", [pp Of Numeracy Improvemnt From BL to EL]
 				)
 			
@@ -512,7 +512,7 @@ table Mesures
 					'ASER CIV Data',
 					'ASER CIV Data'[School ID],
 					'ASER CIV Data'[Period],
-					"@Progress in Literacy from BL to EL", [pp Of Litteracy Improvemnt From BL to EL],
+					"@Progress in Literacy from BL to EL", [pp Of Literacy Improvemnt From BL to EL],
 					"@Progress in Numeracy from BL to EL", [pp Of Numeracy Improvemnt From BL to EL]
 				)
 			
@@ -547,7 +547,7 @@ table Mesures
 					'ASER CIV Data',
 					'ASER CIV Data'[School ID],
 					'ASER CIV Data'[Period],
-					"@Progress in Literacy from BL to EL", [pp Of Litteracy Improvemnt From BL to EL],
+					"@Progress in Literacy from BL to EL", [pp Of Literacy Improvemnt From BL to EL],
 					"@Progress in Numeracy from BL to EL", [pp Of Numeracy Improvemnt From BL to EL]
 				)
 			
@@ -581,7 +581,7 @@ table Mesures
 					'ASER CIV Data',
 					'ASER CIV Data'[School ID],
 					'ASER CIV Data'[Period],
-					"@Progress in Literacy from BL to EL", [pp Of Litteracy Improvemnt From BL to EL],
+					"@Progress in Literacy from BL to EL", [pp Of Literacy Improvemnt From BL to EL],
 					"@Progress in Numeracy from BL to EL", [pp Of Numeracy Improvemnt From BL to EL]
 				)
 			
@@ -616,7 +616,7 @@ table Mesures
 					'ASER CIV Data',
 					'ASER CIV Data'[School ID],
 					'ASER CIV Data'[Period],
-					"@Progress in Literacy from BL to EL", [pp Of Litteracy Improvemnt From BL to EL],
+					"@Progress in Literacy from BL to EL", [pp Of Literacy Improvemnt From BL to EL],
 					"@Progress in Numeracy from BL to EL", [pp Of Numeracy Improvemnt From BL to EL]
 				)
 			
@@ -651,7 +651,7 @@ table Mesures
 					'ASER CIV Data',
 					'ASER CIV Data'[School ID],
 					'ASER CIV Data'[Period],
-					"@Progress in Literacy from BL to EL", [pp Of Litteracy Improvemnt From BL to EL],
+					"@Progress in Literacy from BL to EL", [pp Of Literacy Improvemnt From BL to EL],
 					"@Progress in Numeracy from BL to EL", [pp Of Numeracy Improvemnt From BL to EL]
 				)
 			
@@ -686,7 +686,7 @@ table Mesures
 		lineageTag: 92100cbd-3a25-4528-90f6-65eb70b2d0b6
 
 	measure 'Average Number Of Mentoring School Visits' = DIVIDE( [# Of Visits], [# Of Schools Visited] )
-		formatString: #,0.0
+		formatString: #,0.00
 		displayFolder: 0. Overall KPIs
 		lineageTag: 1db5c8e7-3c12-4876-867d-45e06d2cb988
 
@@ -816,10 +816,10 @@ table Mesures
 			"Overall Cross-Checking for " & MAX( 'Cross-Check Type'[Cross-Check Type] )
 		lineageTag: 778f65d9-2e68-4c81-9c71-558bc5998706
 
-	measure 'pp Of Litteracy Difficulty Reduction From BL to EL (formated)' =
+	measure 'pp Of Literacy Difficulty Reduction From BL to EL (formated)' =
 			
-			VAR __EL = [% Of Students With Low Litteracy At EL]
-			VAR __BL = [% Of Students With Low Litteracy At BL]
+			VAR __EL = [% Of Students With Low Literacy At EL]
+			VAR __BL = [% Of Students With Low Literacy At BL]
 			VAR __Result = 100*(__BL - __EL)
 			RETURN IF( ISBLANK( __EL ), BLANK(), __Result )
 		displayFolder: 2. Program specific KPIs
@@ -827,10 +827,10 @@ table Mesures
 
 		formatStringDefinition = "+0 pp;-0 pp;0 pp"
 
-	measure 'pp Of Litteracy Improvemnt From BL to EL (formated)' =
+	measure 'pp Of Literacy Improvemnt From BL to EL (formated)' =
 			
-			VAR __EL = [% Of Students With High Litteracy At EL]
-			VAR __BL = [% Of Students With High Litteracy At BL]
+			VAR __EL = [% Of Students With High Literacy At EL]
+			VAR __BL = [% Of Students With High Literacy At BL]
 			VAR __Result = 100*(__EL - __BL)
 			RETURN IF( ISBLANK( __EL ), BLANK(), __Result )
 		displayFolder: 2. Program specific KPIs
@@ -863,7 +863,7 @@ table Mesures
 	measure 'pp Of Subject Improvemnt From BL to EL (formated)' =
 			
 			// Doit etre filtree dans le rapport par Subject pour avoir du sens
-			[pp Of Litteracy Improvemnt From BL to EL (formated)] + [pp Of Numeracy Improvemnt From BL to EL (formated)]
+			[pp Of Literacy Improvemnt From BL to EL (formated)] + [pp Of Numeracy Improvemnt From BL to EL (formated)]
 		lineageTag: 870ed57b-23f9-4886-9011-3ea09b2faf25
 
 		formatStringDefinition = "+0 pp;-0 pp;0 pp"
@@ -883,43 +883,28 @@ table Mesures
 			RETURN IF( ISBLANK( __pp ), BLANK(), __Comment )
 		lineageTag: 68824b62-0ba2-4658-a203-95a6d0c4ad99
 
-	measure 'Comment - Levels across cycles' = ```
+	measure 'Comment - Higher Levels across cycles' = ```
 			
 			
 			VAR __Subject = SELECTEDVALUE( 'Levels in Subjects'[Subject ID] )
 			
 			VAR __BL =
 			SWITCH( __Subject,
-			        1, [% Of Students With High Litteracy At BL],
+			        1, [% Of Students With High Literacy At BL],
 			        2, [% Of Students With High Numeracy At BL],
-			        BLANK() )
-			
-			VAR __BL2 =
-			SWITCH( __Subject,
-			        1, [% Of Students With Low Litteracy At BL],
-			        2, [% Of Students With Low Numeracy At BL],
 			        BLANK() )
 			        
 			VAR __EL =
 			SWITCH( __Subject,
-			        1, [% Of Students With High Litteracy At EL],
+			        1, [% Of Students With High Literacy At EL],
 			        2, [% Of Students With High Numeracy At EL],
 			        BLANK() )
 			
-			VAR __EL2 =
-			SWITCH( __Subject,
-			        1, [% Of Students With Low Litteracy At EL],
-			        2, [% Of Students With Low Numeracy At EL],
-			        BLANK() )
-			
 			VAR __pp = [pp Of Subject Improvemnt From BL to EL (formated)]
-			VAR __pp2 = [pp Of Subject Difficulty Reduction From BL to EL (formated)]
 			
 			VAR __pp_target = 20
-			VAR __pp_target2 = -20
 			
 			VAR __pp_gap = __pp - __pp_target
-			VAR __pp_gap2 = __pp_target2 + __pp2
 			
 			VAR __pp_formated =
 			SWITCH( SIGN(__pp),
@@ -927,22 +912,10 @@ table Mesures
 			        -1, FORMAT( __pp, "-0 pp" ),
 			        BLANK() )
 			
-			VAR __pp_formated2 =
-			SWITCH( SIGN(__pp2),
-			        1, FORMAT( ABS(__pp2), "-0 pp" ),
-			        -1, FORMAT( ABS(__pp2), "+0 pp" ),
-			        BLANK() )
-			
 			VAR __Level = 
 			SWITCH( __Subject,
 			        1, "could read sentences",
 			        2, "could solve at least a 2x2 substraction operation",
-			        BLANK() )
-			
-			VAR __Level2 = 
-			SWITCH( __Subject,
-			        1, "could not read words",
-			        2, "could not recognise 2-digit numbers",
 			        BLANK() )
 			
 			// Comment for higher levels improvment
@@ -965,7 +938,840 @@ table Mesures
 			        -1, UNICHAR(10) & "• The change was " & FORMAT( __pp_gap, "0 pp" ) & " less than the target, which was set as " & __pp_target & " pp",
 			        BLANK() )
 			
-			VAR Comment_Part1 = __Line1 & __Line2 & __Line3 & __Line4
+			VAR Comment = __Line1 & __Line2 & __Line3 & __Line4
+			
+			RETURN IF( ISBLANK(__EL),
+			   "Endline data not available for the current year",
+			   Comment )
+			```
+		lineageTag: f59347b9-e053-4716-aff7-c73a60e21741
+
+	measure 'pp Of Subject Difficulty Reduction From BL to EL (formated)' =
+			
+			// Doit etre filtree dans le rapport par Subject pour avoir du sens
+			[pp Of Literacy Difficulty Reduction From BL to EL (formated)] + [pp Of Numeracy Difficulty Reduction From BL to EL (formated)]
+		lineageTag: 0ae81150-e0d4-4fd3-8c15-5849ef789e8c
+
+		formatStringDefinition = "+0 pp;-0 pp;0 pp"
+
+	measure 'Comment - High Literacy Progress across grades' = ```
+			
+			
+			VAR __EL = [pp Of Literacy Improvemnt From BL to EL (formated)]
+			VAR __Top_Grade = [Grade With Highest Literacy Improvement At EL]
+			VAR __Bottom_Grade = [Grade With Lowest Literacy Improvement At EL]
+			VAR __Top_Grade_Performance = [Highest Literacy Improvement across grades at EL]
+			VAR __Bottom_Grade_Performance = [Lowest Literacy Improvement across grades at EL]
+			VAR __Top_Grade_Performance_formated = FORMAT( 100 * __Top_Grade_Performance, "0 pp" )
+			VAR __Bottom_Grade_Performance_formated = FORMAT( 100 * __Bottom_Grade_Performance, "0 pp" )
+			VAR __List_Grades_Over_Target = [Grades With Literacy Improvement over 20pp]
+			VAR __List_Grades_Under_Target = [Grades With Literacy Improvement under 20pp]
+			VAR __Count_Grades = DISTINCTCOUNT( Grades[Grade] )
+			VAR __Count_Grades_Over_Target = [# Of Grades With Literacy Improvement over 20pp]
+			VAR __Count_Grades_Under_Target = [# Of Grades With Literacy Improvement under 20pp]
+			
+			VAR __Comment_Part1 = UNICHAR(10) & "• The best performance was seen in the " &  __Top_Grade & " class with " & __Top_Grade_Performance_formated & ". " & __Bottom_Grade & " was the class which performed the least with " & __Bottom_Grade_Performance_formated
+			
+			VAR __Comment_Part2 = 
+			IF( __Count_Grades_Under_Target = 0,
+			UNICHAR(10) & "• All grades meet the change target of 20 pp",
+			UNICHAR(10) & "• " & __Count_Grades_Under_Target & " grade(s) out of " & __Count_Grades & " did not meet the change target of 20 pp : " & __List_Grades_Under_Target )
+			
+			VAR __Full_Comment = __Comment_Part1 & __Comment_Part2
+			
+			RETURN IF( ISBLANK(__EL),
+			   "Endline data not available for the current year", __Full_comment )
+			```
+		lineageTag: 5396fc62-6e58-4f31-8fb2-1d74e5080aae
+
+	measure 'Grade With Highest Literacy Improvement At EL' =
+			
+			VAR __Table =
+			    ADDCOLUMNS(
+			        VALUES( Grades[Grade] ),
+			        "@Literacy At EL", CALCULATE( [pp Of Literacy Improvemnt From BL to EL] )
+			    )
+			VAR __MaxValue =
+			    MAXX( __Table, [@Literacy At EL] )
+			VAR __Result =
+			    MAXX(
+			        FILTER( __Table, [@Literacy At EL] = __MaxValue ),
+			        Grades[Grade]
+			    )
+			RETURN
+			    IF( ISBLANK( __MaxValue ), BLANK(), __Result )
+		lineageTag: a883e1ce-cfe8-4cad-9078-ea9419c18e20
+
+	measure 'Highest Literacy Improvement across grades at EL' =
+			
+			VAR __Table =
+			    ADDCOLUMNS(
+			        VALUES( Grades[Grade] ),
+			        "@Literacy At EL", CALCULATE( [pp Of Literacy Improvemnt From BL to EL] )
+			    )
+			RETURN
+			    MAXX( __Table, [@Literacy At EL] )
+		formatString: 0\ %;-0\ %;0\ %
+		lineageTag: 61e84125-c724-45ce-b2e2-3053d75a9a7e
+
+	measure 'Grade With Lowest Literacy Improvement At EL' =
+			
+			VAR __Table =
+			    ADDCOLUMNS(
+			        VALUES( Grades[Grade] ),
+			        "@Literacy At EL", CALCULATE( [pp Of Literacy Improvemnt From BL to EL] )
+			    )
+			VAR __MinValue =
+			    MINX( __Table, [@Literacy At EL] )
+			VAR __Result =
+			    MINX(
+			        FILTER( __Table, [@Literacy At EL] = __MinValue ),
+			        Grades[Grade]
+			    )
+			RETURN
+			    IF( ISBLANK( __MinValue ), BLANK(), __Result )
+		lineageTag: 99e0ee6e-fe1b-4c8d-ae4c-1f593b9c5744
+
+	measure 'Lowest Literacy Improvement across grades at EL' =
+			
+			VAR __Table =
+			    ADDCOLUMNS(
+			        VALUES( Grades[Grade] ),
+			        "@Literacy At EL", CALCULATE( [pp Of Literacy Improvemnt From BL to EL] )
+			    )
+			RETURN
+			    MINX( __Table, [@Literacy At EL] )
+		formatString: 0\ %;-0\ %;0\ %
+		lineageTag: afa6eb18-d658-4b2c-99bc-87a953c3665b
+
+	measure 'Grades With Literacy Improvement over 20pp' =
+			
+			VAR __CurrentPeriod = SELECTEDVALUE( Cycles[Period] )
+			VAR __CurrentSubject = 1
+			VAR __Table =
+			    ADDCOLUMNS(
+			        SUMMARIZE( Grades, Grades[Grade], Grades[Grade Sort] ),
+			        "@pp Improvement",
+			            CALCULATE(
+			                [pp Of Subject Improvemnt From BL to EL (formated)],
+			                Cycles[Period] = __CurrentPeriod,
+			                'Levels in Subjects'[Subject ID] = __CurrentSubject
+			            )
+			    )
+			VAR __FilteredTable =
+			    FILTER( __Table, NOT ISBLANK( [@pp Improvement] ) && [@pp Improvement] >= 20 )
+			RETURN
+			    IF(
+			        ISEMPTY( __FilteredTable ),
+			        BLANK(),
+			        CONCATENATEX( __FilteredTable, Grades[Grade], ", ", Grades[Grade Sort], ASC )
+			    )
+		lineageTag: a7c4bf23-2c21-4bdf-8f87-7854d84b4988
+
+	measure '# Of Grades With Literacy Improvement over 20pp' =
+			
+			VAR __CurrentPeriod = SELECTEDVALUE( Cycles[Period] )
+			VAR __CurrentSubjectID = 1
+			VAR __Table =
+			    ADDCOLUMNS(
+			        SUMMARIZE( Grades, Grades[Grade], Grades[Grade Sort] ),
+			        "@pp Improvement",
+			            CALCULATE(
+			                [pp Of Subject Improvemnt From BL to EL (formated)],
+			                Cycles[Period] = __CurrentPeriod,
+			                'Levels in Subjects'[Subject ID] = __CurrentSubjectID
+			            )
+			    )
+			VAR __FilteredTable =
+			    FILTER(
+			        __Table,
+			        NOT ISBLANK( [@pp Improvement] ) && [@pp Improvement] >= 20
+			    )
+			RETURN
+			    IF(
+			        ISEMPTY( __FilteredTable ),
+			        BLANK(),
+			        COUNTROWS( __FilteredTable )
+			    )
+		formatString: 0
+		lineageTag: 60159c08-0255-42e2-88e4-324265b06447
+
+	measure '# Of Grades With Literacy Improvement under 20pp' =
+			
+			VAR __CurrentPeriod = SELECTEDVALUE( Cycles[Period] )
+			VAR __CurrentSubjectID = 1
+			VAR __Table =
+			    ADDCOLUMNS(
+			        SUMMARIZE( Grades, Grades[Grade], Grades[Grade Sort] ),
+			        "@pp Improvement",
+			            CALCULATE(
+			                [pp Of Subject Improvemnt From BL to EL (formated)],
+			                Cycles[Period] = __CurrentPeriod,
+			                'Levels in Subjects'[Subject ID] = __CurrentSubjectID
+			            )
+			    )
+			VAR __FilteredTable =
+			    FILTER(
+			        __Table,
+			        NOT ISBLANK( [@pp Improvement] ) && [@pp Improvement] < 20
+			    )
+			RETURN
+			    IF(
+			        ISEMPTY( __FilteredTable ),
+			        BLANK(),
+			        COUNTROWS( __FilteredTable )
+			    )
+		formatString: 0
+		lineageTag: ee312a97-900c-4b1e-b319-c6d103aa1c15
+
+	measure 'Grades With Literacy Improvement under 20pp' =
+			
+			VAR __CurrentPeriod = SELECTEDVALUE( Cycles[Period] )
+			VAR __CurrentSubject = 1
+			VAR __Table =
+			    ADDCOLUMNS(
+			        SUMMARIZE( Grades, Grades[Grade], Grades[Grade Sort] ),
+			        "@pp Improvement",
+			            CALCULATE(
+			                [pp Of Subject Improvemnt From BL to EL (formated)],
+			                Cycles[Period] = __CurrentPeriod,
+			                'Levels in Subjects'[Subject ID] = __CurrentSubject
+			            )
+			    )
+			VAR __FilteredTable =
+			    FILTER( __Table, NOT ISBLANK( [@pp Improvement] ) && [@pp Improvement] < 20 )
+			RETURN
+			    IF(
+			        ISEMPTY( __FilteredTable ),
+			        BLANK(),
+			        CONCATENATEX( __FilteredTable, Grades[Grade], ", ", Grades[Grade Sort], ASC )
+			    )
+		lineageTag: 50fe9205-e571-49b7-bdad-df46df2d0e41
+
+	measure 'Comment - Low Literacy Reduction across grades' = ```
+			
+			
+			VAR __EL = [pp Of Literacy Difficulty Reduction From BL to EL (formated)]
+			VAR __Top_Grade = [Grade With Highest Literacy Difficulty Reduction At EL]
+			VAR __Bottom_Grade = [Grade With Lowest Literacy Difficulty Reduction At EL]
+			VAR __Top_Grade_Performance = [Highest Literacy Difficulty Reduction across grades at EL]
+			VAR __Bottom_Grade_Performance = [Lowest Literacy Difficulty Reduction across grades at EL]
+			VAR __Top_Grade_Performance_formated = FORMAT( 100 * __Top_Grade_Performance, "0 pp" )
+			VAR __Bottom_Grade_Performance_formated = FORMAT( 100 * __Bottom_Grade_Performance, "0 pp" )
+			VAR __List_Grades_Over_Target = [Grades With Subject Difficulty Reduction over 20pp]
+			VAR __List_Grades_Under_Target = [Grades With Subject Difficulty Reduction under 20pp]
+			VAR __Count_Grades = DISTINCTCOUNT( Grades[Grade] )
+			VAR __Count_Grades_Over_Target = [# Of Grades With Subject Difficulty Reduction over 20pp]
+			VAR __Count_Grades_Under_Target = [# Of Grades With Subject Difficulty Reduction under 20pp]
+			
+			
+			VAR __Comment_Part1 = UNICHAR(10) & "• The best performance was seen in the " &  __Top_Grade & " class with " & __Top_Grade_Performance_formated & ". " & __Bottom_Grade & " was the class which performed the least with " & __Bottom_Grade_Performance_formated
+			
+			VAR __Comment_Part2 = 
+			IF( __Count_Grades_Under_Target = 0,
+			UNICHAR(10) & "• All grades meet the change target of 20 pp",
+			UNICHAR(10) & "• " & __Count_Grades_Under_Target & " grade(s) out of " & __Count_Grades & " did not meet the change target of 20 pp : " & __List_Grades_Under_Target )
+			
+			VAR __Full_Comment = __Comment_Part1 & __Comment_Part2
+			
+			RETURN IF( ISBLANK(__EL),
+			   "Endline data not available for the current year", __Full_comment )
+			```
+		lineageTag: 1649d2ab-8e1d-442a-8494-96e898283f5a
+
+	measure 'Grades With Subject Difficulty Reduction over 20pp' =
+			
+			VAR __CurrentPeriod = SELECTEDVALUE( Cycles[Period] )
+			VAR __CurrentSubject = 1
+			VAR __Table =
+			    ADDCOLUMNS(
+			        SUMMARIZE( Grades, Grades[Grade], Grades[Grade Sort] ),
+			        "@pp Improvement",
+			            CALCULATE(
+			                [pp Of Subject Difficulty Reduction From BL to EL (formated)],
+			                Cycles[Period] = __CurrentPeriod,
+			                'Levels in Subjects'[Subject ID] = __CurrentSubject
+			            )
+			    )
+			VAR __FilteredTable =
+			    FILTER( __Table, NOT ISBLANK( [@pp Improvement] ) && [@pp Improvement] >= 20 )
+			RETURN
+			    IF(
+			        ISEMPTY( __FilteredTable ),
+			        BLANK(),
+			        CONCATENATEX( __FilteredTable, Grades[Grade], ", ", Grades[Grade Sort], ASC )
+			    )
+		lineageTag: b2c95dac-7827-438c-86cb-2741e2886d0c
+
+	measure 'Grades With Subject Difficulty Reduction under 20pp' =
+			
+			VAR __CurrentPeriod = SELECTEDVALUE( Cycles[Period] )
+			VAR __CurrentSubject = 1
+			VAR __Table =
+			    ADDCOLUMNS(
+			        SUMMARIZE( Grades, Grades[Grade], Grades[Grade Sort] ),
+			        "@pp Improvement",
+			            CALCULATE(
+			                [pp Of Subject Difficulty Reduction From BL to EL (formated)],
+			                Cycles[Period] = __CurrentPeriod,
+			                'Levels in Subjects'[Subject ID] = __CurrentSubject
+			            )
+			    )
+			VAR __FilteredTable =
+			    FILTER( __Table, NOT ISBLANK( [@pp Improvement] ) && [@pp Improvement] < 20 )
+			RETURN
+			    IF(
+			        ISEMPTY( __FilteredTable ),
+			        BLANK(),
+			        CONCATENATEX( __FilteredTable, Grades[Grade], ", ", Grades[Grade Sort], ASC )
+			    )
+		lineageTag: eb2ce588-e304-4e18-b5a8-f1e67261eaa5
+
+	measure '# Of Grades With Subject Difficulty Reduction over 20pp' =
+			
+			VAR __CurrentPeriod = SELECTEDVALUE( Cycles[Period] )
+			VAR __CurrentSubjectID = 1
+			VAR __Table =
+			    ADDCOLUMNS(
+			        SUMMARIZE( Grades, Grades[Grade], Grades[Grade Sort] ),
+			        "@pp Improvement",
+			            CALCULATE(
+			                [pp Of Subject Difficulty Reduction From BL to EL (formated)],
+			                Cycles[Period] = __CurrentPeriod,
+			                'Levels in Subjects'[Subject ID] = __CurrentSubjectID
+			            )
+			    )
+			VAR __FilteredTable =
+			    FILTER(
+			        __Table,
+			        NOT ISBLANK( [@pp Improvement] ) && [@pp Improvement] >= 20
+			    )
+			RETURN
+			    IF(
+			        ISEMPTY( __FilteredTable ),
+			        BLANK(),
+			        COUNTROWS( __FilteredTable )
+			    )
+		formatString: 0
+		lineageTag: 258476c6-58fd-4ec9-9bf1-bd4ae147d45b
+
+	measure '# Of Grades With Subject Difficulty Reduction under 20pp' =
+			
+			VAR __CurrentPeriod = SELECTEDVALUE( Cycles[Period] )
+			VAR __CurrentSubjectID = 1
+			VAR __Table =
+			    ADDCOLUMNS(
+			        SUMMARIZE( Grades, Grades[Grade], Grades[Grade Sort] ),
+			        "@pp Improvement",
+			            CALCULATE(
+			                [pp Of Subject Difficulty Reduction From BL to EL (formated)],
+			                Cycles[Period] = __CurrentPeriod,
+			                'Levels in Subjects'[Subject ID] = __CurrentSubjectID
+			            )
+			    )
+			VAR __FilteredTable =
+			    FILTER(
+			        __Table,
+			        NOT ISBLANK( [@pp Improvement] ) && [@pp Improvement] < 20
+			    )
+			RETURN
+			    IF(
+			        ISEMPTY( __FilteredTable ),
+			        BLANK(),
+			        COUNTROWS( __FilteredTable )
+			    )
+		formatString: 0
+		lineageTag: 3d36f290-fd1d-42b7-ada5-1768b6665c19
+
+	measure 'Lowest Literacy Difficulty Reduction across grades at EL' =
+			
+			VAR __Table =
+			    ADDCOLUMNS(
+			        VALUES( Grades[Grade] ),
+			        "@Literacy At EL", CALCULATE( [pp Of Literacy Difficulty Reduction From BL to EL] )
+			    )
+			RETURN
+			    MINX( __Table, [@Literacy At EL] )
+		lineageTag: 9ab600b1-bdf5-4a60-8d59-c428ff4f3de1
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Highest Literacy Difficulty Reduction across grades at EL' =
+			
+			VAR __Table =
+			    ADDCOLUMNS(
+			        VALUES( Grades[Grade] ),
+			        "@Literacy At EL", CALCULATE( [pp Of Literacy Difficulty Reduction From BL to EL] )
+			    )
+			RETURN
+			    MAXX( __Table, [@Literacy At EL] )
+		lineageTag: 9fea5c71-c3ae-4159-9d8c-0b3391a330fd
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Grade With Highest Literacy Difficulty Reduction At EL' =
+			
+			VAR __Table =
+			    ADDCOLUMNS(
+			        VALUES( Grades[Grade] ),
+			        "@Literacy At EL", CALCULATE( [pp Of Literacy Difficulty Reduction From BL to EL] )
+			    )
+			VAR __MaxValue =
+			    MAXX( __Table, [@Literacy At EL] )
+			VAR __Result =
+			    MAXX(
+			        FILTER( __Table, [@Literacy At EL] = __MaxValue ),
+			        Grades[Grade]
+			    )
+			RETURN
+			    IF( ISBLANK( __MaxValue ), BLANK(), __Result )
+		lineageTag: 2c2a52c6-4ebd-4736-92e1-aed213aebf98
+
+	measure 'Grade With Lowest Literacy Difficulty Reduction At EL' =
+			
+			VAR __Table =
+			    ADDCOLUMNS(
+			        VALUES( Grades[Grade] ),
+			        "@Literacy At EL", CALCULATE( [pp Of Literacy Difficulty Reduction From BL to EL] )
+			    )
+			VAR __MinValue =
+			    MINX( __Table, [@Literacy At EL] )
+			VAR __Result =
+			    MINX(
+			        FILTER( __Table, [@Literacy At EL] = __MinValue ),
+			        Grades[Grade]
+			    )
+			RETURN
+			    IF( ISBLANK( __MinValue ), BLANK(), __Result )
+		lineageTag: 8736e068-f679-4376-bfd6-6707a58dcb40
+
+	measure 'Comment - High Numeracy Progress across grades' = ```
+			
+			
+			VAR __EL = [pp Of Numeracy Improvemnt From BL to EL (formated)]
+			VAR __Top_Grade = [Grade With Highest Numeracy Improvement At EL]
+			VAR __Bottom_Grade = [Grade With Lowest Numeracy Improvement At EL]
+			VAR __Top_Grade_Performance = [Highest Numeracy Improvement across grades at EL]
+			VAR __Bottom_Grade_Performance = [Lowest Numeracy Improvement across grades at EL]
+			VAR __Top_Grade_Performance_formated = FORMAT( 100 * __Top_Grade_Performance, "0 pp" )
+			VAR __Bottom_Grade_Performance_formated = FORMAT( 100 * __Bottom_Grade_Performance, "0 pp" )
+			VAR __List_Grades_Over_Target = [Grades With Numeracy Improvement over 20pp]
+			VAR __List_Grades_Under_Target = [Grades With Numeracy Improvement under 20pp]
+			VAR __Count_Grades = DISTINCTCOUNT( Grades[Grade] )
+			VAR __Count_Grades_Over_Target = [# Of Grades With Numeracy Improvement over 20pp]
+			VAR __Count_Grades_Under_Target = [# Of Grades With Numeracy Improvement under 20pp]
+			
+			VAR __Comment_Part1 = UNICHAR(10) & "• The best performance was seen in the " &  __Top_Grade & " class with " & __Top_Grade_Performance_formated & ". " & __Bottom_Grade & " was the class which performed the least with " & __Bottom_Grade_Performance_formated
+			
+			VAR __Comment_Part2 = 
+			IF( __Count_Grades_Under_Target = 0,
+			UNICHAR(10) & "• All grades meet the change target of 20 pp",
+			UNICHAR(10) & "• " & __Count_Grades_Under_Target & " grade(s) out of " & __Count_Grades & " did not meet the change target of 20 pp : " & __List_Grades_Under_Target )
+			
+			VAR __Full_Comment = __Comment_Part1 & __Comment_Part2
+			
+			RETURN IF( ISBLANK(__EL),
+			   "Endline data not available for the current year", __Full_comment )
+			```
+		lineageTag: 30c66462-f369-438c-bf13-34f5030e838f
+
+	measure 'Comment - Low Numeracy Reduction across grades' = ```
+			
+			
+			VAR __EL = [pp Of Numeracy Difficulty Reduction From BL to EL (formated)]
+			VAR __Top_Grade = [Grade With Highest Numeracy Difficulty Reduction At EL]
+			VAR __Bottom_Grade = [Grade With Lowest Numeracy Difficulty Reduction At EL]
+			VAR __Top_Grade_Performance = [Highest Numeracy Difficulty Reduction across grades at EL]
+			VAR __Bottom_Grade_Performance = [Lowest Numeracy Difficulty Reduction across grades at EL]
+			VAR __Top_Grade_Performance_formated = FORMAT( 100 * __Top_Grade_Performance, "0 pp" )
+			VAR __Bottom_Grade_Performance_formated = FORMAT( 100 * __Bottom_Grade_Performance, "0 pp" )
+			VAR __List_Grades_Over_Target = [Grades With Numeracy Difficulty Reduction over 20pp]
+			VAR __List_Grades_Under_Target = [Grades With Numeracy Difficulty Reduction under 20pp]
+			VAR __Count_Grades = DISTINCTCOUNT( Grades[Grade] )
+			VAR __Count_Grades_Over_Target = [# Of Grades With Numeracy Difficulty Reduction over 20pp]
+			VAR __Count_Grades_Under_Target = [# Of Grades With Numeracy Difficulty Reduction under 20pp]
+			
+			
+			VAR __Comment_Part1 = UNICHAR(10) & "• The best performance was seen in the " &  __Top_Grade & " class with " & __Top_Grade_Performance_formated & ". " & __Bottom_Grade & " was the class which performed the least with " & __Bottom_Grade_Performance_formated
+			
+			VAR __Comment_Part2 = 
+			IF( __Count_Grades_Under_Target = 0,
+			UNICHAR(10) & "• All grades meet the change target of 20 pp",
+			UNICHAR(10) & "• " & __Count_Grades_Under_Target & " grade(s) out of " & __Count_Grades & " did not meet the change target of 20 pp : " & __List_Grades_Under_Target )
+			
+			VAR __Full_Comment = __Comment_Part1 & __Comment_Part2
+			
+			RETURN IF( ISBLANK(__EL),
+			   "Endline data not available for the current year", __Full_comment )
+			```
+		lineageTag: 0f760bd5-5149-4c74-8d32-2d90e19fe72d
+
+	measure 'Grade With Highest Numeracy Improvement At EL' =
+			
+			VAR __Table =
+			    ADDCOLUMNS(
+			        VALUES( Grades[Grade] ),
+			        "@Numeracy At EL", CALCULATE( [pp Of Numeracy Improvemnt From BL to EL] )
+			    )
+			VAR __MaxValue =
+			    MAXX( __Table, [@Numeracy At EL] )
+			VAR __Result =
+			    MAXX(
+			        FILTER( __Table, [@Numeracy At EL] = __MaxValue ),
+			        Grades[Grade]
+			    )
+			RETURN
+			    IF( ISBLANK( __MaxValue ), BLANK(), __Result )
+		lineageTag: cfe826e1-07e8-471e-9941-c6c40bbf3642
+
+	measure 'Grade With Lowest Numeracy Improvement At EL' =
+			
+			VAR __Table =
+			    ADDCOLUMNS(
+			        VALUES( Grades[Grade] ),
+			        "@Numeracy At EL", CALCULATE( [pp Of Numeracy Improvemnt From BL to EL] )
+			    )
+			VAR __MinValue =
+			    MINX( __Table, [@Numeracy At EL] )
+			VAR __Result =
+			    MINX(
+			        FILTER( __Table, [@Numeracy At EL] = __MinValue ),
+			        Grades[Grade]
+			    )
+			RETURN
+			    IF( ISBLANK( __MinValue ), BLANK(), __Result )
+		lineageTag: 99e325e3-581c-4ab3-8ab9-037218343888
+
+	measure 'Highest Numeracy Improvement across grades at EL' =
+			
+			VAR __Table =
+			    ADDCOLUMNS(
+			        VALUES( Grades[Grade] ),
+			        "@Numeracy At EL", CALCULATE( [pp Of Numeracy Improvemnt From BL to EL] )
+			    )
+			RETURN
+			    MAXX( __Table, [@Numeracy At EL] )
+		lineageTag: c4a513a8-e889-494d-b6a6-98dd49d94cfb
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Lowest Numeracy Improvement across grades at EL' =
+			
+			VAR __Table =
+			    ADDCOLUMNS(
+			        VALUES( Grades[Grade] ),
+			        "@Numeracy At EL", CALCULATE( [pp Of Numeracy Improvemnt From BL to EL] )
+			    )
+			RETURN
+			    MINX( __Table, [@Numeracy At EL] )
+		lineageTag: 87fa689e-b923-4374-ab04-d1f8866fab60
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Grades With Numeracy Improvement over 20pp' =
+			
+			VAR __CurrentPeriod = SELECTEDVALUE( Cycles[Period] )
+			VAR __CurrentSubject = 2
+			VAR __Table =
+			    ADDCOLUMNS(
+			        SUMMARIZE( Grades, Grades[Grade], Grades[Grade Sort] ),
+			        "@pp Improvement",
+			            CALCULATE(
+			                [pp Of Subject Improvemnt From BL to EL (formated)],
+			                Cycles[Period] = __CurrentPeriod,
+			                'Levels in Subjects'[Subject ID] = __CurrentSubject
+			            )
+			    )
+			VAR __FilteredTable =
+			    FILTER( __Table, NOT ISBLANK( [@pp Improvement] ) && [@pp Improvement] >= 20 )
+			RETURN
+			    IF(
+			        ISEMPTY( __FilteredTable ),
+			        BLANK(),
+			        CONCATENATEX( __FilteredTable, Grades[Grade], ", ", Grades[Grade Sort], ASC )
+			    )
+		lineageTag: 56fedcdb-5cc4-404e-89bf-b7dd4c438b93
+
+	measure '# Of Grades With Numeracy Improvement over 20pp' =
+			
+			VAR __CurrentPeriod = SELECTEDVALUE( Cycles[Period] )
+			VAR __CurrentSubjectID = 2
+			VAR __Table =
+			    ADDCOLUMNS(
+			        SUMMARIZE( Grades, Grades[Grade], Grades[Grade Sort] ),
+			        "@pp Improvement",
+			            CALCULATE(
+			                [pp Of Subject Improvemnt From BL to EL (formated)],
+			                Cycles[Period] = __CurrentPeriod,
+			                'Levels in Subjects'[Subject ID] = __CurrentSubjectID
+			            )
+			    )
+			VAR __FilteredTable =
+			    FILTER(
+			        __Table,
+			        NOT ISBLANK( [@pp Improvement] ) && [@pp Improvement] >= 20
+			    )
+			RETURN
+			    IF(
+			        ISEMPTY( __FilteredTable ),
+			        BLANK(),
+			        COUNTROWS( __FilteredTable )
+			    )
+		formatString: 0
+		lineageTag: 84a83c4d-217a-4b8d-ba11-8f268410a3db
+
+	measure 'Grades With Numeracy Improvement under 20pp' =
+			
+			VAR __CurrentPeriod = SELECTEDVALUE( Cycles[Period] )
+			VAR __CurrentSubject = 2
+			VAR __Table =
+			    ADDCOLUMNS(
+			        SUMMARIZE( Grades, Grades[Grade], Grades[Grade Sort] ),
+			        "@pp Improvement",
+			            CALCULATE(
+			                [pp Of Subject Improvemnt From BL to EL (formated)],
+			                Cycles[Period] = __CurrentPeriod,
+			                'Levels in Subjects'[Subject ID] = __CurrentSubject
+			            )
+			    )
+			VAR __FilteredTable =
+			    FILTER( __Table, NOT ISBLANK( [@pp Improvement] ) && [@pp Improvement] < 20 )
+			RETURN
+			    IF(
+			        ISEMPTY( __FilteredTable ),
+			        BLANK(),
+			        CONCATENATEX( __FilteredTable, Grades[Grade], ", ", Grades[Grade Sort], ASC )
+			    )
+		lineageTag: c07ab8d9-824e-4aac-ae4b-c51aa11a48f6
+
+	measure '# Of Grades With Numeracy Improvement under 20pp' =
+			
+			VAR __CurrentPeriod = SELECTEDVALUE( Cycles[Period] )
+			VAR __CurrentSubjectID = 2
+			VAR __Table =
+			    ADDCOLUMNS(
+			        SUMMARIZE( Grades, Grades[Grade], Grades[Grade Sort] ),
+			        "@pp Improvement",
+			            CALCULATE(
+			                [pp Of Subject Improvemnt From BL to EL (formated)],
+			                Cycles[Period] = __CurrentPeriod,
+			                'Levels in Subjects'[Subject ID] = __CurrentSubjectID
+			            )
+			    )
+			VAR __FilteredTable =
+			    FILTER(
+			        __Table,
+			        NOT ISBLANK( [@pp Improvement] ) && [@pp Improvement] < 20
+			    )
+			RETURN
+			    IF(
+			        ISEMPTY( __FilteredTable ),
+			        BLANK(),
+			        COUNTROWS( __FilteredTable )
+			    )
+		formatString: 0
+		lineageTag: 1f649957-f677-4518-8cf2-ab88fad8eca1
+
+	measure 'Grade With Highest Numeracy Difficulty Reduction At EL' =
+			
+			VAR __Table =
+			    ADDCOLUMNS(
+			        VALUES( Grades[Grade] ),
+			        "@Numeracy At EL", CALCULATE( [pp Of Numeracy Difficulty Reduction From BL to EL] )
+			    )
+			VAR __MaxValue =
+			    MAXX( __Table, [@Numeracy At EL] )
+			VAR __Result =
+			    MAXX(
+			        FILTER( __Table, [@Numeracy At EL] = __MaxValue ),
+			        Grades[Grade]
+			    )
+			RETURN
+			    IF( ISBLANK( __MaxValue ), BLANK(), __Result )
+		lineageTag: 3bd6c467-ada8-485f-b915-c4aec2e8f956
+
+	measure 'Grade With Lowest Numeracy Difficulty Reduction At EL' =
+			
+			VAR __Table =
+			    ADDCOLUMNS(
+			        VALUES( Grades[Grade] ),
+			        "@Numeracy At EL", CALCULATE( [pp Of Numeracy Difficulty Reduction From BL to EL] )
+			    )
+			VAR __MinValue =
+			    MINX( __Table, [@Numeracy At EL] )
+			VAR __Result =
+			    MINX(
+			        FILTER( __Table, [@Numeracy At EL] = __MinValue ),
+			        Grades[Grade]
+			    )
+			RETURN
+			    IF( ISBLANK( __MinValue ), BLANK(), __Result )
+		lineageTag: c41c1bb0-e843-42f1-8e1d-7bde301b534f
+
+	measure 'Highest Numeracy Difficulty Reduction across grades at EL' =
+			
+			VAR __Table =
+			    ADDCOLUMNS(
+			        VALUES( Grades[Grade] ),
+			        "@Numeracy At EL", CALCULATE( [pp Of Numeracy Difficulty Reduction From BL to EL] )
+			    )
+			RETURN
+			    MAXX( __Table, [@Numeracy At EL] )
+		lineageTag: 1c5a6e48-44cf-47f5-8074-c611f3ea32ff
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Lowest Numeracy Difficulty Reduction across grades at EL' =
+			
+			VAR __Table =
+			    ADDCOLUMNS(
+			        VALUES( Grades[Grade] ),
+			        "@Numeracy At EL", CALCULATE( [pp Of Numeracy Difficulty Reduction From BL to EL] )
+			    )
+			RETURN
+			    MINX( __Table, [@Numeracy At EL] )
+		lineageTag: af418b80-c4c5-460e-b5e1-192605a90880
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Grades With Numeracy Difficulty Reduction over 20pp' =
+			
+			VAR __CurrentPeriod = SELECTEDVALUE( Cycles[Period] )
+			VAR __CurrentSubject = 2
+			VAR __Table =
+			    ADDCOLUMNS(
+			        SUMMARIZE( Grades, Grades[Grade], Grades[Grade Sort] ),
+			        "@pp Improvement",
+			            CALCULATE(
+			                [pp Of Subject Difficulty Reduction From BL to EL (formated)],
+			                Cycles[Period] = __CurrentPeriod,
+			                'Levels in Subjects'[Subject ID] = __CurrentSubject
+			            )
+			    )
+			VAR __FilteredTable =
+			    FILTER( __Table, NOT ISBLANK( [@pp Improvement] ) && [@pp Improvement] >= 20 )
+			RETURN
+			    IF(
+			        ISEMPTY( __FilteredTable ),
+			        BLANK(),
+			        CONCATENATEX( __FilteredTable, Grades[Grade], ", ", Grades[Grade Sort], ASC )
+			    )
+		lineageTag: 0e805c53-7471-4a23-8d13-6953b27c8fcf
+
+	measure '# Of Grades With Numeracy Difficulty Reduction over 20pp' =
+			
+			VAR __CurrentPeriod = SELECTEDVALUE( Cycles[Period] )
+			VAR __CurrentSubjectID = 2
+			VAR __Table =
+			    ADDCOLUMNS(
+			        SUMMARIZE( Grades, Grades[Grade], Grades[Grade Sort] ),
+			        "@pp Improvement",
+			            CALCULATE(
+			                [pp Of Subject Difficulty Reduction From BL to EL (formated)],
+			                Cycles[Period] = __CurrentPeriod,
+			                'Levels in Subjects'[Subject ID] = __CurrentSubjectID
+			            )
+			    )
+			VAR __FilteredTable =
+			    FILTER(
+			        __Table,
+			        NOT ISBLANK( [@pp Improvement] ) && [@pp Improvement] >= 20
+			    )
+			RETURN
+			    IF(
+			        ISEMPTY( __FilteredTable ),
+			        BLANK(),
+			        COUNTROWS( __FilteredTable )
+			    )
+		formatString: 0
+		lineageTag: 72159a40-3b0f-4e69-9076-926321f9b2c3
+
+	measure 'Grades With Numeracy Difficulty Reduction under 20pp' =
+			
+			VAR __CurrentPeriod = SELECTEDVALUE( Cycles[Period] )
+			VAR __CurrentSubject = 2
+			VAR __Table =
+			    ADDCOLUMNS(
+			        SUMMARIZE( Grades, Grades[Grade], Grades[Grade Sort] ),
+			        "@pp Improvement",
+			            CALCULATE(
+			                [pp Of Subject Difficulty Reduction From BL to EL (formated)],
+			                Cycles[Period] = __CurrentPeriod,
+			                'Levels in Subjects'[Subject ID] = __CurrentSubject
+			            )
+			    )
+			VAR __FilteredTable =
+			    FILTER( __Table, NOT ISBLANK( [@pp Improvement] ) && [@pp Improvement] < 20 )
+			RETURN
+			    IF(
+			        ISEMPTY( __FilteredTable ),
+			        BLANK(),
+			        CONCATENATEX( __FilteredTable, Grades[Grade], ", ", Grades[Grade Sort], ASC )
+			    )
+		lineageTag: b3267ae7-772c-4078-ace1-68a87b62b0a6
+
+	measure '# Of Grades With Numeracy Difficulty Reduction under 20pp' =
+			
+			VAR __CurrentPeriod = SELECTEDVALUE( Cycles[Period] )
+			VAR __CurrentSubjectID = 2
+			VAR __Table =
+			    ADDCOLUMNS(
+			        SUMMARIZE( Grades, Grades[Grade], Grades[Grade Sort] ),
+			        "@pp Improvement",
+			            CALCULATE(
+			                [pp Of Subject Difficulty Reduction From BL to EL (formated)],
+			                Cycles[Period] = __CurrentPeriod,
+			                'Levels in Subjects'[Subject ID] = __CurrentSubjectID
+			            )
+			    )
+			VAR __FilteredTable =
+			    FILTER(
+			        __Table,
+			        NOT ISBLANK( [@pp Improvement] ) && [@pp Improvement] < 20
+			    )
+			RETURN
+			    IF(
+			        ISEMPTY( __FilteredTable ),
+			        BLANK(),
+			        COUNTROWS( __FilteredTable )
+			    )
+		formatString: 0
+		lineageTag: 4ce45ea8-081b-4493-825d-a03dbefa22e6
+
+	measure 'Comment - Lower Levels across cycles' = ```
+			
+			
+			VAR __Subject = SELECTEDVALUE( 'Levels in Subjects'[Subject ID] )
+			
+			VAR __BL2 =
+			SWITCH( __Subject,
+			        1, [% Of Students With Low Literacy At BL],
+			        2, [% Of Students With Low Numeracy At BL],
+			        BLANK() )
+			
+			VAR __EL2 =
+			SWITCH( __Subject,
+			        1, [% Of Students With Low Literacy At EL],
+			        2, [% Of Students With Low Numeracy At EL],
+			        BLANK() )
+			
+			VAR __pp2 = [pp Of Subject Difficulty Reduction From BL to EL (formated)]
+			
+			VAR __pp_target2 = -20
+			
+			VAR __pp_gap2 = __pp_target2 + __pp2
+			
+			VAR __pp_formated2 =
+			SWITCH( SIGN(__pp2),
+			        1, FORMAT( ABS(__pp2), "-0 pp" ),
+			        -1, FORMAT( ABS(__pp2), "+0 pp" ),
+			        BLANK() )
+			
+			VAR __Level2 = 
+			SWITCH( __Subject,
+			        1, "could not read words",
+			        2, "could not recognise 2-digit numbers",
+			        BLANK() )
 			
 			// Comment for lower levels reduction
 			
@@ -988,73 +1794,928 @@ table Mesures
 			        -1, UNICHAR(10) & "• The change was " & FORMAT( __pp_gap2, "0 pp" ) & " less than the target, which was set as " & __pp_target2 & " pp",
 			        BLANK() )
 			
-			VAR Comment_Part2 = __Line1_2 & __Line2_2 & __Line3_2 & __Line4_2
+			VAR Comment = __Line1_2 & __Line2_2 & __Line3_2 & __Line4_2
 			
-			// Full comment
-			VAR Full_comment = Comment_Part1 & UNICHAR(10) & Comment_Part2
-			
-			RETURN IF( ISBLANK(__EL) || ISBLANK(__EL2),
+			RETURN IF( ISBLANK(__EL2),
 			   "Endline data not available for the current year",
-			   Full_comment )
+			   Comment )
 			```
-		lineageTag: f59347b9-e053-4716-aff7-c73a60e21741
+		lineageTag: 95384443-db47-47ac-b99a-67c4870924e2
 
-	measure 'pp Of Subject Difficulty Reduction From BL to EL (formated)' =
-			
-			// Doit etre filtree dans le rapport par Subject pour avoir du sens
-			[pp Of Litteracy Difficulty Reduction From BL to EL (formated)] + [pp Of Numeracy Difficulty Reduction From BL to EL (formated)]
-		lineageTag: 0ae81150-e0d4-4fd3-8c15-5849ef789e8c
-
-		formatStringDefinition = "+0 pp;-0 pp;0 pp"
-
-	measure 'Comment - Progress across grades' =
-			
-			
-			VAR __Var1 = [% Of Students With High Litteracy At EL]
-			
-			
-			VAR __Comment =
-			"The best performance was seen in the CM1 class 23%
-			The CE1 class did not perform well, as the majority of learners come from lower grades (CP)
-			In CM2: only +22%, although the basic level is already high (48%). This may indicate that there is less room for improvement in CM2, as a large proportion of pupils have already mastered reading.
-			With the exception of the CE1 classes, our progress target has been achieved in all classes.
-			"
-			
-			VAR __Comment_Part1 = ""
-			
-			RETURN 1
-		formatString: 0
-		lineageTag: 5396fc62-6e58-4f31-8fb2-1d74e5080aae
-
-	measure 'Grade With Highest Literacy At EL' =
+	measure 'DRENAET With Highest Literacy Difficulty Reduction At EL' =
 			
 			VAR __Table =
 			    ADDCOLUMNS(
-			        VALUES( Grades[Grade] ),
-			        "@Literacy At EL", CALCULATE( [% Of Students With High Litteracy At EL] )
+			        VALUES( Grades[DRENAET] ),
+			        "@Literacy At EL", CALCULATE( [pp Of Literacy Difficulty Reduction From BL to EL] )
 			    )
 			VAR __MaxValue =
 			    MAXX( __Table, [@Literacy At EL] )
 			VAR __Result =
 			    MAXX(
 			        FILTER( __Table, [@Literacy At EL] = __MaxValue ),
-			        Grades[Grade]
+			        Grades[DRENAET]
 			    )
 			RETURN
 			    IF( ISBLANK( __MaxValue ), BLANK(), __Result )
-		lineageTag: a883e1ce-cfe8-4cad-9078-ea9419c18e20
+		lineageTag: f44de116-2af6-4038-b9d1-7df3e6dec080
 
-	measure 'Highest % Of High Literacy Level across grades at EL' =
+	measure 'DRENAET With Highest Literacy Improvement At EL' =
 			
 			VAR __Table =
 			    ADDCOLUMNS(
-			        VALUES( Grades[Grade] ),
-			        "@Literacy At EL", CALCULATE( [% Of Students With High Litteracy At EL] )
+			        VALUES( Grades[DRENAET] ),
+			        "@Literacy At EL", CALCULATE( [pp Of Literacy Improvemnt From BL to EL] )
+			    )
+			VAR __MaxValue =
+			    MAXX( __Table, [@Literacy At EL] )
+			VAR __Result =
+			    MAXX(
+			        FILTER( __Table, [@Literacy At EL] = __MaxValue ),
+			        Grades[DRENAET]
+			    )
+			RETURN
+			    IF( ISBLANK( __MaxValue ), BLANK(), __Result )
+		lineageTag: 2e7cc223-853f-45ab-b193-398245b21b05
+
+	measure 'DRENAET With Highest Numeracy Difficulty Reduction At EL' =
+			
+			VAR __Table =
+			    ADDCOLUMNS(
+			        VALUES( Grades[DRENAET] ),
+			        "@Numeracy At EL", CALCULATE( [pp Of Numeracy Difficulty Reduction From BL to EL] )
+			    )
+			VAR __MaxValue =
+			    MAXX( __Table, [@Numeracy At EL] )
+			VAR __Result =
+			    MAXX(
+			        FILTER( __Table, [@Numeracy At EL] = __MaxValue ),
+			        Grades[DRENAET]
+			    )
+			RETURN
+			    IF( ISBLANK( __MaxValue ), BLANK(), __Result )
+		lineageTag: 6eb7d96d-7bb2-43d4-be59-7cc462cc645c
+
+	measure 'DRENAET With Highest Numeracy Improvement At EL' =
+			
+			VAR __Table =
+			    ADDCOLUMNS(
+			        VALUES( Grades[DRENAET] ),
+			        "@Numeracy At EL", CALCULATE( [pp Of Numeracy Improvemnt From BL to EL] )
+			    )
+			VAR __MaxValue =
+			    MAXX( __Table, [@Numeracy At EL] )
+			VAR __Result =
+			    MAXX(
+			        FILTER( __Table, [@Numeracy At EL] = __MaxValue ),
+			        Grades[DRENAET]
+			    )
+			RETURN
+			    IF( ISBLANK( __MaxValue ), BLANK(), __Result )
+		lineageTag: ca7e52cd-0d7f-4c72-b051-a1e498ba297e
+
+	measure 'DRENAET With Lowest Literacy Difficulty Reduction At EL' =
+			
+			VAR __Table =
+			    ADDCOLUMNS(
+			        VALUES( Grades[DRENAET] ),
+			        "@Literacy At EL", CALCULATE( [pp Of Literacy Difficulty Reduction From BL to EL] )
+			    )
+			VAR __MinValue =
+			    MINX( __Table, [@Literacy At EL] )
+			VAR __Result =
+			    MINX(
+			        FILTER( __Table, [@Literacy At EL] = __MinValue ),
+			        Grades[DRENAET]
+			    )
+			RETURN
+			    IF( ISBLANK( __MinValue ), BLANK(), __Result )
+		lineageTag: 69a6e241-76b0-46e7-9860-b849a9072c00
+
+	measure 'DRENAET With Lowest Literacy Improvement At EL' =
+			
+			VAR __Table =
+			    ADDCOLUMNS(
+			        VALUES( Grades[DRENAET] ),
+			        "@Literacy At EL", CALCULATE( [pp Of Literacy Improvemnt From BL to EL] )
+			    )
+			VAR __MinValue =
+			    MINX( __Table, [@Literacy At EL] )
+			VAR __Result =
+			    MINX(
+			        FILTER( __Table, [@Literacy At EL] = __MinValue ),
+			        Grades[DRENAET]
+			    )
+			RETURN
+			    IF( ISBLANK( __MinValue ), BLANK(), __Result )
+		lineageTag: cf2396df-40d9-4297-80d1-dab9d8278b69
+
+	measure 'DRENAET With Lowest Numeracy Difficulty Reduction At EL' =
+			
+			VAR __Table =
+			    ADDCOLUMNS(
+			        VALUES( Grades[DRENAET] ),
+			        "@Numeracy At EL", CALCULATE( [pp Of Numeracy Difficulty Reduction From BL to EL] )
+			    )
+			VAR __MinValue =
+			    MINX( __Table, [@Numeracy At EL] )
+			VAR __Result =
+			    MINX(
+			        FILTER( __Table, [@Numeracy At EL] = __MinValue ),
+			        Grades[DRENAET]
+			    )
+			RETURN
+			    IF( ISBLANK( __MinValue ), BLANK(), __Result )
+		lineageTag: 9bc9db32-0669-47bf-96dd-83864f60e391
+
+	measure 'DRENAET With Lowest Numeracy Improvement At EL' =
+			
+			VAR __Table =
+			    ADDCOLUMNS(
+			        VALUES( Grades[DRENAET] ),
+			        "@Numeracy At EL", CALCULATE( [pp Of Numeracy Improvemnt From BL to EL] )
+			    )
+			VAR __MinValue =
+			    MINX( __Table, [@Numeracy At EL] )
+			VAR __Result =
+			    MINX(
+			        FILTER( __Table, [@Numeracy At EL] = __MinValue ),
+			        Grades[DRENAET]
+			    )
+			RETURN
+			    IF( ISBLANK( __MinValue ), BLANK(), __Result )
+		lineageTag: 1fc16ba5-4f78-43d7-be4a-fd355db754be
+
+	measure 'Highest Literacy Difficulty Reduction across DRENAETs at EL' =
+			
+			VAR __Table =
+			    ADDCOLUMNS(
+			        VALUES( Grades[DRENAET] ),
+			        "@Literacy At EL", CALCULATE( [pp Of Literacy Difficulty Reduction From BL to EL] )
 			    )
 			RETURN
 			    MAXX( __Table, [@Literacy At EL] )
+		lineageTag: 1955ea6a-7745-49f4-9aa9-0fb4bff10ab6
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Highest Literacy Improvement across DRENAETs at EL' =
+			
+			VAR __Table =
+			    ADDCOLUMNS(
+			        VALUES( Grades[DRENAET] ),
+			        "@Literacy At EL", CALCULATE( [pp Of Literacy Improvemnt From BL to EL] )
+			    )
+			RETURN
+			    MAXX( __Table, [@Literacy At EL] )
+		lineageTag: 82fdd2de-d172-4577-86eb-6f7d96f403f9
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Highest Numeracy Difficulty Reduction across DRENAETs at EL' =
+			
+			VAR __Table =
+			    ADDCOLUMNS(
+			        VALUES( Grades[DRENAET] ),
+			        "@Numeracy At EL", CALCULATE( [pp Of Numeracy Difficulty Reduction From BL to EL] )
+			    )
+			RETURN
+			    MAXX( __Table, [@Numeracy At EL] )
+		lineageTag: 1fa7b635-c404-4f9c-b352-d5fa68681426
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Highest Numeracy Improvement across DRENAETs at EL' =
+			
+			VAR __Table =
+			    ADDCOLUMNS(
+			        VALUES( Grades[DRENAET] ),
+			        "@Numeracy At EL", CALCULATE( [pp Of Numeracy Improvemnt From BL to EL] )
+			    )
+			RETURN
+			    MAXX( __Table, [@Numeracy At EL] )
+		lineageTag: e2e27c4d-ce58-4888-8800-c655bc7e77a4
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Comment - Literacy Improvement across DRENAETs' =
+			
+			
+			VAR __EL = [pp Of Literacy Improvemnt From BL to EL (formated)]
+			VAR __Top_DRENAET = [DRENAET With Highest Literacy Improvement At EL]
+			VAR __Bottom_DRENAET = [DRENAET With Lowest Literacy Improvement At EL]
+			VAR __Top_DRENAET_Performance =  [Highest Literacy Improvement across DRENAETs at EL]
+			VAR __Bottom_DRENAET_Performance = [Lowest Literacy Improvement across DRENAET at EL]
+			VAR __Top_DRENAET_Performance_formated = FORMAT( 100 * __Top_DRENAET_Performance, "0 pp" )
+			VAR __Bottom_DRENAET_Performance_formated = FORMAT( 100 * __Bottom_DRENAET_Performance, "0 pp" )
+			
+			VAR __Comment_Part1 = UNICHAR(10) & "• " & __Top_DRENAET & " showed the greatest improvement with " & __Top_DRENAET_Performance_formated
+			
+			VAR __Comment_Part2 = UNICHAR(10) & "• " & __Bottom_DRENAET & " showed the smallest improvement with " & __Bottom_DRENAET_Performance_formated
+			
+			VAR __Full_Comment = __Comment_Part1 & __Comment_Part2
+			
+			RETURN IF( ISBLANK(__EL),
+			   "Endline data not available for the current year", __Full_comment )
+		lineageTag: 3ac66c90-172f-4070-857e-4ae8b6659003
+
+	measure 'Lowest Numeracy Difficulty Reduction across DRENAET at EL' =
+			
+			VAR __Table =
+			    ADDCOLUMNS(
+			        VALUES( Grades[DRENAET] ),
+			        "@Numeracy At EL", CALCULATE( [pp Of Numeracy Difficulty Reduction From BL to EL] )
+			    )
+			RETURN
+			    MINX( __Table, [@Numeracy At EL] )
+		lineageTag: 81ddd333-2b05-4230-949f-75ec8b69a2fb
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Lowest Numeracy Improvement across DRENAETs at EL' =
+			
+			VAR __Table =
+			    ADDCOLUMNS(
+			        VALUES( Grades[DRENAET] ),
+			        "@Numeracy At EL", CALCULATE( [pp Of Numeracy Improvemnt From BL to EL] )
+			    )
+			RETURN
+			    MINX( __Table, [@Numeracy At EL] )
+		lineageTag: 6f1e2edf-7c55-4405-bc77-7e8a088da4dc
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Lowest Literacy Difficulty Reduction across DRENAET at EL' =
+			
+			VAR __Table =
+			    ADDCOLUMNS(
+			        VALUES( Grades[DRENAET] ),
+			        "@Literacy At EL", CALCULATE( [pp Of Literacy Difficulty Reduction From BL to EL] )
+			    )
+			RETURN
+			    MINX( __Table, [@Literacy At EL] )
+		lineageTag: d6ab6bc8-4487-4795-89cc-9140cfa195c7
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Lowest Literacy Improvement across DRENAET at EL' =
+			
+			VAR __Table =
+			    ADDCOLUMNS(
+			        VALUES( Grades[DRENAET] ),
+			        "@Literacy At EL", CALCULATE( [pp Of Literacy Improvemnt From BL to EL] )
+			    )
+			RETURN
+			    MINX( __Table, [@Literacy At EL] )
+		lineageTag: 795dac53-c7af-486d-bbc0-76f54962450e
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Comment - Literacy Difficulty Reduction across DRENAETs' =
+			
+			
+			VAR __EL = [pp Of Literacy Difficulty Reduction From BL to EL (formated)]
+			VAR __Top_DRENAET = [DRENAET With Highest Literacy Difficulty Reduction At EL]
+			VAR __Bottom_DRENAET = [DRENAET With Lowest Literacy Difficulty Reduction At EL]
+			VAR __Top_DRENAET_Performance = [Highest Literacy Difficulty Reduction across DRENAETs at EL]
+			VAR __Bottom_DRENAET_Performance = [Lowest Literacy Difficulty Reduction across DRENAET at EL]
+			VAR __Top_DRENAET_Performance_formated = FORMAT( 100 * __Top_DRENAET_Performance, "0 pp" )
+			VAR __Bottom_DRENAET_Performance_formated = FORMAT( 100 * __Bottom_DRENAET_Performance, "0 pp" )
+			
+			VAR __Comment_Part1 = UNICHAR(10) & "• " & __Top_DRENAET & " showed the greatest improvement with " & __Top_DRENAET_Performance_formated
+			
+			VAR __Comment_Part2 = UNICHAR(10) & "• " & __Bottom_DRENAET & " showed the smallest improvement with " & __Bottom_DRENAET_Performance_formated
+			
+			VAR __Full_Comment = __Comment_Part1 & __Comment_Part2
+			
+			RETURN IF( ISBLANK(__EL),
+			   "Endline data not available for the current year", __Full_comment )
+		lineageTag: b55b4e84-e89d-4a33-93a4-486855274a6c
+
+	measure 'Comment - Numeracy Improvement across DRENAETs' =
+			
+			
+			VAR __EL = [pp Of Numeracy Improvemnt From BL to EL (formated)]
+			VAR __Top_DRENAET = [DRENAET With Highest Numeracy Improvement At EL]
+			VAR __Bottom_DRENAET = [DRENAET With Lowest Numeracy Improvement At EL]
+			VAR __Top_DRENAET_Performance =  [Highest Numeracy Improvement across DRENAETs at EL]
+			VAR __Bottom_DRENAET_Performance = [Lowest Numeracy Improvement across DRENAET at EL]
+			VAR __Top_DRENAET_Performance_formated = FORMAT( 100 * __Top_DRENAET_Performance, "0 pp" )
+			VAR __Bottom_DRENAET_Performance_formated = FORMAT( 100 * __Bottom_DRENAET_Performance, "0 pp" )
+			
+			VAR __Comment_Part1 = UNICHAR(10) & "• " & __Top_DRENAET & " showed the greatest improvement with " & __Top_DRENAET_Performance_formated
+			
+			VAR __Comment_Part2 = UNICHAR(10) & "• " & __Bottom_DRENAET & " showed the smallest improvement with " & __Bottom_DRENAET_Performance_formated
+			
+			VAR __Full_Comment = __Comment_Part1 & __Comment_Part2
+			
+			RETURN IF( ISBLANK(__EL),
+			   "Endline data not available for the current year", __Full_comment )
+		lineageTag: 15828600-2dd5-468b-bf1d-2997e8fa0054
+
+	measure 'Lowest Numeracy Improvement across DRENAET at EL' =
+			
+			VAR __Table =
+			    ADDCOLUMNS(
+			        VALUES( Grades[DRENAET] ),
+			        "@Numeracy At EL", CALCULATE( [pp Of Numeracy Improvemnt From BL to EL] )
+			    )
+			RETURN
+			    MINX( __Table, [@Numeracy At EL] )
+		lineageTag: 9b4d19a8-2da3-477d-bc65-da3c06b4c9b1
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Comment - Numeracy Difficulty Reduction across DRENAETs' =
+			
+			
+			VAR __EL = [pp Of Numeracy Difficulty Reduction From BL to EL (formated)]
+			VAR __Top_DRENAET = [DRENAET With Highest Numeracy Difficulty Reduction At EL]
+			VAR __Bottom_DRENAET = [DRENAET With Lowest Numeracy Difficulty Reduction At EL]
+			VAR __Top_DRENAET_Performance = [Highest Numeracy Difficulty Reduction across DRENAETs at EL]
+			VAR __Bottom_DRENAET_Performance = [Lowest Numeracy Difficulty Reduction across DRENAET at EL]
+			VAR __Top_DRENAET_Performance_formated = FORMAT( 100 * __Top_DRENAET_Performance, "0 pp" )
+			VAR __Bottom_DRENAET_Performance_formated = FORMAT( 100 * __Bottom_DRENAET_Performance, "0 pp" )
+			
+			VAR __Comment_Part1 = UNICHAR(10) & "• " & __Top_DRENAET & " showed the greatest improvement with " & __Top_DRENAET_Performance_formated
+			
+			VAR __Comment_Part2 = UNICHAR(10) & "• " & __Bottom_DRENAET & " showed the smallest improvement with " & __Bottom_DRENAET_Performance_formated
+			
+			VAR __Full_Comment = __Comment_Part1 & __Comment_Part2
+			
+			RETURN IF( ISBLANK(__EL),
+			   "Endline data not available for the current year", __Full_comment )
+		lineageTag: 8d405067-75b6-4c60-bef1-ca3cf6b295c5
+
+	measure 'Comment - School Literacy Progress across DRENAETs' =
+			
+			
+			VAR __EL = [pp Of Literacy Improvemnt From BL to EL (formated)]
+			VAR __Top2_Lowest_Red_Schools = [Top 2 DRENAETs With Lowest % Of Red Schools For Literacy]
+			VAR __Top2_Highest_Red_Schools = [Top 2 DRENAETs With Highest % Of Red Schools For Literacy]
+			VAR __Overall_Red_Schools_Percentage = FORMAT( [% Of Red Schools For Literacy], "0%" )
+			VAR __Overall_Yellow_Schools_Percentage = FORMAT( [% Of Yellow Schools For Literacy], "0%" )
+			VAR __Overall_Green_Schools_Percentage = FORMAT ( [% Of Green Schools For Literacy], "0%" )
+			
+			
+			VAR __Comment_Line1 = UNICHAR(10) & "• " & __Top2_Lowest_Red_Schools & " are the DRENAETs with the fewest percentage of red schools"
+			
+			VAR __Comment_Line2 = UNICHAR(10) & "• " & __Top2_Highest_Red_Schools & " are the DRENAETs with the highest percentage of red schools"
+			
+			VAR __Comment_Line3 = UNICHAR(10) & UNICHAR(10) & "• Overall, there are " & __Overall_Red_Schools_Percentage & " red schools, " & __Overall_Yellow_Schools_Percentage & " yellow schools, and " & __Overall_Green_Schools_Percentage & " green schools"
+			
+			VAR __Full_Comment = __Comment_Line1 & __Comment_Line2 & __Comment_Line3
+			
+			RETURN IF( ISBLANK(__EL),
+			   "Endline data not available for the current year", __Full_comment )
+		lineageTag: 610820a0-e509-42f2-a3a2-f9e51bd9484e
+
+	measure 'Top 2 DRENAETs With Lowest % Of Red Schools For Literacy' =
+			
+			VAR __Table =
+			    ADDCOLUMNS(
+			        VALUES( Grades[DRENAET] ),
+			        "@Pct", CALCULATE( [% Of Red Schools For Literacy] )
+			    )
+			VAR __FilteredTable =
+			    FILTER( __Table, NOT ISBLANK( [@Pct] ) && [@Pct] > 0 )
+			VAR __Top2 =
+			    TOPN( 2, __FilteredTable, [@Pct], ASC )
+			RETURN
+			    IF(
+			        ISEMPTY( __Top2 ),
+			        BLANK(),
+			        CONCATENATEX(
+			            __Top2,
+			            Grades[DRENAET] & " (" & FORMAT( [@Pct], "0%" ) & ")",
+			            " and ",
+			            [@Pct], ASC
+			        )
+			    )
+		lineageTag: 9a810743-28bb-41a6-9f7f-3c3239904517
+
+	measure '% Of Red Schools For Literacy' =
+			
+			DIVIDE( [# Of Red schools for Literacy],
+			        [# Of Schools classified for Literacy Progress]  )
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		lineageTag: f95cad89-ea00-4603-8ff2-df06e9992f34
+
+	measure '% Of Yellow Schools For Literacy' =
+			
+			DIVIDE( [# Of Yellow schools for Literacy],
+			        [# Of Schools classified for Literacy Progress]  )
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		lineageTag: c155e824-12e2-43de-aa29-14842ebef9ab
+
+	measure '% Of Green Schools For Literacy' =
+			
+			DIVIDE( [# Of Green schools for Literacy],
+			        [# Of Schools classified for Literacy Progress]  )
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		lineageTag: ffaf2665-5eca-4fb3-8c30-ae582cac8499
+
+	measure '# Of Schools classified for Literacy Progress' = ```
+			
+			    [# Of Red schools for Literacy] +
+			    [# Of Yellow schools for Literacy] +
+			    [# Of Green schools for Literacy]
+			```
+		formatString: 0
+		lineageTag: 133b713a-265b-4152-8001-bf3ffc3cf790
+
+	measure 'Top 2 DRENAETs With Highest % Of Red Schools For Literacy' =
+			
+			VAR __Table =
+			    ADDCOLUMNS(
+			        VALUES( Grades[DRENAET] ),
+			        "@Pct", CALCULATE( [% Of Red Schools For Literacy] )
+			    )
+			VAR __FilteredTable =
+			    FILTER( __Table, NOT ISBLANK( [@Pct] ) && [@Pct] > 0 )
+			VAR __Top2 =
+			    TOPN( 2, __FilteredTable, [@Pct], DESC )
+			RETURN
+			    IF(
+			        ISEMPTY( __Top2 ),
+			        BLANK(),
+			        CONCATENATEX(
+			            __Top2,
+			            Grades[DRENAET] & " (" & FORMAT( [@Pct], "0%" ) & ")",
+			            " and ",
+			            [@Pct], DESC
+			        )
+			    )
+		lineageTag: fd50aee3-9818-4753-adf1-6f938a05104d
+
+	measure 'Comment - School Numeracy Progress across DRENAETs' =
+			
+			
+			VAR __EL = [pp Of Numeracy Improvemnt From BL to EL (formated)]
+			VAR __Top2_Lowest_Red_Schools = [Top 2 DRENAETs With Lowest % Of Red Schools For Numeracy]
+			VAR __Top2_Highest_Red_Schools = [Top 2 DRENAETs With Highest % Of Red Schools For Numeracy]
+			VAR __Overall_Red_Schools_Percentage = FORMAT( [% Of Red Schools For Numeracy], "0%" )
+			VAR __Overall_Yellow_Schools_Percentage = FORMAT( [% Of Yellow Schools For Numeracy], "0%" )
+			VAR __Overall_Green_Schools_Percentage = FORMAT ( [% Of Green Schools For Numeracy], "0%" )
+			
+			
+			VAR __Comment_Line1 = UNICHAR(10) & "• " & __Top2_Lowest_Red_Schools & " are the DRENAETs with the fewest percentage of red schools"
+			
+			VAR __Comment_Line2 = UNICHAR(10) & "• " & __Top2_Highest_Red_Schools & " are the DRENAETs with the highest percentage of red schools"
+			
+			VAR __Comment_Line3 = UNICHAR(10) & UNICHAR(10) & "• Overall, there are " & __Overall_Red_Schools_Percentage & " red schools, " & __Overall_Yellow_Schools_Percentage & " yellow schools, and " & __Overall_Green_Schools_Percentage & " green schools"
+			
+			VAR __Full_Comment = __Comment_Line1 & __Comment_Line2 & __Comment_Line3
+			
+			RETURN IF( ISBLANK(__EL),
+			   "Endline data not available for the current year", __Full_comment )
+		lineageTag: 95f5e865-9ac6-4390-982c-52fe8eb2afb7
+
+	measure 'Top 2 DRENAETs With Lowest % Of Red Schools For Numeracy' =
+			
+			VAR __Table =
+			    ADDCOLUMNS(
+			        VALUES( Grades[DRENAET] ),
+			        "@Pct", CALCULATE( [% Of Red Schools For Numeracy] )
+			    )
+			VAR __FilteredTable =
+			    FILTER( __Table, NOT ISBLANK( [@Pct] ) && [@Pct] > 0 )
+			VAR __Top2 =
+			    TOPN( 2, __FilteredTable, [@Pct], ASC )
+			RETURN
+			    IF(
+			        ISEMPTY( __Top2 ),
+			        BLANK(),
+			        CONCATENATEX(
+			            __Top2,
+			            Grades[DRENAET] & " (" & FORMAT( [@Pct], "0%" ) & ")",
+			            " and ",
+			            [@Pct], ASC
+			        )
+			    )
+		lineageTag: 794f5b9e-393c-4a9e-a94d-213971190532
+
+	measure '# Of Schools classified for Numeracy Progress' = ```
+			
+			    [# Of Red schools for Numeracy] +
+			    [# Of Yellow schools for Numeracy] +
+			    [# Of Green schools for Numeracy]
+			```
+		formatString: 0
+		lineageTag: 3bf89e1b-b204-41d7-b7ae-bd22aca4437b
+
+	measure '% Of Red Schools For Numeracy' =
+			
+			DIVIDE( [# Of Red schools for Numeracy],
+			        [# Of Schools classified for Numeracy Progress]  )
+		lineageTag: d8e9960a-f61d-474f-9f85-566aa875446f
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '% Of Green Schools For Numeracy' =
+			
+			DIVIDE( [# Of Green schools for Numeracy],
+			        [# Of Schools classified for Numeracy Progress]  )
+		lineageTag: 5caa680e-1b07-437d-8af2-b73230fade1a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '% Of Yellow Schools For Numeracy' =
+			
+			DIVIDE( [# Of Yellow schools for Numeracy],
+			        [# Of Schools classified for Numeracy Progress]  )
+		lineageTag: 7ef8beb0-bccf-4148-8d26-55f2790cc940
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Top 2 DRENAETs With Highest % Of Red Schools For Numeracy' =
+			
+			VAR __Table =
+			    ADDCOLUMNS(
+			        VALUES( Grades[DRENAET] ),
+			        "@Pct", CALCULATE( [% Of Red Schools For Numeracy] )
+			    )
+			VAR __FilteredTable =
+			    FILTER( __Table, NOT ISBLANK( [@Pct] ) && [@Pct] > 0 )
+			VAR __Top2 =
+			    TOPN( 2, __FilteredTable, [@Pct], DESC )
+			RETURN
+			    IF(
+			        ISEMPTY( __Top2 ),
+			        BLANK(),
+			        CONCATENATEX(
+			            __Top2,
+			            Grades[DRENAET] & " (" & FORMAT( [@Pct], "0%" ) & ")",
+			            " and ",
+			            [@Pct], DESC
+			        )
+			    )
+		lineageTag: 1c5bb673-576c-4ea2-a12e-67dc0c9f2f5b
+
+	measure 'Average Number Of Mentoring School Visits BL-ML' =
+			
+			CALCULATE( [Average Number Of Mentoring School Visits], Cycles[Cycle] = "ML" )
+		formatString: 0.00
+		lineageTag: 8c3ef596-bc9d-4063-aa1d-6f20778b0aa6
+
+	measure 'Average Number Of Mentoring School Visits ML-EL' =
+			
+			CALCULATE( [Average Number Of Mentoring School Visits], Cycles[Cycle] = "EL" )
+		formatString: 0.00
+		lineageTag: e88d5eb9-b8ea-4ac5-af5c-30e2d1122a3e
+
+	measure 'Average Number Of Mentoring School Visits Change across cycles' =
+			
+			[Average Number Of Mentoring School Visits ML-EL] - [Average Number Of Mentoring School Visits BL-ML]
+		formatString: 0.00
+		lineageTag: 8a932011-af47-4723-8ad9-09ce647cca27
+
+	measure 'Average Number Of Mentoring School Visits Gap across Group' =
+			
+			
+			VAR __CPPP_Average =
+			CALCULATE( [Average Number Of Mentoring School Visits],
+			        'Mentoring Visits'[Visit Type] = "Mentoring Visit (CPPP)" )
+			
+			VAR __Other_Average =
+			CALCULATE( [Average Number Of Mentoring School Visits],
+			        'Mentoring Visits'[Visit Type] = "Other Mentoring Visit" )
+			
+			RETURN __CPPP_Average - __Other_Average
+		formatString: 0.00
+		lineageTag: e49e3c26-a01d-43cf-8cfb-a48fb81ca0f5
+
+	measure 'Average Number Of Mentoring School Visits Gap across Group BL-ML' =
+			
+			CALCULATE( [Average Number Of Mentoring School Visits Gap across Group], Cycles[Cycle] = "ML" )
+		formatString: 0.00
+		lineageTag: 36d013f5-6a8e-4f0a-a31e-c8fb96e265a9
+
+	measure 'Average Number Of Mentoring School Visits Gap across Group ML-EL' =
+			
+			CALCULATE( [Average Number Of Mentoring School Visits Gap across Group], Cycles[Cycle] = "EL" )
+		formatString: 0.00
+		lineageTag: 360beb1b-d746-4a6e-a52a-040a830ccc91
+
+	measure 'Comment - Mentor Visits across Cycles' = ```
+			
+			
+			VAR __EL = [Average Number Of Mentoring School Visits ML-EL]
+			VAR __Gap_ML = [Average Number Of Mentoring School Visits Gap across Group BL-ML]
+			VAR __Gap_EL = [Average Number Of Mentoring School Visits Gap across Group ML-EL]
+			VAR __Change_CPPP = [Average Number Of Mentoring School Visits Change across cycles for CPPP]
+			VAR __Change_Other_group = [Average Number Of Mentoring School Visits Change across cycles for Other group]
+			VAR __Change_CPPP_formated = FORMAT( __Change_CPPP, "0.00" )
+			VAR __Change_Other_group_formated = FORMAT( __Change_Other_group, "0.00" )
+			
+			VAR __Comment_Line1 = 
+			SWITCH( TRUE(),
+			       __Gap_ML > 0 && __Gap_EL > 0, UNICHAR(10) & "• Overall, the average number of visits is greater for CPPP group than other mentoring groups",
+			
+			       __Gap_ML > 0 && __Gap_EL < 0, UNICHAR(10) & "• The average number of visits was greater for CPPP group than other mentoring groups only in the first phase",
+			
+			       __Gap_ML < 0 && __Gap_EL > 0, UNICHAR(10) & "• The average number of visits was greater for CPPP group than other mentoring groups only in the second phase",
+			
+			       __Gap_ML < 0 && __Gap_EL < 0, UNICHAR(10) & "• Overall, the average number of visits is smaller for CPPP group than other mentoring groups",
+			
+			      BLANK()
+			)
+			
+			VAR __Comment_Line2 = 
+			SWITCH( TRUE(),
+			       __Change_CPPP > 0 && __Change_Other_group > 0, UNICHAR(10) & "• Between the two phases, the average number of visits increased for both CPPP(+" & __Change_CPPP_formated  & ") and Other mentoring groups(+" & __Change_Other_group_formated & ")",
+			
+			       __Change_CPPP > 0 && __Change_Other_group < 0, UNICHAR(10) & "• Between the two phases, the average number of visits increased for CPPP(+" & __Change_CPPP_formated  & "), but not for Other mentoring groups(" & __Change_Other_group_formated & ")",
+			
+			       __Change_CPPP < 0 && __Change_Other_group > 0, UNICHAR(10) & "• Between the two phases, the average number of visits increased for Other mentoring groups(+" & __Change_Other_group_formated  & "), but not for CPPP (" & __Change_CPPP_formated & ")",
+			
+			       __Change_CPPP < 0 && __Change_Other_group < 0, UNICHAR(10) & "• Between the two phases, the average number of visits decreased for both CPPP(" & __Change_CPPP_formated  & ") and Other mentoring groups(" & __Change_Other_group_formated & ")",
+			       
+			      BLANK()
+			)
+			
+			VAR __Full_Comment = __Comment_Line1 & __Comment_Line2
+			
+			RETURN IF( ISBLANK(__EL),
+			   "Endline data not available for the current year", __Full_comment )
+			```
+		lineageTag: 72c9b9c1-096f-47f3-8060-aae6fb1a0873
+
+	measure 'Average Number Of Mentoring School Visits Change across cycles for CPPP' =
+			
+			CALCULATE( [Average Number Of Mentoring School Visits Change across cycles],
+			           'Mentoring Visits'[Visit Type] = "Mentoring Visit (CPPP)" )
+		formatString: 0.00
+		lineageTag: ab5946c5-aea2-4353-b82a-9aacf011a5e9
+
+	measure 'Average Number Of Mentoring School Visits Change across cycles for Other group' =
+			
+			CALCULATE( [Average Number Of Mentoring School Visits Change across cycles],
+			           'Mentoring Visits'[Visit Type] = "Other Mentoring Visit" )
+		formatString: 0.00
+		lineageTag: dad487a3-ee80-4ecf-9d4c-83eaca975deb
+
+	measure 'DRENAETs With More Other Mentoring Visits than CPPP Visits' =
+			
+			VAR __Table =
+			    ADDCOLUMNS(
+			        VALUES( Grades[DRENAET] ),
+			        "@Gap", CALCULATE( [Average Number Of Mentoring School Visits Gap across Group] )
+			    )
+			VAR __FilteredTable =
+			    FILTER( __Table, NOT ISBLANK( [@Gap] ) && [@Gap] < 0 )
+			RETURN
+			    IF(
+			        ISEMPTY( __FilteredTable ),
+			        BLANK(),
+			        CONCATENATEX(
+			            __FilteredTable,
+			            Grades[DRENAET] & " (" & FORMAT( -1 * [@Gap], "+0.00" ) & ")",
+			            " and ",
+			            [@Gap], ASC
+			        )
+			    )
+		lineageTag: a6d23385-1df1-4538-8ee6-78009285a95a
+
+	measure 'Comment - Mentor Visits across DRENAETs' = ```
+			
+			
+			VAR __Avg = [Average Number Of Mentoring School Visits]
+			VAR __Count_Other_Group_DRENAET = [# Of DRENAETs With More Other Mentoring Visits than CPPP Visits]
+			VAR __List_Other_Group_DRENAET = [DRENAETs With More Other Mentoring Visits than CPPP Visits]
+			VAR __Top2_CPPP_DRENAET = [Top 2 DRENAETs With Highest Average Number Of CPPP Visits]
+			VAR __Top2_Other_Group_DRENAET = [Top 2 DRENAETs With Highest Average Number Of Other Mentoring Group Visits]
+			
+			VAR __Comment_Line1 = UNICHAR(10) & "• " & __Top2_CPPP_DRENAET & " stand out as the DRENAETs with the most intensive monitoring by CPPP group."
+			
+			VAR __Comment_Line2 = UNICHAR(10) & "• " & __Top2_Other_Group_DRENAET & " stand out as the DRENAETs with the most intensive monitoring by Other monitoring groups."
+			
+			VAR __Comment_Line3 = 
+			SWITCH( TRUE(),
+			     __Count_Other_Group_DRENAET = 1, UNICHAR(10) & "• There is 1 DRENAET where the average number of other mentoring visits is higher than CPPP visits: " & __List_Other_Group_DRENAET,
+			     __Count_Other_Group_DRENAET > 1, UNICHAR(10) & "• There are " &  __Count_Other_Group_DRENAET & " DRENAETs where the average number of other mentoring visits is higher than CPPP visits: " & __List_Other_Group_DRENAET,
+			    BLANK() )
+			
+			VAR __Full_Comment = __Comment_Line1 & __Comment_Line2 & __Comment_Line3
+			
+			RETURN IF( ISBLANK(__Avg),
+			   "Data not available for the current cycle", __Full_comment )
+			```
+		lineageTag: fd557e82-73d0-452c-a179-a64b9b1d3129
+
+	measure '# Of DRENAETs With More Other Mentoring Visits than CPPP Visits' =
+			
+			VAR __Table =
+			    ADDCOLUMNS(
+			        VALUES( Grades[DRENAET] ),
+			        "@Gap", CALCULATE( [Average Number Of Mentoring School Visits Gap across Group] )
+			    )
+			VAR __FilteredTable =
+			    FILTER( __Table, NOT ISBLANK( [@Gap] ) && [@Gap] < 0 )
+			RETURN
+			    IF(
+			        ISEMPTY( __FilteredTable ),
+			        BLANK(),
+			        COUNTROWS( __FilteredTable )
+			    )
+		formatString: 0
+		lineageTag: 1d58472e-5a78-410f-b78a-521cd3dc1145
+
+	measure 'Top 2 DRENAETs With Highest Average Number Of Mentoring School Visits' =
+			
+			VAR __Table =
+			    ADDCOLUMNS(
+			        VALUES( Grades[DRENAET] ),
+			        "@Avg", CALCULATE( [Average Number Of Mentoring School Visits] )
+			    )
+			VAR __FilteredTable =
+			    FILTER( __Table, NOT ISBLANK( [@Avg] ) )
+			VAR __Top2 =
+			    TOPN( 2, __FilteredTable, [@Avg], DESC )
+			RETURN
+			    IF(
+			        ISEMPTY( __Top2 ),
+			        BLANK(),
+			        CONCATENATEX(
+			            __Top2,
+			            Grades[DRENAET] & " (" & FORMAT( [@Avg], "0.00" ) & ")",
+			            " and ",
+			            [@Avg], DESC
+			        )
+			    )
+		lineageTag: 4de99bb0-7339-47a8-b7e0-03d91574b632
+
+	measure 'Top 2 DRENAETs With Highest Average Number Of CPPP Visits' =
+			
+			CALCULATE( [Top 2 DRENAETs With Highest Average Number Of Mentoring School Visits],
+			            'Mentoring Visits'[Visit Type] = "Mentoring Visit (CPPP)" )
+		lineageTag: 3ff2bba2-446c-44f3-af4c-84633287c58f
+
+	measure 'Top 2 DRENAETs With Highest Average Number Of Other Mentoring Group Visits' =
+			
+			CALCULATE( [Top 2 DRENAETs With Highest Average Number Of Mentoring School Visits],
+			            'Mentoring Visits'[Visit Type] = "Other Mentoring Visit" )
+		lineageTag: 7be1ed0a-4a1b-49ae-ab73-89c48a0f24d4
+
+	measure 'Comment - Mentor Visits per School across DRENAETs' = ```
+			
+			
+			VAR __Visits = [# Of Visits]
+			VAR __Zero_Visits_Pct = FORMAT( [% Of Schools with 0 mentor visit], "0%" )
+			VAR __One_Or_More_Visits_DRENAET_Pct = FORMAT( [% Of Schools with at least 1 mentor visit], "0%" )
+			VAR __Seven_Or_More_Visits_DRENAET = [# Of DRENAETs Where % Of Schools With At Least 7 Mentor Visits is greater than 0]
+			VAR __List_Seven_Or_More_Visits_DRENAET = [DRENAETs Where % Of Schools With At Least 7 Mentor Visits is greater than 0]
+			VAR __Top2_Seven_Or_More_Visits_DRENAET = [Top 2 DRENAETs With Highest % Of Schools With At Least 7 Mentor Visits]
+			
+			
+			VAR __Comment_Line1 = UNICHAR(10) & "• Overall, " & __Zero_Visits_Pct & " of schools had 0 mentor visit, and " & __One_Or_More_Visits_DRENAET_Pct & " had at least 1"
+			
+			VAR __Comment_Line2 =
+			SWITCH ( TRUE(),
+			   __Seven_Or_More_Visits_DRENAET = 0,
+			   UNICHAR(10) & "• There is no DRENAET where a school had at least 7 mentor visits",
+			
+			   __Seven_Or_More_Visits_DRENAET = 1, 
+			   UNICHAR(10) & "• There only 1 DRENAET with schools which had at least 7 mentor visits: " & __List_Seven_Or_More_Visits_DRENAET,
+			
+			   __Seven_Or_More_Visits_DRENAET > 1,
+			   UNICHAR(10) & "• There are " & __Seven_Or_More_Visits_DRENAET & " DRENAETs with schools which had at least 7 mentor visits, including " & __Top2_Seven_Or_More_Visits_DRENAET,
+			
+			   BLANK() )
+			
+			VAR __Full_Comment = __Comment_Line1 & __Comment_Line2
+			
+			RETURN 
+			IF( ISBLANK(__Visits),
+			   "No data available for the current cycle", __Full_comment )
+			```
+		lineageTag: 2d55023c-0632-4c5a-86e4-d7ecfd209989
+
+	measure '# Of Schools with at least 1 mentor visit' = ```
+			
+			
+			VAR __CurrentCycle = MAX( Cycles[Cycle ID] )
+			
+			VAR __Visits =
+			SUMMARIZE(
+				'ASER CIV Data',
+				'ASER CIV Data'[Cycle ID],
+				'ASER CIV Data'[School ID],
+				"@Visits", [# Of Visits] + 0
+			)
+			
+			VAR __Filtered_Visits = 
+			FILTER( __Visits, [@Visits] >= 1)
+			
+			VAR __Result = COUNTROWS( __Filtered_Visits )
+			RETURN __Result
+			```
+		formatString: 0
+		lineageTag: d85dba7f-afc4-4e89-986b-651b53f78539
+
+	measure '% Of Schools with 0 mentor visit' =
+			
+			DIVIDE( [# Of Schools with 0 mentor visit], [# Of Schools Reached] )
 		formatString: 0\ %;-0\ %;0\ %
-		lineageTag: 61e84125-c724-45ce-b2e2-3053d75a9a7e
+		lineageTag: d110cbf0-e8aa-4ef8-8ae7-df4fe845f550
+
+	measure '% Of Schools with at least 1 mentor visit' =
+			
+			DIVIDE( [# Of Schools with at least 1 mentor visit], [# Of Schools Reached] )
+		formatString: 0\ %;-0\ %;0\ %
+		lineageTag: 0ec64842-90fc-461d-9be4-9a87acc28ed6
+
+	measure '# Of Schools with at least 7 mentor visits' = ```
+			
+			
+			VAR __CurrentCycle = MAX( Cycles[Cycle ID] )
+			
+			VAR __Visits =
+			SUMMARIZE(
+				'ASER CIV Data',
+				'ASER CIV Data'[Cycle ID],
+				'ASER CIV Data'[School ID],
+				"@Visits", [# Of Visits] + 0
+			)
+			
+			VAR __Filtered_Visits = 
+			FILTER( __Visits, [@Visits] >= 7)
+			
+			VAR __Result = COUNTROWS( __Filtered_Visits )
+			RETURN __Result
+			```
+		formatString: 0
+		lineageTag: bbd7a1cf-1b58-42e8-8faa-7e039068cf74
+
+	measure '% Of Schools with at least 7 mentor visits' =
+			
+			DIVIDE( [# Of Schools with at least 7 mentor visits], [# Of Schools Reached] )
+		formatString: 0\ %;-0\ %;0\ %
+		lineageTag: 672cefb3-3a4b-49fa-a675-9df4e9893d22
+
+	measure 'DRENAETs Where % Of Schools With At Least 7 Mentor Visits is greater than 0' =
+			
+			VAR __Table =
+			    ADDCOLUMNS(
+			        VALUES( Grades[DRENAET] ),
+			        "@Pct", CALCULATE( [% Of Schools with at least 7 mentor visits] )
+			    )
+			VAR __FilteredTable =
+			    FILTER( __Table, NOT ISBLANK( [@Pct] ) && [@Pct] > 0 )
+			RETURN
+			    IF(
+			        ISEMPTY( __FilteredTable ),
+			        BLANK(),
+			        CONCATENATEX(
+			            __FilteredTable,
+			            Grades[DRENAET] & " (" & FORMAT( [@Pct], "0.0%" ) & ")",
+			            ", ",
+			            [@Pct], DESC
+			        )
+			    )
+		lineageTag: 1de9eb19-d4aa-48ad-be58-1dacf43b4942
+
+	measure '# Of DRENAETs Where % Of Schools With At Least 7 Mentor Visits is greater than 0' =
+			
+			VAR __Table =
+			    ADDCOLUMNS(
+			        VALUES( Grades[DRENAET] ),
+			        "@Pct", CALCULATE( [% Of Schools with at least 7 mentor visits] )
+			    )
+			VAR __FilteredTable =
+			    FILTER( __Table, NOT ISBLANK( [@Pct] ) && [@Pct] > 0 )
+			RETURN
+			    IF(
+			        ISEMPTY( __FilteredTable ),
+			        BLANK(),
+			        COUNTROWS( __FilteredTable )
+			    )
+		formatString: 0
+		lineageTag: 2d8c4d7a-cdd2-4286-97e3-3ba6527848b9
+
+	measure 'Top 2 DRENAETs With Highest % Of Schools With At Least 7 Mentor Visits' =
+			
+			VAR __Table =
+			    ADDCOLUMNS(
+			        VALUES( Grades[DRENAET] ),
+			        "@Pct", CALCULATE( [% Of Schools with at least 7 mentor visits] )
+			    )
+			VAR __FilteredTable =
+			    FILTER( __Table, NOT ISBLANK( [@Pct] ) && [@Pct] > 0 )
+			VAR __Top2 =
+			    TOPN( 2, __FilteredTable, [@Pct], DESC )
+			RETURN
+			    IF(
+			        ISEMPTY( __Top2 ),
+			        BLANK(),
+			        CONCATENATEX(
+			            __Top2,
+			            Grades[DRENAET] & " (" & FORMAT( [@Pct], "0%" ) & ")",
+			            " and ",
+			            [@Pct], DESC
+			        )
+			    )
+		lineageTag: 9a9f9cc9-28e0-4f76-a16f-6907f903ac2f
 
 	partition Mesures = m
 		mode: import

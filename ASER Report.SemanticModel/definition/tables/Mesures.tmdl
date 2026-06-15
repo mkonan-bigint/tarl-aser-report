@@ -2259,7 +2259,7 @@ table Mesures
 			VAR __Overall_Green_Schools_Percentage = FORMAT ( [% Of Green Schools For Numeracy], "0%" )
 			
 			
-			VAR __Comment_Line1 = UNICHAR(10) & "• " & __Top2_Lowest_Red_Schools & " are the DRENAETs with the fewest percentage of red schools"
+			VAR __Comment_Line1 = UNICHAR(10) & "• " & __Top2_Lowest_Red_Schools & " are the DRENAETs with the smallest percentage of red schools"
 			
 			VAR __Comment_Line2 = UNICHAR(10) & "• " & __Top2_Highest_Red_Schools & " are the DRENAETs with the highest percentage of red schools"
 			

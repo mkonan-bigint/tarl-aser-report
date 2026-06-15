@@ -11,10 +11,10 @@
       "type": "SharedResources"
     },
     "customTheme": {
-      "name": "TaRL-Africa5989797339417177.json",
+      "name": "TaRL-Africa2570522705606193.json",
       "reportVersionAtImport": {
-        "visual": "2.8.0",
-        "report": "3.2.0",
+        "visual": "2.10.0",
+        "report": "3.4.0",
         "page": "2.3.1"
       },
       "type": "RegisteredResources"
@@ -150,8 +150,8 @@
           "type": "Image"
         },
         {
-          "name": "TaRL-Africa5989797339417177.json",
-          "path": "TaRL-Africa5989797339417177.json",
+          "name": "TaRL-Africa2570522705606193.json",
+          "path": "TaRL-Africa2570522705606193.json",
           "type": "CustomTheme"
         }
       ]

@@ -2232,6 +2232,8 @@ table Mesures
 			
 			    [# Of Red schools for Literacy] +
 			    [# Of Lower Yellow schools for Literacy] +
+			    [# Of Intermediate Yellow schools for Literacy] +
+			    [# Of Upper Yellow schools for Literacy] +
 			    [# Of Green schools for Literacy]
 			```
 		formatString: 0
@@ -2312,6 +2314,8 @@ table Mesures
 			
 			    [# Of Red schools for Numeracy] +
 			    [# Of Lower Yellow schools for Numeracy] +
+			    [# Of Intermediate Yellow schools for Numeracy] +
+			    [# Of Upper Yellow schools for Numeracy] +
 			    [# Of Green schools for Numeracy]
 			```
 		formatString: 0

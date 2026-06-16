@@ -6374,22 +6374,22 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "mesure.of_yellow_schools_for_literacy": {
+			    "mesure.of_lower_yellow_schools_for_literacy": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Mesures",
-			          "ConceptualProperty": "# Of Yellow schools for Literacy"
+			          "ConceptualProperty": "# Of Lower Yellow schools for Literacy"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "# of yellow schools for literacy": {
+			          "# of lower yellow schools for literacy": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "Yellow school (10-25pp)": {
+			          "Lower Yellow school (10-15pp)": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -6426,22 +6426,22 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "mesure.of_yellow_schools_for_numeracy": {
+			    "mesure.of_lower_yellow_schools_for_numeracy": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Mesures",
-			          "ConceptualProperty": "# Of Yellow schools for Numeracy"
+			          "ConceptualProperty": "# Of Lower Yellow schools for Numeracy"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "# of yellow schools for numeracy": {
+			          "# of lower yellow schools for numeracy": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "Yellow school (10-25pp)": {
+			          "Lower Yellow school (10-15pp)": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -11023,17 +11023,17 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "mesure.of_yellow_schools_for_literacy1": {
+			    "mesure.of_lower_yellow_schools_for_literacy1": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Mesures",
-			          "ConceptualProperty": "% Of Yellow Schools For Literacy"
+			          "ConceptualProperty": "% Of Lower Yellow Schools For Literacy"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "% of yellow schools for literacy": {
+			          "% of lower yellow schools for literacy": {
 			            "State": "Generated"
 			          }
 			        }
@@ -11173,17 +11173,17 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "mesure.of_yellow_schools_for_numeracy1": {
+			    "mesure.of_lower_yellow_schools_for_numeracy1": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Mesures",
-			          "ConceptualProperty": "% Of Yellow Schools For Numeracy"
+			          "ConceptualProperty": "% Of Lower Yellow Schools For Numeracy"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "% of yellow schools for numeracy": {
+			          "% of lower yellow schools for numeracy": {
 			            "State": "Generated"
 			          }
 			        }
@@ -11610,9 +11610,1460 @@ cultureInfo fr-FR
 			          }
 			        }
 			      ]
+			    },
+			    "mesure.DRENAETs_with_more_other_mentoring_visits_than_CPPP_visits": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "DRENAETs With More Other Mentoring Visits than CPPP Visits"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "DRENAETs with more other mentoring visits than CPPP visits": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.comment__mentor_visits_across_DRENAETs": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "Comment - Mentor Visits across DRENAETs"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "comment - mentor visits across DRENAETs": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "comment mentor visits across DRENAETs": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "clarification mentor visit across drenaet": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "commentary mentor visit across drenaet": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "explanation mentor visit across drenaet": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "feedback mentor visit across drenaet": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "observation mentor visit across drenaet": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "note mentor visit across drenaet": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "comment mentor appointment across drenaet": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "comment mentor call across drenaet": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "comment mentor stopover across drenaet": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.494
+			          }
+			        },
+			        {
+			          "comment mentor stay across drenaet": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.479
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.of_DRENAETs_with_more_other_mentoring_visits_than_CPPP_visits": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "# Of DRENAETs With More Other Mentoring Visits than CPPP Visits"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "# of DRENAETs with more other mentoring visits than CPPP visits": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.top_2_DRENAETs_with_highest_average_number_of_mentoring_school_visits": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "Top 2 DRENAETs With Highest Average Number Of Mentoring School Visits"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "top 2 DRENAETs with highest average number of mentoring school visits": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.top_2_DRENAETs_with_highest_average_number_of_CPPP_visits": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "Top 2 DRENAETs With Highest Average Number Of CPPP Visits"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "top 2 DRENAETs with highest average number of CPPP visits": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.top_2_DRENAETs_with_highest_average_number_of_other_mentoring_group_visits": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "Top 2 DRENAETs With Highest Average Number Of Other Mentoring Group Visits"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "top 2 DRENAETs with highest average number of other mentoring group visits": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.comment__mentor_visits_per_school_across_DRENAETs": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "Comment - Mentor Visits per School across DRENAETs"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "comment - mentor visits per school across DRENAETs": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "comment mentor visits per school across DRENAETs": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.of_schools_with_at_least_1_mentor_visit": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "# Of Schools with at least 1 mentor visit"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "# of schools with at least 1 mentor visit": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.of_schools_with_0_mentor_visit1": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "% Of Schools with 0 mentor visit"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% of schools with 0 mentor visit": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.of_schools_with_at_least_1_mentor_visit1": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "% Of Schools with at least 1 mentor visit"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% of schools with at least 1 mentor visit": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.of_schools_with_at_least_7_mentor_visits": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "# Of Schools with at least 7 mentor visits"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "# of schools with at least 7 mentor visits": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.of_schools_with_at_least_7_mentor_visits1": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "% Of Schools with at least 7 mentor visits"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% of schools with at least 7 mentor visits": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.DRENAETs_where__of_schools_with_at_least_7_mentor_visits_is_greater_than_0": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "DRENAETs Where % Of Schools With At Least 7 Mentor Visits is greater than 0"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "DRENAETs where % of schools with at least 7 mentor visits is greater than 0": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.of_DRENAETs_where__of_schools_with_at_least_7_mentor_visits_is_greater_than_0": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "# Of DRENAETs Where % Of Schools With At Least 7 Mentor Visits is greater than 0"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "# of DRENAETs where % of schools with at least 7 mentor visits is greater than 0": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.top_2_DRENAETs_with_highest__of_schools_with_at_least_7_mentor_visits": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "Top 2 DRENAETs With Highest % Of Schools With At Least 7 Mentor Visits"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "top 2 DRENAETs with highest % of schools with at least 7 mentor visits": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.of_intermediate_yellow_schools_for_literacy": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "# Of Intermediate Yellow schools for Literacy"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "# of intermediate yellow schools for literacy": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Intermediate Yellow school (15-20pp)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.of_upper_yellow_schools_for_literacy": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "# Of Upper Yellow schools for Literacy"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "# of upper yellow schools for literacy": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Upper Yellow schools (20-25pp)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.of_intermediate_yellow_schools_for_literacy1": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "% Of Intermediate Yellow Schools For Literacy"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% of intermediate yellow schools for literacy": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.of_upper_yellow_schools_for_literacy1": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "% Of Upper Yellow Schools For Literacy"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% of upper yellow schools for literacy": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.of_intermediate_yellow_schools_for_numeracy": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "# Of Intermediate Yellow schools for Numeracy"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "# of intermediate yellow schools for numeracy": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Intermediate Yellow schools (15-20pp)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.of_upper_yellow_schools_for_numeracy": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "# Of Upper Yellow schools for Numeracy"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "# of upper yellow schools for numeracy": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Upper Yellow schools (20-25pp)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.of_intermediate_yellow_schools_for_numeracy1": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "% Of Intermediate Yellow Schools For Numeracy"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% of intermediate yellow schools for numeracy": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.of_upper_yellow_schools_for_numeracy1": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "% Of Upper Yellow Schools For Numeracy"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% of upper yellow schools for numeracy": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
+			    "mesure_has_top_2_DRENAETs_with_highest__of_schools_with_at_least_7_mentor_visits": {
+			      "Binding": {
+			        "ConceptualEntity": "Mesures"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mesure": {
+			          "Target": {
+			            "Entity": "mesure"
+			          }
+			        },
+			        "mesure.top_2_DRENAETs_with_highest__of_schools_with_at_least_7_mentor_visits": {
+			          "Target": {
+			            "Entity": "mesure.top_2_DRENAETs_with_highest__of_schools_with_at_least_7_mentor_visits"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mesure"
+			            },
+			            "Object": {
+			              "Role": "mesure.top_2_DRENAETs_with_highest__of_schools_with_at_least_7_mentor_visits"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mesures_have_top_2_DRENAETs_with_highest__of_schools_with_at_least_7_mentor_visits"
+			        }
+			      ]
+			    },
+			    "mentoring_visit_has_mesure_of_DRENAETs_where__of_schools_with_at_least_7_mentor_visits_is_greater_than_0": {
+			      "Binding": {
+			        "ConceptualEntity": "Mentoring Visits"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mentoring_visit": {
+			          "Target": {
+			            "Entity": "mentoring_visit"
+			          }
+			        },
+			        "mesure.of_DRENAETs_where__of_schools_with_at_least_7_mentor_visits_is_greater_than_0": {
+			          "Target": {
+			            "Entity": "mesure.of_DRENAETs_where__of_schools_with_at_least_7_mentor_visits_is_greater_than_0"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mentoring_visit"
+			            },
+			            "Object": {
+			              "Role": "mesure.of_DRENAETs_where__of_schools_with_at_least_7_mentor_visits_is_greater_than_0"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mentoring_visits_have__of_DRENAETs_where__of_schools_with_at_least_7_mentor_visits_is_greater_than_0"
+			        }
+			      ]
+			    },
+			    "grade_has_mesure_of_DRENAETs_where__of_schools_with_at_least_7_mentor_visits_is_greater_than_0": {
+			      "Binding": {
+			        "ConceptualEntity": "Grades"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grade": {
+			          "Target": {
+			            "Entity": "grade"
+			          }
+			        },
+			        "mesure.of_DRENAETs_where__of_schools_with_at_least_7_mentor_visits_is_greater_than_0": {
+			          "Target": {
+			            "Entity": "mesure.of_DRENAETs_where__of_schools_with_at_least_7_mentor_visits_is_greater_than_0"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grade"
+			            },
+			            "Object": {
+			              "Role": "mesure.of_DRENAETs_where__of_schools_with_at_least_7_mentor_visits_is_greater_than_0"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "grades_have__of_DRENAETs_where__of_schools_with_at_least_7_mentor_visits_is_greater_than_0"
+			        }
+			      ]
+			    },
+			    "ASER_CIV_data_has_mesure_of_DRENAETs_where__of_schools_with_at_least_7_mentor_visits_is_greater_than_0": {
+			      "Binding": {
+			        "ConceptualEntity": "ASER CIV Data"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "ASER_CIV_data": {
+			          "Target": {
+			            "Entity": "ASER_CIV_data"
+			          }
+			        },
+			        "mesure.of_DRENAETs_where__of_schools_with_at_least_7_mentor_visits_is_greater_than_0": {
+			          "Target": {
+			            "Entity": "mesure.of_DRENAETs_where__of_schools_with_at_least_7_mentor_visits_is_greater_than_0"
+			          }
+			        }
+			      }
+			    },
+			    "mesure_has_DRENAETs_where__of_schools_with_at_least_7_mentor_visits_is_greater_than_0": {
+			      "Binding": {
+			        "ConceptualEntity": "Mesures"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mesure": {
+			          "Target": {
+			            "Entity": "mesure"
+			          }
+			        },
+			        "mesure.DRENAETs_where__of_schools_with_at_least_7_mentor_visits_is_greater_than_0": {
+			          "Target": {
+			            "Entity": "mesure.DRENAETs_where__of_schools_with_at_least_7_mentor_visits_is_greater_than_0"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mesure"
+			            },
+			            "Object": {
+			              "Role": "mesure.DRENAETs_where__of_schools_with_at_least_7_mentor_visits_is_greater_than_0"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mesures_have_DRENAETs_where__of_schools_with_at_least_7_mentor_visits_is_greater_than_0"
+			        }
+			      ]
+			    },
+			    "mentoring_visit_has_mesure_of_schools_with_at_least_7_mentor_visits1": {
+			      "Binding": {
+			        "ConceptualEntity": "Mentoring Visits"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mentoring_visit": {
+			          "Target": {
+			            "Entity": "mentoring_visit"
+			          }
+			        },
+			        "mesure.of_schools_with_at_least_7_mentor_visits1": {
+			          "Target": {
+			            "Entity": "mesure.of_schools_with_at_least_7_mentor_visits1"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mentoring_visit"
+			            },
+			            "Object": {
+			              "Role": "mesure.of_schools_with_at_least_7_mentor_visits1"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mentoring_visits_have__of_schools_with_at_least_7_mentor_visits"
+			        }
+			      ]
+			    },
+			    "ASER_CIV_data_has_mesure_of_schools_with_at_least_7_mentor_visits1": {
+			      "Binding": {
+			        "ConceptualEntity": "ASER CIV Data"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "ASER_CIV_data": {
+			          "Target": {
+			            "Entity": "ASER_CIV_data"
+			          }
+			        },
+			        "mesure.of_schools_with_at_least_7_mentor_visits1": {
+			          "Target": {
+			            "Entity": "mesure.of_schools_with_at_least_7_mentor_visits1"
+			          }
+			        }
+			      }
+			    },
+			    "mentoring_visit_has_mesure_of_schools_with_at_least_7_mentor_visits": {
+			      "Binding": {
+			        "ConceptualEntity": "Mentoring Visits"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mentoring_visit": {
+			          "Target": {
+			            "Entity": "mentoring_visit"
+			          }
+			        },
+			        "mesure.of_schools_with_at_least_7_mentor_visits": {
+			          "Target": {
+			            "Entity": "mesure.of_schools_with_at_least_7_mentor_visits"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mentoring_visit"
+			            },
+			            "Object": {
+			              "Role": "mesure.of_schools_with_at_least_7_mentor_visits"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mentoring_visits_have__of_schools_with_at_least_7_mentor_visits1"
+			        }
+			      ]
+			    },
+			    "ASER_CIV_data_has_mesure_of_schools_with_at_least_7_mentor_visits": {
+			      "Binding": {
+			        "ConceptualEntity": "ASER CIV Data"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "ASER_CIV_data": {
+			          "Target": {
+			            "Entity": "ASER_CIV_data"
+			          }
+			        },
+			        "mesure.of_schools_with_at_least_7_mentor_visits": {
+			          "Target": {
+			            "Entity": "mesure.of_schools_with_at_least_7_mentor_visits"
+			          }
+			        }
+			      }
+			    },
+			    "mentoring_visit_has_mesure_of_schools_with_at_least_1_mentor_visit1": {
+			      "Binding": {
+			        "ConceptualEntity": "Mentoring Visits"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mentoring_visit": {
+			          "Target": {
+			            "Entity": "mentoring_visit"
+			          }
+			        },
+			        "mesure.of_schools_with_at_least_1_mentor_visit1": {
+			          "Target": {
+			            "Entity": "mesure.of_schools_with_at_least_1_mentor_visit1"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mentoring_visit"
+			            },
+			            "Object": {
+			              "Role": "mesure.of_schools_with_at_least_1_mentor_visit1"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mentoring_visits_have__of_schools_with_at_least_1_mentor_visit"
+			        }
+			      ]
+			    },
+			    "ASER_CIV_data_has_mesure_of_schools_with_at_least_1_mentor_visit1": {
+			      "Binding": {
+			        "ConceptualEntity": "ASER CIV Data"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "ASER_CIV_data": {
+			          "Target": {
+			            "Entity": "ASER_CIV_data"
+			          }
+			        },
+			        "mesure.of_schools_with_at_least_1_mentor_visit1": {
+			          "Target": {
+			            "Entity": "mesure.of_schools_with_at_least_1_mentor_visit1"
+			          }
+			        }
+			      }
+			    },
+			    "mentoring_visit_has_mesure_of_schools_with_0_mentor_visit1": {
+			      "Binding": {
+			        "ConceptualEntity": "Mentoring Visits"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mentoring_visit": {
+			          "Target": {
+			            "Entity": "mentoring_visit"
+			          }
+			        },
+			        "mesure.of_schools_with_0_mentor_visit1": {
+			          "Target": {
+			            "Entity": "mesure.of_schools_with_0_mentor_visit1"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mentoring_visit"
+			            },
+			            "Object": {
+			              "Role": "mesure.of_schools_with_0_mentor_visit1"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mentoring_visits_have__of_schools_with_0_mentor_visit"
+			        }
+			      ]
+			    },
+			    "ASER_CIV_data_has_mesure_of_schools_with_0_mentor_visit1": {
+			      "Binding": {
+			        "ConceptualEntity": "ASER CIV Data"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "ASER_CIV_data": {
+			          "Target": {
+			            "Entity": "ASER_CIV_data"
+			          }
+			        },
+			        "mesure.of_schools_with_0_mentor_visit1": {
+			          "Target": {
+			            "Entity": "mesure.of_schools_with_0_mentor_visit1"
+			          }
+			        }
+			      }
+			    },
+			    "mentoring_visit_has_mesure_of_schools_with_at_least_1_mentor_visit": {
+			      "Binding": {
+			        "ConceptualEntity": "Mentoring Visits"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mentoring_visit": {
+			          "Target": {
+			            "Entity": "mentoring_visit"
+			          }
+			        },
+			        "mesure.of_schools_with_at_least_1_mentor_visit": {
+			          "Target": {
+			            "Entity": "mesure.of_schools_with_at_least_1_mentor_visit"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mentoring_visit"
+			            },
+			            "Object": {
+			              "Role": "mesure.of_schools_with_at_least_1_mentor_visit"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mentoring_visits_have__of_schools_with_at_least_1_mentor_visit1"
+			        }
+			      ]
+			    },
+			    "ASER_CIV_data_has_mesure_of_schools_with_at_least_1_mentor_visit": {
+			      "Binding": {
+			        "ConceptualEntity": "ASER CIV Data"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "ASER_CIV_data": {
+			          "Target": {
+			            "Entity": "ASER_CIV_data"
+			          }
+			        },
+			        "mesure.of_schools_with_at_least_1_mentor_visit": {
+			          "Target": {
+			            "Entity": "mesure.of_schools_with_at_least_1_mentor_visit"
+			          }
+			        }
+			      }
+			    },
+			    "mesure_has_comment__mentor_visits_per_school_across_DRENAETs": {
+			      "Binding": {
+			        "ConceptualEntity": "Mesures"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mesure": {
+			          "Target": {
+			            "Entity": "mesure"
+			          }
+			        },
+			        "mesure.comment__mentor_visits_per_school_across_DRENAETs": {
+			          "Target": {
+			            "Entity": "mesure.comment__mentor_visits_per_school_across_DRENAETs"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mesure"
+			            },
+			            "Object": {
+			              "Role": "mesure.comment__mentor_visits_per_school_across_DRENAETs"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mesures_have_comment__mentor_visits_per_school_across_DRENAETs"
+			        }
+			      ]
+			    },
+			    "mesure_has_top_2_DRENAETs_with_highest_average_number_of_other_mentoring_group_visits": {
+			      "Binding": {
+			        "ConceptualEntity": "Mesures"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mesure": {
+			          "Target": {
+			            "Entity": "mesure"
+			          }
+			        },
+			        "mesure.top_2_DRENAETs_with_highest_average_number_of_other_mentoring_group_visits": {
+			          "Target": {
+			            "Entity": "mesure.top_2_DRENAETs_with_highest_average_number_of_other_mentoring_group_visits"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mesure"
+			            },
+			            "Object": {
+			              "Role": "mesure.top_2_DRENAETs_with_highest_average_number_of_other_mentoring_group_visits"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mesures_have_top_2_DRENAETs_with_highest_average_number_of_other_mentoring_group_visits"
+			        }
+			      ]
+			    },
+			    "mesure_has_top_2_DRENAETs_with_highest_average_number_of_CPPP_visits": {
+			      "Binding": {
+			        "ConceptualEntity": "Mesures"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mesure": {
+			          "Target": {
+			            "Entity": "mesure"
+			          }
+			        },
+			        "mesure.top_2_DRENAETs_with_highest_average_number_of_CPPP_visits": {
+			          "Target": {
+			            "Entity": "mesure.top_2_DRENAETs_with_highest_average_number_of_CPPP_visits"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mesure"
+			            },
+			            "Object": {
+			              "Role": "mesure.top_2_DRENAETs_with_highest_average_number_of_CPPP_visits"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mesures_have_top_2_DRENAETs_with_highest_average_number_of_CPPP_visits"
+			        }
+			      ]
+			    },
+			    "mesure_has_top_2_DRENAETs_with_highest_average_number_of_mentoring_school_visits": {
+			      "Binding": {
+			        "ConceptualEntity": "Mesures"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mesure": {
+			          "Target": {
+			            "Entity": "mesure"
+			          }
+			        },
+			        "mesure.top_2_DRENAETs_with_highest_average_number_of_mentoring_school_visits": {
+			          "Target": {
+			            "Entity": "mesure.top_2_DRENAETs_with_highest_average_number_of_mentoring_school_visits"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mesure"
+			            },
+			            "Object": {
+			              "Role": "mesure.top_2_DRENAETs_with_highest_average_number_of_mentoring_school_visits"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mesures_have_top_2_DRENAETs_with_highest_average_number_of_mentoring_school_visits"
+			        }
+			      ]
+			    },
+			    "mentoring_visit_has_mesure_of_DRENAETs_with_more_other_mentoring_visits_than_CPPP_visits": {
+			      "Binding": {
+			        "ConceptualEntity": "Mentoring Visits"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mentoring_visit": {
+			          "Target": {
+			            "Entity": "mentoring_visit"
+			          }
+			        },
+			        "mesure.of_DRENAETs_with_more_other_mentoring_visits_than_CPPP_visits": {
+			          "Target": {
+			            "Entity": "mesure.of_DRENAETs_with_more_other_mentoring_visits_than_CPPP_visits"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mentoring_visit"
+			            },
+			            "Object": {
+			              "Role": "mesure.of_DRENAETs_with_more_other_mentoring_visits_than_CPPP_visits"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mentoring_visits_have__of_DRENAETs_with_more_other_mentoring_visits_than_CPPP_visits"
+			        }
+			      ]
+			    },
+			    "grade_has_mesure_of_DRENAETs_with_more_other_mentoring_visits_than_CPPP_visits": {
+			      "Binding": {
+			        "ConceptualEntity": "Grades"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "grade": {
+			          "Target": {
+			            "Entity": "grade"
+			          }
+			        },
+			        "mesure.of_DRENAETs_with_more_other_mentoring_visits_than_CPPP_visits": {
+			          "Target": {
+			            "Entity": "mesure.of_DRENAETs_with_more_other_mentoring_visits_than_CPPP_visits"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "grade"
+			            },
+			            "Object": {
+			              "Role": "mesure.of_DRENAETs_with_more_other_mentoring_visits_than_CPPP_visits"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "grades_have__of_DRENAETs_with_more_other_mentoring_visits_than_CPPP_visits"
+			        }
+			      ]
+			    },
+			    "mesure_has_comment__mentor_visits_across_DRENAETs": {
+			      "Binding": {
+			        "ConceptualEntity": "Mesures"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mesure": {
+			          "Target": {
+			            "Entity": "mesure"
+			          }
+			        },
+			        "mesure.comment__mentor_visits_across_DRENAETs": {
+			          "Target": {
+			            "Entity": "mesure.comment__mentor_visits_across_DRENAETs"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mesure"
+			            },
+			            "Object": {
+			              "Role": "mesure.comment__mentor_visits_across_DRENAETs"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mesures_have_comment__mentor_visits_across_DRENAETs"
+			        }
+			      ]
+			    },
+			    "mesure_has_DRENAETs_with_more_other_mentoring_visits_than_CPPP_visits": {
+			      "Binding": {
+			        "ConceptualEntity": "Mesures"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mesure": {
+			          "Target": {
+			            "Entity": "mesure"
+			          }
+			        },
+			        "mesure.DRENAETs_with_more_other_mentoring_visits_than_CPPP_visits": {
+			          "Target": {
+			            "Entity": "mesure.DRENAETs_with_more_other_mentoring_visits_than_CPPP_visits"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mesure"
+			            },
+			            "Object": {
+			              "Role": "mesure.DRENAETs_with_more_other_mentoring_visits_than_CPPP_visits"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mesures_have_DRENAETs_with_more_other_mentoring_visits_than_CPPP_visits"
+			        },
+			        {
+			          "Verb": {
+			            "Subject": {
+			              "Role": "mesure"
+			            },
+			            "Verbs": [
+			              {
+			                "DRENAET": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "PrepositionalPhrases": [
+			              {
+			                "Prepositions": [
+			                  {
+			                    "with": {
+			                      "State": "Generated"
+			                    }
+			                  }
+			                ],
+			                "Object": {
+			                  "Role": "mesure.DRENAETs_with_more_other_mentoring_visits_than_CPPP_visits"
+			                }
+			              }
+			            ]
+			          },
+			          "State": "Generated",
+			          "Weight": 0.95,
+			          "ID": "mesures_DRENAET_with_DRENAETs_with_more_other_mentoring_visits_than_CPPP_visits"
+			        }
+			      ]
+			    },
+			    "mentoring_visit_has_mesure_average_number_of_mentoring_school_visits_change_across_cycles_for_other_group": {
+			      "Binding": {
+			        "ConceptualEntity": "Mentoring Visits"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mentoring_visit": {
+			          "Target": {
+			            "Entity": "mentoring_visit"
+			          }
+			        },
+			        "mesure.average_number_of_mentoring_school_visits_change_across_cycles_for_other_group": {
+			          "Target": {
+			            "Entity": "mesure.average_number_of_mentoring_school_visits_change_across_cycles_for_other_group"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mentoring_visit"
+			            },
+			            "Object": {
+			              "Role": "mesure.average_number_of_mentoring_school_visits_change_across_cycles_for_other_group"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mentoring_visits_have_average_number_of_mentoring_school_visits_change_across_cycles_for_other_group"
+			        }
+			      ]
+			    },
+			    "mentoring_visit_has_mesure_average_number_of_mentoring_school_visits_change_across_cycles_for_CPPP": {
+			      "Binding": {
+			        "ConceptualEntity": "Mentoring Visits"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mentoring_visit": {
+			          "Target": {
+			            "Entity": "mentoring_visit"
+			          }
+			        },
+			        "mesure.average_number_of_mentoring_school_visits_change_across_cycles_for_CPPP": {
+			          "Target": {
+			            "Entity": "mesure.average_number_of_mentoring_school_visits_change_across_cycles_for_CPPP"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mentoring_visit"
+			            },
+			            "Object": {
+			              "Role": "mesure.average_number_of_mentoring_school_visits_change_across_cycles_for_CPPP"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mentoring_visits_have_average_number_of_mentoring_school_visits_change_across_cycles_for_CPPP"
+			        }
+			      ]
+			    },
+			    "mentoring_visit_has_mesure_comment__mentor_visits_across_cycles": {
+			      "Binding": {
+			        "ConceptualEntity": "Mentoring Visits"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mentoring_visit": {
+			          "Target": {
+			            "Entity": "mentoring_visit"
+			          }
+			        },
+			        "mesure.comment__mentor_visits_across_cycles": {
+			          "Target": {
+			            "Entity": "mesure.comment__mentor_visits_across_cycles"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mentoring_visit"
+			            },
+			            "Object": {
+			              "Role": "mesure.comment__mentor_visits_across_cycles"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mentoring_visits_have_comment__mentor_visits_across_cycles"
+			        }
+			      ]
+			    },
+			    "mentoring_visit_has_mesure_average_number_of_mentoring_school_visits_gap_across_group_MLEL": {
+			      "Binding": {
+			        "ConceptualEntity": "Mentoring Visits"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mentoring_visit": {
+			          "Target": {
+			            "Entity": "mentoring_visit"
+			          }
+			        },
+			        "mesure.average_number_of_mentoring_school_visits_gap_across_group_MLEL": {
+			          "Target": {
+			            "Entity": "mesure.average_number_of_mentoring_school_visits_gap_across_group_MLEL"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mentoring_visit"
+			            },
+			            "Object": {
+			              "Role": "mesure.average_number_of_mentoring_school_visits_gap_across_group_MLEL"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mentoring_visits_have_average_number_of_mentoring_school_visits_gap_across_group_MLEL"
+			        }
+			      ]
+			    },
+			    "mentoring_visit_has_mesure_average_number_of_mentoring_school_visits_gap_across_group_BLML": {
+			      "Binding": {
+			        "ConceptualEntity": "Mentoring Visits"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mentoring_visit": {
+			          "Target": {
+			            "Entity": "mentoring_visit"
+			          }
+			        },
+			        "mesure.average_number_of_mentoring_school_visits_gap_across_group_BLML": {
+			          "Target": {
+			            "Entity": "mesure.average_number_of_mentoring_school_visits_gap_across_group_BLML"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mentoring_visit"
+			            },
+			            "Object": {
+			              "Role": "mesure.average_number_of_mentoring_school_visits_gap_across_group_BLML"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mentoring_visits_have_average_number_of_mentoring_school_visits_gap_across_group_BLML"
+			        }
+			      ]
+			    },
+			    "mentoring_visit_has_mesure_average_number_of_mentoring_school_visits_gap_across_group": {
+			      "Binding": {
+			        "ConceptualEntity": "Mentoring Visits"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mentoring_visit": {
+			          "Target": {
+			            "Entity": "mentoring_visit"
+			          }
+			        },
+			        "mesure.average_number_of_mentoring_school_visits_gap_across_group": {
+			          "Target": {
+			            "Entity": "mesure.average_number_of_mentoring_school_visits_gap_across_group"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mentoring_visit"
+			            },
+			            "Object": {
+			              "Role": "mesure.average_number_of_mentoring_school_visits_gap_across_group"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mentoring_visits_have_average_number_of_mentoring_school_visits_gap_across_group"
+			        }
+			      ]
+			    },
+			    "mentoring_visit_has_mesure_average_number_of_mentoring_school_visits_change_across_cycles": {
+			      "Binding": {
+			        "ConceptualEntity": "Mentoring Visits"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mentoring_visit": {
+			          "Target": {
+			            "Entity": "mentoring_visit"
+			          }
+			        },
+			        "mesure.average_number_of_mentoring_school_visits_change_across_cycles": {
+			          "Target": {
+			            "Entity": "mesure.average_number_of_mentoring_school_visits_change_across_cycles"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mentoring_visit"
+			            },
+			            "Object": {
+			              "Role": "mesure.average_number_of_mentoring_school_visits_change_across_cycles"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mentoring_visits_have_average_number_of_mentoring_school_visits_change_across_cycles"
+			        }
+			      ]
+			    },
 			    "mentoring_visit_has_mesure_average_number_of_mentoring_school_visits_MLEL": {
 			      "Binding": {
 			        "ConceptualEntity": "Mentoring Visits"
@@ -11712,7 +13163,7 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "mesure_has_of_yellow_schools_for_numeracy1": {
+			    "mesure_has_of_lower_yellow_schools_for_numeracy1": {
 			      "Binding": {
 			        "ConceptualEntity": "Mesures"
 			      },
@@ -11723,9 +13174,9 @@ cultureInfo fr-FR
 			            "Entity": "mesure"
 			          }
 			        },
-			        "mesure.of_yellow_schools_for_numeracy1": {
+			        "mesure.of_lower_yellow_schools_for_numeracy1": {
 			          "Target": {
-			            "Entity": "mesure.of_yellow_schools_for_numeracy1"
+			            "Entity": "mesure.of_lower_yellow_schools_for_numeracy1"
 			          }
 			        }
 			      },
@@ -11736,12 +13187,12 @@ cultureInfo fr-FR
 			              "Role": "mesure"
 			            },
 			            "Object": {
-			              "Role": "mesure.of_yellow_schools_for_numeracy1"
+			              "Role": "mesure.of_lower_yellow_schools_for_numeracy1"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mesures_have__of_yellow_schools_for_numeracy"
+			          "ID": "mesures_have__of_lower_yellow_schools_for_numeracy"
 			        }
 			      ]
 			    },
@@ -12009,7 +13460,7 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "mesure_has_of_yellow_schools_for_literacy1": {
+			    "mesure_has_of_lower_yellow_schools_for_literacy1": {
 			      "Binding": {
 			        "ConceptualEntity": "Mesures"
 			      },
@@ -12020,9 +13471,9 @@ cultureInfo fr-FR
 			            "Entity": "mesure"
 			          }
 			        },
-			        "mesure.of_yellow_schools_for_literacy1": {
+			        "mesure.of_lower_yellow_schools_for_literacy1": {
 			          "Target": {
-			            "Entity": "mesure.of_yellow_schools_for_literacy1"
+			            "Entity": "mesure.of_lower_yellow_schools_for_literacy1"
 			          }
 			        }
 			      },
@@ -12033,12 +13484,12 @@ cultureInfo fr-FR
 			              "Role": "mesure"
 			            },
 			            "Object": {
-			              "Role": "mesure.of_yellow_schools_for_literacy1"
+			              "Role": "mesure.of_lower_yellow_schools_for_literacy1"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mesures_have__of_yellow_schools_for_literacy"
+			          "ID": "mesures_have__of_lower_yellow_schools_for_literacy"
 			        }
 			      ]
 			    },
@@ -15431,7 +16882,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mentoring_visits_have__of_schools_with_0_mentor_visit"
+			          "ID": "mentoring_visits_have__of_schools_with_0_mentor_visit1"
 			        }
 			      ]
 			    },
@@ -15618,7 +17069,7 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "mesure_has_of_yellow_schools_for_numeracy": {
+			    "mesure_has_of_lower_yellow_schools_for_numeracy": {
 			      "Binding": {
 			        "ConceptualEntity": "Mesures"
 			      },
@@ -15629,9 +17080,9 @@ cultureInfo fr-FR
 			            "Entity": "mesure"
 			          }
 			        },
-			        "mesure.of_yellow_schools_for_numeracy": {
+			        "mesure.of_lower_yellow_schools_for_numeracy": {
 			          "Target": {
-			            "Entity": "mesure.of_yellow_schools_for_numeracy"
+			            "Entity": "mesure.of_lower_yellow_schools_for_numeracy"
 			          }
 			        }
 			      },
@@ -15642,12 +17093,12 @@ cultureInfo fr-FR
 			              "Role": "mesure"
 			            },
 			            "Object": {
-			              "Role": "mesure.of_yellow_schools_for_numeracy"
+			              "Role": "mesure.of_lower_yellow_schools_for_numeracy"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mesures_have__of_yellow_schools_for_numeracy1"
+			          "ID": "mesures_have__of_lower_yellow_schools_for_numeracy1"
 			        }
 			      ]
 			    },
@@ -15684,7 +17135,7 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "mesure_has_of_yellow_schools_for_literacy": {
+			    "mesure_has_of_lower_yellow_schools_for_literacy": {
 			      "Binding": {
 			        "ConceptualEntity": "Mesures"
 			      },
@@ -15695,9 +17146,9 @@ cultureInfo fr-FR
 			            "Entity": "mesure"
 			          }
 			        },
-			        "mesure.of_yellow_schools_for_literacy": {
+			        "mesure.of_lower_yellow_schools_for_literacy": {
 			          "Target": {
-			            "Entity": "mesure.of_yellow_schools_for_literacy"
+			            "Entity": "mesure.of_lower_yellow_schools_for_literacy"
 			          }
 			        }
 			      },
@@ -15708,12 +17159,12 @@ cultureInfo fr-FR
 			              "Role": "mesure"
 			            },
 			            "Object": {
-			              "Role": "mesure.of_yellow_schools_for_literacy"
+			              "Role": "mesure.of_lower_yellow_schools_for_literacy"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mesures_have__of_yellow_schools_for_literacy1"
+			          "ID": "mesures_have__of_lower_yellow_schools_for_literacy1"
 			        }
 			      ]
 			    },
@@ -17620,139 +19071,7 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "mentoring_visit_has_mesure_average_number_of_mentoring_school_visits_change_across_cycles": {
-			      "Binding": {
-			        "ConceptualEntity": "Mentoring Visits"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "mentoring_visit": {
-			          "Target": {
-			            "Entity": "mentoring_visit"
-			          }
-			        },
-			        "mesure.average_number_of_mentoring_school_visits_change_across_cycles": {
-			          "Target": {
-			            "Entity": "mesure.average_number_of_mentoring_school_visits_change_across_cycles"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "mentoring_visit"
-			            },
-			            "Object": {
-			              "Role": "mesure.average_number_of_mentoring_school_visits_change_across_cycles"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "mentoring_visits_have_average_number_of_mentoring_school_visits_change_across_cycles"
-			        }
-			      ]
-			    },
-			    "mentoring_visit_has_mesure_average_number_of_mentoring_school_visits_gap_across_group": {
-			      "Binding": {
-			        "ConceptualEntity": "Mentoring Visits"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "mentoring_visit": {
-			          "Target": {
-			            "Entity": "mentoring_visit"
-			          }
-			        },
-			        "mesure.average_number_of_mentoring_school_visits_gap_across_group": {
-			          "Target": {
-			            "Entity": "mesure.average_number_of_mentoring_school_visits_gap_across_group"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "mentoring_visit"
-			            },
-			            "Object": {
-			              "Role": "mesure.average_number_of_mentoring_school_visits_gap_across_group"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "mentoring_visits_have_average_number_of_mentoring_school_visits_gap_across_group"
-			        }
-			      ]
-			    },
-			    "mentoring_visit_has_mesure_average_number_of_mentoring_school_visits_gap_across_group_BLML": {
-			      "Binding": {
-			        "ConceptualEntity": "Mentoring Visits"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "mentoring_visit": {
-			          "Target": {
-			            "Entity": "mentoring_visit"
-			          }
-			        },
-			        "mesure.average_number_of_mentoring_school_visits_gap_across_group_BLML": {
-			          "Target": {
-			            "Entity": "mesure.average_number_of_mentoring_school_visits_gap_across_group_BLML"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "mentoring_visit"
-			            },
-			            "Object": {
-			              "Role": "mesure.average_number_of_mentoring_school_visits_gap_across_group_BLML"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "mentoring_visits_have_average_number_of_mentoring_school_visits_gap_across_group_BLML"
-			        }
-			      ]
-			    },
-			    "mentoring_visit_has_mesure_average_number_of_mentoring_school_visits_gap_across_group_MLEL": {
-			      "Binding": {
-			        "ConceptualEntity": "Mentoring Visits"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "mentoring_visit": {
-			          "Target": {
-			            "Entity": "mentoring_visit"
-			          }
-			        },
-			        "mesure.average_number_of_mentoring_school_visits_gap_across_group_MLEL": {
-			          "Target": {
-			            "Entity": "mesure.average_number_of_mentoring_school_visits_gap_across_group_MLEL"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "mentoring_visit"
-			            },
-			            "Object": {
-			              "Role": "mesure.average_number_of_mentoring_school_visits_gap_across_group_MLEL"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "mentoring_visits_have_average_number_of_mentoring_school_visits_gap_across_group_MLEL"
-			        }
-			      ]
-			    },
-			    "mesure_has_comment__mentor_visits_across_cycles": {
+			    "mesure_has_of_intermediate_yellow_schools_for_literacy": {
 			      "Binding": {
 			        "ConceptualEntity": "Mesures"
 			      },
@@ -17763,9 +19082,9 @@ cultureInfo fr-FR
 			            "Entity": "mesure"
 			          }
 			        },
-			        "mesure.comment__mentor_visits_across_cycles": {
+			        "mesure.of_intermediate_yellow_schools_for_literacy": {
 			          "Target": {
-			            "Entity": "mesure.comment__mentor_visits_across_cycles"
+			            "Entity": "mesure.of_intermediate_yellow_schools_for_literacy"
 			          }
 			        }
 			      },
@@ -17776,29 +19095,29 @@ cultureInfo fr-FR
 			              "Role": "mesure"
 			            },
 			            "Object": {
-			              "Role": "mesure.comment__mentor_visits_across_cycles"
+			              "Role": "mesure.of_intermediate_yellow_schools_for_literacy"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mesures_have_comment__mentor_visits_across_cycles"
+			          "ID": "mesures_have__of_intermediate_yellow_schools_for_literacy"
 			        }
 			      ]
 			    },
-			    "mentoring_visit_has_mesure_average_number_of_mentoring_school_visits_change_across_cycles_for_CPPP": {
+			    "mesure_has_of_upper_yellow_schools_for_literacy": {
 			      "Binding": {
-			        "ConceptualEntity": "Mentoring Visits"
+			        "ConceptualEntity": "Mesures"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "mentoring_visit": {
+			        "mesure": {
 			          "Target": {
-			            "Entity": "mentoring_visit"
+			            "Entity": "mesure"
 			          }
 			        },
-			        "mesure.average_number_of_mentoring_school_visits_change_across_cycles_for_CPPP": {
+			        "mesure.of_upper_yellow_schools_for_literacy": {
 			          "Target": {
-			            "Entity": "mesure.average_number_of_mentoring_school_visits_change_across_cycles_for_CPPP"
+			            "Entity": "mesure.of_upper_yellow_schools_for_literacy"
 			          }
 			        }
 			      },
@@ -17806,32 +19125,32 @@ cultureInfo fr-FR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "mentoring_visit"
+			              "Role": "mesure"
 			            },
 			            "Object": {
-			              "Role": "mesure.average_number_of_mentoring_school_visits_change_across_cycles_for_CPPP"
+			              "Role": "mesure.of_upper_yellow_schools_for_literacy"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mentoring_visits_have_average_number_of_mentoring_school_visits_change_across_cycles_for_CPPP"
+			          "ID": "mesures_have__of_upper_yellow_schools_for_literacy"
 			        }
 			      ]
 			    },
-			    "mentoring_visit_has_mesure_average_number_of_mentoring_school_visits_change_across_cycles_for_other_group": {
+			    "mesure_has_of_intermediate_yellow_schools_for_literacy1": {
 			      "Binding": {
-			        "ConceptualEntity": "Mentoring Visits"
+			        "ConceptualEntity": "Mesures"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "mentoring_visit": {
+			        "mesure": {
 			          "Target": {
-			            "Entity": "mentoring_visit"
+			            "Entity": "mesure"
 			          }
 			        },
-			        "mesure.average_number_of_mentoring_school_visits_change_across_cycles_for_other_group": {
+			        "mesure.of_intermediate_yellow_schools_for_literacy1": {
 			          "Target": {
-			            "Entity": "mesure.average_number_of_mentoring_school_visits_change_across_cycles_for_other_group"
+			            "Entity": "mesure.of_intermediate_yellow_schools_for_literacy1"
 			          }
 			        }
 			      },
@@ -17839,15 +19158,180 @@ cultureInfo fr-FR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "mentoring_visit"
+			              "Role": "mesure"
 			            },
 			            "Object": {
-			              "Role": "mesure.average_number_of_mentoring_school_visits_change_across_cycles_for_other_group"
+			              "Role": "mesure.of_intermediate_yellow_schools_for_literacy1"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mentoring_visits_have_average_number_of_mentoring_school_visits_change_across_cycles_for_other_group"
+			          "ID": "mesures_have__of_intermediate_yellow_schools_for_literacy1"
+			        }
+			      ]
+			    },
+			    "mesure_has_of_upper_yellow_schools_for_literacy1": {
+			      "Binding": {
+			        "ConceptualEntity": "Mesures"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mesure": {
+			          "Target": {
+			            "Entity": "mesure"
+			          }
+			        },
+			        "mesure.of_upper_yellow_schools_for_literacy1": {
+			          "Target": {
+			            "Entity": "mesure.of_upper_yellow_schools_for_literacy1"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mesure"
+			            },
+			            "Object": {
+			              "Role": "mesure.of_upper_yellow_schools_for_literacy1"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mesures_have__of_upper_yellow_schools_for_literacy1"
+			        }
+			      ]
+			    },
+			    "mesure_has_of_intermediate_yellow_schools_for_numeracy": {
+			      "Binding": {
+			        "ConceptualEntity": "Mesures"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mesure": {
+			          "Target": {
+			            "Entity": "mesure"
+			          }
+			        },
+			        "mesure.of_intermediate_yellow_schools_for_numeracy": {
+			          "Target": {
+			            "Entity": "mesure.of_intermediate_yellow_schools_for_numeracy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mesure"
+			            },
+			            "Object": {
+			              "Role": "mesure.of_intermediate_yellow_schools_for_numeracy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mesures_have__of_intermediate_yellow_schools_for_numeracy"
+			        }
+			      ]
+			    },
+			    "mesure_has_of_upper_yellow_schools_for_numeracy": {
+			      "Binding": {
+			        "ConceptualEntity": "Mesures"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mesure": {
+			          "Target": {
+			            "Entity": "mesure"
+			          }
+			        },
+			        "mesure.of_upper_yellow_schools_for_numeracy": {
+			          "Target": {
+			            "Entity": "mesure.of_upper_yellow_schools_for_numeracy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mesure"
+			            },
+			            "Object": {
+			              "Role": "mesure.of_upper_yellow_schools_for_numeracy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mesures_have__of_upper_yellow_schools_for_numeracy"
+			        }
+			      ]
+			    },
+			    "mesure_has_of_intermediate_yellow_schools_for_numeracy1": {
+			      "Binding": {
+			        "ConceptualEntity": "Mesures"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mesure": {
+			          "Target": {
+			            "Entity": "mesure"
+			          }
+			        },
+			        "mesure.of_intermediate_yellow_schools_for_numeracy1": {
+			          "Target": {
+			            "Entity": "mesure.of_intermediate_yellow_schools_for_numeracy1"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mesure"
+			            },
+			            "Object": {
+			              "Role": "mesure.of_intermediate_yellow_schools_for_numeracy1"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mesures_have__of_intermediate_yellow_schools_for_numeracy1"
+			        }
+			      ]
+			    },
+			    "mesure_has_of_upper_yellow_schools_for_numeracy1": {
+			      "Binding": {
+			        "ConceptualEntity": "Mesures"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mesure": {
+			          "Target": {
+			            "Entity": "mesure"
+			          }
+			        },
+			        "mesure.of_upper_yellow_schools_for_numeracy1": {
+			          "Target": {
+			            "Entity": "mesure.of_upper_yellow_schools_for_numeracy1"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mesure"
+			            },
+			            "Object": {
+			              "Role": "mesure.of_upper_yellow_schools_for_numeracy1"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mesures_have__of_upper_yellow_schools_for_numeracy1"
 			        }
 			      ]
 			    },

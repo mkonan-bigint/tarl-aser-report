@@ -57,12 +57,42 @@
                       "Entity": "Mesures"
                     }
                   },
-                  "Property": "# Of Yellow schools for Numeracy"
+                  "Property": "# Of Lower Yellow schools for Numeracy"
                 }
               },
               "queryRef": "Mesures.# Of Yellow schools for Numeracy",
-              "nativeQueryRef": "Yellow school (10-25pp)",
-              "displayName": "Yellow school (10-25pp)"
+              "nativeQueryRef": "Lower Yellow school (10-15pp)",
+              "displayName": "Lower Yellow school (10-15pp)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mesures"
+                    }
+                  },
+                  "Property": "# Of Intermediate Yellow schools for Numeracy"
+                }
+              },
+              "queryRef": "Mesures.# Of Intermediate Yellow schools for Numeracy",
+              "nativeQueryRef": "Intermediate Yellow schools (15-20pp)",
+              "displayName": "Intermediate Yellow schools (15-20pp)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mesures"
+                    }
+                  },
+                  "Property": "# Of Upper Yellow schools for Numeracy"
+                }
+              },
+              "queryRef": "Mesures.# Of Upper Yellow schools for Numeracy",
+              "nativeQueryRef": "Upper Yellow schools (20-25pp)",
+              "displayName": "Upper Yellow schools (20-25pp)"
             },
             {
               "field": {
@@ -229,6 +259,44 @@
           },
           "selector": {
             "metadata": "Mesures.# Of Green schools for Numeracy"
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 8,
+                      "Percent": -0.25
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mesures.# Of Intermediate Yellow schools for Numeracy"
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 8,
+                      "Percent": -0.5
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mesures.# Of Upper Yellow schools for Numeracy"
           }
         }
       ]

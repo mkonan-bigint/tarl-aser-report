@@ -481,22 +481,5 @@
     "#493452",
     "#0D2E25",
     "#54484E"
-  ],
-  "visualStyles": {
-    "page": {
-      "*": {
-        "pageSizeMode": [
-          {
-            "type": "Custom"
-          }
-        ],
-        "pageSize": [
-          {
-            "width": 1280,
-            "height": 900
-          }
-        ]
-      }
-    }
-  }
+  ]
 }

@@ -11,7 +11,7 @@
       "type": "SharedResources"
     },
     "customTheme": {
-      "name": "TaRL-Africa2570522705606193.json",
+      "name": "TaRL-Africa25917441887892845.json",
       "reportVersionAtImport": {
         "visual": "2.10.0",
         "report": "3.4.0",
@@ -180,8 +180,8 @@
           "type": "Image"
         },
         {
-          "name": "TaRL-Africa2570522705606193.json",
-          "path": "TaRL-Africa2570522705606193.json",
+          "name": "TaRL-Africa25917441887892845.json",
+          "path": "TaRL-Africa25917441887892845.json",
           "type": "CustomTheme"
         }
       ]

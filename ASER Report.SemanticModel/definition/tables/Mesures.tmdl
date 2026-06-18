@@ -712,20 +712,21 @@ table Mesures
 			
 			
 			VAR __CurrentCycle = MAX( Cycles[Cycle ID] )
+			VAR __CurrentCycleSort = MAX( Cycles[Cycle Sort] )
 			
 			VAR __Visits =
 			SUMMARIZE(
 				'ASER CIV Data',
 				'ASER CIV Data'[Cycle ID],
 				'ASER CIV Data'[School ID],
-				"@Visits", [# Of Visits] + 0
+				"@Visits", [# Of Visits]
 			)
 			
 			VAR __Filtered_Visits = 
-			FILTER( __Visits, [@Visits] = 0)
+			FILTER( __Visits, [@Visits] = 0 && 'ASER CIV Data'[Cycle ID] = __CurrentCycle )
 			
 			VAR __Result = COUNTROWS( __Filtered_Visits )
-			RETURN __Result
+			RETURN IF( __CurrentCycleSort = 1, BLANK(), __Result )
 			```
 		formatString: #,0
 		displayFolder: 1. Cycle specific KPIs
@@ -735,20 +736,21 @@ table Mesures
 			
 			
 			VAR __CurrentCycle = MAX( Cycles[Cycle ID] )
+			VAR __CurrentCycleSort = MAX( Cycles[Cycle Sort] )
 			
 			VAR __Visits =
 			SUMMARIZE(
 				'ASER CIV Data',
 				'ASER CIV Data'[Cycle ID],
 				'ASER CIV Data'[School ID],
-				"@Visits", [# Of Visits] + 0
+				"@Visits", [# Of Visits]
 			)
 			
 			VAR __Filtered_Visits = 
-			FILTER( __Visits, [@Visits] IN {1,2,3})
+			FILTER( __Visits, [@Visits] IN {1,2,3} && 'ASER CIV Data'[Cycle ID] = __CurrentCycle )
 			
 			VAR __Result = COUNTROWS( __Filtered_Visits )
-			RETURN __Result
+			RETURN IF( __CurrentCycleSort = 1, BLANK(), __Result )
 			```
 		formatString: 0
 		displayFolder: 1. Cycle specific KPIs
@@ -758,20 +760,21 @@ table Mesures
 			
 			
 			VAR __CurrentCycle = MAX( Cycles[Cycle ID] )
+			VAR __CurrentCycleSort = MAX( Cycles[Cycle Sort] )
 			
 			VAR __Visits =
 			SUMMARIZE(
 				'ASER CIV Data',
 				'ASER CIV Data'[Cycle ID],
 				'ASER CIV Data'[School ID],
-				"@Visits", [# Of Visits] + 0
+				"@Visits", [# Of Visits]
 			)
 			
 			VAR __Filtered_Visits = 
-			FILTER( __Visits, [@Visits] IN {4,5,6})
+			FILTER( __Visits, [@Visits] IN {4,5,6} && 'ASER CIV Data'[Cycle ID] = __CurrentCycle )
 			
 			VAR __Result = COUNTROWS( __Filtered_Visits )
-			RETURN __Result
+			RETURN IF( __CurrentCycleSort = 1, BLANK(), __Result )
 			```
 		formatString: #,0
 		displayFolder: 1. Cycle specific KPIs
@@ -781,20 +784,21 @@ table Mesures
 			
 			
 			VAR __CurrentCycle = MAX( Cycles[Cycle ID] )
+			VAR __CurrentCycleSort = MAX( Cycles[Cycle Sort] )
 			
 			VAR __Visits =
 			SUMMARIZE(
 				'ASER CIV Data',
 				'ASER CIV Data'[Cycle ID],
 				'ASER CIV Data'[School ID],
-				"@Visits", [# Of Visits] + 0
+				"@Visits", [# Of Visits]
 			)
 			
 			VAR __Filtered_Visits = 
-			FILTER( __Visits, [@Visits] >= 7)
+			FILTER( __Visits, [@Visits] >= 7 && 'ASER CIV Data'[Cycle ID] = __CurrentCycle )
 			
 			VAR __Result = COUNTROWS( __Filtered_Visits )
-			RETURN __Result
+			RETURN IF( __CurrentCycleSort = 1, BLANK(), __Result )
 			```
 		formatString: #,0
 		displayFolder: 1. Cycle specific KPIs
@@ -2616,20 +2620,21 @@ table Mesures
 			
 			
 			VAR __CurrentCycle = MAX( Cycles[Cycle ID] )
+			VAR __CurrentCycleSort = MAX( Cycles[Cycle Sort] )
 			
 			VAR __Visits =
 			SUMMARIZE(
 				'ASER CIV Data',
 				'ASER CIV Data'[Cycle ID],
 				'ASER CIV Data'[School ID],
-				"@Visits", [# Of Visits] + 0
+				"@Visits", [# Of Visits]
 			)
 			
 			VAR __Filtered_Visits = 
-			FILTER( __Visits, [@Visits] >= 1)
+			FILTER( __Visits, [@Visits] >= 1 && 'ASER CIV Data'[Cycle ID] = __CurrentCycle )
 			
 			VAR __Result = COUNTROWS( __Filtered_Visits )
-			RETURN __Result
+			RETURN IF( __CurrentCycleSort = 1, BLANK(), __Result )
 			```
 		formatString: 0
 		lineageTag: d85dba7f-afc4-4e89-986b-651b53f78539
@@ -2650,20 +2655,21 @@ table Mesures
 			
 			
 			VAR __CurrentCycle = MAX( Cycles[Cycle ID] )
+			VAR __CurrentCycleSort = MAX( Cycles[Cycle Sort] )
 			
 			VAR __Visits =
 			SUMMARIZE(
 				'ASER CIV Data',
 				'ASER CIV Data'[Cycle ID],
 				'ASER CIV Data'[School ID],
-				"@Visits", [# Of Visits] + 0
+				"@Visits", [# Of Visits]
 			)
 			
 			VAR __Filtered_Visits = 
-			FILTER( __Visits, [@Visits] >= 7)
+			FILTER( __Visits, [@Visits] >= 7 && 'ASER CIV Data'[Cycle ID] = __CurrentCycle )
 			
 			VAR __Result = COUNTROWS( __Filtered_Visits )
-			RETURN __Result
+			RETURN IF( __CurrentCycleSort = 1, BLANK(), __Result )
 			```
 		formatString: 0
 		lineageTag: bbd7a1cf-1b58-42e8-8faa-7e039068cf74

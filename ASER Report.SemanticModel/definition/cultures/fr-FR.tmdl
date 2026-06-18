@@ -11883,22 +11883,6 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "mesure.of_schools_with_at_least_7_mentor_visits": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Mesures",
-			          "ConceptualProperty": "# Of Schools with at least 7 mentor visits"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "# of schools with at least 7 mentor visits": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
 			    "mesure.of_schools_with_at_least_7_mentor_visits1": {
 			      "Definition": {
 			        "Binding": {

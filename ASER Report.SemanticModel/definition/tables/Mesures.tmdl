@@ -2651,32 +2651,9 @@ table Mesures
 		formatString: 0\ %;-0\ %;0\ %
 		lineageTag: 0ec64842-90fc-461d-9be4-9a87acc28ed6
 
-	measure '# Of Schools with at least 7 mentor visits' = ```
-			
-			
-			VAR __CurrentCycle = MAX( Cycles[Cycle ID] )
-			VAR __CurrentCycleSort = MAX( Cycles[Cycle Sort] )
-			
-			VAR __Visits =
-			SUMMARIZE(
-				'ASER CIV Data',
-				'ASER CIV Data'[Cycle ID],
-				'ASER CIV Data'[School ID],
-				"@Visits", [# Of Visits]
-			)
-			
-			VAR __Filtered_Visits = 
-			FILTER( __Visits, [@Visits] >= 7 && 'ASER CIV Data'[Cycle ID] = __CurrentCycle )
-			
-			VAR __Result = COUNTROWS( __Filtered_Visits )
-			RETURN IF( __CurrentCycleSort = 1, BLANK(), __Result )
-			```
-		formatString: 0
-		lineageTag: bbd7a1cf-1b58-42e8-8faa-7e039068cf74
-
 	measure '% Of Schools with at least 7 mentor visits' =
 			
-			DIVIDE( [# Of Schools with at least 7 mentor visits], [# Of Schools Reached] )
+			DIVIDE( [# Of Schools with 7+ mentor visits], [# Of Schools Reached] )
 		formatString: 0\ %;-0\ %;0\ %
 		lineageTag: 672cefb3-3a4b-49fa-a675-9df4e9893d22
 

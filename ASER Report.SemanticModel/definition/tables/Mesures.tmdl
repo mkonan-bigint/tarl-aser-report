@@ -221,7 +221,7 @@ table Mesures
 		displayFolder: 1. Cycle specific KPIs
 		lineageTag: fcbfe87e-5312-417d-b542-0b17a4dfb42b
 
-	measure 'pp Of Literacy Improvemnt From BL to EL' =
+	measure 'pp Of Literacy Improvement From BL to EL' =
 			
 			VAR __EL = [% Of Students With High Literacy At EL]
 			VAR __BL = [% Of Students With High Literacy At BL]
@@ -324,7 +324,7 @@ table Mesures
 		displayFolder: 1. Cycle specific KPIs
 		lineageTag: e6cafb5c-b178-462a-a3b5-f3942aab4247
 
-	measure 'pp Of Numeracy Improvemnt From BL to EL' =
+	measure 'pp Of Numeracy Improvement From BL to EL' =
 			
 			VAR __EL = [% Of Students With High Numeracy At EL]
 			VAR __BL = [% Of Students With High Numeracy At BL]
@@ -477,8 +477,8 @@ table Mesures
 					'ASER CIV Data',
 					'ASER CIV Data'[School ID],
 					'ASER CIV Data'[Period],
-					"@Progress in Literacy from BL to EL", [pp Of Literacy Improvemnt From BL to EL],
-					"@Progress in Numeracy from BL to EL", [pp Of Numeracy Improvemnt From BL to EL]
+					"@Progress in Literacy from BL to EL", [pp Of Literacy Improvement From BL to EL],
+					"@Progress in Numeracy from BL to EL", [pp Of Numeracy Improvement From BL to EL]
 				)
 			
 				VAR __Table = SELECTCOLUMNS(
@@ -514,8 +514,8 @@ table Mesures
 					'ASER CIV Data',
 					'ASER CIV Data'[School ID],
 					'ASER CIV Data'[Period],
-					"@Progress in Literacy from BL to EL", [pp Of Literacy Improvemnt From BL to EL],
-					"@Progress in Numeracy from BL to EL", [pp Of Numeracy Improvemnt From BL to EL]
+					"@Progress in Literacy from BL to EL", [pp Of Literacy Improvement From BL to EL],
+					"@Progress in Numeracy from BL to EL", [pp Of Numeracy Improvement From BL to EL]
 				)
 			
 				VAR __Table = SELECTCOLUMNS(
@@ -551,8 +551,8 @@ table Mesures
 					'ASER CIV Data',
 					'ASER CIV Data'[School ID],
 					'ASER CIV Data'[Period],
-					"@Progress in Literacy from BL to EL", [pp Of Literacy Improvemnt From BL to EL],
-					"@Progress in Numeracy from BL to EL", [pp Of Numeracy Improvemnt From BL to EL]
+					"@Progress in Literacy from BL to EL", [pp Of Literacy Improvement From BL to EL],
+					"@Progress in Numeracy from BL to EL", [pp Of Numeracy Improvement From BL to EL]
 				)
 			
 				VAR __Table = SELECTCOLUMNS(
@@ -588,8 +588,8 @@ table Mesures
 					'ASER CIV Data',
 					'ASER CIV Data'[School ID],
 					'ASER CIV Data'[Period],
-					"@Progress in Literacy from BL to EL", [pp Of Literacy Improvemnt From BL to EL],
-					"@Progress in Numeracy from BL to EL", [pp Of Numeracy Improvemnt From BL to EL]
+					"@Progress in Literacy from BL to EL", [pp Of Literacy Improvement From BL to EL],
+					"@Progress in Numeracy from BL to EL", [pp Of Numeracy Improvement From BL to EL]
 				)
 			
 				VAR __Table = SELECTCOLUMNS(
@@ -625,8 +625,8 @@ table Mesures
 					'ASER CIV Data',
 					'ASER CIV Data'[School ID],
 					'ASER CIV Data'[Period],
-					"@Progress in Literacy from BL to EL", [pp Of Literacy Improvemnt From BL to EL],
-					"@Progress in Numeracy from BL to EL", [pp Of Numeracy Improvemnt From BL to EL]
+					"@Progress in Literacy from BL to EL", [pp Of Literacy Improvement From BL to EL],
+					"@Progress in Numeracy from BL to EL", [pp Of Numeracy Improvement From BL to EL]
 				)
 			
 				VAR __Table = SELECTCOLUMNS(
@@ -662,8 +662,8 @@ table Mesures
 					'ASER CIV Data',
 					'ASER CIV Data'[School ID],
 					'ASER CIV Data'[Period],
-					"@Progress in Literacy from BL to EL", [pp Of Literacy Improvemnt From BL to EL],
-					"@Progress in Numeracy from BL to EL", [pp Of Numeracy Improvemnt From BL to EL]
+					"@Progress in Literacy from BL to EL", [pp Of Literacy Improvement From BL to EL],
+					"@Progress in Numeracy from BL to EL", [pp Of Numeracy Improvement From BL to EL]
 				)
 			
 				VAR __Table = SELECTCOLUMNS(
@@ -844,7 +844,7 @@ table Mesures
 
 		formatStringDefinition = "+0 pp;-0 pp;0 pp"
 
-	measure 'pp Of Literacy Improvemnt From BL to EL (formated)' =
+	measure 'pp Of Literacy Improvement From BL to EL (formated)' =
 			
 			VAR __EL = [% Of Students With High Literacy At EL]
 			VAR __BL = [% Of Students With High Literacy At BL]
@@ -866,7 +866,7 @@ table Mesures
 
 		formatStringDefinition = "+0 pp;-0 pp;0 pp"
 
-	measure 'pp Of Numeracy Improvemnt From BL to EL (formated)' =
+	measure 'pp Of Numeracy Improvement From BL to EL (formated)' =
 			
 			VAR __EL = [% Of Students With High Numeracy At EL]
 			VAR __BL = [% Of Students With High Numeracy At BL]
@@ -877,19 +877,19 @@ table Mesures
 
 		formatStringDefinition = "+0 pp;-0 pp;0 pp"
 
-	measure 'pp Of Subject Improvemnt From BL to EL (formated)' =
+	measure 'pp Of Subject Improvement From BL to EL (formated)' =
 			
 			// Doit etre filtree dans le rapport par Subject pour avoir du sens
-			[pp Of Literacy Improvemnt From BL to EL (formated)] + [pp Of Numeracy Improvemnt From BL to EL (formated)]
+			[pp Of Literacy Improvement From BL to EL (formated)] + [pp Of Numeracy Improvement From BL to EL (formated)]
 		lineageTag: 870ed57b-23f9-4886-9011-3ea09b2faf25
 
 		formatStringDefinition = "+0 pp;-0 pp;0 pp"
 
-	measure 'Subject Improvemnt comment' =
+	measure 'Subject Improvement comment' =
 			
 			
 			VAR __Subject = SELECTEDVALUE( 'Levels in Subjects'[Subject] )
-			VAR __pp = [pp Of Subject Improvemnt From BL to EL (formated)]
+			VAR __pp = [pp Of Subject Improvement From BL to EL (formated)]
 			VAR __pp_formated =
 			SWITCH( SIGN(__pp),
 			        1, FORMAT( __pp, "+0 pp" ) & " increase",
@@ -917,7 +917,7 @@ table Mesures
 			        2, [% Of Students With High Numeracy At EL],
 			        BLANK() )
 			
-			VAR __pp = [pp Of Subject Improvemnt From BL to EL (formated)]
+			VAR __pp = [pp Of Subject Improvement From BL to EL (formated)]
 			
 			VAR __pp_target = 20
 			
@@ -974,7 +974,7 @@ table Mesures
 	measure 'Comment - High Literacy Progress across grades' = ```
 			
 			
-			VAR __EL = [pp Of Literacy Improvemnt From BL to EL (formated)]
+			VAR __EL = [pp Of Literacy Improvement From BL to EL (formated)]
 			VAR __Top_Grade = [Grade With Highest Literacy Improvement At EL]
 			VAR __Bottom_Grade = [Grade With Lowest Literacy Improvement At EL]
 			VAR __Top_Grade_Performance = [Highest Literacy Improvement across grades at EL]
@@ -1006,7 +1006,7 @@ table Mesures
 			VAR __Table =
 			    ADDCOLUMNS(
 			        VALUES( Grades[Grade] ),
-			        "@Literacy At EL", CALCULATE( [pp Of Literacy Improvemnt From BL to EL] )
+			        "@Literacy At EL", CALCULATE( [pp Of Literacy Improvement From BL to EL] )
 			    )
 			VAR __MaxValue =
 			    MAXX( __Table, [@Literacy At EL] )
@@ -1024,7 +1024,7 @@ table Mesures
 			VAR __Table =
 			    ADDCOLUMNS(
 			        VALUES( Grades[Grade] ),
-			        "@Literacy At EL", CALCULATE( [pp Of Literacy Improvemnt From BL to EL] )
+			        "@Literacy At EL", CALCULATE( [pp Of Literacy Improvement From BL to EL] )
 			    )
 			RETURN
 			    MAXX( __Table, [@Literacy At EL] )
@@ -1036,7 +1036,7 @@ table Mesures
 			VAR __Table =
 			    ADDCOLUMNS(
 			        VALUES( Grades[Grade] ),
-			        "@Literacy At EL", CALCULATE( [pp Of Literacy Improvemnt From BL to EL] )
+			        "@Literacy At EL", CALCULATE( [pp Of Literacy Improvement From BL to EL] )
 			    )
 			VAR __MinValue =
 			    MINX( __Table, [@Literacy At EL] )
@@ -1054,7 +1054,7 @@ table Mesures
 			VAR __Table =
 			    ADDCOLUMNS(
 			        VALUES( Grades[Grade] ),
-			        "@Literacy At EL", CALCULATE( [pp Of Literacy Improvemnt From BL to EL] )
+			        "@Literacy At EL", CALCULATE( [pp Of Literacy Improvement From BL to EL] )
 			    )
 			RETURN
 			    MINX( __Table, [@Literacy At EL] )
@@ -1070,7 +1070,7 @@ table Mesures
 			        SUMMARIZE( Grades, Grades[Grade], Grades[Grade Sort] ),
 			        "@pp Improvement",
 			            CALCULATE(
-			                [pp Of Subject Improvemnt From BL to EL (formated)],
+			                [pp Of Subject Improvement From BL to EL (formated)],
 			                Cycles[Period] = __CurrentPeriod,
 			                'Levels in Subjects'[Subject ID] = __CurrentSubject
 			            )
@@ -1094,7 +1094,7 @@ table Mesures
 			        SUMMARIZE( Grades, Grades[Grade], Grades[Grade Sort] ),
 			        "@pp Improvement",
 			            CALCULATE(
-			                [pp Of Subject Improvemnt From BL to EL (formated)],
+			                [pp Of Subject Improvement From BL to EL (formated)],
 			                Cycles[Period] = __CurrentPeriod,
 			                'Levels in Subjects'[Subject ID] = __CurrentSubjectID
 			            )
@@ -1122,7 +1122,7 @@ table Mesures
 			        SUMMARIZE( Grades, Grades[Grade], Grades[Grade Sort] ),
 			        "@pp Improvement",
 			            CALCULATE(
-			                [pp Of Subject Improvemnt From BL to EL (formated)],
+			                [pp Of Subject Improvement From BL to EL (formated)],
 			                Cycles[Period] = __CurrentPeriod,
 			                'Levels in Subjects'[Subject ID] = __CurrentSubjectID
 			            )
@@ -1150,7 +1150,7 @@ table Mesures
 			        SUMMARIZE( Grades, Grades[Grade], Grades[Grade Sort] ),
 			        "@pp Improvement",
 			            CALCULATE(
-			                [pp Of Subject Improvemnt From BL to EL (formated)],
+			                [pp Of Subject Improvement From BL to EL (formated)],
 			                Cycles[Period] = __CurrentPeriod,
 			                'Levels in Subjects'[Subject ID] = __CurrentSubject
 			            )
@@ -1365,7 +1365,7 @@ table Mesures
 	measure 'Comment - High Numeracy Progress across grades' = ```
 			
 			
-			VAR __EL = [pp Of Numeracy Improvemnt From BL to EL (formated)]
+			VAR __EL = [pp Of Numeracy Improvement From BL to EL (formated)]
 			VAR __Top_Grade = [Grade With Highest Numeracy Improvement At EL]
 			VAR __Bottom_Grade = [Grade With Lowest Numeracy Improvement At EL]
 			VAR __Top_Grade_Performance = [Highest Numeracy Improvement across grades at EL]
@@ -1428,7 +1428,7 @@ table Mesures
 			VAR __Table =
 			    ADDCOLUMNS(
 			        VALUES( Grades[Grade] ),
-			        "@Numeracy At EL", CALCULATE( [pp Of Numeracy Improvemnt From BL to EL] )
+			        "@Numeracy At EL", CALCULATE( [pp Of Numeracy Improvement From BL to EL] )
 			    )
 			VAR __MaxValue =
 			    MAXX( __Table, [@Numeracy At EL] )
@@ -1446,7 +1446,7 @@ table Mesures
 			VAR __Table =
 			    ADDCOLUMNS(
 			        VALUES( Grades[Grade] ),
-			        "@Numeracy At EL", CALCULATE( [pp Of Numeracy Improvemnt From BL to EL] )
+			        "@Numeracy At EL", CALCULATE( [pp Of Numeracy Improvement From BL to EL] )
 			    )
 			VAR __MinValue =
 			    MINX( __Table, [@Numeracy At EL] )
@@ -1464,7 +1464,7 @@ table Mesures
 			VAR __Table =
 			    ADDCOLUMNS(
 			        VALUES( Grades[Grade] ),
-			        "@Numeracy At EL", CALCULATE( [pp Of Numeracy Improvemnt From BL to EL] )
+			        "@Numeracy At EL", CALCULATE( [pp Of Numeracy Improvement From BL to EL] )
 			    )
 			RETURN
 			    MAXX( __Table, [@Numeracy At EL] )
@@ -1477,7 +1477,7 @@ table Mesures
 			VAR __Table =
 			    ADDCOLUMNS(
 			        VALUES( Grades[Grade] ),
-			        "@Numeracy At EL", CALCULATE( [pp Of Numeracy Improvemnt From BL to EL] )
+			        "@Numeracy At EL", CALCULATE( [pp Of Numeracy Improvement From BL to EL] )
 			    )
 			RETURN
 			    MINX( __Table, [@Numeracy At EL] )
@@ -1494,7 +1494,7 @@ table Mesures
 			        SUMMARIZE( Grades, Grades[Grade], Grades[Grade Sort] ),
 			        "@pp Improvement",
 			            CALCULATE(
-			                [pp Of Subject Improvemnt From BL to EL (formated)],
+			                [pp Of Subject Improvement From BL to EL (formated)],
 			                Cycles[Period] = __CurrentPeriod,
 			                'Levels in Subjects'[Subject ID] = __CurrentSubject
 			            )
@@ -1518,7 +1518,7 @@ table Mesures
 			        SUMMARIZE( Grades, Grades[Grade], Grades[Grade Sort] ),
 			        "@pp Improvement",
 			            CALCULATE(
-			                [pp Of Subject Improvemnt From BL to EL (formated)],
+			                [pp Of Subject Improvement From BL to EL (formated)],
 			                Cycles[Period] = __CurrentPeriod,
 			                'Levels in Subjects'[Subject ID] = __CurrentSubjectID
 			            )
@@ -1546,7 +1546,7 @@ table Mesures
 			        SUMMARIZE( Grades, Grades[Grade], Grades[Grade Sort] ),
 			        "@pp Improvement",
 			            CALCULATE(
-			                [pp Of Subject Improvemnt From BL to EL (formated)],
+			                [pp Of Subject Improvement From BL to EL (formated)],
 			                Cycles[Period] = __CurrentPeriod,
 			                'Levels in Subjects'[Subject ID] = __CurrentSubject
 			            )
@@ -1570,7 +1570,7 @@ table Mesures
 			        SUMMARIZE( Grades, Grades[Grade], Grades[Grade Sort] ),
 			        "@pp Improvement",
 			            CALCULATE(
-			                [pp Of Subject Improvemnt From BL to EL (formated)],
+			                [pp Of Subject Improvement From BL to EL (formated)],
 			                Cycles[Period] = __CurrentPeriod,
 			                'Levels in Subjects'[Subject ID] = __CurrentSubjectID
 			            )
@@ -1842,7 +1842,7 @@ table Mesures
 			VAR __Table =
 			    ADDCOLUMNS(
 			        VALUES( Grades[DRENAET] ),
-			        "@Literacy At EL", CALCULATE( [pp Of Literacy Improvemnt From BL to EL] )
+			        "@Literacy At EL", CALCULATE( [pp Of Literacy Improvement From BL to EL] )
 			    )
 			VAR __MaxValue =
 			    MAXX( __Table, [@Literacy At EL] )
@@ -1878,7 +1878,7 @@ table Mesures
 			VAR __Table =
 			    ADDCOLUMNS(
 			        VALUES( Grades[DRENAET] ),
-			        "@Numeracy At EL", CALCULATE( [pp Of Numeracy Improvemnt From BL to EL] )
+			        "@Numeracy At EL", CALCULATE( [pp Of Numeracy Improvement From BL to EL] )
 			    )
 			VAR __MaxValue =
 			    MAXX( __Table, [@Numeracy At EL] )
@@ -1914,7 +1914,7 @@ table Mesures
 			VAR __Table =
 			    ADDCOLUMNS(
 			        VALUES( Grades[DRENAET] ),
-			        "@Literacy At EL", CALCULATE( [pp Of Literacy Improvemnt From BL to EL] )
+			        "@Literacy At EL", CALCULATE( [pp Of Literacy Improvement From BL to EL] )
 			    )
 			VAR __MinValue =
 			    MINX( __Table, [@Literacy At EL] )
@@ -1950,7 +1950,7 @@ table Mesures
 			VAR __Table =
 			    ADDCOLUMNS(
 			        VALUES( Grades[DRENAET] ),
-			        "@Numeracy At EL", CALCULATE( [pp Of Numeracy Improvemnt From BL to EL] )
+			        "@Numeracy At EL", CALCULATE( [pp Of Numeracy Improvement From BL to EL] )
 			    )
 			VAR __MinValue =
 			    MINX( __Table, [@Numeracy At EL] )
@@ -1981,7 +1981,7 @@ table Mesures
 			VAR __Table =
 			    ADDCOLUMNS(
 			        VALUES( Grades[DRENAET] ),
-			        "@Literacy At EL", CALCULATE( [pp Of Literacy Improvemnt From BL to EL] )
+			        "@Literacy At EL", CALCULATE( [pp Of Literacy Improvement From BL to EL] )
 			    )
 			RETURN
 			    MAXX( __Table, [@Literacy At EL] )
@@ -2007,7 +2007,7 @@ table Mesures
 			VAR __Table =
 			    ADDCOLUMNS(
 			        VALUES( Grades[DRENAET] ),
-			        "@Numeracy At EL", CALCULATE( [pp Of Numeracy Improvemnt From BL to EL] )
+			        "@Numeracy At EL", CALCULATE( [pp Of Numeracy Improvement From BL to EL] )
 			    )
 			RETURN
 			    MAXX( __Table, [@Numeracy At EL] )
@@ -2018,7 +2018,7 @@ table Mesures
 	measure 'Comment - Literacy Improvement across DRENAETs' =
 			
 			
-			VAR __EL = [pp Of Literacy Improvemnt From BL to EL (formated)]
+			VAR __EL = [pp Of Literacy Improvement From BL to EL (formated)]
 			VAR __Top_DRENAET = [DRENAET With Highest Literacy Improvement At EL]
 			VAR __Bottom_DRENAET = [DRENAET With Lowest Literacy Improvement At EL]
 			VAR __Top_DRENAET_Performance =  [Highest Literacy Improvement across DRENAETs at EL]
@@ -2054,7 +2054,7 @@ table Mesures
 			VAR __Table =
 			    ADDCOLUMNS(
 			        VALUES( Grades[DRENAET] ),
-			        "@Numeracy At EL", CALCULATE( [pp Of Numeracy Improvemnt From BL to EL] )
+			        "@Numeracy At EL", CALCULATE( [pp Of Numeracy Improvement From BL to EL] )
 			    )
 			RETURN
 			    MINX( __Table, [@Numeracy At EL] )
@@ -2080,7 +2080,7 @@ table Mesures
 			VAR __Table =
 			    ADDCOLUMNS(
 			        VALUES( Grades[DRENAET] ),
-			        "@Literacy At EL", CALCULATE( [pp Of Literacy Improvemnt From BL to EL] )
+			        "@Literacy At EL", CALCULATE( [pp Of Literacy Improvement From BL to EL] )
 			    )
 			RETURN
 			    MINX( __Table, [@Literacy At EL] )
@@ -2112,7 +2112,7 @@ table Mesures
 	measure 'Comment - Numeracy Improvement across DRENAETs' =
 			
 			
-			VAR __EL = [pp Of Numeracy Improvemnt From BL to EL (formated)]
+			VAR __EL = [pp Of Numeracy Improvement From BL to EL (formated)]
 			VAR __Top_DRENAET = [DRENAET With Highest Numeracy Improvement At EL]
 			VAR __Bottom_DRENAET = [DRENAET With Lowest Numeracy Improvement At EL]
 			VAR __Top_DRENAET_Performance =  [Highest Numeracy Improvement across DRENAETs at EL]
@@ -2135,7 +2135,7 @@ table Mesures
 			VAR __Table =
 			    ADDCOLUMNS(
 			        VALUES( Grades[DRENAET] ),
-			        "@Numeracy At EL", CALCULATE( [pp Of Numeracy Improvemnt From BL to EL] )
+			        "@Numeracy At EL", CALCULATE( [pp Of Numeracy Improvement From BL to EL] )
 			    )
 			RETURN
 			    MINX( __Table, [@Numeracy At EL] )
@@ -2167,7 +2167,7 @@ table Mesures
 	measure 'Comment - School Literacy Progress across DRENAETs' =
 			
 			
-			VAR __EL = [pp Of Literacy Improvemnt From BL to EL (formated)]
+			VAR __EL = [pp Of Literacy Improvement From BL to EL (formated)]
 			VAR __Top2_Lowest_Red_Schools = [Top 2 DRENAETs With Lowest % Of Red Schools For Literacy]
 			VAR __Top2_Highest_Red_Schools = [Top 2 DRENAETs With Highest % Of Red Schools For Literacy]
 			VAR __Overall_Red_Schools_Percentage = FORMAT( [% Of Red Schools For Literacy], "0%" )
@@ -2272,7 +2272,7 @@ table Mesures
 	measure 'Comment - School Numeracy Progress across DRENAETs' =
 			
 			
-			VAR __EL = [pp Of Numeracy Improvemnt From BL to EL (formated)]
+			VAR __EL = [pp Of Numeracy Improvement From BL to EL (formated)]
 			VAR __Top2_Lowest_Red_Schools = [Top 2 DRENAETs With Lowest % Of Red Schools For Numeracy]
 			VAR __Top2_Highest_Red_Schools = [Top 2 DRENAETs With Highest % Of Red Schools For Numeracy]
 			VAR __Overall_Red_Schools_Percentage = FORMAT( [% Of Red Schools For Numeracy], "0%" )
@@ -2727,8 +2727,8 @@ table Mesures
 					'ASER CIV Data',
 					'ASER CIV Data'[School ID],
 					'ASER CIV Data'[Period],
-					"@Progress in Literacy from BL to EL", [pp Of Literacy Improvemnt From BL to EL],
-					"@Progress in Numeracy from BL to EL", [pp Of Numeracy Improvemnt From BL to EL]
+					"@Progress in Literacy from BL to EL", [pp Of Literacy Improvement From BL to EL],
+					"@Progress in Numeracy from BL to EL", [pp Of Numeracy Improvement From BL to EL]
 				)
 			
 				VAR __Table = SELECTCOLUMNS(
@@ -2763,8 +2763,8 @@ table Mesures
 					'ASER CIV Data',
 					'ASER CIV Data'[School ID],
 					'ASER CIV Data'[Period],
-					"@Progress in Literacy from BL to EL", [pp Of Literacy Improvemnt From BL to EL],
-					"@Progress in Numeracy from BL to EL", [pp Of Numeracy Improvemnt From BL to EL]
+					"@Progress in Literacy from BL to EL", [pp Of Literacy Improvement From BL to EL],
+					"@Progress in Numeracy from BL to EL", [pp Of Numeracy Improvement From BL to EL]
 				)
 			
 				VAR __Table = SELECTCOLUMNS(
@@ -2815,8 +2815,8 @@ table Mesures
 					'ASER CIV Data',
 					'ASER CIV Data'[School ID],
 					'ASER CIV Data'[Period],
-					"@Progress in Literacy from BL to EL", [pp Of Literacy Improvemnt From BL to EL],
-					"@Progress in Numeracy from BL to EL", [pp Of Numeracy Improvemnt From BL to EL]
+					"@Progress in Literacy from BL to EL", [pp Of Literacy Improvement From BL to EL],
+					"@Progress in Numeracy from BL to EL", [pp Of Numeracy Improvement From BL to EL]
 				)
 			
 				VAR __Table = SELECTCOLUMNS(
@@ -2851,8 +2851,8 @@ table Mesures
 					'ASER CIV Data',
 					'ASER CIV Data'[School ID],
 					'ASER CIV Data'[Period],
-					"@Progress in Literacy from BL to EL", [pp Of Literacy Improvemnt From BL to EL],
-					"@Progress in Numeracy from BL to EL", [pp Of Numeracy Improvemnt From BL to EL]
+					"@Progress in Literacy from BL to EL", [pp Of Literacy Improvement From BL to EL],
+					"@Progress in Numeracy from BL to EL", [pp Of Numeracy Improvement From BL to EL]
 				)
 			
 				VAR __Table = SELECTCOLUMNS(

@@ -45,8 +45,8 @@
                   "Property": "% Of Students With High Literacy In Cycle"
                 }
               },
-              "queryRef": "Mesures.Percentage Of Students Tested With High Litteracy In Grade",
-              "nativeQueryRef": "Percentage Of Students Tested With High Litteracy In Grade"
+              "queryRef": "Mesures.Percentage Of Students Tested With High Literacy In Grade",
+              "nativeQueryRef": "Percentage Of Students Tested With High Literacy In Grade"
             }
           ]
         }

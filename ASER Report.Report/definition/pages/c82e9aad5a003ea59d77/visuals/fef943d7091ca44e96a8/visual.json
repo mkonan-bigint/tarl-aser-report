@@ -60,7 +60,7 @@
                   "Property": "% Of Students With High Literacy At BL"
                 }
               },
-              "queryRef": "Mesures.Percentage Of Students Tested With High Litteracy In Grade BL",
+              "queryRef": "Mesures.Percentage Of Students Tested With High Literacy In Grade BL",
               "nativeQueryRef": "Can read at least a simple para at BL",
               "displayName": "Can read at least a simple para at BL"
             },
@@ -75,7 +75,7 @@
                   "Property": "% Of Students With High Literacy At EL"
                 }
               },
-              "queryRef": "Mesures.Percentage Of Students Tested With High Litteracy In Grade EL",
+              "queryRef": "Mesures.Percentage Of Students Tested With High Literacy In Grade EL",
               "nativeQueryRef": "Can read at least a simple para at EL",
               "displayName": "Can read at least a simple para at EL"
             },
@@ -87,10 +87,10 @@
                       "Entity": "Mesures"
                     }
                   },
-                  "Property": "pp Of Literacy Improvemnt From BL to EL"
+                  "Property": "pp Of Literacy Improvement From BL to EL"
                 }
               },
-              "queryRef": "Mesures.Litteracy Improvemnt BL to EL (PP)",
+              "queryRef": "Mesures.Literacy Improvement BL to EL (PP)",
               "nativeQueryRef": "High Lit increase (pp)",
               "displayName": "High Lit increase (pp)",
               "format": "+0 %;-0 %;0 %"
@@ -106,7 +106,7 @@
                   "Property": "% Of Students With Low Literacy At BL"
                 }
               },
-              "queryRef": "Mesures.Percentage Of Students Tested With Low Litteracy In Grade BL",
+              "queryRef": "Mesures.Percentage Of Students Tested With Low Literacy In Grade BL",
               "nativeQueryRef": "Cannot read words at BL",
               "displayName": "Cannot read words at BL"
             },
@@ -121,7 +121,7 @@
                   "Property": "% Of Students With Low Literacy At EL"
                 }
               },
-              "queryRef": "Mesures.Percentage Of Students Tested With Low Litteracy In Grade EL",
+              "queryRef": "Mesures.Percentage Of Students Tested With Low Literacy In Grade EL",
               "nativeQueryRef": "Cannot read words at EL",
               "displayName": "Cannot read words at EL"
             },
@@ -136,7 +136,7 @@
                   "Property": "pp Of Literacy Difficulty Reduction From BL to EL"
                 }
               },
-              "queryRef": "Mesures.Litteracy Difficulty Reduction BL to EL (PP)",
+              "queryRef": "Mesures.Literacy Difficulty Reduction BL to EL (PP)",
               "nativeQueryRef": "Low Lit reduction (pp)",
               "displayName": "Low Lit reduction (pp)",
               "format": "+0 %;-0 %;0 %"
@@ -179,10 +179,10 @@
                       "Entity": "Mesures"
                     }
                   },
-                  "Property": "pp Of Numeracy Improvemnt From BL to EL"
+                  "Property": "pp Of Numeracy Improvement From BL to EL"
                 }
               },
-              "queryRef": "Mesures.Numeracy Improvemnt BL to EL (PP)",
+              "queryRef": "Mesures.Numeracy Improvement BL to EL (PP)",
               "nativeQueryRef": "High Num increase (pp)",
               "displayName": "High Num increase (pp)",
               "format": "+0 %;-0 %;0 %"
@@ -449,7 +449,7 @@
             }
           },
           "selector": {
-            "metadata": "Mesures.Percentage Of Students Tested With High Litteracy In Grade BL"
+            "metadata": "Mesures.Percentage Of Students Tested With High Literacy In Grade BL"
           }
         },
         {
@@ -477,7 +477,7 @@
             }
           },
           "selector": {
-            "metadata": "Mesures.Percentage Of Students Tested With High Litteracy In Grade EL"
+            "metadata": "Mesures.Percentage Of Students Tested With High Literacy In Grade EL"
           }
         },
         {
@@ -505,7 +505,7 @@
             }
           },
           "selector": {
-            "metadata": "Mesures.Percentage Of Students Tested With Low Litteracy In Grade BL"
+            "metadata": "Mesures.Percentage Of Students Tested With Low Literacy In Grade BL"
           }
         },
         {
@@ -519,7 +519,7 @@
             }
           },
           "selector": {
-            "metadata": "Mesures.Percentage Of Students Tested With Low Litteracy In Grade EL"
+            "metadata": "Mesures.Percentage Of Students Tested With Low Literacy In Grade EL"
           }
         },
         {
@@ -561,7 +561,7 @@
             }
           },
           "selector": {
-            "metadata": "Mesures.Litteracy Difficulty Reduction BL to EL (PP)"
+            "metadata": "Mesures.Literacy Difficulty Reduction BL to EL (PP)"
           }
         },
         {
@@ -575,7 +575,7 @@
             }
           },
           "selector": {
-            "metadata": "Mesures.Litteracy Improvemnt BL to EL (PP)"
+            "metadata": "Mesures.Literacy Improvement BL to EL (PP)"
           }
         },
         {
@@ -589,7 +589,7 @@
             }
           },
           "selector": {
-            "metadata": "Mesures.Numeracy Improvemnt BL to EL (PP)"
+            "metadata": "Mesures.Numeracy Improvement BL to EL (PP)"
           }
         },
         {
@@ -697,7 +697,7 @@
             }
           },
           "selector": {
-            "metadata": "Mesures.Percentage Of Students Tested With High Litteracy In Grade BL"
+            "metadata": "Mesures.Percentage Of Students Tested With High Literacy In Grade BL"
           }
         },
         {
@@ -748,7 +748,7 @@
             }
           },
           "selector": {
-            "metadata": "Mesures.Percentage Of Students Tested With High Litteracy In Grade EL"
+            "metadata": "Mesures.Percentage Of Students Tested With High Literacy In Grade EL"
           }
         },
         {
@@ -799,7 +799,7 @@
             }
           },
           "selector": {
-            "metadata": "Mesures.Litteracy Improvemnt BL to EL (PP)"
+            "metadata": "Mesures.Literacy Improvement BL to EL (PP)"
           }
         },
         {
@@ -952,7 +952,7 @@
             }
           },
           "selector": {
-            "metadata": "Mesures.Numeracy Improvemnt BL to EL (PP)"
+            "metadata": "Mesures.Numeracy Improvement BL to EL (PP)"
           }
         },
         {
@@ -1003,7 +1003,7 @@
             }
           },
           "selector": {
-            "metadata": "Mesures.Percentage Of Students Tested With Low Litteracy In Grade BL"
+            "metadata": "Mesures.Percentage Of Students Tested With Low Literacy In Grade BL"
           }
         },
         {
@@ -1054,7 +1054,7 @@
             }
           },
           "selector": {
-            "metadata": "Mesures.Percentage Of Students Tested With Low Litteracy In Grade EL"
+            "metadata": "Mesures.Percentage Of Students Tested With Low Literacy In Grade EL"
           }
         },
         {
@@ -1105,7 +1105,7 @@
             }
           },
           "selector": {
-            "metadata": "Mesures.Litteracy Difficulty Reduction BL to EL (PP)"
+            "metadata": "Mesures.Literacy Difficulty Reduction BL to EL (PP)"
           }
         },
         {

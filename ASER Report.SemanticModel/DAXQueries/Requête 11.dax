@@ -4,8 +4,8 @@ DEFINE
 		'ASER CIV Data',
 		'ASER CIV Data'[School ID],
 		'ASER CIV Data'[Period],
-		"@Progress in Literacy from BL to EL", [pp Of Litteracy Improvemnt From BL to EL],
-		"@Progress in Numeracy from BL to EL", [pp Of Numeracy Improvemnt From BL to EL]
+		"@Progress in Literacy from BL to EL", [pp Of Literacy Improvement From BL to EL],
+		"@Progress in Numeracy from BL to EL", [pp Of Numeracy Improvement From BL to EL]
 	)
 	
 	VAR __Table = SELECTCOLUMNS(

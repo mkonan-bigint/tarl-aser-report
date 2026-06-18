@@ -57,10 +57,10 @@
                       "Entity": "Mesures"
                     }
                   },
-                  "Property": "pp Of Numeracy Improvemnt From BL to EL"
+                  "Property": "pp Of Numeracy Improvement From BL to EL"
                 }
               },
-              "queryRef": "Mesures.Numeracy Improvemnt BL to EL (PP)",
+              "queryRef": "Mesures.Numeracy Improvement BL to EL (PP)",
               "nativeQueryRef": "Increase from baseline",
               "displayName": "Increase from baseline"
             }
@@ -168,7 +168,7 @@
             }
           },
           "selector": {
-            "metadata": "Mesures.Numeracy Improvemnt BL to EL (PP)"
+            "metadata": "Mesures.Numeracy Improvement BL to EL (PP)"
           }
         }
       ],

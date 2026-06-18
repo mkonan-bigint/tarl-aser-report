@@ -5179,17 +5179,17 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "mesure.pp_of_literacy_improvemnt_from_BL_to_EL": {
+			    "mesure.pp_of_literacy_Improvement_from_BL_to_EL": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Mesures",
-			          "ConceptualProperty": "pp Of Literacy Improvemnt From BL to EL"
+			          "ConceptualProperty": "pp Of Literacy Improvement From BL to EL"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "pp of literacy improvemnt from BL to EL": {
+			          "pp of literacy Improvement from BL to EL": {
 			            "State": "Generated"
 			          }
 			        },
@@ -5407,17 +5407,17 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "mesure.pp_of_numeracy_improvemnt_from_BL_to_EL": {
+			    "mesure.pp_of_numeracy_Improvement_from_BL_to_EL": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Mesures",
-			          "ConceptualProperty": "pp Of Numeracy Improvemnt From BL to EL"
+			          "ConceptualProperty": "pp Of Numeracy Improvement From BL to EL"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "pp of numeracy improvemnt from BL to EL": {
+			          "pp of numeracy Improvement from BL to EL": {
 			            "State": "Generated"
 			          }
 			        },
@@ -8865,22 +8865,22 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "mesure.pp_of_literacy_improvemnt_from_BL_to_EL_formated": {
+			    "mesure.pp_of_literacy_Improvement_from_BL_to_EL_formated": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Mesures",
-			          "ConceptualProperty": "pp Of Literacy Improvemnt From BL to EL (formated)"
+			          "ConceptualProperty": "pp Of Literacy Improvement From BL to EL (formated)"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "pp of literacy improvemnt from BL to EL (formated)": {
+			          "pp of literacy Improvement from BL to EL (formated)": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "pp of literacy improvemnt from BL to EL": {
+			          "pp of literacy Improvement from BL to EL": {
 			            "State": "Generated",
 			            "Weight": 0.75
 			          }
@@ -8909,66 +8909,66 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "mesure.pp_of_numeracy_improvemnt_from_BL_to_EL_formated": {
+			    "mesure.pp_of_numeracy_Improvement_from_BL_to_EL_formated": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Mesures",
-			          "ConceptualProperty": "pp Of Numeracy Improvemnt From BL to EL (formated)"
+			          "ConceptualProperty": "pp Of Numeracy Improvement From BL to EL (formated)"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "pp of numeracy improvemnt from BL to EL (formated)": {
+			          "pp of numeracy Improvement from BL to EL (formated)": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "pp of numeracy improvemnt from BL to EL": {
+			          "pp of numeracy Improvement from BL to EL": {
 			            "State": "Generated",
 			            "Weight": 0.75
 			          }
 			        }
 			      ]
 			    },
-			    "mesure.pp_of_subject_improvemnt_from_BL_to_EL_formated": {
+			    "mesure.pp_of_subject_Improvement_from_BL_to_EL_formated": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Mesures",
-			          "ConceptualProperty": "pp Of Subject Improvemnt From BL to EL (formated)"
+			          "ConceptualProperty": "pp Of Subject Improvement From BL to EL (formated)"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "pp of subject improvemnt from BL to EL (formated)": {
+			          "pp of subject Improvement from BL to EL (formated)": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "pp of subject improvemnt from BL to EL": {
+			          "pp of subject Improvement from BL to EL": {
 			            "State": "Generated",
 			            "Weight": 0.75
 			          }
 			        }
 			      ]
 			    },
-			    "mesure.subject_improvemnt_comment": {
+			    "mesure.subject_Improvement_comment": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Mesures",
-			          "ConceptualProperty": "Subject Improvemnt comment"
+			          "ConceptualProperty": "Subject Improvement comment"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "subject improvemnt comment": {
+			          "subject Improvement comment": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "subject improvemnt clarification": {
+			          "subject Improvement clarification": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -8978,7 +8978,7 @@ cultureInfo fr-FR
 			          }
 			        },
 			        {
-			          "subject improvemnt commentary": {
+			          "subject Improvement commentary": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -8988,7 +8988,7 @@ cultureInfo fr-FR
 			          }
 			        },
 			        {
-			          "subject improvemnt explanation": {
+			          "subject Improvement explanation": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -8998,7 +8998,7 @@ cultureInfo fr-FR
 			          }
 			        },
 			        {
-			          "subject improvemnt feedback": {
+			          "subject Improvement feedback": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -9008,7 +9008,7 @@ cultureInfo fr-FR
 			          }
 			        },
 			        {
-			          "subject improvemnt observation": {
+			          "subject Improvement observation": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -9018,7 +9018,7 @@ cultureInfo fr-FR
 			          }
 			        },
 			        {
-			          "subject improvemnt note": {
+			          "subject Improvement note": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -11300,11 +11300,11 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "mesure.entity__pp_of_literacy_improvemnt_from_BL_to_EL_formated_FormatString": {
+			    "mesure.entity__pp_of_literacy_Improvement_from_BL_to_EL_formated_FormatString": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Mesures",
-			          "ConceptualProperty": "_pp Of Literacy Improvemnt From BL to EL (formated) FormatString"
+			          "ConceptualProperty": "_pp Of Literacy Improvement From BL to EL (formated) FormatString"
 			        }
 			      },
 			      "State": "Generated",
@@ -11313,7 +11313,7 @@ cultureInfo fr-FR
 			      },
 			      "Terms": [
 			        {
-			          "_pp of literacy improvemnt from BL to EL (formated) FormatString": {
+			          "_pp of literacy Improvement from BL to EL (formated) FormatString": {
 			            "State": "Generated"
 			          }
 			        }
@@ -11338,11 +11338,11 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "mesure.entity__pp_of_numeracy_improvemnt_from_BL_to_EL_formated_FormatString": {
+			    "mesure.entity__pp_of_numeracy_Improvement_from_BL_to_EL_formated_FormatString": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Mesures",
-			          "ConceptualProperty": "_pp Of Numeracy Improvemnt From BL to EL (formated) FormatString"
+			          "ConceptualProperty": "_pp Of Numeracy Improvement From BL to EL (formated) FormatString"
 			        }
 			      },
 			      "State": "Generated",
@@ -11351,17 +11351,17 @@ cultureInfo fr-FR
 			      },
 			      "Terms": [
 			        {
-			          "_pp of numeracy improvemnt from BL to EL (formated) FormatString": {
+			          "_pp of numeracy Improvement from BL to EL (formated) FormatString": {
 			            "State": "Generated"
 			          }
 			        }
 			      ]
 			    },
-			    "mesure.entity__pp_of_subject_improvemnt_from_BL_to_EL_formated_FormatString": {
+			    "mesure.entity__pp_of_subject_Improvement_from_BL_to_EL_formated_FormatString": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Mesures",
-			          "ConceptualProperty": "_pp Of Subject Improvemnt From BL to EL (formated) FormatString"
+			          "ConceptualProperty": "_pp Of Subject Improvement From BL to EL (formated) FormatString"
 			        }
 			      },
 			      "State": "Generated",
@@ -11370,7 +11370,7 @@ cultureInfo fr-FR
 			      },
 			      "Terms": [
 			        {
-			          "_pp of subject improvemnt from BL to EL (formated) FormatString": {
+			          "_pp of subject Improvement from BL to EL (formated) FormatString": {
 			            "State": "Generated"
 			          }
 			        }
@@ -16052,7 +16052,7 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "mesure_has_subject_improvemnt_comment": {
+			    "mesure_has_subject_Improvement_comment": {
 			      "Binding": {
 			        "ConceptualEntity": "Mesures"
 			      },
@@ -16063,9 +16063,9 @@ cultureInfo fr-FR
 			            "Entity": "mesure"
 			          }
 			        },
-			        "mesure.subject_improvemnt_comment": {
+			        "mesure.subject_Improvement_comment": {
 			          "Target": {
-			            "Entity": "mesure.subject_improvemnt_comment"
+			            "Entity": "mesure.subject_Improvement_comment"
 			          }
 			        }
 			      },
@@ -16076,16 +16076,16 @@ cultureInfo fr-FR
 			              "Role": "mesure"
 			            },
 			            "Object": {
-			              "Role": "mesure.subject_improvemnt_comment"
+			              "Role": "mesure.subject_Improvement_comment"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mesures_have_subject_improvemnt_comment"
+			          "ID": "mesures_have_subject_Improvement_comment"
 			        }
 			      ]
 			    },
-			    "mesure_has_pp_of_subject_improvemnt_from_BL_to_EL_formated": {
+			    "mesure_has_pp_of_subject_Improvement_from_BL_to_EL_formated": {
 			      "Binding": {
 			        "ConceptualEntity": "Mesures"
 			      },
@@ -16096,9 +16096,9 @@ cultureInfo fr-FR
 			            "Entity": "mesure"
 			          }
 			        },
-			        "mesure.pp_of_subject_improvemnt_from_BL_to_EL_formated": {
+			        "mesure.pp_of_subject_Improvement_from_BL_to_EL_formated": {
 			          "Target": {
-			            "Entity": "mesure.pp_of_subject_improvemnt_from_BL_to_EL_formated"
+			            "Entity": "mesure.pp_of_subject_Improvement_from_BL_to_EL_formated"
 			          }
 			        }
 			      },
@@ -16109,16 +16109,16 @@ cultureInfo fr-FR
 			              "Role": "mesure"
 			            },
 			            "Object": {
-			              "Role": "mesure.pp_of_subject_improvemnt_from_BL_to_EL_formated"
+			              "Role": "mesure.pp_of_subject_Improvement_from_BL_to_EL_formated"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mesures_have_pp_of_subject_improvemnt_from_BL_to_EL_formated"
+			          "ID": "mesures_have_pp_of_subject_Improvement_from_BL_to_EL_formated"
 			        }
 			      ]
 			    },
-			    "mesure_has_pp_of_numeracy_improvemnt_from_BL_to_EL_formated": {
+			    "mesure_has_pp_of_numeracy_Improvement_from_BL_to_EL_formated": {
 			      "Binding": {
 			        "ConceptualEntity": "Mesures"
 			      },
@@ -16129,9 +16129,9 @@ cultureInfo fr-FR
 			            "Entity": "mesure"
 			          }
 			        },
-			        "mesure.pp_of_numeracy_improvemnt_from_BL_to_EL_formated": {
+			        "mesure.pp_of_numeracy_Improvement_from_BL_to_EL_formated": {
 			          "Target": {
-			            "Entity": "mesure.pp_of_numeracy_improvemnt_from_BL_to_EL_formated"
+			            "Entity": "mesure.pp_of_numeracy_Improvement_from_BL_to_EL_formated"
 			          }
 			        }
 			      },
@@ -16142,12 +16142,12 @@ cultureInfo fr-FR
 			              "Role": "mesure"
 			            },
 			            "Object": {
-			              "Role": "mesure.pp_of_numeracy_improvemnt_from_BL_to_EL_formated"
+			              "Role": "mesure.pp_of_numeracy_Improvement_from_BL_to_EL_formated"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mesures_have_pp_of_numeracy_improvemnt_from_BL_to_EL_formated"
+			          "ID": "mesures_have_pp_of_numeracy_Improvement_from_BL_to_EL_formated"
 			        }
 			      ]
 			    },
@@ -16184,7 +16184,7 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "mesure_has_pp_of_literacy_improvemnt_from_BL_to_EL_formated": {
+			    "mesure_has_pp_of_literacy_Improvement_from_BL_to_EL_formated": {
 			      "Binding": {
 			        "ConceptualEntity": "Mesures"
 			      },
@@ -16195,9 +16195,9 @@ cultureInfo fr-FR
 			            "Entity": "mesure"
 			          }
 			        },
-			        "mesure.pp_of_literacy_improvemnt_from_BL_to_EL_formated": {
+			        "mesure.pp_of_literacy_Improvement_from_BL_to_EL_formated": {
 			          "Target": {
-			            "Entity": "mesure.pp_of_literacy_improvemnt_from_BL_to_EL_formated"
+			            "Entity": "mesure.pp_of_literacy_Improvement_from_BL_to_EL_formated"
 			          }
 			        }
 			      },
@@ -16208,12 +16208,12 @@ cultureInfo fr-FR
 			              "Role": "mesure"
 			            },
 			            "Object": {
-			              "Role": "mesure.pp_of_literacy_improvemnt_from_BL_to_EL_formated"
+			              "Role": "mesure.pp_of_literacy_Improvement_from_BL_to_EL_formated"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mesures_have_pp_of_literacy_improvemnt_from_BL_to_EL_formated"
+			          "ID": "mesures_have_pp_of_literacy_Improvement_from_BL_to_EL_formated"
 			        }
 			      ]
 			    },
@@ -17737,7 +17737,7 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "mesure_has_pp_of_numeracy_improvemnt_from_BL_to_EL": {
+			    "mesure_has_pp_of_numeracy_Improvement_from_BL_to_EL": {
 			      "Binding": {
 			        "ConceptualEntity": "Mesures"
 			      },
@@ -17748,9 +17748,9 @@ cultureInfo fr-FR
 			            "Entity": "mesure"
 			          }
 			        },
-			        "mesure.pp_of_numeracy_improvemnt_from_BL_to_EL": {
+			        "mesure.pp_of_numeracy_Improvement_from_BL_to_EL": {
 			          "Target": {
-			            "Entity": "mesure.pp_of_numeracy_improvemnt_from_BL_to_EL"
+			            "Entity": "mesure.pp_of_numeracy_Improvement_from_BL_to_EL"
 			          }
 			        }
 			      },
@@ -17761,12 +17761,12 @@ cultureInfo fr-FR
 			              "Role": "mesure"
 			            },
 			            "Object": {
-			              "Role": "mesure.pp_of_numeracy_improvemnt_from_BL_to_EL"
+			              "Role": "mesure.pp_of_numeracy_Improvement_from_BL_to_EL"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mesures_have_pp_of_numeracy_improvemnt_from_BL_to_EL"
+			          "ID": "mesures_have_pp_of_numeracy_Improvement_from_BL_to_EL"
 			        }
 			      ]
 			    },
@@ -18001,7 +18001,7 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "mesure_has_pp_of_literacy_improvemnt_from_BL_to_EL": {
+			    "mesure_has_pp_of_literacy_Improvement_from_BL_to_EL": {
 			      "Binding": {
 			        "ConceptualEntity": "Mesures"
 			      },
@@ -18012,9 +18012,9 @@ cultureInfo fr-FR
 			            "Entity": "mesure"
 			          }
 			        },
-			        "mesure.pp_of_literacy_improvemnt_from_BL_to_EL": {
+			        "mesure.pp_of_literacy_Improvement_from_BL_to_EL": {
 			          "Target": {
-			            "Entity": "mesure.pp_of_literacy_improvemnt_from_BL_to_EL"
+			            "Entity": "mesure.pp_of_literacy_Improvement_from_BL_to_EL"
 			          }
 			        }
 			      },
@@ -18025,12 +18025,12 @@ cultureInfo fr-FR
 			              "Role": "mesure"
 			            },
 			            "Object": {
-			              "Role": "mesure.pp_of_literacy_improvemnt_from_BL_to_EL"
+			              "Role": "mesure.pp_of_literacy_Improvement_from_BL_to_EL"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mesures_have_pp_of_literacy_improvemnt_from_BL_to_EL"
+			          "ID": "mesures_have_pp_of_literacy_Improvement_from_BL_to_EL"
 			        }
 			      ]
 			    },

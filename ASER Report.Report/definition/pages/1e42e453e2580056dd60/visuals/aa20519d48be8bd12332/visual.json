@@ -45,7 +45,7 @@
                   "Property": "% Of Students With High Literacy At BL"
                 }
               },
-              "queryRef": "Mesures.Percentage Of Students Tested With High Litteracy In Grade BL",
+              "queryRef": "Mesures.Percentage Of Students Tested With High Literacy In Grade BL",
               "nativeQueryRef": "Baseline",
               "displayName": "Baseline"
             },
@@ -57,10 +57,10 @@
                       "Entity": "Mesures"
                     }
                   },
-                  "Property": "pp Of Literacy Improvemnt From BL to EL"
+                  "Property": "pp Of Literacy Improvement From BL to EL"
                 }
               },
-              "queryRef": "Mesures.Litteracy Improvemnt BL to EL (PP)",
+              "queryRef": "Mesures.Literacy Improvement BL to EL (PP)",
               "nativeQueryRef": "Increase from Baseline",
               "displayName": "Increase from Baseline"
             }
@@ -145,7 +145,7 @@
             }
           },
           "selector": {
-            "metadata": "Mesures.Percentage Of Students Tested With High Litteracy In Grade BL"
+            "metadata": "Mesures.Percentage Of Students Tested With High Literacy In Grade BL"
           }
         },
         {
@@ -164,7 +164,7 @@
             }
           },
           "selector": {
-            "metadata": "Mesures.Litteracy Improvemnt BL to EL (PP)"
+            "metadata": "Mesures.Literacy Improvement BL to EL (PP)"
           }
         }
       ],

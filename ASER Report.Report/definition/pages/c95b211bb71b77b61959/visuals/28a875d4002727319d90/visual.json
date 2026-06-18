@@ -45,8 +45,8 @@
                   "Property": "% Of Students With Low Literacy In Cycle"
                 }
               },
-              "queryRef": "Mesures.Percentage Of Students Tested With Low Litteracy In Grade",
-              "nativeQueryRef": "Percentage Of Students Tested With Low Litteracy In Grade"
+              "queryRef": "Mesures.Percentage Of Students Tested With Low Literacy In Grade",
+              "nativeQueryRef": "Percentage Of Students Tested With Low Literacy In Grade"
             }
           ]
         }

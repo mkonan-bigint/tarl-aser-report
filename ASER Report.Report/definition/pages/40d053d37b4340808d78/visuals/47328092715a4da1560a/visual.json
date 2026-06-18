@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "47328092715a4da1560a",
   "position": {
     "x": 183,
@@ -23,11 +23,11 @@
                       "Entity": "Mesures"
                     }
                   },
-                  "Property": "# Of Students Tested In Cycle"
+                  "Property": "# Of Boys and Girls Tested In Cycle"
                 }
               },
-              "queryRef": "Mesures.Number Of Students Tested In Cycle",
-              "nativeQueryRef": "Number Of Students Tested In Cycle"
+              "queryRef": "Mesures.# Of Boys and Girls Tested In Cycle",
+              "nativeQueryRef": "# Of Boys and Girls Tested In Cycle"
             }
           ]
         }
@@ -42,7 +42,7 @@
                     "Entity": "Mesures"
                   }
                 },
-                "Property": "# Of Students Tested In Cycle"
+                "Property": "# Of Boys and Girls Tested In Cycle"
               }
             },
             "direction": "Descending"
@@ -123,7 +123,7 @@
             }
           },
           "selector": {
-            "metadata": "Mesures.Number Of Students Tested In Cycle"
+            "metadata": "Mesures.# Of Boys and Girls Tested In Cycle"
           }
         }
       ]

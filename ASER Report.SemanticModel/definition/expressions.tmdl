@@ -1,6 +1,6 @@
 expression 'New Data' =
 		let
-		    Source = Folder.Files("C:\2026 04 Formation TaRL\ASER_Data\From 24_25"),
+		    Source = Folder.Files("D:\BigInt Analytics\05 Formations Power BI\2026\2026 04 Formation TaRL\ASER_Data\From 24_25"),
 		    #"Fichiers masqués filtrés1" = Table.SelectRows(Source, each [Attributes]?[Hidden]? <> true),
 		    #"Appeler une fonction personnalisée1" = Table.AddColumn(#"Fichiers masqués filtrés1", "Transformer le fichier", each #"Transformer le fichier"([Content])),
 		    #"Colonnes renommées1" = Table.RenameColumns(#"Appeler une fonction personnalisée1", {"Name", "Source.Name"}),
@@ -25,7 +25,7 @@ expression 'New Data' =
 
 expression ASER_2021-2022 =
 		let
-		    Source = Excel.Workbook(File.Contents("C:\2026 04 Formation TaRL\ASER_Data\Before 24_25\ASER Data_2021-2022.xlsx"), null, true),
+		    Source = Excel.Workbook(File.Contents("D:\BigInt Analytics\05 Formations Power BI\2026\2026 04 Formation TaRL\ASER_Data\Before 24_25\ASER Data_2021-2022.xlsx"), null, true),
 		    ASER_Sheet = Source{[Item="ASER",Kind="Sheet"]}[Data],
 		    #"En-têtes promus" = Table.PromoteHeaders(ASER_Sheet, [PromoteAllScalars=true]),
 		    TableSize = Table.RowCount(#"En-têtes promus"),
@@ -41,7 +41,7 @@ expression ASER_2021-2022 =
 
 expression ASER_2022-2023 =
 		let
-		    Source = Excel.Workbook(File.Contents("C:\2026 04 Formation TaRL\ASER_Data\Before 24_25\ASER Data_2022-2023.xlsx"), null, true),
+		    Source = Excel.Workbook(File.Contents("D:\BigInt Analytics\05 Formations Power BI\2026\2026 04 Formation TaRL\ASER_Data\Before 24_25\ASER Data_2022-2023.xlsx"), null, true),
 		    ASER_Sheet = Source{[Item="ASER",Kind="Sheet"]}[Data],
 		    #"En-têtes promus" = Table.PromoteHeaders(ASER_Sheet, [PromoteAllScalars=true]),
 		    TableSize = Table.RowCount(#"En-têtes promus"),
@@ -57,7 +57,7 @@ expression ASER_2022-2023 =
 
 expression ASER_2023-2024 =
 		let
-		    Source = Excel.Workbook(File.Contents("C:\2026 04 Formation TaRL\ASER_Data\Before 24_25\ASER Data_2023-2024.xlsx"), null, true),
+		    Source = Excel.Workbook(File.Contents("D:\BigInt Analytics\05 Formations Power BI\2026\2026 04 Formation TaRL\ASER_Data\Before 24_25\ASER Data_2023-2024.xlsx"), null, true),
 		    ASER_Sheet = Source{[Item="ASER",Kind="Sheet"]}[Data],
 		    #"En-têtes promus" = Table.PromoteHeaders(ASER_Sheet, [PromoteAllScalars=true]),
 		    TableSize = Table.RowCount(#"En-têtes promus"),
@@ -85,7 +85,7 @@ expression 'Old Data' =
 
 expression 'DRENAETs and Donors' =
 		let
-		    Source = Excel.Workbook(File.Contents("C:\2026 04 Formation TaRL\ASER_Data\Donor and DRENAET.xlsx"), null, true),
+		    Source = Excel.Workbook(File.Contents("D:\BigInt Analytics\05 Formations Power BI\2026\2026 04 Formation TaRL\ASER_Data\Donor and DRENAET.xlsx"), null, true),
 		    Tableau1_Table = Source{[Item="Tableau1",Kind="Table"]}[Data],
 		    #"Type modifié" = Table.TransformColumnTypes(Tableau1_Table,{{"DRENAET", type text}, {"Donors", type text}}),
 		    #"Index ajouté" = Table.AddIndexColumn(#"Type modifié", "Index", 0, 1, Int64.Type),
@@ -167,7 +167,7 @@ expression Paramètre1 = #"Exemple de fichier" meta [IsParameterQuery=true, Bina
 
 expression 'Exemple de fichier' =
 		let
-		    Source = Folder.Files("C:\2026 04 Formation TaRL\ASER_Data\From 24_25"),
+		    Source = Folder.Files("D:\BigInt Analytics\05 Formations Power BI\2026\2026 04 Formation TaRL\ASER_Data\From 24_25"),
 		    Navigation1 = Source{0}[Content]
 		in
 		    Navigation1
@@ -214,7 +214,7 @@ expression Sample_Size = null meta [IsParameterQuery=true, Type="Number", IsPara
 
 expression 'Exemple de fichier (2)' =
 		let
-		    Source = Folder.Files("C:\2026 04 Formation TaRL\ASER_Data\verification_ASER"),
+		    Source = Folder.Files("D:\BigInt Analytics\05 Formations Power BI\2026\2026 04 Formation TaRL\ASER_Data\verification_ASER"),
 		    Navigation1 = Source{0}[Content]
 		in
 		    Navigation1

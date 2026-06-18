@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "6c7677b91132680beae8",
   "position": {
     "x": 660,
@@ -233,7 +233,7 @@
                 "name": {
                   "expr": {
                     "Literal": {
-                      "Value": "'drenaet img.png'"
+                      "Value": "'WhatsApp Image 2026-06-18 at 15.33.43.jpeg'"
                     }
                   }
                 },
@@ -242,7 +242,7 @@
                     "ResourcePackageItem": {
                       "PackageName": "RegisteredResources",
                       "PackageType": 1,
-                      "ItemName": "drenaet_img8356319764846721.png"
+                      "ItemName": "WhatsApp_Image_2026-06-18_at_123831768162801803.jpeg"
                     }
                   }
                 },
@@ -252,6 +252,13 @@
                       "Value": "'Normal'"
                     }
                   }
+                }
+              }
+            },
+            "size": {
+              "expr": {
+                "Literal": {
+                  "Value": "60L"
                 }
               }
             }
@@ -267,7 +274,7 @@
                 "name": {
                   "expr": {
                     "Literal": {
-                      "Value": "'drenaet img.png'"
+                      "Value": "'WhatsApp Image 2026-06-18 at 15.33.43 (1).jpeg'"
                     }
                   }
                 },
@@ -276,7 +283,7 @@
                     "ResourcePackageItem": {
                       "PackageName": "RegisteredResources",
                       "PackageType": 1,
-                      "ItemName": "drenaet_img8920860042061809.png"
+                      "ItemName": "WhatsApp_Image_2026-06-18_at_15987439299147478.jpeg"
                     }
                   }
                 },
@@ -286,6 +293,20 @@
                       "Value": "'Normal'"
                     }
                   }
+                }
+              }
+            },
+            "size": {
+              "expr": {
+                "Literal": {
+                  "Value": "70L"
+                }
+              }
+            },
+            "fit": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Normal'"
                 }
               }
             }

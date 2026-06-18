@@ -89,7 +89,7 @@ table 'ASER Verification'
 		mode: import
 		source =
 				let
-				    Source = Folder.Files("C:\2026 04 Formation TaRL\ASER_Data\verification_ASER"),
+				    Source = Folder.Files("D:\BigInt Analytics\05 Formations Power BI\2026\2026 04 Formation TaRL\ASER_Data\verification_ASER"),
 				    #"Fichiers masqués filtrés1" = Table.SelectRows(Source, each [Attributes]?[Hidden]? <> true),
 				    #"Appeler une fonction personnalisée1" = Table.AddColumn(#"Fichiers masqués filtrés1", "Transformer le fichier", each #"Transformer le fichier (2)"([Content])),
 				    #"Colonnes renommées1" = Table.RenameColumns(#"Appeler une fonction personnalisée1", {"Name", "Source.Name"}),

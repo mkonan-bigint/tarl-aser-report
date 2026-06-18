@@ -160,16 +160,6 @@
           "type": "Image"
         },
         {
-          "name": "drenaet_img8356319764846721.png",
-          "path": "drenaet_img8356319764846721.png",
-          "type": "Image"
-        },
-        {
-          "name": "drenaet_img8920860042061809.png",
-          "path": "drenaet_img8920860042061809.png",
-          "type": "Image"
-        },
-        {
           "name": "pupils_img7116967251911133.png",
           "path": "pupils_img7116967251911133.png",
           "type": "Image"
@@ -183,6 +173,16 @@
           "name": "TaRL-Africa25917441887892845.json",
           "path": "TaRL-Africa25917441887892845.json",
           "type": "CustomTheme"
+        },
+        {
+          "name": "WhatsApp_Image_2026-06-18_at_123831768162801803.jpeg",
+          "path": "WhatsApp_Image_2026-06-18_at_123831768162801803.jpeg",
+          "type": "Image"
+        },
+        {
+          "name": "WhatsApp_Image_2026-06-18_at_15987439299147478.jpeg",
+          "path": "WhatsApp_Image_2026-06-18_at_15987439299147478.jpeg",
+          "type": "Image"
         }
       ]
     }

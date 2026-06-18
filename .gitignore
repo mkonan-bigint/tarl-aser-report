@@ -1,18 +1,39 @@
 # Fichier : .gitignore
 # À placer à la racine du projet PBIP
 
-# Fichiers ignorés par défaut par Microsoft
+#  ─── FICHIERS IGNORES PAR DEFAUT PAR MICROSOFT ───────────
 **/.pbi/localSettings.json
 **/.pbi/cache.abf
 
-# Ignorer les fichiers binaires Power BI
+# ─── SECRETS ET VARIABLES D'ENVIRONNEMENT ───────────────────────
+# Fichiers contenant des mots de passe, tokens, clés API
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+*.env
+
+# ─── CONFIGURATION LOCALE (spécifique à ta machine) ─────────────
+# Paramètres VS Code personnels (garde uniquement settings.json partagé)
+.vscode/settings.json
+.vscode/launch.json
+.vscode/*.code-workspace
+
+# ─── FICHIERS POWER BI BINAIRES ──────────────────────────────────
+# Ne jamais versionner les .pbix — utiliser le format PBIP à la place
 *.pbix
 *.pbiviz
- 
-# Ignorer les fichiers temporaires Windows
+
+# ─── FICHIERS TEMPORAIRES WINDOWS ────────────────────────────────
 Thumbs.db
 desktop.ini
 .vs/
- 
-# Ignorer les paramètres locaux VS Code
-.vscode/settings.json
+
+# ─── FICHIERS TEMPORAIRES MACOS ──────────────────────────────────
+.DS_Store
+
+# ─── LOGS ET CACHES ──────────────────────────────────────────────
+*.log
+*.tmp
+*.cache

@@ -42,11 +42,11 @@
                       "Entity": "Mesures"
                     }
                   },
-                  "Property": "# Of Boys and Girls Tested In Cycle"
+                  "Property": "# Of Students Tested In Cycle"
                 }
               },
-              "queryRef": "Mesures.# Of Boys and Girls Tested In Cycle",
-              "nativeQueryRef": "# Of Boys and Girls Tested In Cycle"
+              "queryRef": "Mesures.# Of Students Tested In Cycle",
+              "nativeQueryRef": "# Of Students Tested In Cycle"
             }
           ]
         }

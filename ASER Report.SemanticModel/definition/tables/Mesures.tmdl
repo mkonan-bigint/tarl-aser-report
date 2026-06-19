@@ -44,16 +44,16 @@ table Mesures
 			VAR __CurrentCycle = MAX( Cycles[Cycle ID] )
 			VAR __CurrentSubject = MAX( 'ASER CIV Data'[Subject ID] )
 			
-			VAR __BaseTable = DISTINCT(SELECTCOLUMNS(
+			VAR __BaseTable = SUMMARIZE(
 					'ASER CIV Data',
-					"@Grade ID", 'ASER CIV Data'[Grade ID],
-					"@Cycle ID", 'ASER CIV Data'[Cycle ID],
-					"@Level ID", 'ASER CIV Data'[Level ID],
-					"@Subject ID", 'ASER CIV Data'[Subject ID],
-					"@Students At Level", 'ASER CIV Data'[Students At Level]
-				))
+					'ASER CIV Data'[Grade ID],
+					'ASER CIV Data'[Cycle ID],
+					'ASER CIV Data'[Level ID],
+					'ASER CIV Data'[Subject ID],
+					"@Students At Level", MAX('ASER CIV Data'[Students At Level] )
+				)
 			
-			VAR __FilteredTable = FILTER( __BaseTable, [@Cycle ID] = __CurrentCycle  && [@Subject ID] = __CurrentSubject)
+			VAR __FilteredTable = FILTER( __BaseTable, 'ASER CIV Data'[Cycle ID]= __CurrentCycle  && 'ASER CIV Data'[Subject ID] = __CurrentSubject)
 			
 			RETURN SUMX( __FilteredTable, [@Students At Level] )
 		formatString: #,0
@@ -136,14 +136,14 @@ table Mesures
 			
 			VAR __CurrentCycle = MAX( Cycles[Cycle ID] )
 			
-			VAR __BaseTable = DISTINCT(SELECTCOLUMNS(
+			VAR __BaseTable = SUMMARIZE(
 					'ASER CIV Data',
-					"@Grade ID", 'ASER CIV Data'[Grade ID],
-					"@Cycle ID", 'ASER CIV Data'[Cycle ID],
-					"@Boys Tested In Class", 'ASER CIV Data'[Boys Tested In Class]
-				))
+					'ASER CIV Data'[Grade ID],
+					'ASER CIV Data'[Cycle ID],
+					"@Boys Tested In Class", MAX( 'ASER CIV Data'[Boys Tested In Class] )
+				)
 			
-			    VAR __FilteredTable = FILTER( __BaseTable, [@Cycle ID] = __CurrentCycle)
+			VAR __FilteredTable = FILTER( __BaseTable, 'ASER CIV Data'[Cycle ID] = __CurrentCycle)
 			
 			RETURN SUMX( __FilteredTable, [@Boys Tested In Class] )
 		formatString: #,0
@@ -154,14 +154,14 @@ table Mesures
 			
 			VAR __CurrentCycle = MAX( Cycles[Cycle ID] )
 			
-			VAR __BaseTable = DISTINCT(SELECTCOLUMNS(
+			VAR __BaseTable = SUMMARIZE(
 					'ASER CIV Data',
-					"@Grade ID", 'ASER CIV Data'[Grade ID],
-					"@Cycle ID", 'ASER CIV Data'[Cycle ID],
-					"@Girls Tested In Class", 'ASER CIV Data'[Girls Tested In Class]
-				))
+					'ASER CIV Data'[Grade ID],
+					'ASER CIV Data'[Cycle ID],
+					"@Girls Tested In Class", MAX( 'ASER CIV Data'[Girls Tested In Class] )
+				)
 			
-			    VAR __FilteredTable = FILTER( __BaseTable, [@Cycle ID] = __CurrentCycle )
+			VAR __FilteredTable = FILTER( __BaseTable, 'ASER CIV Data'[Cycle ID] = __CurrentCycle)
 			
 			RETURN SUMX( __FilteredTable, [@Girls Tested In Class] )
 		formatString: #,0
@@ -2896,6 +2896,10 @@ table Mesures
 		lineageTag: 78d09007-eb10-417b-8259-66a4ef47b9cc
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure __gap = [# Of Boys and Girls Tested In Cycle] - [# Of Students Tested In Cycle]
+		formatString: 0
+		lineageTag: b4d91b04-f95b-486f-b2dd-6e0bbcd76e27
 
 	partition Mesures = m
 		mode: import

@@ -188,7 +188,8 @@ table 'ASER CIV Data'
 		source =
 				let
 				    Source = Table.Combine({#"Old Data", #"New Data"}),
-				    #"Texte en majuscules" = Table.TransformColumns(Source,{{"DRENAET", Text.Upper, type text}}),
+				    #"Doublons supprimés" = Table.Distinct(Source, {"DRENAET", "IEPP", "School", "Cycle", "Grade", "Period"}),
+				    #"Texte en majuscules" = Table.TransformColumns(#"Doublons supprimés",{{"DRENAET", Text.Upper, type text}}),
 				    #"Valeur remplacée" = Table.ReplaceValue(#"Texte en majuscules","DRENA ","",Replacer.ReplaceText,{"DRENAET"}),
 				    #"Colonnes renommées" = Table.RenameColumns(#"Valeur remplacée",{{"Beginner L", "Beginner L - L"}, {"Letter", "Letter - L"}, {"Word", "Word - L"}, {"Paragraph", "Paragraph - L"}, {"Story", "Story - L"}, {"Beginner N", "Beginner N - N"}, {"1-Digit", "1-Digit - N"}, {"2-Digit", "2-Digit - N"}, {"Substraction", "Substraction - N"}, {"Division", "Division - N"}, {"Comprehension", "Comprehension - L"}}),
 				    #"Tableau croisé dynamique des colonnes supprimé" = Table.UnpivotOtherColumns(#"Colonnes renommées", {"DRENAET", "IEPP", "School", "Cycle", "Grade", "Students In Class", "Boys Tested", "Girls Tested", "Entry Date", "Region", "Sector", "Students Tested", "Period", "Teacher Male", "Teacher Female"}, "Attribut", "Valeur"),

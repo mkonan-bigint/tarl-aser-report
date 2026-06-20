@@ -51,7 +51,6 @@ table 'ASER Verification'
 
 	column 'Grade ID'
 		dataType: int64
-		isHidden
 		formatString: 0
 		lineageTag: 6b15787a-d928-4d53-9418-3ce69ce05dfd
 		summarizeBy: none

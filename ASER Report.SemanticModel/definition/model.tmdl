@@ -29,7 +29,7 @@ queryGroup 'Transform Verification ASER\Requêtes d''assistance'
 
 annotation __PBI_TimeIntelligenceEnabled = 0
 
-annotation PBI_QueryOrder = ["New Data","Paramètre1","Exemple de fichier","Transformer le fichier","ASER_2021-2022","ASER_2022-2023","ASER_2023-2024","Old Data","ASER CIV Data","Mentoring Visits","ASER Verification","Grades","Cycles","Levels in Subjects","DRENAETs and Donors","Schools","IEPPs","Mesures","Cycles List","Paramètre2","Exemple de fichier (2)","Transformer le fichier (2)","Sample_Size"]
+annotation PBI_QueryOrder = ["New Data","Paramètre1","Exemple de fichier","Transformer le fichier","ASER_2021-2022","ASER_2022-2023","ASER_2023-2024","Old Data","ASER CIV Data","Mentoring Visits","ASER Verification","Grades","Cycles","Levels in Subjects","DRENAETs and Donors","Schools","IEPPs","Mesures","Cycles List","Paramètre2","Exemple de fichier (2)","Transformer le fichier (2)","Sample_Size","Grades from Verification"]
 
 annotation PBI_ProTooling = ["DaxQueryView_Desktop","TMDLView_Desktop","DevMode"]
 

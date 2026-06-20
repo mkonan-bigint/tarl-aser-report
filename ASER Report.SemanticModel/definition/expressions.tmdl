@@ -112,7 +112,9 @@ expression IEPPs =
 		    #"Requêtes fusionnées1" = Table.NestedJoin(#"DRENAETs and Donors développé", {"DRENAET", "IEPP", "School"}, Schools, {"DRENAET", "IEPP", "School"}, "Schools", JoinKind.LeftOuter),
 		    #"Schools développé" = Table.ExpandTableColumn(#"Requêtes fusionnées1", "Schools", {"School ID"}, {"School ID"}),
 		    #"Autres colonnes supprimées1" = Table.SelectColumns(#"Schools développé",{"DRENAET", "IEPP"}),
-		    #"Doublons supprimés1" = Table.Distinct(#"Autres colonnes supprimées1"),
+		    #"Requête ajoutée" = Table.Combine({#"Autres colonnes supprimées1", #"Grades from Verification"}),
+		    #"Autres colonnes supprimées2" = Table.SelectColumns(#"Requête ajoutée",{"DRENAET", "IEPP"}),
+		    #"Doublons supprimés1" = Table.Distinct(#"Autres colonnes supprimées2"),
 		    #"Index ajouté1" = Table.AddIndexColumn(#"Doublons supprimés1", "Index", 0, 1, Int64.Type),
 		    #"Colonnes renommées1" = Table.RenameColumns(#"Index ajouté1",{{"Index", "IEPP ID"}})
 		in
@@ -135,7 +137,9 @@ expression Schools =
 		    #"Requêtes fusionnées" = Table.NestedJoin(#"Colonnes renommées", {"DRENAET"}, #"DRENAETs and Donors", {"DRENAET"}, "DRENAETs and Donors", JoinKind.LeftOuter),
 		    #"DRENAETs and Donors développé" = Table.ExpandTableColumn(#"Requêtes fusionnées", "DRENAETs and Donors", {"Donor"}, {"Donor"}),
 		    #"Autres colonnes supprimées1" = Table.SelectColumns(#"DRENAETs and Donors développé",{"DRENAET", "IEPP", "School"}),
-		    #"Doublons supprimés1" = Table.Distinct(#"Autres colonnes supprimées1"),
+		    #"Requête ajoutée" = Table.Combine({#"Autres colonnes supprimées1", #"Grades from Verification"}),
+		    #"Autres colonnes supprimées2" = Table.SelectColumns(#"Requête ajoutée",{"DRENAET", "IEPP", "School"}),
+		    #"Doublons supprimés1" = Table.Distinct(#"Autres colonnes supprimées2"),
 		    #"Index ajouté1" = Table.AddIndexColumn(#"Doublons supprimés1", "Index", 0, 1, Int64.Type),
 		    #"Colonnes renommées1" = Table.RenameColumns(#"Index ajouté1",{{"Index", "School ID"}})
 		in
@@ -243,4 +247,26 @@ expression 'Transformer le fichier (2)' =
 	annotation PBI_NavigationStepName = Navigation
 
 	annotation PBI_ResultType = Function
+
+expression 'Grades from Verification' =
+		let
+		    Source = Folder.Files("D:\BigInt Analytics\05 Formations Power BI\2026\2026 04 Formation TaRL\ASER_Data\verification_ASER"),
+		    #"Fichiers masqués filtrés1" = Table.SelectRows(Source, each [Attributes]?[Hidden]? <> true),
+		    #"Appeler une fonction personnalisée1" = Table.AddColumn(#"Fichiers masqués filtrés1", "Transformer le fichier", each #"Transformer le fichier (2)"([Content])),
+		    #"Colonnes renommées1" = Table.RenameColumns(#"Appeler une fonction personnalisée1", {"Name", "Source.Name"}),
+		    #"Autres colonnes supprimées1" = Table.SelectColumns(#"Colonnes renommées1", {"Source.Name", "Transformer le fichier"}),
+		    #"Colonne de tables développée1" = Table.ExpandTableColumn(#"Autres colonnes supprimées1", "Transformer le fichier", Table.ColumnNames(#"Transformer le fichier (2)"(#"Exemple de fichier (2)"))),
+		    #"Fractionner la colonne par délimiteur" = Table.SplitColumn(#"Colonne de tables développée1", "Source.Name", Splitter.SplitTextByDelimiter("_", QuoteStyle.Csv), {"Source.Name.1", "Source.Name.2", "Source.Name.3"}),
+		    #"Fractionner la colonne par délimiteur1" = Table.SplitColumn(#"Fractionner la colonne par délimiteur", "Source.Name.3", Splitter.SplitTextByDelimiter(".", QuoteStyle.Csv), {"Source.Name.3.1", "Source.Name.3.2"}),
+		    #"Autres colonnes supprimées" = Table.SelectColumns(#"Fractionner la colonne par délimiteur1",{"DRENA", "IEPP", "ECOLES", "COURS"}),
+		    #"Colonnes renommées" = Table.RenameColumns(#"Autres colonnes supprimées",{{"ECOLES", "School"}, {"COURS", "Grade"}, {"DRENA", "DRENAET"}}),
+		    #"Valeur remplacée" = Table.ReplaceValue(#"Colonnes renommées","DRENA ","",Replacer.ReplaceText,{"DRENAET"}),
+		    #"Type modifié" = Table.TransformColumnTypes(#"Valeur remplacée",{{"DRENAET", type text}, {"IEPP", type text}, {"School", type text}, {"Grade", type text}})
+		in
+		    #"Type modifié"
+	lineageTag: 6b816d6d-0ec4-473b-be43-6431833da30d
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
 

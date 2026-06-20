@@ -436,5 +436,65 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "99828cb93edc70ea1bb0",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mesures"
+              }
+            },
+            "Property": "# Of DRENAETs Reached"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "dd993b166d0005d687aa",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mesures"
+              }
+            },
+            "Property": "# Of IEPPs Reached"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "c163cafd84d35521b782",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mesures"
+              }
+            },
+            "Property": "# Of Schools Reached"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "df3f8c72c0d3c465a600",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mesures"
+              }
+            },
+            "Property": "_# Of Students Reached In Program"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

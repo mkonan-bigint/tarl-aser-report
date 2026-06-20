@@ -1,21 +1,6 @@
 table Mesures
 	lineageTag: 88d328ed-b1e1-4ef2-a3ac-aee29dcb536c
 
-	measure '# Of DRENAETs' = DISTINCTCOUNT( 'Grades'[DRENAET] )
-		formatString: #,0
-		displayFolder: 0. Overall KPIs
-		lineageTag: 18a3d325-e8d5-453f-b685-22788919c997
-
-	measure '# Of IEPPs' = DISTINCTCOUNT( 'Grades'[IEPP] )
-		formatString: #,0
-		displayFolder: 0. Overall KPIs
-		lineageTag: cf5d988b-65aa-4447-9c26-9f74f6fda9a7
-
-	measure '# Of Schools' = DISTINCTCOUNT( 'Grades'[School ID] )
-		formatString: #,0
-		displayFolder: 0. Overall KPIs
-		lineageTag: cb9668aa-733c-44e6-aa9e-f06733f64b35
-
 	measure '# Of Schools Reached' = DISTINCTCOUNT( 'ASER CIV Data'[School ID] )
 		formatString: #,0
 		displayFolder: 0. Overall KPIs
@@ -447,13 +432,6 @@ table Mesures
 		formatString: #,0
 		displayFolder: 0. Overall KPIs
 		lineageTag: 70672695-dd88-4a1c-986e-42126c156b3c
-
-	measure '% Of Schools That Submitted Their data' =
-			
-			DIVIDE( [# Of Schools Reached], [# Of Schools] )
-		formatString: 0\ %;-0\ %;0\ %
-		displayFolder: 0. Overall KPIs
-		lineageTag: cd4870d4-ea1e-4ef7-b073-db5a7effc9de
 
 	measure 'Home Page Title' = "Endline Assessment Results"
 		lineageTag: 461d8922-0f4d-4b22-ac4e-87a1f7386f05

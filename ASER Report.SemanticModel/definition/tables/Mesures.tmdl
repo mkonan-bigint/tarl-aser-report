@@ -2901,6 +2901,24 @@ table Mesures
 			                       UNICHAR(11044) & "  Target meet" )
 		lineageTag: 79ee7500-261e-4bbb-8fcc-8c483f0adf53
 
+	measure 'Text Colour - Target meet' = "#00736C"
+		lineageTag: 6316766c-9289-40a1-8c49-fa421eab0aac
+
+	measure 'Text Colour - Approaching Target' = "#BD9335"
+		lineageTag: dc5dedc6-b584-4ede-a54b-0260c00a2921
+
+	measure 'Text Colour - Below Target' = "#A1343C"
+		lineageTag: b83fa76a-a1a1-41db-add4-7ad94393564a
+
+	measure 'Background Colour - Target meet' = "#C3E9E5"
+		lineageTag: 8722ecd1-15f4-44d3-bbde-7fb55da6d022
+
+	measure 'Background Colour - Approaching Target' = "#FEE7B5"
+		lineageTag: 096214ae-7dc0-40e1-b92c-fde8ad4df65a
+
+	measure 'Background Colour - Below Target' = "#EFB5B9"
+		lineageTag: c3ffcaef-2e01-4dbe-ada7-d74d2dc4bb46
+
 	partition Mesures = m
 		mode: import
 		source =

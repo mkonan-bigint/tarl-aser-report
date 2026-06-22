@@ -5041,7 +5041,7 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "mesure.pp_of_literacy_Improvement_from_BL_to_EL": {
+			    "mesure.pp_of_literacy_improvement_from_BL_to_EL": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Mesures",
@@ -5051,7 +5051,7 @@ cultureInfo fr-FR
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "pp of literacy Improvement from BL to EL": {
+			          "pp of literacy improvement from BL to EL": {
 			            "State": "Generated"
 			          }
 			        },
@@ -5269,7 +5269,7 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "mesure.pp_of_numeracy_Improvement_from_BL_to_EL": {
+			    "mesure.pp_of_numeracy_improvement_from_BL_to_EL": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Mesures",
@@ -5279,7 +5279,7 @@ cultureInfo fr-FR
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "pp of numeracy Improvement from BL to EL": {
+			          "pp of numeracy improvement from BL to EL": {
 			            "State": "Generated"
 			          }
 			        },
@@ -7178,12 +7178,6 @@ cultureInfo fr-FR
 			          }
 			        },
 			        {
-			          "literacy": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
 			          "cross cheque": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -7281,6 +7275,16 @@ cultureInfo fr-FR
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "Literacy": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -8708,10 +8712,20 @@ cultureInfo fr-FR
 			            "State": "Generated",
 			            "Weight": 0.75
 			          }
+			        },
+			        {
+			          "NUMERACY": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
-			    "mesure.pp_of_literacy_Improvement_from_BL_to_EL_formated": {
+			    "mesure.pp_of_literacy_improvement_from_BL_to_EL_formated": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Mesures",
@@ -8721,14 +8735,24 @@ cultureInfo fr-FR
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "pp of literacy Improvement from BL to EL (formated)": {
+			          "pp of literacy improvement from BL to EL (formated)": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "pp of literacy Improvement from BL to EL": {
+			          "pp of literacy improvement from BL to EL": {
 			            "State": "Generated",
 			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "LITERACY": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -8755,7 +8779,7 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "mesure.pp_of_numeracy_Improvement_from_BL_to_EL_formated": {
+			    "mesure.pp_of_numeracy_improvement_from_BL_to_EL_formated": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Mesures",
@@ -8765,19 +8789,19 @@ cultureInfo fr-FR
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "pp of numeracy Improvement from BL to EL (formated)": {
+			          "pp of numeracy improvement from BL to EL (formated)": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "pp of numeracy Improvement from BL to EL": {
+			          "pp of numeracy improvement from BL to EL": {
 			            "State": "Generated",
 			            "Weight": 0.75
 			          }
 			        }
 			      ]
 			    },
-			    "mesure.pp_of_subject_Improvement_from_BL_to_EL_formated": {
+			    "mesure.pp_of_subject_improvement_from_BL_to_EL_formated": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Mesures",
@@ -8787,19 +8811,19 @@ cultureInfo fr-FR
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "pp of subject Improvement from BL to EL (formated)": {
+			          "pp of subject improvement from BL to EL (formated)": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "pp of subject Improvement from BL to EL": {
+			          "pp of subject improvement from BL to EL": {
 			            "State": "Generated",
 			            "Weight": 0.75
 			          }
 			        }
 			      ]
 			    },
-			    "mesure.subject_Improvement_comment": {
+			    "mesure.subject_improvement_comment": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Mesures",
@@ -8809,12 +8833,24 @@ cultureInfo fr-FR
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "subject Improvement comment": {
+			          "subject improvement comment": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "subject Improvement clarification": {
+			          "comment": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "improvement comment": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "subject improvement clarification": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -8824,7 +8860,7 @@ cultureInfo fr-FR
 			          }
 			        },
 			        {
-			          "subject Improvement commentary": {
+			          "subject improvement commentary": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -8834,7 +8870,7 @@ cultureInfo fr-FR
 			          }
 			        },
 			        {
-			          "subject Improvement explanation": {
+			          "subject improvement explanation": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -8844,7 +8880,7 @@ cultureInfo fr-FR
 			          }
 			        },
 			        {
-			          "subject Improvement feedback": {
+			          "subject improvement feedback": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -8854,7 +8890,7 @@ cultureInfo fr-FR
 			          }
 			        },
 			        {
-			          "subject Improvement observation": {
+			          "subject improvement observation": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -8864,13 +8900,53 @@ cultureInfo fr-FR
 			          }
 			        },
 			        {
-			          "subject Improvement note": {
+			          "improvement clarification": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.739
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "improvement commentary": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "improvement explanation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "improvement feedback": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "improvement observation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
 			          }
 			        }
 			      ]
@@ -11146,7 +11222,7 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "mesure.entity__pp_of_literacy_Improvement_from_BL_to_EL_formated_FormatString": {
+			    "mesure.entity__pp_of_literacy_improvement_from_BL_to_EL_formated_FormatString": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Mesures",
@@ -11159,7 +11235,7 @@ cultureInfo fr-FR
 			      },
 			      "Terms": [
 			        {
-			          "_pp of literacy Improvement from BL to EL (formated) FormatString": {
+			          "_pp of literacy improvement from BL to EL (formated) FormatString": {
 			            "State": "Generated"
 			          }
 			        }
@@ -11184,7 +11260,7 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "mesure.entity__pp_of_numeracy_Improvement_from_BL_to_EL_formated_FormatString": {
+			    "mesure.entity__pp_of_numeracy_improvement_from_BL_to_EL_formated_FormatString": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Mesures",
@@ -11197,13 +11273,13 @@ cultureInfo fr-FR
 			      },
 			      "Terms": [
 			        {
-			          "_pp of numeracy Improvement from BL to EL (formated) FormatString": {
+			          "_pp of numeracy improvement from BL to EL (formated) FormatString": {
 			            "State": "Generated"
 			          }
 			        }
 			      ]
 			    },
-			    "mesure.entity__pp_of_subject_Improvement_from_BL_to_EL_formated_FormatString": {
+			    "mesure.entity__pp_of_subject_improvement_from_BL_to_EL_formated_FormatString": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Mesures",
@@ -11216,7 +11292,7 @@ cultureInfo fr-FR
 			      },
 			      "Terms": [
 			        {
-			          "_pp of subject Improvement from BL to EL (formated) FormatString": {
+			          "_pp of subject improvement from BL to EL (formated) FormatString": {
 			            "State": "Generated"
 			          }
 			        }
@@ -11729,7 +11805,7 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "mesure.of_schools_with_at_least_7_mentor_visits1": {
+			    "mesure.of_schools_with_at_least_7_mentor_visits": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Mesures",
@@ -11960,9 +12036,158 @@ cultureInfo fr-FR
 			          }
 			        }
 			      ]
+			    },
+			    "mesure.entity___gap": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "__gap"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "__gap": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "__ cavity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "__ aperture": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "__ hole": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "__ opening": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "__ break": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "__ breach": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "__ slit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "__ fissure": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "__ crack": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "__ interruption": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
+			    "mesure_has_of_intermediate_yellow_schools_for_literacy": {
+			      "Binding": {
+			        "ConceptualEntity": "Mesures"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mesure": {
+			          "Target": {
+			            "Entity": "mesure"
+			          }
+			        },
+			        "mesure.of_intermediate_yellow_schools_for_literacy": {
+			          "Target": {
+			            "Entity": "mesure.of_intermediate_yellow_schools_for_literacy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mesure"
+			            },
+			            "Object": {
+			              "Role": "mesure.of_intermediate_yellow_schools_for_literacy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mesures_have__of_intermediate_yellow_schools_for_literacy"
+			        }
+			      ]
+			    },
 			    "mesure_has_top_2_DRENAETs_with_highest__of_schools_with_at_least_7_mentor_visits": {
 			      "Binding": {
 			        "ConceptualEntity": "Mesures"
@@ -12062,6 +12287,39 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
+			    "cycle_has_mesure_of_DRENAETs_where__of_schools_with_at_least_7_mentor_visits_is_greater_than_0": {
+			      "Binding": {
+			        "ConceptualEntity": "Cycles"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cycle": {
+			          "Target": {
+			            "Entity": "cycle"
+			          }
+			        },
+			        "mesure.of_DRENAETs_where__of_schools_with_at_least_7_mentor_visits_is_greater_than_0": {
+			          "Target": {
+			            "Entity": "mesure.of_DRENAETs_where__of_schools_with_at_least_7_mentor_visits_is_greater_than_0"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cycle"
+			            },
+			            "Object": {
+			              "Role": "mesure.of_DRENAETs_where__of_schools_with_at_least_7_mentor_visits_is_greater_than_0"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "cycles_have__of_DRENAETs_where__of_schools_with_at_least_7_mentor_visits_is_greater_than_0"
+			        }
+			      ]
+			    },
 			    "ASER_CIV_data_has_mesure_of_DRENAETs_where__of_schools_with_at_least_7_mentor_visits_is_greater_than_0": {
 			      "Binding": {
 			        "ConceptualEntity": "ASER CIV Data"
@@ -12113,57 +12371,6 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "mentoring_visit_has_mesure_of_schools_with_at_least_7_mentor_visits1": {
-			      "Binding": {
-			        "ConceptualEntity": "Mentoring Visits"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "mentoring_visit": {
-			          "Target": {
-			            "Entity": "mentoring_visit"
-			          }
-			        },
-			        "mesure.of_schools_with_at_least_7_mentor_visits1": {
-			          "Target": {
-			            "Entity": "mesure.of_schools_with_at_least_7_mentor_visits1"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "mentoring_visit"
-			            },
-			            "Object": {
-			              "Role": "mesure.of_schools_with_at_least_7_mentor_visits1"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "mentoring_visits_have__of_schools_with_at_least_7_mentor_visits"
-			        }
-			      ]
-			    },
-			    "ASER_CIV_data_has_mesure_of_schools_with_at_least_7_mentor_visits1": {
-			      "Binding": {
-			        "ConceptualEntity": "ASER CIV Data"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "ASER_CIV_data": {
-			          "Target": {
-			            "Entity": "ASER_CIV_data"
-			          }
-			        },
-			        "mesure.of_schools_with_at_least_7_mentor_visits1": {
-			          "Target": {
-			            "Entity": "mesure.of_schools_with_at_least_7_mentor_visits1"
-			          }
-			        }
-			      }
-			    },
 			    "mentoring_visit_has_mesure_of_schools_with_at_least_7_mentor_visits": {
 			      "Binding": {
 			        "ConceptualEntity": "Mentoring Visits"
@@ -12193,7 +12400,40 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mentoring_visits_have__of_schools_with_at_least_7_mentor_visits1"
+			          "ID": "mentoring_visits_have__of_schools_with_at_least_7_mentor_visits"
+			        }
+			      ]
+			    },
+			    "cycle_has_mesure_of_schools_with_at_least_7_mentor_visits": {
+			      "Binding": {
+			        "ConceptualEntity": "Cycles"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cycle": {
+			          "Target": {
+			            "Entity": "cycle"
+			          }
+			        },
+			        "mesure.of_schools_with_at_least_7_mentor_visits": {
+			          "Target": {
+			            "Entity": "mesure.of_schools_with_at_least_7_mentor_visits"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cycle"
+			            },
+			            "Object": {
+			              "Role": "mesure.of_schools_with_at_least_7_mentor_visits"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "cycles_have__of_schools_with_at_least_7_mentor_visits"
 			        }
 			      ]
 			    },
@@ -12248,6 +12488,39 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
+			    "cycle_has_mesure_of_schools_with_at_least_1_mentor_visit1": {
+			      "Binding": {
+			        "ConceptualEntity": "Cycles"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cycle": {
+			          "Target": {
+			            "Entity": "cycle"
+			          }
+			        },
+			        "mesure.of_schools_with_at_least_1_mentor_visit1": {
+			          "Target": {
+			            "Entity": "mesure.of_schools_with_at_least_1_mentor_visit1"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cycle"
+			            },
+			            "Object": {
+			              "Role": "mesure.of_schools_with_at_least_1_mentor_visit1"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "cycles_have__of_schools_with_at_least_1_mentor_visit"
+			        }
+			      ]
+			    },
 			    "ASER_CIV_data_has_mesure_of_schools_with_at_least_1_mentor_visit1": {
 			      "Binding": {
 			        "ConceptualEntity": "ASER CIV Data"
@@ -12299,6 +12572,39 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
+			    "cycle_has_mesure_of_schools_with_0_mentor_visit1": {
+			      "Binding": {
+			        "ConceptualEntity": "Cycles"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cycle": {
+			          "Target": {
+			            "Entity": "cycle"
+			          }
+			        },
+			        "mesure.of_schools_with_0_mentor_visit1": {
+			          "Target": {
+			            "Entity": "mesure.of_schools_with_0_mentor_visit1"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cycle"
+			            },
+			            "Object": {
+			              "Role": "mesure.of_schools_with_0_mentor_visit1"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "cycles_have__of_schools_with_0_mentor_visit"
+			        }
+			      ]
+			    },
 			    "ASER_CIV_data_has_mesure_of_schools_with_0_mentor_visit1": {
 			      "Binding": {
 			        "ConceptualEntity": "ASER CIV Data"
@@ -12347,6 +12653,39 @@ cultureInfo fr-FR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "mentoring_visits_have__of_schools_with_at_least_1_mentor_visit1"
+			        }
+			      ]
+			    },
+			    "cycle_has_mesure_of_schools_with_at_least_1_mentor_visit": {
+			      "Binding": {
+			        "ConceptualEntity": "Cycles"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cycle": {
+			          "Target": {
+			            "Entity": "cycle"
+			          }
+			        },
+			        "mesure.of_schools_with_at_least_1_mentor_visit": {
+			          "Target": {
+			            "Entity": "mesure.of_schools_with_at_least_1_mentor_visit"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cycle"
+			            },
+			            "Object": {
+			              "Role": "mesure.of_schools_with_at_least_1_mentor_visit"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "cycles_have__of_schools_with_at_least_1_mentor_visit1"
 			        }
 			      ]
 			    },
@@ -15898,7 +16237,7 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "mesure_has_subject_Improvement_comment": {
+			    "mesure_has_subject_improvement_comment": {
 			      "Binding": {
 			        "ConceptualEntity": "Mesures"
 			      },
@@ -15909,9 +16248,9 @@ cultureInfo fr-FR
 			            "Entity": "mesure"
 			          }
 			        },
-			        "mesure.subject_Improvement_comment": {
+			        "mesure.subject_improvement_comment": {
 			          "Target": {
-			            "Entity": "mesure.subject_Improvement_comment"
+			            "Entity": "mesure.subject_improvement_comment"
 			          }
 			        }
 			      },
@@ -15922,16 +16261,16 @@ cultureInfo fr-FR
 			              "Role": "mesure"
 			            },
 			            "Object": {
-			              "Role": "mesure.subject_Improvement_comment"
+			              "Role": "mesure.subject_improvement_comment"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mesures_have_subject_Improvement_comment"
+			          "ID": "mesures_have_subject_improvement_comment"
 			        }
 			      ]
 			    },
-			    "mesure_has_pp_of_subject_Improvement_from_BL_to_EL_formated": {
+			    "mesure_has_pp_of_subject_improvement_from_BL_to_EL_formated": {
 			      "Binding": {
 			        "ConceptualEntity": "Mesures"
 			      },
@@ -15942,9 +16281,9 @@ cultureInfo fr-FR
 			            "Entity": "mesure"
 			          }
 			        },
-			        "mesure.pp_of_subject_Improvement_from_BL_to_EL_formated": {
+			        "mesure.pp_of_subject_improvement_from_BL_to_EL_formated": {
 			          "Target": {
-			            "Entity": "mesure.pp_of_subject_Improvement_from_BL_to_EL_formated"
+			            "Entity": "mesure.pp_of_subject_improvement_from_BL_to_EL_formated"
 			          }
 			        }
 			      },
@@ -15955,16 +16294,16 @@ cultureInfo fr-FR
 			              "Role": "mesure"
 			            },
 			            "Object": {
-			              "Role": "mesure.pp_of_subject_Improvement_from_BL_to_EL_formated"
+			              "Role": "mesure.pp_of_subject_improvement_from_BL_to_EL_formated"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mesures_have_pp_of_subject_Improvement_from_BL_to_EL_formated"
+			          "ID": "mesures_have_pp_of_subject_improvement_from_BL_to_EL_formated"
 			        }
 			      ]
 			    },
-			    "mesure_has_pp_of_numeracy_Improvement_from_BL_to_EL_formated": {
+			    "mesure_has_pp_of_numeracy_improvement_from_BL_to_EL_formated": {
 			      "Binding": {
 			        "ConceptualEntity": "Mesures"
 			      },
@@ -15975,9 +16314,9 @@ cultureInfo fr-FR
 			            "Entity": "mesure"
 			          }
 			        },
-			        "mesure.pp_of_numeracy_Improvement_from_BL_to_EL_formated": {
+			        "mesure.pp_of_numeracy_improvement_from_BL_to_EL_formated": {
 			          "Target": {
-			            "Entity": "mesure.pp_of_numeracy_Improvement_from_BL_to_EL_formated"
+			            "Entity": "mesure.pp_of_numeracy_improvement_from_BL_to_EL_formated"
 			          }
 			        }
 			      },
@@ -15988,12 +16327,12 @@ cultureInfo fr-FR
 			              "Role": "mesure"
 			            },
 			            "Object": {
-			              "Role": "mesure.pp_of_numeracy_Improvement_from_BL_to_EL_formated"
+			              "Role": "mesure.pp_of_numeracy_improvement_from_BL_to_EL_formated"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mesures_have_pp_of_numeracy_Improvement_from_BL_to_EL_formated"
+			          "ID": "mesures_have_pp_of_numeracy_improvement_from_BL_to_EL_formated"
 			        }
 			      ]
 			    },
@@ -16030,7 +16369,7 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "mesure_has_pp_of_literacy_Improvement_from_BL_to_EL_formated": {
+			    "mesure_has_pp_of_literacy_improvement_from_BL_to_EL_formated": {
 			      "Binding": {
 			        "ConceptualEntity": "Mesures"
 			      },
@@ -16041,9 +16380,9 @@ cultureInfo fr-FR
 			            "Entity": "mesure"
 			          }
 			        },
-			        "mesure.pp_of_literacy_Improvement_from_BL_to_EL_formated": {
+			        "mesure.pp_of_literacy_improvement_from_BL_to_EL_formated": {
 			          "Target": {
-			            "Entity": "mesure.pp_of_literacy_Improvement_from_BL_to_EL_formated"
+			            "Entity": "mesure.pp_of_literacy_improvement_from_BL_to_EL_formated"
 			          }
 			        }
 			      },
@@ -16054,12 +16393,12 @@ cultureInfo fr-FR
 			              "Role": "mesure"
 			            },
 			            "Object": {
-			              "Role": "mesure.pp_of_literacy_Improvement_from_BL_to_EL_formated"
+			              "Role": "mesure.pp_of_literacy_improvement_from_BL_to_EL_formated"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mesures_have_pp_of_literacy_Improvement_from_BL_to_EL_formated"
+			          "ID": "mesures_have_pp_of_literacy_improvement_from_BL_to_EL_formated"
 			        }
 			      ]
 			    },
@@ -16563,6 +16902,39 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
+			    "cycle_has_mesure_of_schools_with_7_mentor_visits": {
+			      "Binding": {
+			        "ConceptualEntity": "Cycles"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cycle": {
+			          "Target": {
+			            "Entity": "cycle"
+			          }
+			        },
+			        "mesure.of_schools_with_7_mentor_visits": {
+			          "Target": {
+			            "Entity": "mesure.of_schools_with_7_mentor_visits"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cycle"
+			            },
+			            "Object": {
+			              "Role": "mesure.of_schools_with_7_mentor_visits"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "cycles_have__of_schools_with_7_mentor_visits"
+			        }
+			      ]
+			    },
 			    "ASER_CIV_data_has_mesure_of_schools_with_7_mentor_visits": {
 			      "Binding": {
 			        "ConceptualEntity": "ASER CIV Data"
@@ -16611,6 +16983,39 @@ cultureInfo fr-FR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "mentoring_visits_have__of_schools_with_46_mentor_visits"
+			        }
+			      ]
+			    },
+			    "cycle_has_mesure_of_schools_with_46_mentor_visits": {
+			      "Binding": {
+			        "ConceptualEntity": "Cycles"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cycle": {
+			          "Target": {
+			            "Entity": "cycle"
+			          }
+			        },
+			        "mesure.of_schools_with_46_mentor_visits": {
+			          "Target": {
+			            "Entity": "mesure.of_schools_with_46_mentor_visits"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cycle"
+			            },
+			            "Object": {
+			              "Role": "mesure.of_schools_with_46_mentor_visits"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "cycles_have__of_schools_with_46_mentor_visits"
 			        }
 			      ]
 			    },
@@ -16665,6 +17070,39 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
+			    "cycle_has_mesure_of_schools_with_13_mentor_visits": {
+			      "Binding": {
+			        "ConceptualEntity": "Cycles"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cycle": {
+			          "Target": {
+			            "Entity": "cycle"
+			          }
+			        },
+			        "mesure.of_schools_with_13_mentor_visits": {
+			          "Target": {
+			            "Entity": "mesure.of_schools_with_13_mentor_visits"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cycle"
+			            },
+			            "Object": {
+			              "Role": "mesure.of_schools_with_13_mentor_visits"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "cycles_have__of_schools_with_13_mentor_visits"
+			        }
+			      ]
+			    },
 			    "ASER_CIV_data_has_mesure_of_schools_with_13_mentor_visits": {
 			      "Binding": {
 			        "ConceptualEntity": "ASER CIV Data"
@@ -16713,6 +17151,39 @@ cultureInfo fr-FR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "mentoring_visits_have__of_schools_with_0_mentor_visit1"
+			        }
+			      ]
+			    },
+			    "cycle_has_mesure_of_schools_with_0_mentor_visit": {
+			      "Binding": {
+			        "ConceptualEntity": "Cycles"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cycle": {
+			          "Target": {
+			            "Entity": "cycle"
+			          }
+			        },
+			        "mesure.of_schools_with_0_mentor_visit": {
+			          "Target": {
+			            "Entity": "mesure.of_schools_with_0_mentor_visit"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cycle"
+			            },
+			            "Object": {
+			              "Role": "mesure.of_schools_with_0_mentor_visit"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "cycles_have__of_schools_with_0_mentor_visit1"
 			        }
 			      ]
 			    },
@@ -17130,57 +17601,6 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "grade_has_mesure_of_schools_that_submitted_their_data": {
-			      "Binding": {
-			        "ConceptualEntity": "Grades"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "grade": {
-			          "Target": {
-			            "Entity": "grade"
-			          }
-			        },
-			        "mesure.of_schools_that_submitted_their_data": {
-			          "Target": {
-			            "Entity": "mesure.of_schools_that_submitted_their_data"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "grade"
-			            },
-			            "Object": {
-			              "Role": "mesure.of_schools_that_submitted_their_data"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "grades_have__of_schools_that_submitted_their_data"
-			        }
-			      ]
-			    },
-			    "ASER_CIV_data_has_mesure_of_schools_that_submitted_their_data": {
-			      "Binding": {
-			        "ConceptualEntity": "ASER CIV Data"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "ASER_CIV_data": {
-			          "Target": {
-			            "Entity": "ASER_CIV_data"
-			          }
-			        },
-			        "mesure.of_schools_that_submitted_their_data": {
-			          "Target": {
-			            "Entity": "mesure.of_schools_that_submitted_their_data"
-			          }
-			        }
-			      }
-			    },
 			    "ASER_CIV_data_has_mesure_of_DRENAETs_reached": {
 			      "Binding": {
 			        "ConceptualEntity": "ASER CIV Data"
@@ -17583,7 +18003,7 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "mesure_has_pp_of_numeracy_Improvement_from_BL_to_EL": {
+			    "mesure_has_pp_of_numeracy_improvement_from_BL_to_EL": {
 			      "Binding": {
 			        "ConceptualEntity": "Mesures"
 			      },
@@ -17594,9 +18014,9 @@ cultureInfo fr-FR
 			            "Entity": "mesure"
 			          }
 			        },
-			        "mesure.pp_of_numeracy_Improvement_from_BL_to_EL": {
+			        "mesure.pp_of_numeracy_improvement_from_BL_to_EL": {
 			          "Target": {
-			            "Entity": "mesure.pp_of_numeracy_Improvement_from_BL_to_EL"
+			            "Entity": "mesure.pp_of_numeracy_improvement_from_BL_to_EL"
 			          }
 			        }
 			      },
@@ -17607,12 +18027,12 @@ cultureInfo fr-FR
 			              "Role": "mesure"
 			            },
 			            "Object": {
-			              "Role": "mesure.pp_of_numeracy_Improvement_from_BL_to_EL"
+			              "Role": "mesure.pp_of_numeracy_improvement_from_BL_to_EL"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mesures_have_pp_of_numeracy_Improvement_from_BL_to_EL"
+			          "ID": "mesures_have_pp_of_numeracy_improvement_from_BL_to_EL"
 			        }
 			      ]
 			    },
@@ -17847,7 +18267,7 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "mesure_has_pp_of_literacy_Improvement_from_BL_to_EL": {
+			    "mesure_has_pp_of_literacy_improvement_from_BL_to_EL": {
 			      "Binding": {
 			        "ConceptualEntity": "Mesures"
 			      },
@@ -17858,9 +18278,9 @@ cultureInfo fr-FR
 			            "Entity": "mesure"
 			          }
 			        },
-			        "mesure.pp_of_literacy_Improvement_from_BL_to_EL": {
+			        "mesure.pp_of_literacy_improvement_from_BL_to_EL": {
 			          "Target": {
-			            "Entity": "mesure.pp_of_literacy_Improvement_from_BL_to_EL"
+			            "Entity": "mesure.pp_of_literacy_improvement_from_BL_to_EL"
 			          }
 			        }
 			      },
@@ -17871,12 +18291,12 @@ cultureInfo fr-FR
 			              "Role": "mesure"
 			            },
 			            "Object": {
-			              "Role": "mesure.pp_of_literacy_Improvement_from_BL_to_EL"
+			              "Role": "mesure.pp_of_literacy_improvement_from_BL_to_EL"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mesures_have_pp_of_literacy_Improvement_from_BL_to_EL"
+			          "ID": "mesures_have_pp_of_literacy_improvement_from_BL_to_EL"
 			        }
 			      ]
 			    },
@@ -18111,15 +18531,15 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "mesure_has_of_girls_tested_in_cycle": {
+			    "ASER_CIV_data_has_mesure_of_girls_tested_in_cycle": {
 			      "Binding": {
-			        "ConceptualEntity": "Mesures"
+			        "ConceptualEntity": "ASER CIV Data"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "mesure": {
+			        "ASER_CIV_data": {
 			          "Target": {
-			            "Entity": "mesure"
+			            "Entity": "ASER_CIV_data"
 			          }
 			        },
 			        "mesure.of_girls_tested_in_cycle": {
@@ -18127,32 +18547,17 @@ cultureInfo fr-FR
 			            "Entity": "mesure.of_girls_tested_in_cycle"
 			          }
 			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "mesure"
-			            },
-			            "Object": {
-			              "Role": "mesure.of_girls_tested_in_cycle"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "mesures_have__of_girls_tested_in_cycle"
-			        }
-			      ]
+			      }
 			    },
-			    "mesure_has_of_boys_tested_in_cycle": {
+			    "ASER_CIV_data_has_mesure_of_boys_tested_in_cycle": {
 			      "Binding": {
-			        "ConceptualEntity": "Mesures"
+			        "ConceptualEntity": "ASER CIV Data"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "mesure": {
+			        "ASER_CIV_data": {
 			          "Target": {
-			            "Entity": "mesure"
+			            "Entity": "ASER_CIV_data"
 			          }
 			        },
 			        "mesure.of_boys_tested_in_cycle": {
@@ -18160,22 +18565,7 @@ cultureInfo fr-FR
 			            "Entity": "mesure.of_boys_tested_in_cycle"
 			          }
 			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "mesure"
-			            },
-			            "Object": {
-			              "Role": "mesure.of_boys_tested_in_cycle"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "mesures_have__of_boys_tested_in_cycle"
-			        }
-			      ]
+			      }
 			    },
 			    "mesure_has_of_students_tested_in_previous_cycle": {
 			      "Binding": {
@@ -18276,15 +18666,15 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "mesure_has_of_students_tested_in_cycle": {
+			    "ASER_CIV_data_has_mesure_of_students_tested_in_cycle": {
 			      "Binding": {
-			        "ConceptualEntity": "Mesures"
+			        "ConceptualEntity": "ASER CIV Data"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "mesure": {
+			        "ASER_CIV_data": {
 			          "Target": {
-			            "Entity": "mesure"
+			            "Entity": "ASER_CIV_data"
 			          }
 			        },
 			        "mesure.of_students_tested_in_cycle": {
@@ -18292,32 +18682,17 @@ cultureInfo fr-FR
 			            "Entity": "mesure.of_students_tested_in_cycle"
 			          }
 			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "mesure"
-			            },
-			            "Object": {
-			              "Role": "mesure.of_students_tested_in_cycle"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "mesures_have__of_students_tested_in_cycle"
-			        }
-			      ]
+			      }
 			    },
-			    "mesure_has_of_boys_and_girls_tested_in_cycle": {
+			    "ASER_CIV_data_has_mesure_of_boys_and_girls_tested_in_cycle": {
 			      "Binding": {
-			        "ConceptualEntity": "Mesures"
+			        "ConceptualEntity": "ASER CIV Data"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "mesure": {
+			        "ASER_CIV_data": {
 			          "Target": {
-			            "Entity": "mesure"
+			            "Entity": "ASER_CIV_data"
 			          }
 			        },
 			        "mesure.of_boys_and_girls_tested_in_cycle": {
@@ -18325,22 +18700,7 @@ cultureInfo fr-FR
 			            "Entity": "mesure.of_boys_and_girls_tested_in_cycle"
 			          }
 			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "mesure"
-			            },
-			            "Object": {
-			              "Role": "mesure.of_boys_and_girls_tested_in_cycle"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "mesures_have__of_boys_and_girls_tested_in_cycle"
-			        }
-			      ]
+			      }
 			    },
 			    "mesure_has_of_students_in_cycle": {
 			      "Binding": {
@@ -18392,105 +18752,6 @@ cultureInfo fr-FR
 			          }
 			        }
 			      }
-			    },
-			    "grade_has_mesure_of_schools": {
-			      "Binding": {
-			        "ConceptualEntity": "Grades"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "grade": {
-			          "Target": {
-			            "Entity": "grade"
-			          }
-			        },
-			        "mesure.of_schools": {
-			          "Target": {
-			            "Entity": "mesure.of_schools"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "grade"
-			            },
-			            "Object": {
-			              "Role": "mesure.of_schools"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "grades_have__of_schools"
-			        }
-			      ]
-			    },
-			    "grade_has_mesure_of_IEPPs": {
-			      "Binding": {
-			        "ConceptualEntity": "Grades"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "grade": {
-			          "Target": {
-			            "Entity": "grade"
-			          }
-			        },
-			        "mesure.of_IEPPs": {
-			          "Target": {
-			            "Entity": "mesure.of_IEPPs"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "grade"
-			            },
-			            "Object": {
-			              "Role": "mesure.of_IEPPs"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "grades_have__of_IEPPs"
-			        }
-			      ]
-			    },
-			    "grade_has_mesure_of_DRENAETs": {
-			      "Binding": {
-			        "ConceptualEntity": "Grades"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "grade": {
-			          "Target": {
-			            "Entity": "grade"
-			          }
-			        },
-			        "mesure.of_DRENAETs": {
-			          "Target": {
-			            "Entity": "mesure.of_DRENAETs"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "grade"
-			            },
-			            "Object": {
-			              "Role": "mesure.of_DRENAETs"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "grades_have__of_DRENAETs"
-			        }
-			      ]
 			    },
 			    "entry_calendar_has_date": {
 			      "Binding": {
@@ -18901,39 +19162,6 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "mesure_has_of_intermediate_yellow_schools_for_literacy": {
-			      "Binding": {
-			        "ConceptualEntity": "Mesures"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "mesure": {
-			          "Target": {
-			            "Entity": "mesure"
-			          }
-			        },
-			        "mesure.of_intermediate_yellow_schools_for_literacy": {
-			          "Target": {
-			            "Entity": "mesure.of_intermediate_yellow_schools_for_literacy"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "mesure"
-			            },
-			            "Object": {
-			              "Role": "mesure.of_intermediate_yellow_schools_for_literacy"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "mesures_have__of_intermediate_yellow_schools_for_literacy"
-			        }
-			      ]
-			    },
 			    "mesure_has_of_upper_yellow_schools_for_literacy": {
 			      "Binding": {
 			        "ConceptualEntity": "Mesures"
@@ -19164,6 +19392,24 @@ cultureInfo fr-FR
 			          "ID": "mesures_have__of_upper_yellow_schools_for_numeracy1"
 			        }
 			      ]
+			    },
+			    "ASER_CIV_data_has_mesure_entity___gap": {
+			      "Binding": {
+			        "ConceptualEntity": "ASER CIV Data"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "ASER_CIV_data": {
+			          "Target": {
+			            "Entity": "ASER_CIV_data"
+			          }
+			        },
+			        "mesure.entity___gap": {
+			          "Target": {
+			            "Entity": "mesure.entity___gap"
+			          }
+			        }
+			      }
 			    },
 			    "ASER_CIV_data_has_grade": {
 			      "Binding": {

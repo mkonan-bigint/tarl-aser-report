@@ -102,6 +102,66 @@
           "selector": {
             "id": "default"
           }
+        },
+        {
+          "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mesures"
+                        }
+                      },
+                      "Property": "Colour Status - Literacy pp Gain"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 0
+                }
+              }
+            ],
+            "metadata": "Mesures.pp Of Literacy Improvement From BL to EL (formated)"
+          }
+        },
+        {
+          "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mesures"
+                        }
+                      },
+                      "Property": "Colour Status - Numeracy pp Gain"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 0
+                }
+              }
+            ],
+            "metadata": "Mesures.pp Of Literacy Difficulty Reduction From BL to EL (formated)"
+          }
         }
       ],
       "referenceLabel": [
@@ -133,6 +193,506 @@
             "metadata": "Mesures.pp Of Literacy Difficulty Reduction From BL to EL (formated)",
             "id": "field-d7582456-7f93-9d4e-74f7-486ae15b2275",
             "order": 0
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mesures"
+                    }
+                  },
+                  "Property": "Status - Literacy pp Gain"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 0
+                }
+              }
+            ],
+            "metadata": "Mesures.pp Of Literacy Improvement From BL to EL (formated)",
+            "id": "field-a43fbccc-79f7-f777-31d8-5434a8d43b05",
+            "order": 0
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mesures"
+                    }
+                  },
+                  "Property": "Status - Numeracy pp Gain"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 0
+                }
+              }
+            ],
+            "metadata": "Mesures.pp Of Literacy Difficulty Reduction From BL to EL (formated)",
+            "id": "field-7bdf2cf3-ad09-01b8-d1b4-be1d2486a988",
+            "order": 0
+          }
+        },
+        {
+          "properties": {},
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 0
+                }
+              }
+            ],
+            "metadata": "Mesures.pp Of Literacy Improvement From BL to EL (formated)",
+            "id": "field-148e26ad-3057-ed30-fbcc-e9cced0e4b85",
+            "order": 1
+          }
+        },
+        {
+          "properties": {},
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 0
+                }
+              }
+            ],
+            "metadata": "Mesures.pp Of Literacy Difficulty Reduction From BL to EL (formated)",
+            "id": "field-5cbf53e3-4d27-8115-2c8b-dbcd1679e68b",
+            "order": 1
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mesures"
+                    }
+                  },
+                  "Property": "% Of Schools With Numeracy Improvement over 20pp"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 0
+                }
+              }
+            ],
+            "metadata": "Mesures.pp Of Literacy Difficulty Reduction From BL to EL (formated)",
+            "id": "field-ca5686e0-4b2b-f67e-de9f-88d5a7b284e2",
+            "order": 1
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mesures"
+                    }
+                  },
+                  "Property": "% Of Schools With Literacy Improvement over 20pp"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 0
+                }
+              }
+            ],
+            "metadata": "Mesures.pp Of Literacy Improvement From BL to EL (formated)",
+            "id": "field-6c9cfa0a-1d33-888a-5079-5c2098b24aff",
+            "order": 1
+          }
+        }
+      ],
+      "referenceLabelTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mesures.pp Of Literacy Improvement From BL to EL (formated)",
+            "id": "field-a43fbccc-79f7-f777-31d8-5434a8d43b05"
+          }
+        },
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mesures.pp Of Literacy Difficulty Reduction From BL to EL (formated)",
+            "id": "field-7bdf2cf3-ad09-01b8-d1b4-be1d2486a988"
+          }
+        },
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mesures.pp Of Literacy Improvement From BL to EL (formated)",
+            "id": "field-6c9cfa0a-1d33-888a-5079-5c2098b24aff"
+          }
+        },
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mesures.pp Of Literacy Difficulty Reduction From BL to EL (formated)",
+            "id": "field-ca5686e0-4b2b-f67e-de9f-88d5a7b284e2"
+          }
+        }
+      ],
+      "referenceLabelValue": [
+        {
+          "properties": {
+            "valueFontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mesures.pp Of Literacy Improvement From BL to EL (formated)",
+            "id": "field-a43fbccc-79f7-f777-31d8-5434a8d43b05"
+          }
+        },
+        {
+          "properties": {
+            "valueFontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mesures.pp Of Literacy Difficulty Reduction From BL to EL (formated)",
+            "id": "field-7bdf2cf3-ad09-01b8-d1b4-be1d2486a988"
+          }
+        },
+        {
+          "properties": {
+            "valueFontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mesures"
+                        }
+                      },
+                      "Property": "Colour Status - Numeracy pp Gain"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 0
+                }
+              }
+            ],
+            "metadata": "Mesures.pp Of Literacy Difficulty Reduction From BL to EL (formated)",
+            "id": "field-7bdf2cf3-ad09-01b8-d1b4-be1d2486a988"
+          }
+        },
+        {
+          "properties": {
+            "valueFontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mesures"
+                        }
+                      },
+                      "Property": "Colour Status - Literacy pp Gain"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 0
+                }
+              }
+            ],
+            "metadata": "Mesures.pp Of Literacy Improvement From BL to EL (formated)",
+            "id": "field-a43fbccc-79f7-f777-31d8-5434a8d43b05"
+          }
+        },
+        {
+          "properties": {
+            "valueFontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "valueTransparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mesures.pp Of Literacy Difficulty Reduction From BL to EL (formated)",
+            "id": "field-ca5686e0-4b2b-f67e-de9f-88d5a7b284e2"
+          }
+        },
+        {
+          "properties": {
+            "valueFontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mesures.pp Of Literacy Improvement From BL to EL (formated)",
+            "id": "field-6c9cfa0a-1d33-888a-5079-5c2098b24aff"
+          }
+        },
+        {
+          "properties": {
+            "valueFontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mesures"
+                        }
+                      },
+                      "Property": "Colour Status - Numeracy pp Gain"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 0
+                }
+              }
+            ],
+            "metadata": "Mesures.pp Of Literacy Difficulty Reduction From BL to EL (formated)",
+            "id": "field-ca5686e0-4b2b-f67e-de9f-88d5a7b284e2"
+          }
+        },
+        {
+          "properties": {
+            "valueFontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mesures"
+                        }
+                      },
+                      "Property": "Colour Status - Literacy pp Gain"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 0
+                }
+              }
+            ],
+            "metadata": "Mesures.pp Of Literacy Improvement From BL to EL (formated)",
+            "id": "field-6c9cfa0a-1d33-888a-5079-5c2098b24aff"
+          }
+        }
+      ],
+      "referenceLabelDetail": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "showBlankAs": {
+              "expr": {
+                "Literal": {
+                  "Value": "'of schools met the 20pp target'"
+                }
+              }
+            },
+            "detailTransparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "100D"
+                }
+              }
+            },
+            "detailFontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mesures.pp Of Literacy Improvement From BL to EL (formated)",
+            "id": "field-6c9cfa0a-1d33-888a-5079-5c2098b24aff"
+          }
+        },
+        {
+          "properties": {},
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 0
+                }
+              }
+            ],
+            "metadata": "Mesures.pp Of Literacy Improvement From BL to EL (formated)",
+            "id": "field-6c9cfa0a-1d33-888a-5079-5c2098b24aff"
+          }
+        },
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mesures.pp Of Literacy Difficulty Reduction From BL to EL (formated)",
+            "id": "field-7bdf2cf3-ad09-01b8-d1b4-be1d2486a988"
+          }
+        },
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "showBlankAs": {
+              "expr": {
+                "Literal": {
+                  "Value": "'of schools met the 20pp target'"
+                }
+              }
+            },
+            "detailTransparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "100D"
+                }
+              }
+            },
+            "detailFontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mesures.pp Of Literacy Difficulty Reduction From BL to EL (formated)",
+            "id": "field-ca5686e0-4b2b-f67e-de9f-88d5a7b284e2"
           }
         }
       ]

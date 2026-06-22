@@ -2919,6 +2919,108 @@ table Mesures
 	measure 'Background Colour - Below Target' = "#EFB5B9"
 		lineageTag: c3ffcaef-2e01-4dbe-ada7-d74d2dc4bb46
 
+	measure 'Colour Status - Literacy pp Gain' =
+			
+			VAR __ppGain = [pp Of Literacy Improvement From BL to EL]
+			RETURN
+			    SWITCH(TRUE(),
+			           __ppGain = BLANK(), "#242424",
+			           __ppGain < 0.15, [Text Colour - Below Target],
+			           __ppGain < 0.20, [Text Colour - Approaching Target],
+			                       [Text Colour - Target meet] )
+		lineageTag: 4dc2a337-600a-4a28-9b4c-c75d225074e9
+
+	measure 'Colour Status - Numeracy pp Gain' =
+			
+			VAR __ppGain = [pp Of Numeracy Improvement From BL to EL]
+			RETURN
+			    SWITCH(TRUE(),
+			           __ppGain = BLANK(), "#242424",
+			           __ppGain < 0.15, [Text Colour - Below Target],
+			           __ppGain < 0.20, [Text Colour - Approaching Target],
+			                       [Text Colour - Target meet] )
+		lineageTag: 84861df0-0d00-4eaa-a87c-151ade9401d5
+
+	measure '# Of Schools With Literacy Improvement over 20pp' =
+			
+			
+			VAR __CurrentPeriod = SELECTEDVALUE( Cycles[Period] )
+			
+			VAR __Table =
+			    ADDCOLUMNS(
+			        VALUES( Grades[School ID] ),
+			        "@pp Improvement",
+			            CALCULATE(
+			                [pp Of Literacy Improvement From BL to EL (formated)],
+			                Cycles[Period] = __CurrentPeriod
+			            )
+			    )
+			
+			VAR __FilteredTable =
+			    FILTER(
+			        __Table,
+			        NOT ISBLANK( [@pp Improvement] ) && [@pp Improvement] >= 20
+			    )
+			
+			RETURN
+			    IF(
+			        ISEMPTY( __FilteredTable ),
+			        BLANK(),
+			        COUNTROWS( __FilteredTable )
+			    )
+		formatString: #,0
+		lineageTag: cb819848-693b-4665-9f22-136624c81786
+
+	measure '# Of Schools With Numeracy Improvement over 20pp' =
+			
+			
+			VAR __CurrentPeriod = SELECTEDVALUE( Cycles[Period] )
+			
+			VAR __Table =
+			    ADDCOLUMNS(
+			        VALUES( Grades[School ID] ),
+			        "@pp Improvement",
+			            CALCULATE(
+			                [pp Of Numeracy Improvement From BL to EL (formated)],
+			                Cycles[Period] = __CurrentPeriod
+			            )
+			    )
+			
+			VAR __FilteredTable =
+			    FILTER(
+			        __Table,
+			        NOT ISBLANK( [@pp Improvement] ) && [@pp Improvement] >= 20
+			    )
+			
+			RETURN
+			    IF(
+			        ISEMPTY( __FilteredTable ),
+			        BLANK(),
+			        COUNTROWS( __FilteredTable )
+			    )
+		formatString: 0
+		lineageTag: 7673440e-662b-48ca-a51b-b31c61b44a28
+
+	measure '% Of Schools With Literacy Improvement over 20pp' =
+			
+			
+			DIVIDE(
+			    [# Of Schools With Literacy Improvement over 20pp],
+			    [# Of Schools Reached]
+			)
+		formatString: 0\ %;-0\ %;0\ %
+		lineageTag: 4661a5f2-ba4d-430a-8f91-5eb919a5c52b
+
+	measure '% Of Schools With Numeracy Improvement over 20pp' =
+			
+			
+			DIVIDE(
+			    [# Of Schools With Numeracy Improvement over 20pp],
+			    [# Of Schools Reached]
+			)
+		formatString: 0\ %;-0\ %;0\ %
+		lineageTag: 1f773fa3-2b26-41b3-b342-27629899244b
+
 	partition Mesures = m
 		mode: import
 		source =

@@ -42,7 +42,7 @@
                       "Entity": "Mesures"
                     }
                   },
-                  "Property": "_# Of Students Reached In Program"
+                  "Property": "# Of Students Reached In Program"
                 }
               },
               "queryRef": "Mesures.Number Of Students Reached In Program",

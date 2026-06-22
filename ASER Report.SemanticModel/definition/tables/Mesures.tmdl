@@ -45,7 +45,7 @@ table Mesures
 		displayFolder: 1. Cycle specific KPIs
 		lineageTag: 4589fda1-cd39-43d9-8eb0-b4e3ad2e6e2f
 
-	measure '_# Of Students Reached In Program' =
+	measure '# Of Students Reached In Program' =
 			
 			VAR __BaseTable =
 			    SUMMARIZE (
@@ -802,7 +802,7 @@ table Mesures
 
 	measure '% Of Students reassessed' =
 			
-			DIVIDE( [# Of Students reassessed], [_# Of Students Reached In Program] )
+			DIVIDE( [# Of Students reassessed], [# Of Students Reached In Program] )
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
 		lineageTag: 98d11783-c7b1-4d1e-b365-a601b6a9a1ae
 
@@ -2897,7 +2897,7 @@ table Mesures
 			    SWITCH(TRUE(),
 			           __ppGain = BLANK(), BLANK(),
 			           __ppGain < 0.15, UNICHAR(11044) & "  Below Target",
-			           __ppGain < 0.2, UNICHAR(11044) & "  Approaching Target",
+			           __ppGain < 0.20, UNICHAR(11044) & "  Approaching Target",
 			                       UNICHAR(11044) & "  Target met" )
 		lineageTag: 79ee7500-261e-4bbb-8fcc-8c483f0adf53
 

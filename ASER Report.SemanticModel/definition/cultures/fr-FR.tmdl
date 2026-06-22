@@ -3521,7 +3521,7 @@ cultureInfo fr-FR
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Mesures",
-			          "ConceptualProperty": "_# Of Students Reached In Program"
+			          "ConceptualProperty": "# Of Students Reached In Program"
 			        }
 			      },
 			      "State": "Generated",

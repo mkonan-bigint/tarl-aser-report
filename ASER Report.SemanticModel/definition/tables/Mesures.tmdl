@@ -1042,15 +1042,13 @@ table Mesures
 	measure 'Grades With Literacy Improvement over 20pp' =
 			
 			VAR __CurrentPeriod = SELECTEDVALUE( Cycles[Period] )
-			VAR __CurrentSubject = 1
 			VAR __Table =
 			    ADDCOLUMNS(
 			        SUMMARIZE( Grades, Grades[Grade], Grades[Grade Sort] ),
 			        "@pp Improvement",
 			            CALCULATE(
-			                [pp Of Subject Improvement From BL to EL (formated)],
-			                Cycles[Period] = __CurrentPeriod,
-			                'Levels in Subjects'[Subject ID] = __CurrentSubject
+			                [pp Of Literacy Improvement From BL to EL (formated)],
+			                Cycles[Period] = __CurrentPeriod
 			            )
 			    )
 			VAR __FilteredTable =
@@ -1066,15 +1064,13 @@ table Mesures
 	measure '# Of Grades With Literacy Improvement over 20pp' =
 			
 			VAR __CurrentPeriod = SELECTEDVALUE( Cycles[Period] )
-			VAR __CurrentSubjectID = 1
 			VAR __Table =
 			    ADDCOLUMNS(
 			        SUMMARIZE( Grades, Grades[Grade], Grades[Grade Sort] ),
 			        "@pp Improvement",
 			            CALCULATE(
-			                [pp Of Subject Improvement From BL to EL (formated)],
-			                Cycles[Period] = __CurrentPeriod,
-			                'Levels in Subjects'[Subject ID] = __CurrentSubjectID
+			                [pp Of Literacy Improvement From BL to EL (formated)],
+			                Cycles[Period] = __CurrentPeriod
 			            )
 			    )
 			VAR __FilteredTable =
@@ -1094,15 +1090,13 @@ table Mesures
 	measure '# Of Grades With Literacy Improvement under 20pp' =
 			
 			VAR __CurrentPeriod = SELECTEDVALUE( Cycles[Period] )
-			VAR __CurrentSubjectID = 1
 			VAR __Table =
 			    ADDCOLUMNS(
 			        SUMMARIZE( Grades, Grades[Grade], Grades[Grade Sort] ),
 			        "@pp Improvement",
 			            CALCULATE(
-			                [pp Of Subject Improvement From BL to EL (formated)],
-			                Cycles[Period] = __CurrentPeriod,
-			                'Levels in Subjects'[Subject ID] = __CurrentSubjectID
+			                [pp Of Literacy Improvement From BL to EL (formated)],
+			                Cycles[Period] = __CurrentPeriod
 			            )
 			    )
 			VAR __FilteredTable =
@@ -1122,15 +1116,13 @@ table Mesures
 	measure 'Grades With Literacy Improvement under 20pp' =
 			
 			VAR __CurrentPeriod = SELECTEDVALUE( Cycles[Period] )
-			VAR __CurrentSubject = 1
 			VAR __Table =
 			    ADDCOLUMNS(
 			        SUMMARIZE( Grades, Grades[Grade], Grades[Grade Sort] ),
 			        "@pp Improvement",
 			            CALCULATE(
-			                [pp Of Subject Improvement From BL to EL (formated)],
-			                Cycles[Period] = __CurrentPeriod,
-			                'Levels in Subjects'[Subject ID] = __CurrentSubject
+			                [pp Of Literacy Improvement From BL to EL (formated)],
+			                Cycles[Period] = __CurrentPeriod
 			            )
 			    )
 			VAR __FilteredTable =
@@ -1153,11 +1145,11 @@ table Mesures
 			VAR __Bottom_Grade_Performance = [Lowest Literacy Difficulty Reduction across grades at EL]
 			VAR __Top_Grade_Performance_formated = FORMAT( 100 * __Top_Grade_Performance, "0 pp" )
 			VAR __Bottom_Grade_Performance_formated = FORMAT( 100 * __Bottom_Grade_Performance, "0 pp" )
-			VAR __List_Grades_Over_Target = [Grades With Subject Difficulty Reduction over 20pp]
-			VAR __List_Grades_Under_Target = [Grades With Subject Difficulty Reduction under 20pp]
+			VAR __List_Grades_Over_Target = [Grades With Literacy Difficulty Reduction over 20pp]
+			VAR __List_Grades_Under_Target = [Grades With Literacy Difficulty Reduction under 20pp]
 			VAR __Count_Grades = DISTINCTCOUNT( Grades[Grade] )
-			VAR __Count_Grades_Over_Target = [# Of Grades With Subject Difficulty Reduction over 20pp]
-			VAR __Count_Grades_Under_Target = [# Of Grades With Subject Difficulty Reduction under 20pp]
+			VAR __Count_Grades_Over_Target = [# Of Grades With Literacy Difficulty Reduction over 20pp]
+			VAR __Count_Grades_Under_Target = [# Of Grades With Literacy Difficulty Reduction under 20pp]
 			
 			
 			VAR __Comment_Part1 = UNICHAR(10) & "• The best performance was seen in the " &  __Top_Grade & " class with " & __Top_Grade_Performance_formated & ". " & __Bottom_Grade & " was the class which performed the least with " & __Bottom_Grade_Performance_formated
@@ -1174,18 +1166,16 @@ table Mesures
 			```
 		lineageTag: 1649d2ab-8e1d-442a-8494-96e898283f5a
 
-	measure 'Grades With Subject Difficulty Reduction over 20pp' =
+	measure 'Grades With Literacy Difficulty Reduction over 20pp' =
 			
 			VAR __CurrentPeriod = SELECTEDVALUE( Cycles[Period] )
-			VAR __CurrentSubject = 1
 			VAR __Table =
 			    ADDCOLUMNS(
 			        SUMMARIZE( Grades, Grades[Grade], Grades[Grade Sort] ),
 			        "@pp Improvement",
 			            CALCULATE(
 			                [pp Of Subject Difficulty Reduction From BL to EL (formated)],
-			                Cycles[Period] = __CurrentPeriod,
-			                'Levels in Subjects'[Subject ID] = __CurrentSubject
+			                Cycles[Period] = __CurrentPeriod
 			            )
 			    )
 			VAR __FilteredTable =
@@ -1198,18 +1188,16 @@ table Mesures
 			    )
 		lineageTag: b2c95dac-7827-438c-86cb-2741e2886d0c
 
-	measure 'Grades With Subject Difficulty Reduction under 20pp' =
+	measure 'Grades With Literacy Difficulty Reduction under 20pp' =
 			
 			VAR __CurrentPeriod = SELECTEDVALUE( Cycles[Period] )
-			VAR __CurrentSubject = 1
 			VAR __Table =
 			    ADDCOLUMNS(
 			        SUMMARIZE( Grades, Grades[Grade], Grades[Grade Sort] ),
 			        "@pp Improvement",
 			            CALCULATE(
-			                [pp Of Subject Difficulty Reduction From BL to EL (formated)],
-			                Cycles[Period] = __CurrentPeriod,
-			                'Levels in Subjects'[Subject ID] = __CurrentSubject
+			                [pp Of Literacy Difficulty Reduction From BL to EL (formated)],
+			                Cycles[Period] = __CurrentPeriod
 			            )
 			    )
 			VAR __FilteredTable =
@@ -1222,18 +1210,16 @@ table Mesures
 			    )
 		lineageTag: eb2ce588-e304-4e18-b5a8-f1e67261eaa5
 
-	measure '# Of Grades With Subject Difficulty Reduction over 20pp' =
+	measure '# Of Grades With Literacy Difficulty Reduction over 20pp' =
 			
 			VAR __CurrentPeriod = SELECTEDVALUE( Cycles[Period] )
-			VAR __CurrentSubjectID = 1
 			VAR __Table =
 			    ADDCOLUMNS(
 			        SUMMARIZE( Grades, Grades[Grade], Grades[Grade Sort] ),
 			        "@pp Improvement",
 			            CALCULATE(
-			                [pp Of Subject Difficulty Reduction From BL to EL (formated)],
-			                Cycles[Period] = __CurrentPeriod,
-			                'Levels in Subjects'[Subject ID] = __CurrentSubjectID
+			                [pp Of Literacy Difficulty Reduction From BL to EL (formated)],
+			                Cycles[Period] = __CurrentPeriod
 			            )
 			    )
 			VAR __FilteredTable =
@@ -1250,18 +1236,16 @@ table Mesures
 		formatString: 0
 		lineageTag: 258476c6-58fd-4ec9-9bf1-bd4ae147d45b
 
-	measure '# Of Grades With Subject Difficulty Reduction under 20pp' =
+	measure '# Of Grades With Literacy Difficulty Reduction under 20pp' =
 			
 			VAR __CurrentPeriod = SELECTEDVALUE( Cycles[Period] )
-			VAR __CurrentSubjectID = 1
 			VAR __Table =
 			    ADDCOLUMNS(
 			        SUMMARIZE( Grades, Grades[Grade], Grades[Grade Sort] ),
 			        "@pp Improvement",
 			            CALCULATE(
-			                [pp Of Subject Difficulty Reduction From BL to EL (formated)],
-			                Cycles[Period] = __CurrentPeriod,
-			                'Levels in Subjects'[Subject ID] = __CurrentSubjectID
+			                [pp Of Literacy Difficulty Reduction From BL to EL (formated)],
+			                Cycles[Period] = __CurrentPeriod
 			            )
 			    )
 			VAR __FilteredTable =
@@ -1466,15 +1450,13 @@ table Mesures
 	measure 'Grades With Numeracy Improvement over 20pp' =
 			
 			VAR __CurrentPeriod = SELECTEDVALUE( Cycles[Period] )
-			VAR __CurrentSubject = 2
 			VAR __Table =
 			    ADDCOLUMNS(
 			        SUMMARIZE( Grades, Grades[Grade], Grades[Grade Sort] ),
 			        "@pp Improvement",
 			            CALCULATE(
-			                [pp Of Subject Improvement From BL to EL (formated)],
-			                Cycles[Period] = __CurrentPeriod,
-			                'Levels in Subjects'[Subject ID] = __CurrentSubject
+			                [pp Of Numeracy Improvement From BL to EL (formated)],
+			                Cycles[Period] = __CurrentPeriod
 			            )
 			    )
 			VAR __FilteredTable =
@@ -1490,15 +1472,13 @@ table Mesures
 	measure '# Of Grades With Numeracy Improvement over 20pp' =
 			
 			VAR __CurrentPeriod = SELECTEDVALUE( Cycles[Period] )
-			VAR __CurrentSubjectID = 2
 			VAR __Table =
 			    ADDCOLUMNS(
 			        SUMMARIZE( Grades, Grades[Grade], Grades[Grade Sort] ),
 			        "@pp Improvement",
 			            CALCULATE(
-			                [pp Of Subject Improvement From BL to EL (formated)],
-			                Cycles[Period] = __CurrentPeriod,
-			                'Levels in Subjects'[Subject ID] = __CurrentSubjectID
+			                [pp Of Numeracy Improvement From BL to EL (formated)],
+			                Cycles[Period] = __CurrentPeriod
 			            )
 			    )
 			VAR __FilteredTable =
@@ -1632,15 +1612,13 @@ table Mesures
 	measure 'Grades With Numeracy Difficulty Reduction over 20pp' =
 			
 			VAR __CurrentPeriod = SELECTEDVALUE( Cycles[Period] )
-			VAR __CurrentSubject = 2
 			VAR __Table =
 			    ADDCOLUMNS(
 			        SUMMARIZE( Grades, Grades[Grade], Grades[Grade Sort] ),
 			        "@pp Improvement",
 			            CALCULATE(
-			                [pp Of Subject Difficulty Reduction From BL to EL (formated)],
-			                Cycles[Period] = __CurrentPeriod,
-			                'Levels in Subjects'[Subject ID] = __CurrentSubject
+			                [pp Of Numeracy Difficulty Reduction From BL to EL (formated)],
+			                Cycles[Period] = __CurrentPeriod
 			            )
 			    )
 			VAR __FilteredTable =
@@ -1656,15 +1634,13 @@ table Mesures
 	measure '# Of Grades With Numeracy Difficulty Reduction over 20pp' =
 			
 			VAR __CurrentPeriod = SELECTEDVALUE( Cycles[Period] )
-			VAR __CurrentSubjectID = 2
 			VAR __Table =
 			    ADDCOLUMNS(
 			        SUMMARIZE( Grades, Grades[Grade], Grades[Grade Sort] ),
 			        "@pp Improvement",
 			            CALCULATE(
-			                [pp Of Subject Difficulty Reduction From BL to EL (formated)],
-			                Cycles[Period] = __CurrentPeriod,
-			                'Levels in Subjects'[Subject ID] = __CurrentSubjectID
+			                [pp Of Numeracy Difficulty Reduction From BL to EL (formated)],
+			                Cycles[Period] = __CurrentPeriod
 			            )
 			    )
 			VAR __FilteredTable =
@@ -1684,15 +1660,13 @@ table Mesures
 	measure 'Grades With Numeracy Difficulty Reduction under 20pp' =
 			
 			VAR __CurrentPeriod = SELECTEDVALUE( Cycles[Period] )
-			VAR __CurrentSubject = 2
 			VAR __Table =
 			    ADDCOLUMNS(
 			        SUMMARIZE( Grades, Grades[Grade], Grades[Grade Sort] ),
 			        "@pp Improvement",
 			            CALCULATE(
-			                [pp Of Subject Difficulty Reduction From BL to EL (formated)],
-			                Cycles[Period] = __CurrentPeriod,
-			                'Levels in Subjects'[Subject ID] = __CurrentSubject
+			                [pp Of Numeracy Difficulty Reduction From BL to EL (formated)],
+			                Cycles[Period] = __CurrentPeriod
 			            )
 			    )
 			VAR __FilteredTable =
@@ -1708,15 +1682,13 @@ table Mesures
 	measure '# Of Grades With Numeracy Difficulty Reduction under 20pp' =
 			
 			VAR __CurrentPeriod = SELECTEDVALUE( Cycles[Period] )
-			VAR __CurrentSubjectID = 2
 			VAR __Table =
 			    ADDCOLUMNS(
 			        SUMMARIZE( Grades, Grades[Grade], Grades[Grade Sort] ),
 			        "@pp Improvement",
 			            CALCULATE(
-			                [pp Of Subject Difficulty Reduction From BL to EL (formated)],
-			                Cycles[Period] = __CurrentPeriod,
-			                'Levels in Subjects'[Subject ID] = __CurrentSubjectID
+			                [pp Of Numeracy Difficulty Reduction From BL to EL (formated)],
+			                Cycles[Period] = __CurrentPeriod
 			            )
 			    )
 			VAR __FilteredTable =
@@ -2945,7 +2917,6 @@ table Mesures
 			
 			
 			VAR __CurrentPeriod = SELECTEDVALUE( Cycles[Period] )
-			
 			VAR __Table =
 			    ADDCOLUMNS(
 			        VALUES( Grades[School ID] ),
@@ -2975,7 +2946,6 @@ table Mesures
 			
 			
 			VAR __CurrentPeriod = SELECTEDVALUE( Cycles[Period] )
-			
 			VAR __Table =
 			    ADDCOLUMNS(
 			        VALUES( Grades[School ID] ),

@@ -9519,7 +9519,7 @@ cultureInfo fr-FR
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Mesures",
-			          "ConceptualProperty": "Grades With Subject Difficulty Reduction over 20pp"
+			          "ConceptualProperty": "Grades With Literacy Difficulty Reduction over 20pp"
 			        }
 			      },
 			      "State": "Generated",
@@ -9535,7 +9535,7 @@ cultureInfo fr-FR
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Mesures",
-			          "ConceptualProperty": "Grades With Subject Difficulty Reduction under 20pp"
+			          "ConceptualProperty": "Grades With Literacy Difficulty Reduction under 20pp"
 			        }
 			      },
 			      "State": "Generated",
@@ -9551,7 +9551,7 @@ cultureInfo fr-FR
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Mesures",
-			          "ConceptualProperty": "# Of Grades With Subject Difficulty Reduction over 20pp"
+			          "ConceptualProperty": "# Of Grades With Literacy Difficulty Reduction over 20pp"
 			        }
 			      },
 			      "State": "Generated",
@@ -9567,7 +9567,7 @@ cultureInfo fr-FR
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Mesures",
-			          "ConceptualProperty": "# Of Grades With Subject Difficulty Reduction under 20pp"
+			          "ConceptualProperty": "# Of Grades With Literacy Difficulty Reduction under 20pp"
 			        }
 			      },
 			      "State": "Generated",

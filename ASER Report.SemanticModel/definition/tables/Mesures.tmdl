@@ -3021,6 +3021,12 @@ table Mesures
 		formatString: 0\ %;-0\ %;0\ %
 		lineageTag: 1f773fa3-2b26-41b3-b342-27629899244b
 
+	measure 'Learning pp Gains Title' =
+			
+			VAR __Period = MAX( Cycles[Period] )
+			RETURN "Learning pp gains in " & __Period
+		lineageTag: fbafce9d-8637-490c-8325-c9a8cb93a6af
+
 	partition Mesures = m
 		mode: import
 		source =

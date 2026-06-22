@@ -3517,7 +3517,7 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "mesure.entity___of_students_reached_in_program": {
+			    "mesure.of_students_reached_in_program": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Mesures",
@@ -3527,7 +3527,7 @@ cultureInfo fr-FR
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "_# of students reached in program": {
+			          "# of students reached in program": {
 			            "State": "Generated"
 			          }
 			        },
@@ -5056,16 +5056,6 @@ cultureInfo fr-FR
 			          }
 			        },
 			        {
-			          "High Lit increase (pp)": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
 			          "Increase from Baseline": {
 			            "State": "Suggested",
 			            "Source": {
@@ -5105,16 +5095,6 @@ cultureInfo fr-FR
 			        {
 			          "pp of literacy difficulty reduction from BL to EL": {
 			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "Low Lit reduction (pp)": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
 			          }
 			        },
 			        {
@@ -5281,16 +5261,6 @@ cultureInfo fr-FR
 			        {
 			          "pp of numeracy improvement from BL to EL": {
 			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "High Num increase (pp)": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
 			          }
 			        },
 			        {
@@ -7322,12 +7292,6 @@ cultureInfo fr-FR
 			          }
 			        },
 			        {
-			          "numeracy": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
 			          "cross cheque": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -8722,6 +8686,16 @@ cultureInfo fr-FR
 			            },
 			            "Weight": 0.9
 			          }
+			        },
+			        {
+			          "Low Lit reduction (pp)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -8754,6 +8728,16 @@ cultureInfo fr-FR
 			            },
 			            "Weight": 0.9
 			          }
+			        },
+			        {
+			          "High Lit increase (pp)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -8776,6 +8760,16 @@ cultureInfo fr-FR
 			            "State": "Generated",
 			            "Weight": 0.75
 			          }
+			        },
+			        {
+			          "Low Num reduction (pp)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -8797,6 +8791,16 @@ cultureInfo fr-FR
 			          "pp of numeracy improvement from BL to EL": {
 			            "State": "Generated",
 			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "High Num increase (pp)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -9515,7 +9519,7 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "mesure.grades_with_subject_difficulty_reduction_over_20pp": {
+			    "mesure.grades_with_literacy_difficulty_reduction_over_20pp": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Mesures",
@@ -9525,13 +9529,13 @@ cultureInfo fr-FR
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "grades with subject difficulty reduction over 20pp": {
+			          "grades with literacy difficulty reduction over 20pp": {
 			            "State": "Generated"
 			          }
 			        }
 			      ]
 			    },
-			    "mesure.grades_with_subject_difficulty_reduction_under_20pp": {
+			    "mesure.grades_with_literacy_difficulty_reduction_under_20pp": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Mesures",
@@ -9541,13 +9545,13 @@ cultureInfo fr-FR
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "grades with subject difficulty reduction under 20pp": {
+			          "grades with literacy difficulty reduction under 20pp": {
 			            "State": "Generated"
 			          }
 			        }
 			      ]
 			    },
-			    "mesure.of_grades_with_subject_difficulty_reduction_over_20pp": {
+			    "mesure.of_grades_with_literacy_difficulty_reduction_over_20pp": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Mesures",
@@ -9557,13 +9561,13 @@ cultureInfo fr-FR
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "# of grades with subject difficulty reduction over 20pp": {
+			          "# of grades with literacy difficulty reduction over 20pp": {
 			            "State": "Generated"
 			          }
 			        }
 			      ]
 			    },
-			    "mesure.of_grades_with_subject_difficulty_reduction_under_20pp": {
+			    "mesure.of_grades_with_literacy_difficulty_reduction_under_20pp": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Mesures",
@@ -9573,7 +9577,7 @@ cultureInfo fr-FR
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "# of grades with subject difficulty reduction under 20pp": {
+			          "# of grades with literacy difficulty reduction under 20pp": {
 			            "State": "Generated"
 			          }
 			        }
@@ -12152,9 +12156,1865 @@ cultureInfo fr-FR
 			          }
 			        }
 			      ]
+			    },
+			    "mesure.status__literacy_pp_gain": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "Status - Literacy pp Gain"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "status - literacy pp gain": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "status literacy pp gain": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "category - literacy pp gain": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "importance - literacy pp gain": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "prestige - literacy pp gain": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "prominence - literacy pp gain": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "category literacy pp gain": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "importance literacy pp gain": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "prestige literacy pp gain": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "prominence literacy pp gain": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "condition - literacy pp gain": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "class - literacy pp gain": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.status__numeracy_pp_gain": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "Status - Numeracy pp Gain"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "status - numeracy pp gain": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "status numeracy pp gain": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "category - numeracy pp gain": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "importance - numeracy pp gain": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "prestige - numeracy pp gain": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "prominence - numeracy pp gain": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "category numeracy pp gain": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "importance numeracy pp gain": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "prestige numeracy pp gain": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "prominence numeracy pp gain": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "condition - numeracy pp gain": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "class - numeracy pp gain": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.text_colour__target_meet": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "Text Colour - Target meet"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "text colour - target meet": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "text colour target meet": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "meet": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "target meet": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "colour target meet": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "text colour - focus meet": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "text colour - goal meet": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "text colour - objective meet": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "text colour focus meet": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "text colour goal meet": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "text colour objective meet": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "colour focus meet": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "colour goal meet": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "colour objective meet": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "focus meet": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.text_colour__approaching_target": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "Text Colour - Approaching Target"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "text colour - approaching target": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "text colour approaching target": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "target": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "approaching target": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "colour approaching target": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "text colour - approaching focus": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "text colour - approaching goal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "text colour - approaching objective": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "text colour approaching focus": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "text colour approaching goal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "text colour approaching objective": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "colour approaching focus": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "colour approaching goal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "colour approaching objective": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "approaching focus": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.text_colour__below_target": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "Text Colour - Below Target"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "text colour - below target": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "text colour below target": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "colour": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "text colour": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "text colour - below focus": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "text colour - below goal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "text colour - below objective": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "text colour below focus": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "text colour below goal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "text colour below objective": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.background_colour__target_meet": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "Background Colour - Target meet"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "background colour - target meet": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "background colour target meet": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "meet": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "target meet": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "colour target meet": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "background colour - focus meet": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "background colour - goal meet": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "background colour - objective meet": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "background colour focus meet": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "background colour goal meet": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "background colour objective meet": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "colour focus meet": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "colour goal meet": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "colour objective meet": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "focus meet": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.background_colour__approaching_target": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "Background Colour - Approaching Target"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "background colour - approaching target": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "background colour approaching target": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "target": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "approaching target": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "colour approaching target": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "background colour - approaching focus": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "background colour - approaching goal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "background colour - approaching objective": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "background colour approaching focus": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "background colour approaching goal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "background colour approaching objective": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "colour approaching focus": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "colour approaching goal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "colour approaching objective": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "approaching focus": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.background_colour__below_target": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "Background Colour - Below Target"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "background colour - below target": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "background colour below target": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "colour": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "background colour": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "background colour - below focus": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "background colour - below goal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "background colour - below objective": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "background colour below focus": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "background colour below goal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "background colour below objective": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.colour_status__literacy_pp_gain": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "Colour Status - Literacy pp Gain"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "colour status - literacy pp gain": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "colour status literacy pp gain": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "colour category literacy pp gain": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "colour importance literacy pp gain": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "colour prestige literacy pp gain": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "colour prominence literacy pp gain": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "colour condition literacy pp gain": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "colour class literacy pp gain": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "colour grade literacy pp gain": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "colour level literacy pp gain": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "colour position literacy pp gain": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "colour rank literacy pp gain": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.colour_status__numeracy_pp_gain": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "Colour Status - Numeracy pp Gain"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "colour status - numeracy pp gain": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "colour status numeracy pp gain": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "colour category numeracy pp gain": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "colour importance numeracy pp gain": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "colour prestige numeracy pp gain": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "colour prominence numeracy pp gain": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "colour condition numeracy pp gain": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "colour class numeracy pp gain": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "colour grade numeracy pp gain": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "colour level numeracy pp gain": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "colour position numeracy pp gain": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "colour rank numeracy pp gain": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.of_schools_with_literacy_improvement_over_20pp": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "# Of Schools With Literacy Improvement over 20pp"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "# of schools with literacy improvement over 20pp": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.of_schools_with_numeracy_improvement_over_20pp": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "# Of Schools With Numeracy Improvement over 20pp"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "# of schools with numeracy improvement over 20pp": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.of_schools_with_literacy_improvement_over_20pp1": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "% Of Schools With Literacy Improvement over 20pp"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% of schools with literacy improvement over 20pp": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.of_schools_with_numeracy_improvement_over_20pp1": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "% Of Schools With Numeracy Improvement over 20pp"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% of schools with numeracy improvement over 20pp": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.learning_pp_gains_title": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "Learning pp Gains Title"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "learning pp gains title": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "learning pp gain designation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "learning pp gain name": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "learning pp gain award": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "learning pp gain call": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "learning pp gain heading": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "learning pp gain label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
+			    "mesure_has_background_colour__approaching_target": {
+			      "Binding": {
+			        "ConceptualEntity": "Mesures"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mesure": {
+			          "Target": {
+			            "Entity": "mesure"
+			          }
+			        },
+			        "mesure.background_colour__approaching_target": {
+			          "Target": {
+			            "Entity": "mesure.background_colour__approaching_target"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mesure"
+			            },
+			            "Object": {
+			              "Role": "mesure.background_colour__approaching_target"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mesures_have_background_colour__approaching_target"
+			        }
+			      ]
+			    },
+			    "mesure_has_background_colour__target_meet": {
+			      "Binding": {
+			        "ConceptualEntity": "Mesures"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mesure": {
+			          "Target": {
+			            "Entity": "mesure"
+			          }
+			        },
+			        "mesure.background_colour__target_meet": {
+			          "Target": {
+			            "Entity": "mesure.background_colour__target_meet"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mesure"
+			            },
+			            "Object": {
+			              "Role": "mesure.background_colour__target_meet"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mesures_have_background_colour__target_meet"
+			        }
+			      ]
+			    },
+			    "mesure_has_text_colour__below_target": {
+			      "Binding": {
+			        "ConceptualEntity": "Mesures"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mesure": {
+			          "Target": {
+			            "Entity": "mesure"
+			          }
+			        },
+			        "mesure.text_colour__below_target": {
+			          "Target": {
+			            "Entity": "mesure.text_colour__below_target"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mesure"
+			            },
+			            "Object": {
+			              "Role": "mesure.text_colour__below_target"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mesures_have_text_colour__below_target"
+			        }
+			      ]
+			    },
+			    "mesure_has_text_colour__approaching_target": {
+			      "Binding": {
+			        "ConceptualEntity": "Mesures"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mesure": {
+			          "Target": {
+			            "Entity": "mesure"
+			          }
+			        },
+			        "mesure.text_colour__approaching_target": {
+			          "Target": {
+			            "Entity": "mesure.text_colour__approaching_target"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mesure"
+			            },
+			            "Object": {
+			              "Role": "mesure.text_colour__approaching_target"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mesures_have_text_colour__approaching_target"
+			        }
+			      ]
+			    },
+			    "mesure_has_text_colour__target_meet": {
+			      "Binding": {
+			        "ConceptualEntity": "Mesures"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mesure": {
+			          "Target": {
+			            "Entity": "mesure"
+			          }
+			        },
+			        "mesure.text_colour__target_meet": {
+			          "Target": {
+			            "Entity": "mesure.text_colour__target_meet"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mesure"
+			            },
+			            "Object": {
+			              "Role": "mesure.text_colour__target_meet"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mesures_have_text_colour__target_meet"
+			        }
+			      ]
+			    },
+			    "mesure_has_status__numeracy_pp_gain": {
+			      "Binding": {
+			        "ConceptualEntity": "Mesures"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mesure": {
+			          "Target": {
+			            "Entity": "mesure"
+			          }
+			        },
+			        "mesure.status__numeracy_pp_gain": {
+			          "Target": {
+			            "Entity": "mesure.status__numeracy_pp_gain"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mesure"
+			            },
+			            "Object": {
+			              "Role": "mesure.status__numeracy_pp_gain"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mesures_have_status__numeracy_pp_gain"
+			        }
+			      ]
+			    },
+			    "mesure_has_status__literacy_pp_gain": {
+			      "Binding": {
+			        "ConceptualEntity": "Mesures"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mesure": {
+			          "Target": {
+			            "Entity": "mesure"
+			          }
+			        },
+			        "mesure.status__literacy_pp_gain": {
+			          "Target": {
+			            "Entity": "mesure.status__literacy_pp_gain"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mesure"
+			            },
+			            "Object": {
+			              "Role": "mesure.status__literacy_pp_gain"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mesures_have_status__literacy_pp_gain"
+			        }
+			      ]
+			    },
+			    "ASER_CIV_data_has_mesure_entity___gap": {
+			      "Binding": {
+			        "ConceptualEntity": "ASER CIV Data"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "ASER_CIV_data": {
+			          "Target": {
+			            "Entity": "ASER_CIV_data"
+			          }
+			        },
+			        "mesure.entity___gap": {
+			          "Target": {
+			            "Entity": "mesure.entity___gap"
+			          }
+			        }
+			      }
+			    },
+			    "mesure_has_of_upper_yellow_schools_for_numeracy1": {
+			      "Binding": {
+			        "ConceptualEntity": "Mesures"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mesure": {
+			          "Target": {
+			            "Entity": "mesure"
+			          }
+			        },
+			        "mesure.of_upper_yellow_schools_for_numeracy1": {
+			          "Target": {
+			            "Entity": "mesure.of_upper_yellow_schools_for_numeracy1"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mesure"
+			            },
+			            "Object": {
+			              "Role": "mesure.of_upper_yellow_schools_for_numeracy1"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mesures_have__of_upper_yellow_schools_for_numeracy"
+			        }
+			      ]
+			    },
+			    "mesure_has_of_intermediate_yellow_schools_for_numeracy1": {
+			      "Binding": {
+			        "ConceptualEntity": "Mesures"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mesure": {
+			          "Target": {
+			            "Entity": "mesure"
+			          }
+			        },
+			        "mesure.of_intermediate_yellow_schools_for_numeracy1": {
+			          "Target": {
+			            "Entity": "mesure.of_intermediate_yellow_schools_for_numeracy1"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mesure"
+			            },
+			            "Object": {
+			              "Role": "mesure.of_intermediate_yellow_schools_for_numeracy1"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mesures_have__of_intermediate_yellow_schools_for_numeracy"
+			        }
+			      ]
+			    },
+			    "mesure_has_of_upper_yellow_schools_for_numeracy": {
+			      "Binding": {
+			        "ConceptualEntity": "Mesures"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mesure": {
+			          "Target": {
+			            "Entity": "mesure"
+			          }
+			        },
+			        "mesure.of_upper_yellow_schools_for_numeracy": {
+			          "Target": {
+			            "Entity": "mesure.of_upper_yellow_schools_for_numeracy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mesure"
+			            },
+			            "Object": {
+			              "Role": "mesure.of_upper_yellow_schools_for_numeracy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mesures_have__of_upper_yellow_schools_for_numeracy1"
+			        }
+			      ]
+			    },
+			    "mesure_has_of_intermediate_yellow_schools_for_numeracy": {
+			      "Binding": {
+			        "ConceptualEntity": "Mesures"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mesure": {
+			          "Target": {
+			            "Entity": "mesure"
+			          }
+			        },
+			        "mesure.of_intermediate_yellow_schools_for_numeracy": {
+			          "Target": {
+			            "Entity": "mesure.of_intermediate_yellow_schools_for_numeracy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mesure"
+			            },
+			            "Object": {
+			              "Role": "mesure.of_intermediate_yellow_schools_for_numeracy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mesures_have__of_intermediate_yellow_schools_for_numeracy1"
+			        }
+			      ]
+			    },
+			    "mesure_has_of_upper_yellow_schools_for_literacy1": {
+			      "Binding": {
+			        "ConceptualEntity": "Mesures"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mesure": {
+			          "Target": {
+			            "Entity": "mesure"
+			          }
+			        },
+			        "mesure.of_upper_yellow_schools_for_literacy1": {
+			          "Target": {
+			            "Entity": "mesure.of_upper_yellow_schools_for_literacy1"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mesure"
+			            },
+			            "Object": {
+			              "Role": "mesure.of_upper_yellow_schools_for_literacy1"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mesures_have__of_upper_yellow_schools_for_literacy"
+			        }
+			      ]
+			    },
+			    "mesure_has_of_intermediate_yellow_schools_for_literacy1": {
+			      "Binding": {
+			        "ConceptualEntity": "Mesures"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mesure": {
+			          "Target": {
+			            "Entity": "mesure"
+			          }
+			        },
+			        "mesure.of_intermediate_yellow_schools_for_literacy1": {
+			          "Target": {
+			            "Entity": "mesure.of_intermediate_yellow_schools_for_literacy1"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mesure"
+			            },
+			            "Object": {
+			              "Role": "mesure.of_intermediate_yellow_schools_for_literacy1"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mesures_have__of_intermediate_yellow_schools_for_literacy"
+			        }
+			      ]
+			    },
+			    "mesure_has_of_upper_yellow_schools_for_literacy": {
+			      "Binding": {
+			        "ConceptualEntity": "Mesures"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mesure": {
+			          "Target": {
+			            "Entity": "mesure"
+			          }
+			        },
+			        "mesure.of_upper_yellow_schools_for_literacy": {
+			          "Target": {
+			            "Entity": "mesure.of_upper_yellow_schools_for_literacy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mesure"
+			            },
+			            "Object": {
+			              "Role": "mesure.of_upper_yellow_schools_for_literacy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mesures_have__of_upper_yellow_schools_for_literacy1"
+			        }
+			      ]
+			    },
 			    "mesure_has_of_intermediate_yellow_schools_for_literacy": {
 			      "Binding": {
 			        "ConceptualEntity": "Mesures"
@@ -12184,7 +14044,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mesures_have__of_intermediate_yellow_schools_for_literacy"
+			          "ID": "mesures_have__of_intermediate_yellow_schools_for_literacy1"
 			        }
 			      ]
 			    },
@@ -15523,7 +17383,7 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "mesure_has_of_grades_with_subject_difficulty_reduction_under_20pp": {
+			    "mesure_has_of_grades_with_literacy_difficulty_reduction_under_20pp": {
 			      "Binding": {
 			        "ConceptualEntity": "Mesures"
 			      },
@@ -15534,9 +17394,9 @@ cultureInfo fr-FR
 			            "Entity": "mesure"
 			          }
 			        },
-			        "mesure.of_grades_with_subject_difficulty_reduction_under_20pp": {
+			        "mesure.of_grades_with_literacy_difficulty_reduction_under_20pp": {
 			          "Target": {
-			            "Entity": "mesure.of_grades_with_subject_difficulty_reduction_under_20pp"
+			            "Entity": "mesure.of_grades_with_literacy_difficulty_reduction_under_20pp"
 			          }
 			        }
 			      },
@@ -15547,16 +17407,16 @@ cultureInfo fr-FR
 			              "Role": "mesure"
 			            },
 			            "Object": {
-			              "Role": "mesure.of_grades_with_subject_difficulty_reduction_under_20pp"
+			              "Role": "mesure.of_grades_with_literacy_difficulty_reduction_under_20pp"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mesures_have__of_grades_with_subject_difficulty_reduction_under_20pp"
+			          "ID": "mesures_have__of_grades_with_literacy_difficulty_reduction_under_20pp"
 			        }
 			      ]
 			    },
-			    "mesure_has_of_grades_with_subject_difficulty_reduction_over_20pp": {
+			    "mesure_has_of_grades_with_literacy_difficulty_reduction_over_20pp": {
 			      "Binding": {
 			        "ConceptualEntity": "Mesures"
 			      },
@@ -15567,9 +17427,9 @@ cultureInfo fr-FR
 			            "Entity": "mesure"
 			          }
 			        },
-			        "mesure.of_grades_with_subject_difficulty_reduction_over_20pp": {
+			        "mesure.of_grades_with_literacy_difficulty_reduction_over_20pp": {
 			          "Target": {
-			            "Entity": "mesure.of_grades_with_subject_difficulty_reduction_over_20pp"
+			            "Entity": "mesure.of_grades_with_literacy_difficulty_reduction_over_20pp"
 			          }
 			        }
 			      },
@@ -15580,16 +17440,16 @@ cultureInfo fr-FR
 			              "Role": "mesure"
 			            },
 			            "Object": {
-			              "Role": "mesure.of_grades_with_subject_difficulty_reduction_over_20pp"
+			              "Role": "mesure.of_grades_with_literacy_difficulty_reduction_over_20pp"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mesures_have__of_grades_with_subject_difficulty_reduction_over_20pp"
+			          "ID": "mesures_have__of_grades_with_literacy_difficulty_reduction_over_20pp"
 			        }
 			      ]
 			    },
-			    "mesure_has_grades_with_subject_difficulty_reduction_under_20pp": {
+			    "mesure_has_grades_with_literacy_difficulty_reduction_under_20pp": {
 			      "Binding": {
 			        "ConceptualEntity": "Mesures"
 			      },
@@ -15600,9 +17460,9 @@ cultureInfo fr-FR
 			            "Entity": "mesure"
 			          }
 			        },
-			        "mesure.grades_with_subject_difficulty_reduction_under_20pp": {
+			        "mesure.grades_with_literacy_difficulty_reduction_under_20pp": {
 			          "Target": {
-			            "Entity": "mesure.grades_with_subject_difficulty_reduction_under_20pp"
+			            "Entity": "mesure.grades_with_literacy_difficulty_reduction_under_20pp"
 			          }
 			        }
 			      },
@@ -15613,12 +17473,12 @@ cultureInfo fr-FR
 			              "Role": "mesure"
 			            },
 			            "Object": {
-			              "Role": "mesure.grades_with_subject_difficulty_reduction_under_20pp"
+			              "Role": "mesure.grades_with_literacy_difficulty_reduction_under_20pp"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mesures_have_grades_with_subject_difficulty_reduction_under_20pp"
+			          "ID": "mesures_have_grades_with_literacy_difficulty_reduction_under_20pp"
 			        },
 			        {
 			          "Verb": {
@@ -15642,18 +17502,18 @@ cultureInfo fr-FR
 			                  }
 			                ],
 			                "Object": {
-			                  "Role": "mesure.grades_with_subject_difficulty_reduction_under_20pp"
+			                  "Role": "mesure.grades_with_literacy_difficulty_reduction_under_20pp"
 			                }
 			              }
 			            ]
 			          },
 			          "State": "Generated",
 			          "Weight": 0.95,
-			          "ID": "mesures_grade_with_grades_with_subject_difficulty_reduction_under_20pp"
+			          "ID": "mesures_grade_with_grades_with_literacy_difficulty_reduction_under_20pp"
 			        }
 			      ]
 			    },
-			    "mesure_has_grades_with_subject_difficulty_reduction_over_20pp": {
+			    "mesure_has_grades_with_literacy_difficulty_reduction_over_20pp": {
 			      "Binding": {
 			        "ConceptualEntity": "Mesures"
 			      },
@@ -15664,9 +17524,9 @@ cultureInfo fr-FR
 			            "Entity": "mesure"
 			          }
 			        },
-			        "mesure.grades_with_subject_difficulty_reduction_over_20pp": {
+			        "mesure.grades_with_literacy_difficulty_reduction_over_20pp": {
 			          "Target": {
-			            "Entity": "mesure.grades_with_subject_difficulty_reduction_over_20pp"
+			            "Entity": "mesure.grades_with_literacy_difficulty_reduction_over_20pp"
 			          }
 			        }
 			      },
@@ -15677,12 +17537,12 @@ cultureInfo fr-FR
 			              "Role": "mesure"
 			            },
 			            "Object": {
-			              "Role": "mesure.grades_with_subject_difficulty_reduction_over_20pp"
+			              "Role": "mesure.grades_with_literacy_difficulty_reduction_over_20pp"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mesures_have_grades_with_subject_difficulty_reduction_over_20pp"
+			          "ID": "mesures_have_grades_with_literacy_difficulty_reduction_over_20pp"
 			        },
 			        {
 			          "Verb": {
@@ -15706,14 +17566,14 @@ cultureInfo fr-FR
 			                  }
 			                ],
 			                "Object": {
-			                  "Role": "mesure.grades_with_subject_difficulty_reduction_over_20pp"
+			                  "Role": "mesure.grades_with_literacy_difficulty_reduction_over_20pp"
 			                }
 			              }
 			            ]
 			          },
 			          "State": "Generated",
 			          "Weight": 0.95,
-			          "ID": "mesures_grade_with_grades_with_subject_difficulty_reduction_over_20pp"
+			          "ID": "mesures_grade_with_grades_with_literacy_difficulty_reduction_over_20pp"
 			        }
 			      ]
 			    },
@@ -18633,7 +20493,7 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "mesure_has_entity___of_students_reached_in_program": {
+			    "mesure_has_of_students_reached_in_program": {
 			      "Binding": {
 			        "ConceptualEntity": "Mesures"
 			      },
@@ -18644,9 +20504,9 @@ cultureInfo fr-FR
 			            "Entity": "mesure"
 			          }
 			        },
-			        "mesure.entity___of_students_reached_in_program": {
+			        "mesure.of_students_reached_in_program": {
 			          "Target": {
-			            "Entity": "mesure.entity___of_students_reached_in_program"
+			            "Entity": "mesure.of_students_reached_in_program"
 			          }
 			        }
 			      },
@@ -18657,12 +20517,12 @@ cultureInfo fr-FR
 			              "Role": "mesure"
 			            },
 			            "Object": {
-			              "Role": "mesure.entity___of_students_reached_in_program"
+			              "Role": "mesure.of_students_reached_in_program"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mesures_have___of_students_reached_in_program"
+			          "ID": "mesures_have__of_students_reached_in_program"
 			        }
 			      ]
 			    },
@@ -19162,7 +21022,7 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "mesure_has_of_upper_yellow_schools_for_literacy": {
+			    "mesure_has_background_colour__below_target": {
 			      "Binding": {
 			        "ConceptualEntity": "Mesures"
 			      },
@@ -19173,9 +21033,9 @@ cultureInfo fr-FR
 			            "Entity": "mesure"
 			          }
 			        },
-			        "mesure.of_upper_yellow_schools_for_literacy": {
+			        "mesure.background_colour__below_target": {
 			          "Target": {
-			            "Entity": "mesure.of_upper_yellow_schools_for_literacy"
+			            "Entity": "mesure.background_colour__below_target"
 			          }
 			        }
 			      },
@@ -19186,16 +21046,16 @@ cultureInfo fr-FR
 			              "Role": "mesure"
 			            },
 			            "Object": {
-			              "Role": "mesure.of_upper_yellow_schools_for_literacy"
+			              "Role": "mesure.background_colour__below_target"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mesures_have__of_upper_yellow_schools_for_literacy"
+			          "ID": "mesures_have_background_colour__below_target"
 			        }
 			      ]
 			    },
-			    "mesure_has_of_intermediate_yellow_schools_for_literacy1": {
+			    "mesure_has_colour_status__literacy_pp_gain": {
 			      "Binding": {
 			        "ConceptualEntity": "Mesures"
 			      },
@@ -19206,9 +21066,9 @@ cultureInfo fr-FR
 			            "Entity": "mesure"
 			          }
 			        },
-			        "mesure.of_intermediate_yellow_schools_for_literacy1": {
+			        "mesure.colour_status__literacy_pp_gain": {
 			          "Target": {
-			            "Entity": "mesure.of_intermediate_yellow_schools_for_literacy1"
+			            "Entity": "mesure.colour_status__literacy_pp_gain"
 			          }
 			        }
 			      },
@@ -19219,16 +21079,16 @@ cultureInfo fr-FR
 			              "Role": "mesure"
 			            },
 			            "Object": {
-			              "Role": "mesure.of_intermediate_yellow_schools_for_literacy1"
+			              "Role": "mesure.colour_status__literacy_pp_gain"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mesures_have__of_intermediate_yellow_schools_for_literacy1"
+			          "ID": "mesures_have_colour_status__literacy_pp_gain"
 			        }
 			      ]
 			    },
-			    "mesure_has_of_upper_yellow_schools_for_literacy1": {
+			    "mesure_has_colour_status__numeracy_pp_gain": {
 			      "Binding": {
 			        "ConceptualEntity": "Mesures"
 			      },
@@ -19239,9 +21099,9 @@ cultureInfo fr-FR
 			            "Entity": "mesure"
 			          }
 			        },
-			        "mesure.of_upper_yellow_schools_for_literacy1": {
+			        "mesure.colour_status__numeracy_pp_gain": {
 			          "Target": {
-			            "Entity": "mesure.of_upper_yellow_schools_for_literacy1"
+			            "Entity": "mesure.colour_status__numeracy_pp_gain"
 			          }
 			        }
 			      },
@@ -19252,16 +21112,16 @@ cultureInfo fr-FR
 			              "Role": "mesure"
 			            },
 			            "Object": {
-			              "Role": "mesure.of_upper_yellow_schools_for_literacy1"
+			              "Role": "mesure.colour_status__numeracy_pp_gain"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mesures_have__of_upper_yellow_schools_for_literacy1"
+			          "ID": "mesures_have_colour_status__numeracy_pp_gain"
 			        }
 			      ]
 			    },
-			    "mesure_has_of_intermediate_yellow_schools_for_numeracy": {
+			    "mesure_has_of_schools_with_literacy_improvement_over_20pp": {
 			      "Binding": {
 			        "ConceptualEntity": "Mesures"
 			      },
@@ -19272,9 +21132,9 @@ cultureInfo fr-FR
 			            "Entity": "mesure"
 			          }
 			        },
-			        "mesure.of_intermediate_yellow_schools_for_numeracy": {
+			        "mesure.of_schools_with_literacy_improvement_over_20pp": {
 			          "Target": {
-			            "Entity": "mesure.of_intermediate_yellow_schools_for_numeracy"
+			            "Entity": "mesure.of_schools_with_literacy_improvement_over_20pp"
 			          }
 			        }
 			      },
@@ -19285,16 +21145,16 @@ cultureInfo fr-FR
 			              "Role": "mesure"
 			            },
 			            "Object": {
-			              "Role": "mesure.of_intermediate_yellow_schools_for_numeracy"
+			              "Role": "mesure.of_schools_with_literacy_improvement_over_20pp"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mesures_have__of_intermediate_yellow_schools_for_numeracy"
+			          "ID": "mesures_have__of_schools_with_literacy_improvement_over_20pp"
 			        }
 			      ]
 			    },
-			    "mesure_has_of_upper_yellow_schools_for_numeracy": {
+			    "mesure_has_of_schools_with_numeracy_improvement_over_20pp": {
 			      "Binding": {
 			        "ConceptualEntity": "Mesures"
 			      },
@@ -19305,9 +21165,9 @@ cultureInfo fr-FR
 			            "Entity": "mesure"
 			          }
 			        },
-			        "mesure.of_upper_yellow_schools_for_numeracy": {
+			        "mesure.of_schools_with_numeracy_improvement_over_20pp": {
 			          "Target": {
-			            "Entity": "mesure.of_upper_yellow_schools_for_numeracy"
+			            "Entity": "mesure.of_schools_with_numeracy_improvement_over_20pp"
 			          }
 			        }
 			      },
@@ -19318,16 +21178,16 @@ cultureInfo fr-FR
 			              "Role": "mesure"
 			            },
 			            "Object": {
-			              "Role": "mesure.of_upper_yellow_schools_for_numeracy"
+			              "Role": "mesure.of_schools_with_numeracy_improvement_over_20pp"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mesures_have__of_upper_yellow_schools_for_numeracy"
+			          "ID": "mesures_have__of_schools_with_numeracy_improvement_over_20pp"
 			        }
 			      ]
 			    },
-			    "mesure_has_of_intermediate_yellow_schools_for_numeracy1": {
+			    "mesure_has_of_schools_with_literacy_improvement_over_20pp1": {
 			      "Binding": {
 			        "ConceptualEntity": "Mesures"
 			      },
@@ -19338,9 +21198,9 @@ cultureInfo fr-FR
 			            "Entity": "mesure"
 			          }
 			        },
-			        "mesure.of_intermediate_yellow_schools_for_numeracy1": {
+			        "mesure.of_schools_with_literacy_improvement_over_20pp1": {
 			          "Target": {
-			            "Entity": "mesure.of_intermediate_yellow_schools_for_numeracy1"
+			            "Entity": "mesure.of_schools_with_literacy_improvement_over_20pp1"
 			          }
 			        }
 			      },
@@ -19351,16 +21211,16 @@ cultureInfo fr-FR
 			              "Role": "mesure"
 			            },
 			            "Object": {
-			              "Role": "mesure.of_intermediate_yellow_schools_for_numeracy1"
+			              "Role": "mesure.of_schools_with_literacy_improvement_over_20pp1"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mesures_have__of_intermediate_yellow_schools_for_numeracy1"
+			          "ID": "mesures_have__of_schools_with_literacy_improvement_over_20pp1"
 			        }
 			      ]
 			    },
-			    "mesure_has_of_upper_yellow_schools_for_numeracy1": {
+			    "mesure_has_of_schools_with_numeracy_improvement_over_20pp1": {
 			      "Binding": {
 			        "ConceptualEntity": "Mesures"
 			      },
@@ -19371,9 +21231,9 @@ cultureInfo fr-FR
 			            "Entity": "mesure"
 			          }
 			        },
-			        "mesure.of_upper_yellow_schools_for_numeracy1": {
+			        "mesure.of_schools_with_numeracy_improvement_over_20pp1": {
 			          "Target": {
-			            "Entity": "mesure.of_upper_yellow_schools_for_numeracy1"
+			            "Entity": "mesure.of_schools_with_numeracy_improvement_over_20pp1"
 			          }
 			        }
 			      },
@@ -19384,32 +21244,47 @@ cultureInfo fr-FR
 			              "Role": "mesure"
 			            },
 			            "Object": {
-			              "Role": "mesure.of_upper_yellow_schools_for_numeracy1"
+			              "Role": "mesure.of_schools_with_numeracy_improvement_over_20pp1"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mesures_have__of_upper_yellow_schools_for_numeracy1"
+			          "ID": "mesures_have__of_schools_with_numeracy_improvement_over_20pp1"
 			        }
 			      ]
 			    },
-			    "ASER_CIV_data_has_mesure_entity___gap": {
+			    "cycle_has_mesure_learning_pp_gains_title": {
 			      "Binding": {
-			        "ConceptualEntity": "ASER CIV Data"
+			        "ConceptualEntity": "Cycles"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "ASER_CIV_data": {
+			        "cycle": {
 			          "Target": {
-			            "Entity": "ASER_CIV_data"
+			            "Entity": "cycle"
 			          }
 			        },
-			        "mesure.entity___gap": {
+			        "mesure.learning_pp_gains_title": {
 			          "Target": {
-			            "Entity": "mesure.entity___gap"
+			            "Entity": "mesure.learning_pp_gains_title"
 			          }
 			        }
-			      }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cycle"
+			            },
+			            "Object": {
+			              "Role": "mesure.learning_pp_gains_title"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "cycles_have_learning_pp_gains_title"
+			        }
+			      ]
 			    },
 			    "ASER_CIV_data_has_grade": {
 			      "Binding": {

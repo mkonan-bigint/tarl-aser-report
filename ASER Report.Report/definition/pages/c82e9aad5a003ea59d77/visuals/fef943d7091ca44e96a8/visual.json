@@ -87,13 +87,12 @@
                       "Entity": "Mesures"
                     }
                   },
-                  "Property": "pp Of Literacy Improvement From BL to EL"
+                  "Property": "pp Of Literacy Improvement From BL to EL (formated)"
                 }
               },
-              "queryRef": "Mesures.Literacy Improvement BL to EL (PP)",
-              "nativeQueryRef": "High Lit increase (pp)",
-              "displayName": "High Lit increase (pp)",
-              "format": "+0 %;-0 %;0 %"
+              "queryRef": "Mesures.pp Of Literacy Improvement From BL to EL (formated)",
+              "nativeQueryRef": "High Lit increase (pp)1",
+              "displayName": "High Lit increase (pp)"
             },
             {
               "field": {
@@ -133,13 +132,12 @@
                       "Entity": "Mesures"
                     }
                   },
-                  "Property": "pp Of Literacy Difficulty Reduction From BL to EL"
+                  "Property": "pp Of Literacy Difficulty Reduction From BL to EL (formated)"
                 }
               },
-              "queryRef": "Mesures.Literacy Difficulty Reduction BL to EL (PP)",
-              "nativeQueryRef": "Low Lit reduction (pp)",
-              "displayName": "Low Lit reduction (pp)",
-              "format": "+0 %;-0 %;0 %"
+              "queryRef": "Mesures.pp Of Literacy Difficulty Reduction From BL to EL (formated)",
+              "nativeQueryRef": "Low Lit reduction (pp)1",
+              "displayName": "Low Lit reduction (pp)"
             },
             {
               "field": {
@@ -179,13 +177,12 @@
                       "Entity": "Mesures"
                     }
                   },
-                  "Property": "pp Of Numeracy Improvement From BL to EL"
+                  "Property": "pp Of Numeracy Improvement From BL to EL (formated)"
                 }
               },
-              "queryRef": "Mesures.Numeracy Improvement BL to EL (PP)",
-              "nativeQueryRef": "High Num increase (pp)",
-              "displayName": "High Num increase (pp)",
-              "format": "+0 %;-0 %;0 %"
+              "queryRef": "Mesures.pp Of Numeracy Improvement From BL to EL (formated)",
+              "nativeQueryRef": "High Num increase (pp)1",
+              "displayName": "High Num increase (pp)"
             },
             {
               "field": {
@@ -225,13 +222,12 @@
                       "Entity": "Mesures"
                     }
                   },
-                  "Property": "pp Of Numeracy Difficulty Reduction From BL to EL"
+                  "Property": "pp Of Numeracy Difficulty Reduction From BL to EL (formated)"
                 }
               },
-              "queryRef": "Mesures.Numeracy Difficulty Reduction BL to EL (PP)",
-              "nativeQueryRef": "Low Num reduction (pp)",
-              "displayName": "Low Num reduction (pp)",
-              "format": "+0 %;-0 %;0 %"
+              "queryRef": "Mesures.pp Of Numeracy Difficulty Reduction From BL to EL (formated)",
+              "nativeQueryRef": "Low Num reduction (pp)1",
+              "displayName": "Low Num reduction (pp)"
             }
           ]
         }
@@ -555,13 +551,13 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "71.19846221252342D"
+                  "Value": "69.06956387909403D"
                 }
               }
             }
           },
           "selector": {
-            "metadata": "Mesures.Literacy Difficulty Reduction BL to EL (PP)"
+            "metadata": "Mesures.pp Of Literacy Improvement From BL to EL (formated)"
           }
         },
         {
@@ -569,13 +565,13 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "72.84593837535013D"
+                  "Value": "73.88832854454947D"
                 }
               }
             }
           },
           "selector": {
-            "metadata": "Mesures.Literacy Improvement BL to EL (PP)"
+            "metadata": "Mesures.pp Of Literacy Difficulty Reduction From BL to EL (formated)"
           }
         },
         {
@@ -583,13 +579,13 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "76.68214157308019D"
+                  "Value": "78.40163009457756D"
                 }
               }
             }
           },
           "selector": {
-            "metadata": "Mesures.Numeracy Improvement BL to EL (PP)"
+            "metadata": "Mesures.pp Of Numeracy Improvement From BL to EL (formated)"
           }
         },
         {
@@ -597,13 +593,13 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "73.74357406431162D"
+                  "Value": "74.22215731566182D"
                 }
               }
             }
           },
           "selector": {
-            "metadata": "Mesures.Numeracy Difficulty Reduction BL to EL (PP)"
+            "metadata": "Mesures.pp Of Numeracy Difficulty Reduction From BL to EL (formated)"
           }
         }
       ],
@@ -739,8 +735,9 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "Literal": {
-                      "Value": "'#242424'"
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
                     }
                   }
                 }
@@ -749,57 +746,6 @@
           },
           "selector": {
             "metadata": "Mesures.Percentage Of Students Tested With High Literacy In Grade EL"
-          }
-        },
-        {
-          "properties": {
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#242424'"
-                    }
-                  }
-                }
-              }
-            },
-            "backColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 4,
-                      "Percent": 0.6
-                    }
-                  }
-                }
-              }
-            },
-            "styleHeader": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "styleTotal": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "alignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Right'"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Mesures.Literacy Improvement BL to EL (PP)"
           }
         },
         {
@@ -902,57 +848,6 @@
           },
           "selector": {
             "metadata": "Mesures.Percentage Of Students Tested With High Numeracy In Grade EL"
-          }
-        },
-        {
-          "properties": {
-            "styleTotal": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "styleHeader": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#242424'"
-                    }
-                  }
-                }
-              }
-            },
-            "backColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 4,
-                      "Percent": 0.6
-                    }
-                  }
-                }
-              }
-            },
-            "alignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Right'"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Mesures.Numeracy Improvement BL to EL (PP)"
           }
         },
         {
@@ -1073,57 +968,6 @@
                 }
               }
             },
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#242424'"
-                    }
-                  }
-                }
-              }
-            },
-            "backColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 8,
-                      "Percent": 0.6
-                    }
-                  }
-                }
-              }
-            },
-            "alignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Right'"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Mesures.Literacy Difficulty Reduction BL to EL (PP)"
-          }
-        },
-        {
-          "properties": {
-            "styleHeader": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "styleTotal": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
             "alignment": {
               "expr": {
                 "Literal": {
@@ -1219,6 +1063,18 @@
                 }
               }
             },
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 4,
+                      "Percent": 0.6
+                    }
+                  }
+                }
+              }
+            },
             "styleTotal": {
               "expr": {
                 "Literal": {
@@ -1230,8 +1086,49 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "Literal": {
-                      "Value": "'#242424'"
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Right'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mesures.pp Of Literacy Improvement From BL to EL (formated)"
+          }
+        },
+        {
+          "properties": {
+            "styleHeader": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "styleTotal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
                     }
                   }
                 }
@@ -1258,7 +1155,111 @@
             }
           },
           "selector": {
-            "metadata": "Mesures.Numeracy Difficulty Reduction BL to EL (PP)"
+            "metadata": "Mesures.pp Of Literacy Difficulty Reduction From BL to EL (formated)"
+          }
+        },
+        {
+          "properties": {
+            "styleHeader": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "styleTotal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 4,
+                      "Percent": 0.6
+                    }
+                  }
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Right'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mesures.pp Of Numeracy Improvement From BL to EL (formated)"
+          }
+        },
+        {
+          "properties": {
+            "styleHeader": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "styleTotal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 4,
+                      "Percent": 0.6
+                    }
+                  }
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Right'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mesures.pp Of Numeracy Difficulty Reduction From BL to EL (formated)"
           }
         }
       ]

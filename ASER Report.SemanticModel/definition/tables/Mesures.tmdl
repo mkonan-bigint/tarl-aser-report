@@ -2887,7 +2887,7 @@ table Mesures
 			           __ppGain = BLANK(), BLANK(),
 			           __ppGain < 0.15, UNICHAR(11044) & "  Below Target",
 			           __ppGain < 0.20, UNICHAR(11044) & "  Approaching Target",
-			                       UNICHAR(11044) & "  Target meet" )
+			                       UNICHAR(11044) & "  Target met" )
 		lineageTag: 434f4452-379e-476f-9be8-388b5fdca3b3
 
 	measure 'Status - Numeracy pp Gain' =
@@ -2898,7 +2898,7 @@ table Mesures
 			           __ppGain = BLANK(), BLANK(),
 			           __ppGain < 0.15, UNICHAR(11044) & "  Below Target",
 			           __ppGain < 0.2, UNICHAR(11044) & "  Approaching Target",
-			                       UNICHAR(11044) & "  Target meet" )
+			                       UNICHAR(11044) & "  Target met" )
 		lineageTag: 79ee7500-261e-4bbb-8fcc-8c483f0adf53
 
 	measure 'Text Colour - Target meet' = "#00736C"

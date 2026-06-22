@@ -103,6 +103,38 @@
             "id": "default"
           }
         }
+      ],
+      "referenceLabel": [
+        {
+          "properties": {},
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 0
+                }
+              }
+            ],
+            "metadata": "Mesures.pp Of Literacy Improvement From BL to EL (formated)",
+            "id": "field-d7762556-9e71-a5da-34cc-bb7a0d1e0db3",
+            "order": 0
+          }
+        },
+        {
+          "properties": {},
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 0
+                }
+              }
+            ],
+            "metadata": "Mesures.pp Of Literacy Difficulty Reduction From BL to EL (formated)",
+            "id": "field-d7582456-7f93-9d4e-74f7-486ae15b2275",
+            "order": 0
+          }
+        }
       ]
     },
     "visualContainerObjects": {

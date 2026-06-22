@@ -2879,6 +2879,28 @@ table Mesures
 		formatString: 0
 		lineageTag: b4d91b04-f95b-486f-b2dd-6e0bbcd76e27
 
+	measure 'Status - Literacy pp Gain' =
+			
+			VAR __ppGain = [pp Of Literacy Improvement From BL to EL]
+			RETURN
+			    SWITCH(TRUE(),
+			           __ppGain = BLANK(), BLANK(),
+			           __ppGain < 0.15, UNICHAR(11044) & "  Below Target",
+			           __ppGain < 0.20, UNICHAR(11044) & "  Approaching Target",
+			                       UNICHAR(11044) & "  Target meet" )
+		lineageTag: 434f4452-379e-476f-9be8-388b5fdca3b3
+
+	measure 'Status - Numeracy pp Gain' =
+			
+			VAR __ppGain = [pp Of Numeracy Improvement From BL to EL]
+			RETURN
+			    SWITCH(TRUE(),
+			           __ppGain = BLANK(), BLANK(),
+			           __ppGain < 0.15, UNICHAR(11044) & "  Below Target",
+			           __ppGain < 0.2, UNICHAR(11044) & "  Approaching Target",
+			                       UNICHAR(11044) & "  Target meet" )
+		lineageTag: 79ee7500-261e-4bbb-8fcc-8c483f0adf53
+
 	partition Mesures = m
 		mode: import
 		source =

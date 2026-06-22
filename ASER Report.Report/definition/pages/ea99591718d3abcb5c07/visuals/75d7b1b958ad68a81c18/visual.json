@@ -81,7 +81,14 @@
             "alignment": {
               "expr": {
                 "Literal": {
-                  "Value": "'top'"
+                  "Value": "'middle'"
+                }
+              }
+            },
+            "calloutSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "60D"
                 }
               }
             }
@@ -695,6 +702,22 @@
             "id": "field-ca5686e0-4b2b-f67e-de9f-88d5a7b284e2"
           }
         }
+      ],
+      "referenceLabelLayout": [
+        {
+          "properties": {
+            "verticalAlignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'top'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
       ]
     },
     "visualContainerObjects": {
@@ -703,8 +726,13 @@
           "properties": {
             "text": {
               "expr": {
-                "Literal": {
-                  "Value": "'Learning pp gains'"
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mesures"
+                    }
+                  },
+                  "Property": "Learning pp Gains Title"
                 }
               }
             },

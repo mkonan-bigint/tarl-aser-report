@@ -5400,16 +5400,6 @@ cultureInfo fr-FR
 			          }
 			        },
 			        {
-			          "Low Num reduction (pp)": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
 			          "Decrease from baseline": {
 			            "State": "Suggested",
 			            "Source": {
@@ -8678,16 +8668,6 @@ cultureInfo fr-FR
 			          }
 			        },
 			        {
-			          "NUMERACY": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
 			          "Low Lit reduction (pp)": {
 			            "State": "Suggested",
 			            "Source": {
@@ -8791,6 +8771,16 @@ cultureInfo fr-FR
 			          "pp of numeracy improvement from BL to EL": {
 			            "State": "Generated",
 			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "NUMERACY": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        },
 			        {

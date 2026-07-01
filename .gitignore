@@ -9,9 +9,7 @@
 # Fichiers contenant des mots de passe, tokens, clés API
 .env
 .env.local
-.env.development
-.env.production
-.env.test
+.env.*
 *.env
 
 # ─── CONFIGURATION LOCALE (spécifique à ta machine) ─────────────
